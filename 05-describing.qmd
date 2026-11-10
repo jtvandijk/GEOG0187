@@ -57,7 +57,7 @@ We will use the same project for all three statistics sessions, with one `data` 
 :::
 
 ## A tidy workflow
-In Term 1, you worked with **base R**: functions such as `read.csv()` and `tapply()`, and the `$` operator. In these sessions, we will switch to the **tidyverse**: a collection of packages that share a common way of working. You take a dataset and pass it through a series of small steps using the pipe, `|>`, which you can read as *"and then"*. This is also how R is used in most Year 2 methods modules.
+In Term 1, you worked with **base R**: functions such as `read.csv()` and `tapply()`, and the `$` operator. In these sessions, we will switch to the `tidyverse`: a collection of packages that share a common way of working. You take a dataset and pass it through a series of small steps using the pipe, `|>`, which you can read as *"and then"*. This is also how R is used in most Year 2 methods modules.
 
 Let us start by loading the `tidyverse` and reading in the data. The `glimpse()` function gives us a first look at the dataset: the number of rows and columns, the type of each column, and the first few values.
 
@@ -75,7 +75,7 @@ lsoa <- read_csv('data/london-lsoa-air-quality.csv')
 glimpse(lsoa)
 ```
 
-The tidyverse is built around a small number of **verbs**, each of which does one thing. The table below lists the most important ones, together with their base R equivalents from Term 1:
+The `tidyverse` is built around a small number of **verbs**, each of which does one thing. The table below lists the most important ones, together with their base R equivalents from Term 1:
 
 | Verb | What it does | Base R from Term 1 |
 | :--- | :----------- | :----------------- |
@@ -147,7 +147,7 @@ lsoa |>
 - **Spread**: the *standard deviation* (sd) is roughly the typical distance of a value from the mean, and the *interquartile range* (IQR) is the range covered by the middle 50% of values.
 - **Shape**: is the distribution symmetric or skewed, and does it have one peak or more? To see this, we need a plot.
 
-For plotting, we will keep using **base R**, as in Term 1. Note that the `$` operator still works on a dataset loaded with the tidyverse:
+For plotting, we will keep using **base R**, as in Term 1. Note that the `$` operator still works on a dataset loaded with the `tidyverse`:
 
 ```{r}
 #| label: fig-05-hist
@@ -180,7 +180,7 @@ lsoa |>
 In this case the two values are very close, but it is always worth asking yourself whether your unit of analysis is the area or the person.
 
 ## Describing groups
-We can compare groups by combining `group_by()` with `summarise()`, the tidyverse equivalent of `tapply()`. Let us compare NO~2~ levels in Inner and Outer London:
+We can compare groups by combining `group_by()` with `summarise()`, the `tidyverse` equivalent of `tapply()`. Let us compare NO~2~ levels in Inner and Outer London:
 
 ```{r}
 #| label: 05-group

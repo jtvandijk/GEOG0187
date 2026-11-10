@@ -562,7 +562,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="a-tidy-workflow" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="a-tidy-workflow"><span class="header-section-number">5.4</span> A tidy workflow</h2>
-<p>In Term 1, you worked with <strong>base R</strong>: functions such as <code>read.csv()</code> and <code>tapply()</code>, and the <code>$</code> operator. In these sessions, we will switch to the <strong>tidyverse</strong>: a collection of packages that share a common way of working. You take a dataset and pass it through a series of small steps using the pipe, <code>|&gt;</code>, which you can read as <em>“and then”</em>. This is also how R is used in most Year 2 methods modules.</p>
+<p>In Term 1, you worked with <strong>base R</strong>: functions such as <code>read.csv()</code> and <code>tapply()</code>, and the <code>$</code> operator. In these sessions, we will switch to the <code>tidyverse</code>: a collection of packages that share a common way of working. You take a dataset and pass it through a series of small steps using the pipe, <code>|&gt;</code>, which you can read as <em>“and then”</em>. This is also how R is used in most Year 2 methods modules.</p>
 <p>Let us start by loading the <code>tidyverse</code> and reading in the data. The <code>glimpse()</code> function gives us a first look at the dataset: the number of rows and columns, the type of each column, and the first few values.</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -593,7 +593,7 @@ $ imd_decile   &lt;dbl&gt; 8, 10, 8, 5, 4, 2, 2, 2, 2, 2, 3, 3, 3, 4, 3, 3, 3, 3
 $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.403, 0…</code></pre>
 </div>
 </div>
-<p>The tidyverse is built around a small number of <strong>verbs</strong>, each of which does one thing. The table below lists the most important ones, together with their base R equivalents from Term 1:</p>
+<p>The <code>tidyverse</code> is built around a small number of <strong>verbs</strong>, each of which does one thing. The table below lists the most important ones, together with their base R equivalents from Term 1:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 11%">
@@ -747,7 +747,7 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 <li><strong>Spread</strong>: the <em>standard deviation</em> (sd) is roughly the typical distance of a value from the mean, and the <em>interquartile range</em> (IQR) is the range covered by the middle 50% of values.</li>
 <li><strong>Shape</strong>: is the distribution symmetric or skewed, and does it have one peak or more? To see this, we need a plot.</li>
 </ul>
-<p>For plotting, we will keep using <strong>base R</strong>, as in Term 1. Note that the <code>$</code> operator still works on a dataset loaded with the tidyverse:</p>
+<p>For plotting, we will keep using <strong>base R</strong>, as in Term 1. Note that the <code>$</code> operator still works on a dataset loaded with the <code>tidyverse</code>:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -808,7 +808,7 @@ Figure&nbsp;1: Distribution of annual mean NO2 across London LSOAs, 2022.
 </section>
 <section id="describing-groups" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="describing-groups"><span class="header-section-number">5.6</span> Describing groups</h2>
-<p>We can compare groups by combining <code>group_by()</code> with <code>summarise()</code>, the tidyverse equivalent of <code>tapply()</code>. Let us compare NO<sub>2</sub> levels in Inner and Outer London:</p>
+<p>We can compare groups by combining <code>group_by()</code> with <code>summarise()</code>, the <code>tidyverse</code> equivalent of <code>tapply()</code>. Let us compare NO<sub>2</sub> levels in Inner and Outer London:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
