@@ -56,5 +56,9 @@ website:
             file: 03-storymap.qmd
           - text: "4 Using Secondary Data"
             file: 04-secondary.qmd
+      - section: "Statistics"
+        contents:
+          - text: "5 Describing Data"
+            file: 05-describing.qmd
 
 editor: source

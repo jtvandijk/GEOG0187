@@ -22,11 +22,11 @@ The topics are listed below. Chapters are released ahead of each session; check 
 | :------ | :---------- | :---- |
 | 1       | Spatial Data Collection | [Collecting Spatial Data]({{< var urls.w01 >}}) |
 | 2       | Mapping     | [Mapping Your Field Data]({{< var urls.w02 >}}) |
-| 3       | Mapping     | Telling Stories with Maps |
-| 4       | Mapping     | Working with Secondary Data |
-| 5       | Statistics  | Describing Data |
+| 3       | Mapping     | [Building a Story Map]({{< var urls.w03 >}}) |
+| 4       | Mapping     | [Using Secondary Data]({{< var urls.w04 >}}) |
+| 5       | Statistics  | [Describing Data]({{< var urls.w05 >}}) |
 | 6       | Statistics  | Samples and Uncertainty |
-| 7       | Statistics  | Comparing Groups |
+| 7       | Statistics  | Testing Differences |
 
 ## Acknowledgements {.unnumbered}
 This workbook is created using the [Quarto](https://quarto.org/) publishing system. Elements of this workbook are partially based on and modified from:

@@ -8,6 +8,9 @@ urls:
   w02: "02-mapping.html"
   w03: "03-storymap.html"
   w04: "04-secondary.html"
+  w05: "05-describing.html"
+  w06: "06-uncertainty.html"
+  w07: "07-testing.html"
 
 # Fieldwork data collection (session 1). 
 fieldwork:
@@ -26,3 +29,7 @@ secondary:
   bcn_districts: "GEOG0187 Barcelona - Districts"
   london_lsoa: "Lower Level Super Output Area (LSOAs) IMD2025 (WGS84)"
   london_boroughs: "Local Authority (Lower Tier) IMD2025 (WGS84)"
+
+# Statistics sessions (5, 12, 19 Mar). Built by _notes/data-london/build.R.
+data:
+  lsoa_csv: "https://github.com/jtvandijk/GEOG0187/blob/master/data/london-lsoa-air-quality.csv"

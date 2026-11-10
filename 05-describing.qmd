@@ -1,0 +1,274 @@
+---
+number-offset: 4
+---
+
+# Describing Data
+
+In Term 1 you used R to describe data and even ran a t-test. The next three sessions go back over that ground more slowly, and with a purpose: to understand what the numbers mean, how sure we can be about them, and when a difference is real. We use one question throughout: **who breathes the most polluted air in London?** This week you set up a tidy workflow and describe the data. This session and the next feed the first statistics worksheet.
+
+::: {.callout-important}
+## Before the session
+Have **R** and **RStudio** working on your laptop (you installed them in Term 1; [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere) is a fallback). Then run this once in the RStudio console:
+
+```r
+install.packages('tidyverse')
+```
+:::
+
+## Air pollution in London
+**Nitrogen dioxide** (NO~2~) comes mostly from road traffic, and long-term exposure is linked to asthma and other respiratory disease. The World Health Organization's guideline for the annual mean is **10 µg/m³**, with *interim targets* of 40, 30 and 20 µg/m³ for places still far above it; the UK legal limit is **40 µg/m³**. Fine particles (PM~2.5~) come from traffic, wood burning and many other sources; the WHO guideline is **5 µg/m³**.
+
+The values in our data are **averages over whole LSOAs**: no LSOA as a whole is above the legal limit, but many roadside spots inside them are. Air quality is a physical question, but who is exposed is a social one. Researchers call this **environmental justice**: are poorer neighbourhoods exposed to more pollution than richer ones? Over three sessions you will describe, estimate and test exactly that.
+
+## The data
+Your dataset has one row for each of London's **4,994 LSOAs** (Lower Super Output Areas: small areas of about 1,500 residents).
+
+| Column | Description |
+| :----- | :---------- |
+| `lsoa_code`, `lsoa_name` | LSOA code and name (2021) |
+| `borough`, `inner_outer` | London borough, and whether it is in Inner or Outer London |
+| `population` | Residents (mid-2022) |
+| `no2`, `pm25` | Modelled annual mean NO~2~ and PM~2.5~, 2022 (µg/m³), averaged over the LSOA |
+| `imd_score`, `imd_decile` | Index of Multiple Deprivation 2025: score, and decile within England (1 = most deprived 10%) |
+| `income_score` | Share of residents who are income-deprived (0 to 1) |
+
+::: {.callout-note}
+## Data sources
+Greater London Authority, *London Atmospheric Emissions Inventory (LAEI) 2022*, 20 m concentration grids, averaged per LSOA by GEOG0187 staff. Ministry of Housing, Communities & Local Government, *English Indices of Deprivation 2025*. LSOA boundaries: Office for National Statistics. All under the Open Government Licence v3.0.
+:::
+
+## Set up your project
+1. In RStudio, go to [File]{.ui} → [New Project]{.ui} → [New Directory]{.ui} → [New Project]{.ui}. Call it `GEOG0187-stats`, save it somewhere sensible (not your Downloads folder), and click [Create Project]{.ui}.
+2. In the [Files]{.ui} pane, click [New Folder]{.ui} and create a folder called `data`.
+3. Download the dataset and save it in that `data` folder:
+
+| File | Type | Link |
+| :--- | :--- | :--- |
+| London LSOA air quality and deprivation | `csv` | [Download]({{< var data.lsoa_csv >}}) |
+
+4. Create a new script ([File]{.ui} → [New File]{.ui} → [R Script]{.ui}) and save it as `w05-describing.R`. Type (or copy) the code below into the script and run it line by line with `Ctrl` + `Enter` (`Cmd` + `Return` on a Mac).
+
+::: {.callout-tip}
+Use the same project for all three statistics sessions: one project, one `data` folder, one script per week. If R says it cannot find the file, check that the project is open (its name shows in the top-right corner of RStudio) and that the file is in the `data` folder with exactly this name.
+:::
+
+## A tidy workflow
+In Term 1 you worked in **base R**: `read.csv()`, the `$` operator and functions such as `tapply()`. We now switch to the **tidyverse**, a set of packages that share one way of working: you take a dataset, and pass it through a series of small steps with the pipe, `|>`, read as *"and then"*. This is also what you will use in GEOG0018 next year.
+
+```{r}
+#| label: 05-load
+#| filename: 'R code'
+#| message: false
+# load the tidyverse
+library(tidyverse)
+
+# read the data
+lsoa <- read_csv('data/london-lsoa-air-quality.csv')
+
+# a first look: rows, columns, types and first values
+glimpse(lsoa)
+```
+
+The tidyverse is built around a handful of **verbs**, each doing one thing:
+
+| Verb | What it does | Base R from Term 1 |
+| :--- | :----------- | :----------------- |
+| `select()` | keep some columns | `df[, c('a', 'b')]` |
+| `filter()` | keep rows that meet a condition | `df[df$a > 10, ]` |
+| `mutate()` | add or change a column | `df$c <- df$a / df$b` |
+| `arrange()` | sort rows | `df[order(df$a), ]` |
+| `group_by()` + `summarise()` | summarise per group | `tapply(df$a, df$g, mean)` |
+| `count()` | count rows per group | `table(df$g)` |
+
+```{r}
+#| label: 05-verbs
+#| filename: 'R code'
+# the five LSOAs with the highest NO2
+lsoa |>
+  select(lsoa_name, borough, no2) |>
+  arrange(desc(no2)) |>
+  head(5)
+
+# how many LSOAs in Inner and Outer London?
+lsoa |>
+  count(inner_outer)
+
+# LSOAs in Hackney with NO2 above 25
+lsoa |>
+  filter(borough == 'Hackney', no2 > 25) |>
+  nrow()
+```
+
+`mutate()` adds columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so here we flag each LSOA that is above the WHO interim target of 20 µg/m³. We also divide London into five equal groups (**quintiles**) by income deprivation, from 1 (least deprived fifth) to 5 (most deprived fifth). We save the result, because we will use both new columns again.
+
+```{r}
+#| label: 05-mutate
+#| filename: 'R code'
+# add two columns
+lsoa <- lsoa |>
+  mutate(above_20 = no2 > 20,
+         income_quintile = ntile(income_score, 5))
+
+# check: about 1,000 LSOAs in each quintile
+lsoa |>
+  count(income_quintile)
+```
+
+::: {.callout-note}
+Why income and not the full deprivation index? The IMD includes a *Living Environment* domain that partly measures air quality. Comparing NO~2~ with the IMD would partly compare air pollution with itself. Income deprivation avoids that.
+:::
+
+## Describe one variable
+To describe a numerical variable you report three things: its **centre**, its **spread** and its **shape**.
+
+```{r}
+#| label: 05-describe
+#| filename: 'R code'
+# centre and spread of NO2
+lsoa |>
+  summarise(n = n(),
+            mean = mean(no2),
+            median = median(no2),
+            sd = sd(no2),
+            iqr = IQR(no2),
+            min = min(no2),
+            max = max(no2))
+```
+
+- **Centre**: the *mean* is the average; the *median* is the middle value. If they differ much, the distribution is skewed or has outliers.
+- **Spread**: the *standard deviation* (sd) is roughly the typical distance from the mean; the *interquartile range* (IQR) is the range of the middle 50% of values.
+- **Shape**: is the distribution symmetric, skewed, or does it have more than one peak? For this you need a plot.
+
+We keep using **base R** for plots, as in Term 1. The `$` operator still works on a tidyverse dataset.
+
+```{r}
+#| label: fig-05-hist
+#| fig-cap: Distribution of annual mean NO2 across London LSOAs, 2022.
+#| filename: 'R code'
+# histogram, with the WHO interim target as a dashed line
+hist(lsoa$no2, breaks = 40,
+     main = 'NO2 in London LSOAs, 2022',
+     xlab = 'Annual mean NO2 (µg/m³)', ylab = 'Number of LSOAs',
+     col = 'grey80', border = 'white')
+abline(v = 20, lty = 2)
+```
+
+::: {.callout-tip}
+Proportions are means too: `above_20` is `TRUE` (1) or `FALSE` (0), so its mean is the share of LSOAs above the interim target. Try `mean(lsoa$above_20)`. What does the answer tell you?
+:::
+
+### Who is the average?
+The mean above treats every LSOA as one unit. But LSOAs differ in size, and a statement about *people* should count people. A **population-weighted mean** does that:
+
+```{r}
+#| label: 05-weighted
+#| filename: 'R code'
+# average LSOA vs average Londoner
+lsoa |>
+  summarise(mean_lsoa = mean(no2),
+            mean_resident = weighted.mean(no2, population))
+```
+
+Here the two are close, but always ask: *is my unit the area or the person?*
+
+## Describe by group
+Now compare groups with `group_by()` and `summarise()`, the tidy equivalent of `tapply()`.
+
+```{r}
+#| label: 05-group
+#| filename: 'R code'
+# NO2 in Inner and Outer London
+lsoa |>
+  group_by(inner_outer) |>
+  summarise(n = n(),
+            mean = mean(no2),
+            median = median(no2),
+            sd = sd(no2))
+```
+
+A **boxplot** shows the median, the IQR (the box) and outliers for each group side by side. The formula `no2 ~ inner_outer` reads as "NO~2~ by Inner/Outer London".
+
+```{r}
+#| label: fig-05-box-io
+#| fig-cap: NO2 in Inner and Outer London LSOAs.
+#| filename: 'R code'
+# boxplot by group
+boxplot(no2 ~ inner_outer, data = lsoa,
+        main = 'NO2 by part of London',
+        xlab = '', ylab = 'Annual mean NO2 (µg/m³)')
+```
+
+The same works for the boroughs. With 33 groups, sorting helps:
+
+```{r}
+#| label: 05-borough
+#| filename: 'R code'
+# borough summary, sorted by median NO2
+borough_no2 <- lsoa |>
+  group_by(borough) |>
+  summarise(n = n(),
+            median = median(no2),
+            iqr = IQR(no2),
+            share_above_20 = mean(above_20)) |>
+  arrange(desc(median))
+
+head(borough_no2, 5)
+tail(borough_no2, 5)
+```
+
+## Two variables: pollution and deprivation
+Back to the environmental justice question. Summarise and plot NO~2~ by income quintile:
+
+```{r}
+#| label: 05-quintile
+#| filename: 'R code'
+# NO2 by income deprivation quintile
+lsoa |>
+  group_by(income_quintile) |>
+  summarise(n = n(),
+            mean = mean(no2),
+            median = median(no2),
+            sd = sd(no2))
+```
+
+```{r}
+#| label: fig-05-box-quintile
+#| fig-cap: NO2 by income deprivation quintile (1 = least deprived fifth of London LSOAs).
+#| filename: 'R code'
+boxplot(no2 ~ income_quintile, data = lsoa,
+        main = 'NO2 by income deprivation',
+        xlab = 'Income deprivation quintile (1 = least, 5 = most deprived)',
+        ylab = 'Annual mean NO2 (µg/m³)')
+```
+
+Look carefully before you conclude. Is the pattern the same all the way from quintile 1 to 5? Remember that deprived areas and polluted areas are both more common in Inner London: repeat the summary **within** Inner and Outer London (`group_by(inner_outer, income_quintile)`) and see whether the pattern holds.
+
+::: {.callout-warning}
+Describing is not explaining. A difference between groups tells you *that* exposure is unequal, not *why*: roads, housing, history and planning all play a part.
+:::
+
+## Write it up
+A good description of a variable states:
+
+- **what** was measured, in which **units**, for which **units of analysis** (LSOAs, people), and **how many**;
+- the **centre** and **spread**, with the right measures (median and IQR for skewed data);
+- the **shape**, with a figure;
+- how groups **differ**, in numbers and in a figure, with careful wording.
+
+For example: *"Across London's 4,994 LSOAs, modelled annual mean NO~2~ in 2022 had a median of ... µg/m³ (IQR ...). Every LSOA exceeded the WHO guideline of 10 µg/m³, and ...% exceeded the interim target of 20 µg/m³."* Write two or three sentences like this for PM~2.5~.
+
+## Check before you leave
+- [ ] a project `GEOG0187-stats` with the data in `data/` and a saved script `w05-describing.R`;
+- [ ] you can use `select()`, `filter()`, `mutate()`, `arrange()`, `group_by()` + `summarise()` and `count()`;
+- [ ] a description (centre, spread, shape) of NO~2~ and PM~2.5~ with a histogram;
+- [ ] a comparison of NO~2~ between groups, with a boxplot;
+- [ ] two or three sentences that describe the data, written as you would in the worksheet.
+
+## Troubleshooting
+| Problem | What to try |
+| :------ | :---------- |
+| `could not find function "read_csv"` | Run `library(tidyverse)` first. If that fails, run `install.packages('tidyverse')`. |
+| `'data/london-lsoa-air-quality.csv' does not exist` | Is your project open? Is the file in the `data` folder, with exactly this name (no `(1)` added by your browser)? |
+| `object 'lsoa' not found` | Run the lines that create it first. Run your script from the top. |
+| `object 'income_quintile' not found` | You ran `mutate()` without saving the result: use `lsoa <- lsoa \|> mutate(...)`. |
+| A plot looks squashed | Make the [Plots]{.ui} pane bigger, or click [Zoom]{.ui}. |
