@@ -33,3 +33,7 @@ secondary:
 # Statistics sessions (5, 12, 19 Mar). Built by _notes/data-london/build.R.
 data:
   lsoa_csv: "https://github.com/jtvandijk/GEOG0187/blob/master/data/london-lsoa-air-quality.csv"
+
+# Example story map (Anwar Musah, John Snow / Soho cholera), public; used on page 03 and in GIS WS1 brief.
+examples:
+  storymap: "https://storymaps.arcgis.com/stories/d56637a2dea048adbb520082eddea076"
