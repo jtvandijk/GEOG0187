@@ -22,7 +22,7 @@ fieldwork:
 # ArcGIS Online (session 2 onwards).
 arcgis:
   org: "https://uclondon.maps.arcgis.com"
-  layer: "UCL Geography Field Survey"
+  layer: "UCL Geography Field Survey_results"
 
 # Secondary data pack (session 4, 26 Feb). Names must match the layers published in the UCL org.
 secondary:
