@@ -23,10 +23,10 @@ A **geographic information system (GIS)** is software for storing, combining, an
 ## What you will collect
 Your group collects two datasets: your route as a **line**, and your sites as **points**. You collect each with a different tool:
 
-| What                  | Tool | Why |
-| :-------------------- | :--- | :-- |
-| Route (a line)        | [Strava](https://www.strava.com) app | Records your GPS track in the background, also without mobile data. Exported afterwards as a `.gpx` file. |
-| Sites (points)        | [UCL Geography Field Survey]({{< var fieldwork.survey >}}) (web form) | One form submission per site: your location, a photo and a short note. Submissions go straight into ArcGIS Online, so there is no copying of coordinates by hand. |
+| What       | Tool | How it works |
+| :--------- | :--- | :----------- |
+| Your route | [Strava](https://www.strava.com) | A phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a `.gpx` file. |
+| Your sites | [UCL Geography Field Survey]({{< var fieldwork.survey >}}) | A web form that opens in your phone's browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no copying of coordinates by hand. |
 
 **Everyone records the route on their own phone**, so you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites only need to be submitted once per working group, so you will agree who does that.
 
