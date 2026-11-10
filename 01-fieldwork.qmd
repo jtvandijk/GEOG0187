@@ -104,9 +104,14 @@ We will start with a live demonstration of a test walk done with the same instru
    - For the **photo** and the **short note**, anything will do.
    - Tap [Submit]{.ui} and check that you see a confirmation.
 <!-- SCREENSHOT 5: the field survey on an iPhone, filled in, with the location map visible. images/w01/survey-form.png -->
-3. **Fix any problems.** Work through anything that did not work together with the people around you and with staff. The [troubleshooting table](#troubleshooting) covers the most common issues.
+3. **Fix any problems.** If something did not work, try to sort it out first with your working group and the students around you, using the [troubleshooting table](#troubleshooting), which covers the most common issues. If you are still stuck, or have any other questions, ask the teaching staff for help.
 
 By the end of this part, everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
+
+::: {.callout-warning}
+## Sort it out now, not in Catalonia
+Time in the field is limited, and you do not want to spend it on fixing settings, finding passwords or working out how the survey works. Anything that does not work today is much easier to fix here, with help at hand, than on a street corner in Catalonia.
+:::
 
 ### Plan your fieldwork
 Next, sit down with your working group and agree how you will collect your data once you are in Catalonia:
