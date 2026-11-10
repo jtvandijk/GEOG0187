@@ -5,7 +5,14 @@ meta:
 
 urls:
   w01: "01-fieldwork.html"
+  w02: "02-mapping.html"
 
 # Fieldwork data collection (session 1). 
 fieldwork:
   survey: "https://arcg.is/vbWLC5"
+
+
+# ArcGIS Online (session 2 onwards).
+arcgis:
+  org: "https://uclondon.maps.arcgis.com"
+  layer: "UCL Geography Field Survey"

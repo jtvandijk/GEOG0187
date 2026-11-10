@@ -66,6 +66,127 @@
     ]
   },
   {
+    "objectID": "02-mapping.html",
+    "href": "02-mapping.html",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "In Catalonia your working group recorded sites in the field survey, and you recorded your route in Strava. This week you bring the two together on one map in ArcGIS Online. Everyone makes their own map. Next week you will turn this map into a story map, so make sure you save it at the end of the session.\n\n\n\n\n\n\nImportantBefore the session\n\n\n\nHave your route exported as a .gpx file from the Strava website (see After the trip), and know your fieldwork group and working group number. If your own recording failed, ask someone in your working group for a copy of their .gpx file.\n\n\n\n\nIn Session 1 you saw that spatial data come as points, lines and polygons. A GIS keeps each dataset as a separate layer, and stacks the layers on top of each other to make a map:\n\nYour sites are a point layer: one point per survey entry.\nYour route is a line layer: the track Strava recorded.\nThe basemap at the bottom is the background (streets, satellite imagery, terrain) that gives your data context.\n\nEach feature in a layer also carries attributes: the information stored about it, such as the site ID, note and photo you entered in the survey. In ArcGIS Online you see a feature’s attributes in its pop-up when you click on it, and you can use them to filter a layer (only show some features) or style it (e.g. colour points by category).\nA map on a flat screen is always a projection of the curved Earth, which distorts distances and areas somewhat. ArcGIS Online takes care of this for you; we will not need to worry about it in this module.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nArcGIS Online changes its layout regularly. This chapter describes what to click by its label (e.g. Add). If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.\n\n\n\n\n\n\nGo to https://uclondon.maps.arcgis.com, click UCL SSO, and sign in as you would for Moodle. Use a laptop or computer, not your phone.\nOpen Map from the top menu. This opens Map Viewer with an empty map.\nThe left-hand toolbar holds what is in your map (Layers, Add, Basemap, Save and open). The right-hand toolbar holds settings for the selected layer (Properties, Styles, Filter, Pop-ups).\n\n\n\n\nClick Basemap and try a few options. A quiet basemap such as Light Gray Canvas or OpenStreetMap makes your own data stand out; Imagery shows what the places look like from above. You can change it again at any time.\n\n\n\nAll field survey entries, from every group, are in one layer. You add that layer and then filter it to your own working group.\n\nClick Add → Browse layers. Switch from My content to My organization, and search for UCL Geography Field Survey.\nClick Add on the layer, and close the browse panel. The map zooms to the points: you will see the entries of the whole year.\nWith the layer selected, click Filter on the right-hand toolbar, then Add new:\n\nData collection is your fieldwork group (e.g. Fieldwork - Catalonia Group 1).\nClick Add new again: Working group number is your number.\nClick Save. Only your group’s sites should now be visible.\n\nZoom to your sites (in Layers, open the ⋯ menu of the layer → Zoom to) and click a point. Its pop-up shows the attributes and photo your group entered.\n\nThe filter only changes your map. Nobody else’s data are deleted or changed.\n\n\n\n\nClick Add → Add layer from file, and select your .gpx file.\nWhen asked, choose to create a hosted feature layer (so the route is stored in your own ArcGIS Online content), give it a name such as CAT1_WG05 route, and click Create and add to map.\nThe route appears as a line on the map. Check that it matches where you walked. If you have several recordings, add each .gpx file in the same way.\n\n\n\n\nSelect a layer in Layers and click Styles on the right-hand toolbar.\n\nRoute: keep the Location (single symbol) style, click Style options and change the line colour and width so the route is clearly visible on your basemap.\nSites: change the symbol, size and colour so the points stand out against the route. If you want, you can instead style them by an attribute, but a single clear symbol is fine for now.\n\nAim for a map that someone who was not there can read at a glance: two clearly different layers and nothing that distracts from them.\n\n\n\nSelect the sites layer and click Pop-ups.\n\nSet the title to the site ID: click the title, type {, and choose the Site ID field.\nUnder Fields list, keep the fields that matter (site ID, note) and remove the rest.\nCheck that Attachments is included, so the photo shows.\nClick a few points on the map to check the result.\n\n\n\n\n\nClick Save and open → Save as.\nTitle: GEOG0187 – CAT1_WG05 – Surname (with your own trip, working group number and surname). Add a short summary, e.g. Sites and route from fieldwork in Barcelona.\nClick Save. The map is now in Content → My content, and you can open it again next week.\n\nYou do not need to share the map with anyone.\n\n\n\nBy the end of the session your saved map should have:\n\na basemap of your choice;\nyour working group’s sites, and only those;\nyour route as a line;\nclear styling for both layers;\npop-ups that show the site ID, note and photo.\n\nIf you finish early: use the Measure tool (right-hand toolbar) to find how far you walked, try a different basemap, or add labels with the site IDs (Labels on the right-hand toolbar).\n\n\n\n\n\n\n\n\n\n\nProblem\nWhat to try\n\n\n\n\nThe survey layer does not appear in the search\nCheck you are searching My organization, not My content, and that you signed in through UCL SSO.\n\n\nNo sites left after filtering\nCheck the exact fieldwork group and working group number, and that your group did not use Fieldwork - Test by mistake. Ask staff if your sites are missing.\n\n\nI do not have a .gpx file\nAsk someone in your working group for theirs. In the meantime, practise with the demo route from your Affiliate Lecturer.\n\n\nThe .gpx file will not upload\nCheck the file ends in .gpx and was exported from the Strava website. Try a different browser.\n\n\nThe route is a straight line or has big jumps\nThe GPS signal was lost during recording. Use another group member’s route if theirs is better.\n\n\nThe photo does not show in the pop-up\nCheck Attachments is switched on under Pop-ups. Not every entry has a photo.\n\n\nI cannot find my map next time\nContent → My content, or search for GEOG0187.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#layers-and-attributes",
+    "href": "02-mapping.html#layers-and-attributes",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "In Session 1 you saw that spatial data come as points, lines and polygons. A GIS keeps each dataset as a separate layer, and stacks the layers on top of each other to make a map:\n\nYour sites are a point layer: one point per survey entry.\nYour route is a line layer: the track Strava recorded.\nThe basemap at the bottom is the background (streets, satellite imagery, terrain) that gives your data context.\n\nEach feature in a layer also carries attributes: the information stored about it, such as the site ID, note and photo you entered in the survey. In ArcGIS Online you see a feature’s attributes in its pop-up when you click on it, and you can use them to filter a layer (only show some features) or style it (e.g. colour points by category).\nA map on a flat screen is always a projection of the curved Earth, which distorts distances and areas somewhat. ArcGIS Online takes care of this for you; we will not need to worry about it in this module.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nArcGIS Online changes its layout regularly. This chapter describes what to click by its label (e.g. Add). If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#open-map-viewer",
+    "href": "02-mapping.html#open-map-viewer",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "Go to https://uclondon.maps.arcgis.com, click UCL SSO, and sign in as you would for Moodle. Use a laptop or computer, not your phone.\nOpen Map from the top menu. This opens Map Viewer with an empty map.\nThe left-hand toolbar holds what is in your map (Layers, Add, Basemap, Save and open). The right-hand toolbar holds settings for the selected layer (Properties, Styles, Filter, Pop-ups).",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#choose-a-basemap",
+    "href": "02-mapping.html#choose-a-basemap",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "Click Basemap and try a few options. A quiet basemap such as Light Gray Canvas or OpenStreetMap makes your own data stand out; Imagery shows what the places look like from above. You can change it again at any time.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#add-your-groups-sites",
+    "href": "02-mapping.html#add-your-groups-sites",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "All field survey entries, from every group, are in one layer. You add that layer and then filter it to your own working group.\n\nClick Add → Browse layers. Switch from My content to My organization, and search for UCL Geography Field Survey.\nClick Add on the layer, and close the browse panel. The map zooms to the points: you will see the entries of the whole year.\nWith the layer selected, click Filter on the right-hand toolbar, then Add new:\n\nData collection is your fieldwork group (e.g. Fieldwork - Catalonia Group 1).\nClick Add new again: Working group number is your number.\nClick Save. Only your group’s sites should now be visible.\n\nZoom to your sites (in Layers, open the ⋯ menu of the layer → Zoom to) and click a point. Its pop-up shows the attributes and photo your group entered.\n\nThe filter only changes your map. Nobody else’s data are deleted or changed.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#add-your-route",
+    "href": "02-mapping.html#add-your-route",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "Click Add → Add layer from file, and select your .gpx file.\nWhen asked, choose to create a hosted feature layer (so the route is stored in your own ArcGIS Online content), give it a name such as CAT1_WG05 route, and click Create and add to map.\nThe route appears as a line on the map. Check that it matches where you walked. If you have several recordings, add each .gpx file in the same way.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#style-your-layers",
+    "href": "02-mapping.html#style-your-layers",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "Select a layer in Layers and click Styles on the right-hand toolbar.\n\nRoute: keep the Location (single symbol) style, click Style options and change the line colour and width so the route is clearly visible on your basemap.\nSites: change the symbol, size and colour so the points stand out against the route. If you want, you can instead style them by an attribute, but a single clear symbol is fine for now.\n\nAim for a map that someone who was not there can read at a glance: two clearly different layers and nothing that distracts from them.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#set-up-the-pop-ups",
+    "href": "02-mapping.html#set-up-the-pop-ups",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "Select the sites layer and click Pop-ups.\n\nSet the title to the site ID: click the title, type {, and choose the Site ID field.\nUnder Fields list, keep the fields that matter (site ID, note) and remove the rest.\nCheck that Attachments is included, so the photo shows.\nClick a few points on the map to check the result.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#save-your-map",
+    "href": "02-mapping.html#save-your-map",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "Click Save and open → Save as.\nTitle: GEOG0187 – CAT1_WG05 – Surname (with your own trip, working group number and surname). Add a short summary, e.g. Sites and route from fieldwork in Barcelona.\nClick Save. The map is now in Content → My content, and you can open it again next week.\n\nYou do not need to share the map with anyone.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#check-before-you-leave",
+    "href": "02-mapping.html#check-before-you-leave",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "By the end of the session your saved map should have:\n\na basemap of your choice;\nyour working group’s sites, and only those;\nyour route as a line;\nclear styling for both layers;\npop-ups that show the site ID, note and photo.\n\nIf you finish early: use the Measure tool (right-hand toolbar) to find how far you walked, try a different basemap, or add labels with the site IDs (Labels on the right-hand toolbar).",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
+    "objectID": "02-mapping.html#troubleshooting",
+    "href": "02-mapping.html#troubleshooting",
+    "title": "1 Mapping Your Field Data",
+    "section": "",
+    "text": "Problem\nWhat to try\n\n\n\n\nThe survey layer does not appear in the search\nCheck you are searching My organization, not My content, and that you signed in through UCL SSO.\n\n\nNo sites left after filtering\nCheck the exact fieldwork group and working group number, and that your group did not use Fieldwork - Test by mistake. Ask staff if your sites are missing.\n\n\nI do not have a .gpx file\nAsk someone in your working group for theirs. In the meantime, practise with the demo route from your Affiliate Lecturer.\n\n\nThe .gpx file will not upload\nCheck the file ends in .gpx and was exported from the Strava website. Try a different browser.\n\n\nThe route is a straight line or has big jumps\nThe GPS signal was lost during recording. Use another group member’s route if theirs is better.\n\n\nThe photo does not show in the pop-up\nCheck Attachments is switched on under Pop-ups. Not every entry has a photo.\n\n\nI cannot find my map next time\nContent → My content, or search for GEOG0187.",
+    "crumbs": [
+      "Mapping",
+      "Mapping Your Field Data"
+    ]
+  },
+  {
     "objectID": "01-fieldwork.html",
     "href": "01-fieldwork.html",
     "title": "1 Collecting Spatial Data",

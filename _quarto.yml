@@ -47,5 +47,8 @@ website:
       - section: "Spatial Data Collection"
         contents:
           - 01-fieldwork.qmd
+      - section: "Mapping"
+        contents:
+          - 02-mapping.qmd
 
 editor: source
