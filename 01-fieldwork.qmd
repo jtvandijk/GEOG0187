@@ -63,7 +63,11 @@ On Android, go to [Settings]{.ui} → [Apps]{.ui} → [Strava]{.ui} → [Permiss
 ### Save the field survey to your phone
 1. Open the [UCL Geography Field Survey]({{< var fieldwork.survey >}}) on your phone. It opens in your browser; there is nothing to install.
 2. Sign in with your UCL account. If you are asked for *Your ArcGIS organization's URL*, type `uclondon`, tap [Continue]{.ui}, then [UCL SSO]{.ui}, and sign in as you would for Moodle. You do not need to fill in the survey yet.
-3. Add it to your home screen so you can find it quickly in the field: in Safari use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome use the [⋮]{.ui} menu → [Add to Home screen]{.ui}.
+
+::: {.callout-tip}
+## Save it to your home screen
+To find the survey quickly in the field, in Safari use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome use the [⋮]{.ui} menu → [Add to Home screen]{.ui}.
+:::
 
 ### Do a test walk
 1. Somewhere outside, open Strava, tap [Record]{.ui}, choose [Walk]{.ui} as the activity type, and start. You can lock your phone; Strava keeps recording.
@@ -91,7 +95,7 @@ We start with a live demonstration: your Affiliate Lecturer has done the same te
 <!-- SCREENSHOT 5: the field survey on an iPhone, filled in, with the location map visible. images/w01/survey-form.png -->
 3. **Fix problems.** Work through anything that did not work with the people around you and with staff. The [troubleshooting table](#troubleshooting) covers the most common issues.
 4. **Plan as a working group.** Agree who submits the sites (one or two people, so that each site is entered only once) and who takes over if their phone runs out of battery. Agree how your sites relate to your Urban Project theme.
-5. **Agree on site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, per group, and use the same ID everywhere: in the survey, in your field notebook, and in the names or captions of any extra photos, videos or audio. This is what lets you match your notes to your points later.
+5. **Agree on site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, per group, and enter the same ID in the survey and on any notes, photos or recordings you make outside it. That is how you will match them to your points on the map later.
 
 By the end of the session everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
 
