@@ -8,6 +8,6 @@ urls:
 
 # Fieldwork data collection (session 1). Replace the TBC values before publishing.
 fieldwork:
-  survey: "https://survey123.arcgis.com/share/TBC"
+  survey: "https://arcg.is/vbWLC5"
   upload: "the GEOG0187 Moodle page (TBC)"
   deadline: "TBC (between Sunday 31 January and the next GIS session)"
