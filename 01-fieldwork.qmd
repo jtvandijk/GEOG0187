@@ -69,7 +69,7 @@ We start with a live demonstration: your Affiliate Lecturer has done the same te
 1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava **website**, not from the app, so use a laptop or computer. Log in at [strava.com](https://www.strava.com), open your test walk, open the [⋯]{.ui} (more actions) menu next to the activity and choose [Export GPX]{.ui}. Check that a `.gpx` file has been downloaded.
 <!-- SCREENSHOT 4: Strava website, activity page with the ⋯ menu open and "Export GPX" visible. images/w01/strava-export.png -->
 2. **Try the field survey.** Open the survey from your home screen and submit one test entry from the room:
-   - **Trip**: select `Fieldwork Test`.
+   - **Data collection**: select `Fieldwork test`.
    - **Group number**: your Urban Project group number, or `0` if you do not know it yet.
    - **Site ID**: `S00`.
    - **Location**: tap [Allow]{.ui} when asked, and check the dot on the map is roughly where you are. If it is off, wait a few seconds or drag it to the right spot.
@@ -84,7 +84,7 @@ By the end of the session everyone should have exported a `.gpx` file and submit
 
 ## In Catalonia
 - **Start Strava** when your group starts walking, and stop it when you finish. One recording per outing is fine; you can have several.
-- **Submit one survey entry per site**, while you are standing at the site, with your own trip and group number (not `Fieldwork Test`).
+- **Submit one survey entry per site**, while you are standing at the site, with **Data collection** set to `Catalonia` (not `Fieldwork test`) and your own group number.
 - **Charge your phone** every night and bring a power bank if you have one. GPS and the camera use a lot of battery.
 - **No signal or no mobile data?** Strava keeps recording without data and uploads when you are back online. The survey needs a connection to submit: if you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. Check your phone contract for roaming charges before you go.
 - **Be considerate.** Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
