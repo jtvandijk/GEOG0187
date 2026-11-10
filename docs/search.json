@@ -1,178 +1,222 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Quantitative Skills",
+    "objectID": "04-secondary.html",
+    "href": "04-secondary.html",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "Welcome to the Quantitative Skills strand of GEOG0187 Foundations of Geography II. This term has three parts:\n\nSpatial Data Collection. Before the field trip to Catalonia, you prepare to collect your own spatial data: the routes you walk and the sites you record.\nMapping. After the trip, you map your field data in ArcGIS Online, turn it into a story map, and learn to work with and evaluate secondary data.\nStatistics. Finally, you use R to describe data, quantify uncertainty, and compare groups.\n\n\n\n\nMoodle is the central point of contact for GEOG0187 and it is where all important information will be communicated, such as session dates, group allocations and assessment information. This workbook contains the material for the Quantitative Skills sessions.\n\n\n\nEach session starts with a short introduction, after which you work through the material in this workbook at your own pace, with Affiliate Lecturers and Teaching Assistants on hand to help. Some sessions ask you to do a short task before you come to class: this is flagged at the top of the relevant chapter.\n\n\n\nThe topics are listed below. Chapters are released ahead of each session; check Moodle for the exact dates.\n\n\n\nSession\nSection\nTopic\n\n\n\n\n1\nSpatial Data Collection\nCollecting Spatial Data\n\n\n2\nMapping\nMapping Your Field Data\n\n\n3\nMapping\nTelling Stories with Maps\n\n\n4\nMapping\nWorking with Secondary Data\n\n\n5\nStatistics\nDescribing Data\n\n\n6\nStatistics\nSamples and Uncertainty\n\n\n7\nStatistics\nComparing Groups\n\n\n\n\n\n\nThis workbook is created using the Quarto publishing system. Elements of this workbook are partially based on and modified from:\n\nPrevious GEOG0013: Geography in the Field 1 GIS content created by Anwar Musah\nThe GEOG0018: Methods in Human Geography workbook by Justin van Dijk",
-    "crumbs": [
-      "Module overview",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "Quantitative Skills",
-    "section": "",
-    "text": "Welcome to the Quantitative Skills strand of GEOG0187 Foundations of Geography II. This term has three parts:\n\nSpatial Data Collection. Before the field trip to Catalonia, you prepare to collect your own spatial data: the routes you walk and the sites you record.\nMapping. After the trip, you map your field data in ArcGIS Online, turn it into a story map, and learn to work with and evaluate secondary data.\nStatistics. Finally, you use R to describe data, quantify uncertainty, and compare groups.",
-    "crumbs": [
-      "Module overview",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#moodle",
-    "href": "index.html#moodle",
-    "title": "Quantitative Skills",
-    "section": "",
-    "text": "Moodle is the central point of contact for GEOG0187 and it is where all important information will be communicated, such as session dates, group allocations and assessment information. This workbook contains the material for the Quantitative Skills sessions.",
-    "crumbs": [
-      "Module overview",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#how-the-sessions-work",
-    "href": "index.html#how-the-sessions-work",
-    "title": "Quantitative Skills",
-    "section": "",
-    "text": "Each session starts with a short introduction, after which you work through the material in this workbook at your own pace, with Affiliate Lecturers and Teaching Assistants on hand to help. Some sessions ask you to do a short task before you come to class: this is flagged at the top of the relevant chapter.",
-    "crumbs": [
-      "Module overview",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#module-overview",
-    "href": "index.html#module-overview",
-    "title": "Quantitative Skills",
-    "section": "",
-    "text": "The topics are listed below. Chapters are released ahead of each session; check Moodle for the exact dates.\n\n\n\nSession\nSection\nTopic\n\n\n\n\n1\nSpatial Data Collection\nCollecting Spatial Data\n\n\n2\nMapping\nMapping Your Field Data\n\n\n3\nMapping\nTelling Stories with Maps\n\n\n4\nMapping\nWorking with Secondary Data\n\n\n5\nStatistics\nDescribing Data\n\n\n6\nStatistics\nSamples and Uncertainty\n\n\n7\nStatistics\nComparing Groups",
-    "crumbs": [
-      "Module overview",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "Quantitative Skills",
-    "section": "",
-    "text": "This workbook is created using the Quarto publishing system. Elements of this workbook are partially based on and modified from:\n\nPrevious GEOG0013: Geography in the Field 1 GIS content created by Anwar Musah\nThe GEOG0018: Methods in Human Geography workbook by Justin van Dijk",
-    "crumbs": [
-      "Module overview",
-      "Welcome"
-    ]
-  },
-  {
-    "objectID": "03-storymap.html",
-    "href": "03-storymap.html",
-    "title": "3 Building a Story Map",
-    "section": "",
-    "text": "Last week you made a map of your group’s sites and route. This week you use it as the centre of a story map: a web page, built in ArcGIS StoryMaps, that combines text, photos, video and your interactive map to tell a short story about your theme. This is the format of the first GIS worksheet, so what you build this session is the start of your submission.\n\n\n\n\n\n\nImportantBefore the session\n\n\n\nHave the following ready:\n\nyour saved web map from last week (find it in Content → My content);\nyour group’s photos and any videos, downloaded to the laptop you will work on (your group shares these in its own OneDrive folder);\nthe worksheet brief for this task. The brief is the authority on what your story map must contain; this chapter shows you how to build it.\n\n\n\n\n\nA story map is a scrolling web page in which you can place a map block next to the text it belongs to. The reader scrolls, and can also zoom, pan and click on the map. A good story map has a clear storyline, and every photo, video and map element is there because it supports that storyline.\nYour story map must fit the theme your group was allocated for the Urban Project. Plan the storyline before you start building:\n\nWhat is the one thing you want a reader to understand about your theme in your study area?\nWhich evidence do you have for it: which sites, which photos, which part of your route?\nHow do you split it up: the worksheet limits the number of main sections, so decide what each section is for (for instance: the study area and aim, what you observed, and what you learned from the methods and experience).\n\nWrite the headings down before you open the builder. This takes five minutes and saves most of the time you would otherwise lose to rearranging blocks.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nArcGIS StoryMaps changes its layout regularly. This chapter describes what to click by its label. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.\n\n\n\n\n\n\nGo to https://uclondon.maps.arcgis.com, sign in with UCL SSO, and open StoryMaps (from the app launcher or the top menu).\nClick New story. The story builder opens: you write directly in the page, and add content with the + button that appears between blocks.\nClick the title placeholder and type your main title: short, specific, and about your theme, not just “My story map”.\nIn the cover, add your candidate number and your working group number as the subtitle. Do not put your name anywhere. If your name is shown as the author on the cover, remove it in the cover settings.\nChoose a cover design that suits your theme and a cover image from your group’s photos. \n\nYour story saves automatically as a draft in your own ArcGIS Online content.\n\n\n\nClick below the cover and start typing. Use Heading (from the text style menu) for each of your main sections, so that the story gets a clear structure and a navigation bar. Keep paragraphs short: people read web pages differently from essays.\nWrite for a reader who was not on the trip. The text has to explain the aim, the place, and what you did and learned, in your own words. The worksheet sets the word limit.\n\n\n\n\nClick + where the map should go and choose Map.\nSelect My content, and choose the web map you saved last week. Click Add.\nIf asked about sharing, agree to share the map at the same level as the story (you will make the story public at the end; see Share and submit).\nUse the map block’s Options to switch on the legend and the zoom buttons, and to set the starting view to your study area.\nClick a point to check that the pop-up still shows the site ID, note and photo. \n\nIf you want the map to change as the reader scrolls through the text, try a Sidecar or Immersive block: they place the text in a panel that scrolls over a full-screen map. It is nice to have, not a requirement.\n\n\n\n\n\n\nNoteThe map lives in two places\n\n\n\nYour web map is a separate item from your story. If you change the map later (for example, to restyle a layer), those changes show up in the story automatically. Do not delete the web map or its layers before you have submitted.\n\n\n\n\n\n\nClick + → Image and upload a photo from your computer. Resize large photos first if uploads are slow.\nAdd a caption under every photo that says what it shows and why it matters for your story. If it comes from your group’s shared folder, say so.\nAdd alt text so the image can be understood by someone using a screen reader. \n\nChoose photos that support your argument. Five good photos you can refer to in the text are better than fifteen that only decorate the page.\n\n\n\nShort clips from the field can add atmosphere or an interview that photos cannot show.\n\nClick + → Video.\nEither Upload the file, or paste a link from a video site.\nAdd a caption.\n\nKeep clips short, and check the worksheet for how many are allowed and how long they may be. Only include people who have agreed to be filmed.\n\n\n\nYou submit the link to your story map, so anyone with the link must be able to open it.\n\nClick Share (top right) and set the visibility to Everyone (public). Make sure the web map and its layers are shared at the same level if the builder asks.\nClick Publish. Copy the story’s URL.\nOpen the URL in a private/incognito browser window. This shows you what a marker will see. Check that the map, pop-ups, photos and video all work without being signed in.\n\nThe submission itself (the cover sheet with your link) is explained in the worksheet brief and on Moodle.\n\n\n\nBy the end of the session your story map should have:\n\na title, your candidate number and group number, and no name;\nyour main headings in place, even if some are still empty;\nyour web map embedded, with legend and zoom, and working pop-ups;\nat least one photo with a caption;\na link that opens when you are signed out.\n\nYou have until the worksheet deadline to finish. Use the remaining time for the text, the remaining photos and videos, and for checking your story map against the brief.\n\n\n\n\n\n\n\n\n\n\nProblem\nWhat to try\n\n\n\n\nI cannot find my web map\nContent → My content, or search for GEOG0187. Save it first if you did not last week.\n\n\nThe map shows no pop-up photos\nOpen the web map again and check Attachments is on under Pop-ups.\n\n\nThe map does not load when signed out\nShare the web map and its layers with Everyone (public), then reload in a private window.\n\n\nMy name is shown on the cover\nRemove it from the author setting in the cover options. Submissions are marked anonymously.\n\n\nPhoto or video upload fails\nReduce the file size, try a different browser, or use a link for the video.\n\n\nI lost my story\nStoryMaps → My stories. Drafts are saved automatically.",
+    "text": "So far you have mapped data that you collected. Most of the maps you will meet in geography, however, are made from secondary data: data collected by someone else, for their own purposes, and made available for others to reuse. This week you learn to find such data, put it on a map, and ask whether it is fit for the question you want to answer. This is the skill behind the second GIS worksheet.\n\n\n\n\n\n\nImportantBefore the session\n\n\n\nSign in to ArcGIS Online with UCL SSO (see Open Map Viewer) and have a browser open. Know your fieldwork city: Barcelona if you went on the Catalonia trip, London otherwise. Everyone does the same exercise, with a different data pack.\n\n\n\n\nSecondary data are produced by organisations: statistical agencies, city councils, researchers or companies. Before you use any of them, find out five things. You will need them for your own referencing, and for the critical evaluation the worksheet asks for.\n\n\n\n\n\n\n\nQuestion\nExample\n\n\n\n\nWhat does it measure?\nDisposable household income per person (€)\n\n\nWho produced it, and why?\nBarcelona City Council, to monitor inequality\n\n\nHow was it collected or estimated?\nEstimated from tax records and surveys, not a count of every household\n\n\nWhen does it refer to?\nIncome in 2023\n\n\nWhere: for which areas?\n1,068 census sections\n\n\n\nYou usually find these answers in the dataset’s description or metadata page, which is part of why you should always start there and not with the map.\n\n\n\nA choropleth map shades areas (polygons) by the value of a numerical variable, such as income, density or deprivation. They are easy to make and easy to get wrong, because each of the following choices changes what the map seems to say:\n\nThe variable. Use rates or averages (income per person, % of residents) rather than raw totals (total income): areas with more people will otherwise look “bigger” for no interesting reason.\nThe classes. The values are split into groups, each with a colour. With equal intervals the classes have the same width; with quantiles they have the same number of areas. The same data can look very different.\nThe colours. Use a single-hue ramp from light to dark for values that go from low to high. Avoid rainbow palettes.\nThe scale. The same variable can look different for small areas than for large ones. Averaging over a large area hides differences inside it.\n\n\n\n\nOpen a new map (Map) and pick a quiet basemap. Then follow the instructions for your city.\n\n\n\nClick Add → Browse layers → My organization, and search for GEOG0187 Barcelona.\nAdd GEOG0187 Barcelona - Census sections (income). It has one polygon per census section (the smallest statistical area) and these attributes:\n\ndisp_income_pc_2023_eur: disposable household income per person, 2023;\nmean_taxable_income_2024_eur: mean taxable income per unit of consumption, 2024;\ngini_2024_pct: the Gini index of tax income, 2024 (higher means a more unequal distribution).\n\nAdd GEOG0187 Barcelona - Neighbourhoods and GEOG0187 Barcelona - Districts: boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.\n\n\n\n\n\n\n\nNoteData source\n\n\n\nBarcelona City Council, Open Data BCN (CC BY 4.0), based on the Idescat income account and the INE Household Income Distribution Atlas. Sections, neighbourhoods and districts come from the Administrative units of the city of Barcelona dataset.\n\n\n\n\n\n\nClick Add → Browse layers → ArcGIS Online, and search for Lower Super Output Area (LSOA) IMD2019 (WGS84) from gis@communities.gov.uk.\nAdd the layer. It holds one polygon for every LSOA in England (areas of about 1,500 residents), with the Index of Multiple Deprivation (2019) rank and decile.\nTo see only London, use Filter: lsoa11nm starts with the name of a borough (for example Camden). Add more conditions with or for the other boroughs you want.\nUse the borough names as your context: turn on Labels for a borough’s LSOAs, or add a boundary layer for the London boroughs.\n\n\n\n\n\n\n\nNoteData source\n\n\n\nMinistry of Housing, Communities & Local Government, English Indices of Deprivation 2019 (Open Government Licence v3.0).\n\n\n\n\n\n\n\nSelect the main layer and click Styles.\nUnder Choose attributes, pick the numerical variable (Barcelona: disp_income_pc_2023_eur; London: IMDRank), then choose Counts and Amounts (Color) and click Style options.\nUnder Classify data, try Natural breaks, Quantile and Equal interval, with 5 classes each time. Look at how the map changes.\nChoose one single-hue colour ramp. Switch off or thin the outlines of the polygons if they clutter the map.\nCheck the legend: it should say what is being shown and in which units.\n\nPick the classification you can best defend, and be ready to explain why.\n\n\n\n\nPut the neighbourhoods and districts layers above your income layer and set their fill to none, with a visible outline.\nZoom into one district. How much does income vary between the sections within a neighbourhood, compared with between neighbourhoods?\n\nLondon users: do the same with the boroughs. Why might a borough-level average hide a lot?\n\n\n\nPop-ups should do more than show numbers.\n\nSelect the main layer and click Pop-ups.\nSet the title to the neighbourhood (Barcelona) or the LSOA name (London).\nShow the value with a clear name and unit, e.g. Disposable income per person (2023): €{disp_income_pc_2023_eur}.\nAdd a short interpretive note: one sentence on what the value means in context.\nClick a few areas to check.\n\n\n\n\nChoose one variable from your pack and answer the five questions from Secondary data and where it comes from. Then add two or three limitations. Think about:\n\nScale: what is hidden by showing averages for areas?\nCompleteness: are there areas missing? In the Barcelona layer, mean_taxable_income_2024_eur is empty for three sections: why might data be missing?\nMethod: is it a count, an estimate or a model? (The London index gives ranks: what does a rank not tell you?)\nTime: is the year the same as your fieldwork?\nBias: who is more likely to be missing from, or poorly represented in, the underlying data?\n\nWrite your answers as notes; you will need them for the worksheet.\n\n\n\nSave and open → Save as, with a title like GEOG0187 – Secondary data – Surname. You will build on this map for the second story map.\n\n\n\n\nyour main layer shaded by one numerical variable;\na context layer (boundaries) on the map;\na legend that explains the variable and units;\na pop-up with a value and an interpretive note;\nnotes on the five questions and two or three limitations of your data.\n\n\n\n\nFor the worksheet you do not have to use the pack above. Good places to look:\n\nArcGIS Living Atlas: Add → Browse layers → Living Atlas.\nOpen Data BCN (opendata-ajuntament.barcelona.cat) for Barcelona.\nLondon Datastore (data.london.gov.uk), ONS (ons.gov.uk) and data.gov.uk for London and the UK.\n\nCheck the licence, and always record the name, publisher and year for your references.\n\n\n\n\n\n\n\n\n\n\nProblem\nWhat to try\n\n\n\n\nThe Barcelona layers do not appear\nSearch My organization, not My content, and check you signed in through UCL SSO. Tell staff if the layers are missing.\n\n\nThe London layer is slow or looks wrong\nApply the borough filter first, then zoom in.\n\n\nThe map looks all one colour\nCheck the classification and the number of classes. Try quantile.\n\n\nThe legend shows odd numbers\nEdit the legend labels, or round the values in the style options.\n\n\nA value is empty in the pop-up\nThe data may be missing for that area. Say so in your evaluation.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#what-is-a-story-map",
-    "href": "03-storymap.html#what-is-a-story-map",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#secondary-data-and-where-it-comes-from",
+    "href": "04-secondary.html#secondary-data-and-where-it-comes-from",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "A story map is a scrolling web page in which you can place a map block next to the text it belongs to. The reader scrolls, and can also zoom, pan and click on the map. A good story map has a clear storyline, and every photo, video and map element is there because it supports that storyline.\nYour story map must fit the theme your group was allocated for the Urban Project. Plan the storyline before you start building:\n\nWhat is the one thing you want a reader to understand about your theme in your study area?\nWhich evidence do you have for it: which sites, which photos, which part of your route?\nHow do you split it up: the worksheet limits the number of main sections, so decide what each section is for (for instance: the study area and aim, what you observed, and what you learned from the methods and experience).\n\nWrite the headings down before you open the builder. This takes five minutes and saves most of the time you would otherwise lose to rearranging blocks.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nArcGIS StoryMaps changes its layout regularly. This chapter describes what to click by its label. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.",
+    "text": "Secondary data are produced by organisations: statistical agencies, city councils, researchers or companies. Before you use any of them, find out five things. You will need them for your own referencing, and for the critical evaluation the worksheet asks for.\n\n\n\n\n\n\n\nQuestion\nExample\n\n\n\n\nWhat does it measure?\nDisposable household income per person (€)\n\n\nWho produced it, and why?\nBarcelona City Council, to monitor inequality\n\n\nHow was it collected or estimated?\nEstimated from tax records and surveys, not a count of every household\n\n\nWhen does it refer to?\nIncome in 2023\n\n\nWhere: for which areas?\n1,068 census sections\n\n\n\nYou usually find these answers in the dataset’s description or metadata page, which is part of why you should always start there and not with the map.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#create-the-story",
-    "href": "03-storymap.html#create-the-story",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#choropleth-maps",
+    "href": "04-secondary.html#choropleth-maps",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "Go to https://uclondon.maps.arcgis.com, sign in with UCL SSO, and open StoryMaps (from the app launcher or the top menu).\nClick New story. The story builder opens: you write directly in the page, and add content with the + button that appears between blocks.\nClick the title placeholder and type your main title: short, specific, and about your theme, not just “My story map”.\nIn the cover, add your candidate number and your working group number as the subtitle. Do not put your name anywhere. If your name is shown as the author on the cover, remove it in the cover settings.\nChoose a cover design that suits your theme and a cover image from your group’s photos. \n\nYour story saves automatically as a draft in your own ArcGIS Online content.",
+    "text": "A choropleth map shades areas (polygons) by the value of a numerical variable, such as income, density or deprivation. They are easy to make and easy to get wrong, because each of the following choices changes what the map seems to say:\n\nThe variable. Use rates or averages (income per person, % of residents) rather than raw totals (total income): areas with more people will otherwise look “bigger” for no interesting reason.\nThe classes. The values are split into groups, each with a colour. With equal intervals the classes have the same width; with quantiles they have the same number of areas. The same data can look very different.\nThe colours. Use a single-hue ramp from light to dark for values that go from low to high. Avoid rainbow palettes.\nThe scale. The same variable can look different for small areas than for large ones. Averaging over a large area hides differences inside it.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#add-your-text",
-    "href": "03-storymap.html#add-your-text",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#add-your-data-pack",
+    "href": "04-secondary.html#add-your-data-pack",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "Click below the cover and start typing. Use Heading (from the text style menu) for each of your main sections, so that the story gets a clear structure and a navigation bar. Keep paragraphs short: people read web pages differently from essays.\nWrite for a reader who was not on the trip. The text has to explain the aim, the place, and what you did and learned, in your own words. The worksheet sets the word limit.",
+    "text": "Open a new map (Map) and pick a quiet basemap. Then follow the instructions for your city.\n\n\n\nClick Add → Browse layers → My organization, and search for GEOG0187 Barcelona.\nAdd GEOG0187 Barcelona - Census sections (income). It has one polygon per census section (the smallest statistical area) and these attributes:\n\ndisp_income_pc_2023_eur: disposable household income per person, 2023;\nmean_taxable_income_2024_eur: mean taxable income per unit of consumption, 2024;\ngini_2024_pct: the Gini index of tax income, 2024 (higher means a more unequal distribution).\n\nAdd GEOG0187 Barcelona - Neighbourhoods and GEOG0187 Barcelona - Districts: boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.\n\n\n\n\n\n\n\nNoteData source\n\n\n\nBarcelona City Council, Open Data BCN (CC BY 4.0), based on the Idescat income account and the INE Household Income Distribution Atlas. Sections, neighbourhoods and districts come from the Administrative units of the city of Barcelona dataset.\n\n\n\n\n\n\nClick Add → Browse layers → ArcGIS Online, and search for Lower Super Output Area (LSOA) IMD2019 (WGS84) from gis@communities.gov.uk.\nAdd the layer. It holds one polygon for every LSOA in England (areas of about 1,500 residents), with the Index of Multiple Deprivation (2019) rank and decile.\nTo see only London, use Filter: lsoa11nm starts with the name of a borough (for example Camden). Add more conditions with or for the other boroughs you want.\nUse the borough names as your context: turn on Labels for a borough’s LSOAs, or add a boundary layer for the London boroughs.\n\n\n\n\n\n\n\nNoteData source\n\n\n\nMinistry of Housing, Communities & Local Government, English Indices of Deprivation 2019 (Open Government Licence v3.0).",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#add-your-map",
-    "href": "03-storymap.html#add-your-map",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#make-the-choropleth",
+    "href": "04-secondary.html#make-the-choropleth",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "Click + where the map should go and choose Map.\nSelect My content, and choose the web map you saved last week. Click Add.\nIf asked about sharing, agree to share the map at the same level as the story (you will make the story public at the end; see Share and submit).\nUse the map block’s Options to switch on the legend and the zoom buttons, and to set the starting view to your study area.\nClick a point to check that the pop-up still shows the site ID, note and photo. \n\nIf you want the map to change as the reader scrolls through the text, try a Sidecar or Immersive block: they place the text in a panel that scrolls over a full-screen map. It is nice to have, not a requirement.\n\n\n\n\n\n\nNoteThe map lives in two places\n\n\n\nYour web map is a separate item from your story. If you change the map later (for example, to restyle a layer), those changes show up in the story automatically. Do not delete the web map or its layers before you have submitted.",
+    "text": "Select the main layer and click Styles.\nUnder Choose attributes, pick the numerical variable (Barcelona: disp_income_pc_2023_eur; London: IMDRank), then choose Counts and Amounts (Color) and click Style options.\nUnder Classify data, try Natural breaks, Quantile and Equal interval, with 5 classes each time. Look at how the map changes.\nChoose one single-hue colour ramp. Switch off or thin the outlines of the polygons if they clutter the map.\nCheck the legend: it should say what is being shown and in which units.\n\nPick the classification you can best defend, and be ready to explain why.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#add-photos-and-captions",
-    "href": "03-storymap.html#add-photos-and-captions",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#compare-scales-barcelona",
+    "href": "04-secondary.html#compare-scales-barcelona",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "Click + → Image and upload a photo from your computer. Resize large photos first if uploads are slow.\nAdd a caption under every photo that says what it shows and why it matters for your story. If it comes from your group’s shared folder, say so.\nAdd alt text so the image can be understood by someone using a screen reader. \n\nChoose photos that support your argument. Five good photos you can refer to in the text are better than fifteen that only decorate the page.",
+    "text": "Put the neighbourhoods and districts layers above your income layer and set their fill to none, with a visible outline.\nZoom into one district. How much does income vary between the sections within a neighbourhood, compared with between neighbourhoods?\n\nLondon users: do the same with the boroughs. Why might a borough-level average hide a lot?",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#add-video",
-    "href": "03-storymap.html#add-video",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#write-the-pop-up",
+    "href": "04-secondary.html#write-the-pop-up",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "Short clips from the field can add atmosphere or an interview that photos cannot show.\n\nClick + → Video.\nEither Upload the file, or paste a link from a video site.\nAdd a caption.\n\nKeep clips short, and check the worksheet for how many are allowed and how long they may be. Only include people who have agreed to be filmed.",
+    "text": "Pop-ups should do more than show numbers.\n\nSelect the main layer and click Pop-ups.\nSet the title to the neighbourhood (Barcelona) or the LSOA name (London).\nShow the value with a clear name and unit, e.g. Disposable income per person (2023): €{disp_income_pc_2023_eur}.\nAdd a short interpretive note: one sentence on what the value means in context.\nClick a few areas to check.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#share-and-submit",
-    "href": "03-storymap.html#share-and-submit",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#evaluate-your-data",
+    "href": "04-secondary.html#evaluate-your-data",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "You submit the link to your story map, so anyone with the link must be able to open it.\n\nClick Share (top right) and set the visibility to Everyone (public). Make sure the web map and its layers are shared at the same level if the builder asks.\nClick Publish. Copy the story’s URL.\nOpen the URL in a private/incognito browser window. This shows you what a marker will see. Check that the map, pop-ups, photos and video all work without being signed in.\n\nThe submission itself (the cover sheet with your link) is explained in the worksheet brief and on Moodle.",
+    "text": "Choose one variable from your pack and answer the five questions from Secondary data and where it comes from. Then add two or three limitations. Think about:\n\nScale: what is hidden by showing averages for areas?\nCompleteness: are there areas missing? In the Barcelona layer, mean_taxable_income_2024_eur is empty for three sections: why might data be missing?\nMethod: is it a count, an estimate or a model? (The London index gives ranks: what does a rank not tell you?)\nTime: is the year the same as your fieldwork?\nBias: who is more likely to be missing from, or poorly represented in, the underlying data?\n\nWrite your answers as notes; you will need them for the worksheet.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#check-before-you-leave",
-    "href": "03-storymap.html#check-before-you-leave",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#save-your-map",
+    "href": "04-secondary.html#save-your-map",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "By the end of the session your story map should have:\n\na title, your candidate number and group number, and no name;\nyour main headings in place, even if some are still empty;\nyour web map embedded, with legend and zoom, and working pop-ups;\nat least one photo with a caption;\na link that opens when you are signed out.\n\nYou have until the worksheet deadline to finish. Use the remaining time for the text, the remaining photos and videos, and for checking your story map against the brief.",
+    "text": "Save and open → Save as, with a title like GEOG0187 – Secondary data – Surname. You will build on this map for the second story map.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
     ]
   },
   {
-    "objectID": "03-storymap.html#troubleshooting",
-    "href": "03-storymap.html#troubleshooting",
-    "title": "3 Building a Story Map",
+    "objectID": "04-secondary.html#check-before-you-leave",
+    "href": "04-secondary.html#check-before-you-leave",
+    "title": "4 Using Secondary Data",
     "section": "",
-    "text": "Problem\nWhat to try\n\n\n\n\nI cannot find my web map\nContent → My content, or search for GEOG0187. Save it first if you did not last week.\n\n\nThe map shows no pop-up photos\nOpen the web map again and check Attachments is on under Pop-ups.\n\n\nThe map does not load when signed out\nShare the web map and its layers with Everyone (public), then reload in a private window.\n\n\nMy name is shown on the cover\nRemove it from the author setting in the cover options. Submissions are marked anonymously.\n\n\nPhoto or video upload fails\nReduce the file size, try a different browser, or use a link for the video.\n\n\nI lost my story\nStoryMaps → My stories. Drafts are saved automatically.",
+    "text": "your main layer shaded by one numerical variable;\na context layer (boundaries) on the map;\na legend that explains the variable and units;\na pop-up with a value and an interpretive note;\nnotes on the five questions and two or three limitations of your data.",
     "crumbs": [
       "Mapping",
-      "3 Building a Story Map"
+      "4 Using Secondary Data"
+    ]
+  },
+  {
+    "objectID": "04-secondary.html#find-your-own-data",
+    "href": "04-secondary.html#find-your-own-data",
+    "title": "4 Using Secondary Data",
+    "section": "",
+    "text": "For the worksheet you do not have to use the pack above. Good places to look:\n\nArcGIS Living Atlas: Add → Browse layers → Living Atlas.\nOpen Data BCN (opendata-ajuntament.barcelona.cat) for Barcelona.\nLondon Datastore (data.london.gov.uk), ONS (ons.gov.uk) and data.gov.uk for London and the UK.\n\nCheck the licence, and always record the name, publisher and year for your references.",
+    "crumbs": [
+      "Mapping",
+      "4 Using Secondary Data"
+    ]
+  },
+  {
+    "objectID": "04-secondary.html#troubleshooting",
+    "href": "04-secondary.html#troubleshooting",
+    "title": "4 Using Secondary Data",
+    "section": "",
+    "text": "Problem\nWhat to try\n\n\n\n\nThe Barcelona layers do not appear\nSearch My organization, not My content, and check you signed in through UCL SSO. Tell staff if the layers are missing.\n\n\nThe London layer is slow or looks wrong\nApply the borough filter first, then zoom in.\n\n\nThe map looks all one colour\nCheck the classification and the number of classes. Try quantile.\n\n\nThe legend shows odd numbers\nEdit the legend labels, or round the values in the style options.\n\n\nA value is empty in the pop-up\nThe data may be missing for that area. Say so in your evaluation.",
+    "crumbs": [
+      "Mapping",
+      "4 Using Secondary Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html",
+    "href": "01-fieldwork.html",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "On the field trip to Catalonia your group will collect its own spatial data: the route you walk, and the sites you record for your Urban Project. After the trip, in the Mapping sessions, you will put these data on a map, combine them with other data, and build a story map. Data you do not collect in Catalonia cannot be collected afterwards, so this week is about making sure everything works before you travel.\n\n\n\n\n\n\nImportantBefore the session: set up and test walk\n\n\n\nWork through Before the session below. It takes about 20 minutes, most of it walking. There is nothing to hand in: just bring your phone, with your test walk saved in Strava, to the session.\n\n\n\n\nAlmost everything geographers study happens somewhere. Spatial data record not only what something is, but also where it is. A photo of a street vendor is data; the same photo together with the coordinates of where it was taken is spatial data, because it can be placed on a map and related to everything else around it: the route you walked, the neighbourhood it sits in, or census statistics for that area.\nMost spatial data take one of three basic shapes:\n\nPoints: a single location, such as a site you record or a bus stop.\nLines: a sequence of locations, such as the route you walk.\nPolygons: an area with a boundary, such as a neighbourhood or a census district.\n\nLocations are stored as coordinates: latitude, the position north or south of the equator, and longitude, the position east or west of the meridian through Greenwich. Plaça de Catalunya in Barcelona, for instance, is at about 41.387° N, 2.170° E. Your phone works out its coordinates from satellite positioning (GPS). Outdoors this is typically accurate to within 5 to 10 metres, but it gets worse between tall buildings and indoors, which is worth keeping in mind when you record sites in narrow streets.\nA geographic information system (GIS) is software for storing, combining, analysing and mapping spatial data. Because every record has a location, a GIS can overlay datasets that were collected separately, such as your sites, your route, a street map and census data, and help answer questions about where things happen and what is near what. In this module we use ArcGIS Online, a GIS that runs in your web browser.\n\n\n\nYour group collects two datasets: your route as a line, and your sites as points. You collect each with a different tool:\n\n\n\nWhat\nTool\nHow it works\n\n\n\n\nYour route\nStrava\nA phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a .gpx file.\n\n\nYour sites\nUCL Geography Field Survey\nA web form that opens in your phone’s browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no copying of coordinates by hand.\n\n\n\nEveryone records the route on their own phone, so you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites only need to be submitted once per working group, so you will agree who does that.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nApps and websites change their layout regularly. This chapter therefore describes what to tap by its label (e.g. Record) rather than showing screenshots. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.\n\n\n\n\n\nDo this in the week before the session.\n\n\n\nInstall Strava from the App Store or Google Play and create a free account. You do not need a paid subscription. Remember your login details: you will need them on the Strava website later.\nWhen asked, allow location access While Using the App.\nMake your activities private: tap the You tab, then the settings cog (top right), and go to Privacy Controls → Activities → Only You. You can still export private activities.\n\n\n\n\n\nBoth Strava and your web browser (for the field survey) need access to your location. On an iPhone, both settings are under Settings → Apps:\n\nStrava: Settings → Apps → Strava → Location. Select While Using the App and keep Precise Location switched on.\n\nSafari: Settings → Apps → Safari, then scroll a long way down to Location. Select Allow or Ask, not Deny.\n\n\nOn Android, go to Settings → Apps → Strava → Permissions → Location, choose Allow only while using the app and switch on Use precise location. Do the same for Chrome.\n\n\n\n\nOpen the UCL Geography Field Survey on your phone. It opens in your browser; there is nothing to install.\nSign in with your UCL account. If you are asked for Your ArcGIS organization’s URL, type uclondon, tap Continue, then UCL SSO, and sign in as you would for Moodle. You do not need to fill in the survey yet.\n\n\n\n\n\n\n\nTipSave it to your home screen\n\n\n\nTo find the survey quickly in the field, in Safari use Share → Add to Home Screen; in Chrome use the ⋮ menu → Add to Home screen.\n\n\n\n\n\n\nSomewhere outside, open Strava, tap Record, choose Walk as the activity type, and start. You can lock your phone; Strava keeps recording.\nWalk for about 10 minutes.\nStop Strava (Stop → Finish), name the activity GEOG0187 test walk, and Save it.\nCheck that your route looks right on the map, and notice how much battery the walk used.\n\n\n\n\n\nYour phone, charged, with the test walk saved in Strava.\nYour Strava login details.\nAnything that did not work, or that you were unsure about.\n\n\n\n\n\nWe start with a live demonstration: your Affiliate Lecturer has done the same test walk with the same instructions, and will show how to get the route out of Strava, how to fill in the field survey, and what the data look like in ArcGIS Online. You then do the same:\n\nExport your test walk. The .gpx file can only be downloaded from the Strava website, not from the app, so use a laptop or computer. Log in at strava.com, open your test walk, open the ⋯ (more actions) menu next to the activity and choose Export GPX. Check that a .gpx file has been downloaded. \nTry the field survey. Open the survey from your home screen and submit one test entry from the room:\n\nData collection: select Fieldwork - Test.\nGroup number: 0.\nSite ID: S00.\nLocation: tap Allow when asked, and check the dot on the map is roughly where you are. If it is off, wait a few seconds or drag it to the right spot.\nPhoto and a short note: anything will do.\nTap Submit and check that you see a confirmation. \n\nFix problems. Work through anything that did not work with the people around you and with staff. The troubleshooting table covers the most common issues.\nPlan as a working group. Agree who submits the sites (one or two people, so that each site is entered only once) and who takes over if their phone runs out of battery. Agree how your sites relate to your Urban Project theme.\nAgree on site IDs. Number your sites S01, S02, S03, and so on, per group, and enter the same ID in the survey and on any notes, photos or recordings you make outside it. That is how you will match them to your points on the map later.\n\nBy the end of the session everyone should have exported a .gpx file and submitted one test entry from their own phone.\n\n\n\n\nEveryone starts Strava when your group starts walking, and stops it when you finish. One recording per outing is fine; you can have several.\nSubmit one survey entry per site, while you are standing at the site, with Data collection set to your fieldwork group (not Fieldwork - Test) and your own working group number.\nCharge your phone every night and bring a power bank if you have one. GPS and the camera use a lot of battery.\nNo signal or no mobile data? Strava keeps recording without data and uploads when you are back online. The survey needs a connection to submit: if you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. Check your phone contract for roaming charges before you go.\nBe considerate. Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.\n\n\n\n\nYour sites are already in ArcGIS Online. Before the next session:\n\nExport your own route. Download the .gpx file(s) of your recordings from the Strava website, as in the session. If your recording failed, ask someone in your working group for a copy of theirs.\nShare everything else. Put extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. Avoid WhatsApp for photos: it compresses them and removes their location information.\n\n\n\n\n\n\n\n\n\n\n\nProblem\nWhat to try\n\n\n\n\nStrava does not record, or the route is a straight line\nCheck location access is set to While Using the App with Precise Location on. Do not force-close the app while recording. Turn off Low Power Mode if the route has gaps.\n\n\nNo Export GPX option\nUse the Strava website on a laptop, not the app or a phone browser. You can only export your own activities.\n\n\nThe survey asks me to sign in again\nSign in as in the setup: organisation URL uclondon, then UCL SSO. You may need to do this again after a while, also in Catalonia.\n\n\nThe survey cannot find my location\nAllow location for your browser (see above), then reload the form. Indoors or between tall buildings it can take a little while; step into the open.\n\n\nThe point is in the wrong place\nDrag the dot on the map to the correct location before submitting.\n\n\nNo confirmation after Submit\nCheck you have a connection, then tap Submit again. Required fields that are missing are highlighted in the form.\n\n\nPhoto will not upload\nTry again on wifi, or submit without the photo and note the site ID on the photo instead.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html#spatial-data-and-gis",
+    "href": "01-fieldwork.html#spatial-data-and-gis",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "Almost everything geographers study happens somewhere. Spatial data record not only what something is, but also where it is. A photo of a street vendor is data; the same photo together with the coordinates of where it was taken is spatial data, because it can be placed on a map and related to everything else around it: the route you walked, the neighbourhood it sits in, or census statistics for that area.\nMost spatial data take one of three basic shapes:\n\nPoints: a single location, such as a site you record or a bus stop.\nLines: a sequence of locations, such as the route you walk.\nPolygons: an area with a boundary, such as a neighbourhood or a census district.\n\nLocations are stored as coordinates: latitude, the position north or south of the equator, and longitude, the position east or west of the meridian through Greenwich. Plaça de Catalunya in Barcelona, for instance, is at about 41.387° N, 2.170° E. Your phone works out its coordinates from satellite positioning (GPS). Outdoors this is typically accurate to within 5 to 10 metres, but it gets worse between tall buildings and indoors, which is worth keeping in mind when you record sites in narrow streets.\nA geographic information system (GIS) is software for storing, combining, analysing and mapping spatial data. Because every record has a location, a GIS can overlay datasets that were collected separately, such as your sites, your route, a street map and census data, and help answer questions about where things happen and what is near what. In this module we use ArcGIS Online, a GIS that runs in your web browser.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html#what-you-will-collect",
+    "href": "01-fieldwork.html#what-you-will-collect",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "Your group collects two datasets: your route as a line, and your sites as points. You collect each with a different tool:\n\n\n\nWhat\nTool\nHow it works\n\n\n\n\nYour route\nStrava\nA phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a .gpx file.\n\n\nYour sites\nUCL Geography Field Survey\nA web form that opens in your phone’s browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no copying of coordinates by hand.\n\n\n\nEveryone records the route on their own phone, so you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites only need to be submitted once per working group, so you will agree who does that.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nApps and websites change their layout regularly. This chapter therefore describes what to tap by its label (e.g. Record) rather than showing screenshots. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html#before-the-session",
+    "href": "01-fieldwork.html#before-the-session",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "Do this in the week before the session.\n\n\n\nInstall Strava from the App Store or Google Play and create a free account. You do not need a paid subscription. Remember your login details: you will need them on the Strava website later.\nWhen asked, allow location access While Using the App.\nMake your activities private: tap the You tab, then the settings cog (top right), and go to Privacy Controls → Activities → Only You. You can still export private activities.\n\n\n\n\n\nBoth Strava and your web browser (for the field survey) need access to your location. On an iPhone, both settings are under Settings → Apps:\n\nStrava: Settings → Apps → Strava → Location. Select While Using the App and keep Precise Location switched on.\n\nSafari: Settings → Apps → Safari, then scroll a long way down to Location. Select Allow or Ask, not Deny.\n\n\nOn Android, go to Settings → Apps → Strava → Permissions → Location, choose Allow only while using the app and switch on Use precise location. Do the same for Chrome.\n\n\n\n\nOpen the UCL Geography Field Survey on your phone. It opens in your browser; there is nothing to install.\nSign in with your UCL account. If you are asked for Your ArcGIS organization’s URL, type uclondon, tap Continue, then UCL SSO, and sign in as you would for Moodle. You do not need to fill in the survey yet.\n\n\n\n\n\n\n\nTipSave it to your home screen\n\n\n\nTo find the survey quickly in the field, in Safari use Share → Add to Home Screen; in Chrome use the ⋮ menu → Add to Home screen.\n\n\n\n\n\n\nSomewhere outside, open Strava, tap Record, choose Walk as the activity type, and start. You can lock your phone; Strava keeps recording.\nWalk for about 10 minutes.\nStop Strava (Stop → Finish), name the activity GEOG0187 test walk, and Save it.\nCheck that your route looks right on the map, and notice how much battery the walk used.\n\n\n\n\n\nYour phone, charged, with the test walk saved in Strava.\nYour Strava login details.\nAnything that did not work, or that you were unsure about.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html#in-the-session",
+    "href": "01-fieldwork.html#in-the-session",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "We start with a live demonstration: your Affiliate Lecturer has done the same test walk with the same instructions, and will show how to get the route out of Strava, how to fill in the field survey, and what the data look like in ArcGIS Online. You then do the same:\n\nExport your test walk. The .gpx file can only be downloaded from the Strava website, not from the app, so use a laptop or computer. Log in at strava.com, open your test walk, open the ⋯ (more actions) menu next to the activity and choose Export GPX. Check that a .gpx file has been downloaded. \nTry the field survey. Open the survey from your home screen and submit one test entry from the room:\n\nData collection: select Fieldwork - Test.\nGroup number: 0.\nSite ID: S00.\nLocation: tap Allow when asked, and check the dot on the map is roughly where you are. If it is off, wait a few seconds or drag it to the right spot.\nPhoto and a short note: anything will do.\nTap Submit and check that you see a confirmation. \n\nFix problems. Work through anything that did not work with the people around you and with staff. The troubleshooting table covers the most common issues.\nPlan as a working group. Agree who submits the sites (one or two people, so that each site is entered only once) and who takes over if their phone runs out of battery. Agree how your sites relate to your Urban Project theme.\nAgree on site IDs. Number your sites S01, S02, S03, and so on, per group, and enter the same ID in the survey and on any notes, photos or recordings you make outside it. That is how you will match them to your points on the map later.\n\nBy the end of the session everyone should have exported a .gpx file and submitted one test entry from their own phone.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html#in-catalonia",
+    "href": "01-fieldwork.html#in-catalonia",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "Everyone starts Strava when your group starts walking, and stops it when you finish. One recording per outing is fine; you can have several.\nSubmit one survey entry per site, while you are standing at the site, with Data collection set to your fieldwork group (not Fieldwork - Test) and your own working group number.\nCharge your phone every night and bring a power bank if you have one. GPS and the camera use a lot of battery.\nNo signal or no mobile data? Strava keeps recording without data and uploads when you are back online. The survey needs a connection to submit: if you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. Check your phone contract for roaming charges before you go.\nBe considerate. Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html#after-the-trip",
+    "href": "01-fieldwork.html#after-the-trip",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "Your sites are already in ArcGIS Online. Before the next session:\n\nExport your own route. Download the .gpx file(s) of your recordings from the Strava website, as in the session. If your recording failed, ask someone in your working group for a copy of theirs.\nShare everything else. Put extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. Avoid WhatsApp for photos: it compresses them and removes their location information.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
+    ]
+  },
+  {
+    "objectID": "01-fieldwork.html#troubleshooting",
+    "href": "01-fieldwork.html#troubleshooting",
+    "title": "1 Collecting Spatial Data",
+    "section": "",
+    "text": "Problem\nWhat to try\n\n\n\n\nStrava does not record, or the route is a straight line\nCheck location access is set to While Using the App with Precise Location on. Do not force-close the app while recording. Turn off Low Power Mode if the route has gaps.\n\n\nNo Export GPX option\nUse the Strava website on a laptop, not the app or a phone browser. You can only export your own activities.\n\n\nThe survey asks me to sign in again\nSign in as in the setup: organisation URL uclondon, then UCL SSO. You may need to do this again after a while, also in Catalonia.\n\n\nThe survey cannot find my location\nAllow location for your browser (see above), then reload the form. Indoors or between tall buildings it can take a little while; step into the open.\n\n\nThe point is in the wrong place\nDrag the dot on the map to the correct location before submitting.\n\n\nNo confirmation after Submit\nCheck you have a connection, then tap Submit again. Required fields that are missing are highlighted in the form.\n\n\nPhoto will not upload\nTry again on wifi, or submit without the photo and note the site ID on the photo instead.",
+    "crumbs": [
+      "Spatial Data Collection",
+      "1 Collecting Spatial Data"
     ]
   },
   {
@@ -297,91 +341,179 @@
     ]
   },
   {
-    "objectID": "01-fieldwork.html",
-    "href": "01-fieldwork.html",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html",
+    "href": "03-storymap.html",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "On the field trip to Catalonia your group will collect its own spatial data: the route you walk, and the sites you record for your Urban Project. After the trip, in the Mapping sessions, you will put these data on a map, combine them with other data, and build a story map. Data you do not collect in Catalonia cannot be collected afterwards, so this week is about making sure everything works before you travel.\n\n\n\n\n\n\nImportantBefore the session: set up and test walk\n\n\n\nWork through Before the session below. It takes about 20 minutes, most of it walking. There is nothing to hand in: just bring your phone, with your test walk saved in Strava, to the session.\n\n\n\n\nAlmost everything geographers study happens somewhere. Spatial data record not only what something is, but also where it is. A photo of a street vendor is data; the same photo together with the coordinates of where it was taken is spatial data, because it can be placed on a map and related to everything else around it: the route you walked, the neighbourhood it sits in, or census statistics for that area.\nMost spatial data take one of three basic shapes:\n\nPoints: a single location, such as a site you record or a bus stop.\nLines: a sequence of locations, such as the route you walk.\nPolygons: an area with a boundary, such as a neighbourhood or a census district.\n\nLocations are stored as coordinates: latitude, the position north or south of the equator, and longitude, the position east or west of the meridian through Greenwich. Plaça de Catalunya in Barcelona, for instance, is at about 41.387° N, 2.170° E. Your phone works out its coordinates from satellite positioning (GPS). Outdoors this is typically accurate to within 5 to 10 metres, but it gets worse between tall buildings and indoors, which is worth keeping in mind when you record sites in narrow streets.\nA geographic information system (GIS) is software for storing, combining, analysing and mapping spatial data. Because every record has a location, a GIS can overlay datasets that were collected separately, such as your sites, your route, a street map and census data, and help answer questions about where things happen and what is near what. In this module we use ArcGIS Online, a GIS that runs in your web browser.\n\n\n\nYour group collects two datasets: your route as a line, and your sites as points. You collect each with a different tool:\n\n\n\nWhat\nTool\nHow it works\n\n\n\n\nYour route\nStrava\nA phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a .gpx file.\n\n\nYour sites\nUCL Geography Field Survey\nA web form that opens in your phone’s browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no copying of coordinates by hand.\n\n\n\nEveryone records the route on their own phone, so you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites only need to be submitted once per working group, so you will agree who does that.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nApps and websites change their layout regularly. This chapter therefore describes what to tap by its label (e.g. Record) rather than showing screenshots. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.\n\n\n\n\n\nDo this in the week before the session.\n\n\n\nInstall Strava from the App Store or Google Play and create a free account. You do not need a paid subscription. Remember your login details: you will need them on the Strava website later.\nWhen asked, allow location access While Using the App.\nMake your activities private: tap the You tab, then the settings cog (top right), and go to Privacy Controls → Activities → Only You. You can still export private activities.\n\n\n\n\n\nBoth Strava and your web browser (for the field survey) need access to your location. On an iPhone, both settings are under Settings → Apps:\n\nStrava: Settings → Apps → Strava → Location. Select While Using the App and keep Precise Location switched on.\n\nSafari: Settings → Apps → Safari, then scroll a long way down to Location. Select Allow or Ask, not Deny.\n\n\nOn Android, go to Settings → Apps → Strava → Permissions → Location, choose Allow only while using the app and switch on Use precise location. Do the same for Chrome.\n\n\n\n\nOpen the UCL Geography Field Survey on your phone. It opens in your browser; there is nothing to install.\nSign in with your UCL account. If you are asked for Your ArcGIS organization’s URL, type uclondon, tap Continue, then UCL SSO, and sign in as you would for Moodle. You do not need to fill in the survey yet.\n\n\n\n\n\n\n\nTipSave it to your home screen\n\n\n\nTo find the survey quickly in the field, in Safari use Share → Add to Home Screen; in Chrome use the ⋮ menu → Add to Home screen.\n\n\n\n\n\n\nSomewhere outside, open Strava, tap Record, choose Walk as the activity type, and start. You can lock your phone; Strava keeps recording.\nWalk for about 10 minutes.\nStop Strava (Stop → Finish), name the activity GEOG0187 test walk, and Save it.\nCheck that your route looks right on the map, and notice how much battery the walk used.\n\n\n\n\n\nYour phone, charged, with the test walk saved in Strava.\nYour Strava login details.\nAnything that did not work, or that you were unsure about.\n\n\n\n\n\nWe start with a live demonstration: your Affiliate Lecturer has done the same test walk with the same instructions, and will show how to get the route out of Strava, how to fill in the field survey, and what the data look like in ArcGIS Online. You then do the same:\n\nExport your test walk. The .gpx file can only be downloaded from the Strava website, not from the app, so use a laptop or computer. Log in at strava.com, open your test walk, open the ⋯ (more actions) menu next to the activity and choose Export GPX. Check that a .gpx file has been downloaded. \nTry the field survey. Open the survey from your home screen and submit one test entry from the room:\n\nData collection: select Fieldwork - Test.\nGroup number: 0.\nSite ID: S00.\nLocation: tap Allow when asked, and check the dot on the map is roughly where you are. If it is off, wait a few seconds or drag it to the right spot.\nPhoto and a short note: anything will do.\nTap Submit and check that you see a confirmation. \n\nFix problems. Work through anything that did not work with the people around you and with staff. The troubleshooting table covers the most common issues.\nPlan as a working group. Agree who submits the sites (one or two people, so that each site is entered only once) and who takes over if their phone runs out of battery. Agree how your sites relate to your Urban Project theme.\nAgree on site IDs. Number your sites S01, S02, S03, and so on, per group, and enter the same ID in the survey and on any notes, photos or recordings you make outside it. That is how you will match them to your points on the map later.\n\nBy the end of the session everyone should have exported a .gpx file and submitted one test entry from their own phone.\n\n\n\n\nEveryone starts Strava when your group starts walking, and stops it when you finish. One recording per outing is fine; you can have several.\nSubmit one survey entry per site, while you are standing at the site, with Data collection set to your fieldwork group (not Fieldwork - Test) and your own working group number.\nCharge your phone every night and bring a power bank if you have one. GPS and the camera use a lot of battery.\nNo signal or no mobile data? Strava keeps recording without data and uploads when you are back online. The survey needs a connection to submit: if you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. Check your phone contract for roaming charges before you go.\nBe considerate. Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.\n\n\n\n\nYour sites are already in ArcGIS Online. Before the next session:\n\nExport your own route. Download the .gpx file(s) of your recordings from the Strava website, as in the session. If your recording failed, ask someone in your working group for a copy of theirs.\nShare everything else. Put extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. Avoid WhatsApp for photos: it compresses them and removes their location information.\n\n\n\n\n\n\n\n\n\n\n\nProblem\nWhat to try\n\n\n\n\nStrava does not record, or the route is a straight line\nCheck location access is set to While Using the App with Precise Location on. Do not force-close the app while recording. Turn off Low Power Mode if the route has gaps.\n\n\nNo Export GPX option\nUse the Strava website on a laptop, not the app or a phone browser. You can only export your own activities.\n\n\nThe survey asks me to sign in again\nSign in as in the setup: organisation URL uclondon, then UCL SSO. You may need to do this again after a while, also in Catalonia.\n\n\nThe survey cannot find my location\nAllow location for your browser (see above), then reload the form. Indoors or between tall buildings it can take a little while; step into the open.\n\n\nThe point is in the wrong place\nDrag the dot on the map to the correct location before submitting.\n\n\nNo confirmation after Submit\nCheck you have a connection, then tap Submit again. Required fields that are missing are highlighted in the form.\n\n\nPhoto will not upload\nTry again on wifi, or submit without the photo and note the site ID on the photo instead.",
+    "text": "Last week you made a map of your group’s sites and route. This week you use it as the centre of a story map: a web page, built in ArcGIS StoryMaps, that combines text, photos, video and your interactive map to tell a short story about your theme. This is the format of the first GIS worksheet, so what you build this session is the start of your submission.\n\n\n\n\n\n\nImportantBefore the session\n\n\n\nHave the following ready:\n\nyour saved web map from last week (find it in Content → My content);\nyour group’s photos and any videos, downloaded to the laptop you will work on (your group shares these in its own OneDrive folder);\nthe worksheet brief for this task. The brief is the authority on what your story map must contain; this chapter shows you how to build it.\n\n\n\n\n\nA story map is a scrolling web page in which you can place a map block next to the text it belongs to. The reader scrolls, and can also zoom, pan and click on the map. A good story map has a clear storyline, and every photo, video and map element is there because it supports that storyline.\nYour story map must fit the theme your group was allocated for the Urban Project. Plan the storyline before you start building:\n\nWhat is the one thing you want a reader to understand about your theme in your study area?\nWhich evidence do you have for it: which sites, which photos, which part of your route?\nHow do you split it up: the worksheet limits the number of main sections, so decide what each section is for (for instance: the study area and aim, what you observed, and what you learned from the methods and experience).\n\nWrite the headings down before you open the builder. This takes five minutes and saves most of the time you would otherwise lose to rearranging blocks.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nArcGIS StoryMaps changes its layout regularly. This chapter describes what to click by its label. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.\n\n\n\n\n\n\nGo to https://uclondon.maps.arcgis.com, sign in with UCL SSO, and open StoryMaps (from the app launcher or the top menu).\nClick New story. The story builder opens: you write directly in the page, and add content with the + button that appears between blocks.\nClick the title placeholder and type your main title: short, specific, and about your theme, not just “My story map”.\nIn the cover, add your candidate number and your working group number as the subtitle. Do not put your name anywhere. If your name is shown as the author on the cover, remove it in the cover settings.\nChoose a cover design that suits your theme and a cover image from your group’s photos. \n\nYour story saves automatically as a draft in your own ArcGIS Online content.\n\n\n\nClick below the cover and start typing. Use Heading (from the text style menu) for each of your main sections, so that the story gets a clear structure and a navigation bar. Keep paragraphs short: people read web pages differently from essays.\nWrite for a reader who was not on the trip. The text has to explain the aim, the place, and what you did and learned, in your own words. The worksheet sets the word limit.\n\n\n\n\nClick + where the map should go and choose Map.\nSelect My content, and choose the web map you saved last week. Click Add.\nIf asked about sharing, agree to share the map at the same level as the story (you will make the story public at the end; see Share and submit).\nUse the map block’s Options to switch on the legend and the zoom buttons, and to set the starting view to your study area.\nClick a point to check that the pop-up still shows the site ID, note and photo. \n\nIf you want the map to change as the reader scrolls through the text, try a Sidecar or Immersive block: they place the text in a panel that scrolls over a full-screen map. It is nice to have, not a requirement.\n\n\n\n\n\n\nNoteThe map lives in two places\n\n\n\nYour web map is a separate item from your story. If you change the map later (for example, to restyle a layer), those changes show up in the story automatically. Do not delete the web map or its layers before you have submitted.\n\n\n\n\n\n\nClick + → Image and upload a photo from your computer. Resize large photos first if uploads are slow.\nAdd a caption under every photo that says what it shows and why it matters for your story. If it comes from your group’s shared folder, say so.\nAdd alt text so the image can be understood by someone using a screen reader. \n\nChoose photos that support your argument. Five good photos you can refer to in the text are better than fifteen that only decorate the page.\n\n\n\nShort clips from the field can add atmosphere or an interview that photos cannot show.\n\nClick + → Video.\nEither Upload the file, or paste a link from a video site.\nAdd a caption.\n\nKeep clips short, and check the worksheet for how many are allowed and how long they may be. Only include people who have agreed to be filmed.\n\n\n\nYou submit the link to your story map, so anyone with the link must be able to open it.\n\nClick Share (top right) and set the visibility to Everyone (public). Make sure the web map and its layers are shared at the same level if the builder asks.\nClick Publish. Copy the story’s URL.\nOpen the URL in a private/incognito browser window. This shows you what a marker will see. Check that the map, pop-ups, photos and video all work without being signed in.\n\nThe submission itself (the cover sheet with your link) is explained in the worksheet brief and on Moodle.\n\n\n\nBy the end of the session your story map should have:\n\na title, your candidate number and group number, and no name;\nyour main headings in place, even if some are still empty;\nyour web map embedded, with legend and zoom, and working pop-ups;\nat least one photo with a caption;\na link that opens when you are signed out.\n\nYou have until the worksheet deadline to finish. Use the remaining time for the text, the remaining photos and videos, and for checking your story map against the brief.\n\n\n\n\n\n\n\n\n\n\nProblem\nWhat to try\n\n\n\n\nI cannot find my web map\nContent → My content, or search for GEOG0187. Save it first if you did not last week.\n\n\nThe map shows no pop-up photos\nOpen the web map again and check Attachments is on under Pop-ups.\n\n\nThe map does not load when signed out\nShare the web map and its layers with Everyone (public), then reload in a private window.\n\n\nMy name is shown on the cover\nRemove it from the author setting in the cover options. Submissions are marked anonymously.\n\n\nPhoto or video upload fails\nReduce the file size, try a different browser, or use a link for the video.\n\n\nI lost my story\nStoryMaps → My stories. Drafts are saved automatically.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
     ]
   },
   {
-    "objectID": "01-fieldwork.html#spatial-data-and-gis",
-    "href": "01-fieldwork.html#spatial-data-and-gis",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html#what-is-a-story-map",
+    "href": "03-storymap.html#what-is-a-story-map",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "Almost everything geographers study happens somewhere. Spatial data record not only what something is, but also where it is. A photo of a street vendor is data; the same photo together with the coordinates of where it was taken is spatial data, because it can be placed on a map and related to everything else around it: the route you walked, the neighbourhood it sits in, or census statistics for that area.\nMost spatial data take one of three basic shapes:\n\nPoints: a single location, such as a site you record or a bus stop.\nLines: a sequence of locations, such as the route you walk.\nPolygons: an area with a boundary, such as a neighbourhood or a census district.\n\nLocations are stored as coordinates: latitude, the position north or south of the equator, and longitude, the position east or west of the meridian through Greenwich. Plaça de Catalunya in Barcelona, for instance, is at about 41.387° N, 2.170° E. Your phone works out its coordinates from satellite positioning (GPS). Outdoors this is typically accurate to within 5 to 10 metres, but it gets worse between tall buildings and indoors, which is worth keeping in mind when you record sites in narrow streets.\nA geographic information system (GIS) is software for storing, combining, analysing and mapping spatial data. Because every record has a location, a GIS can overlay datasets that were collected separately, such as your sites, your route, a street map and census data, and help answer questions about where things happen and what is near what. In this module we use ArcGIS Online, a GIS that runs in your web browser.",
+    "text": "A story map is a scrolling web page in which you can place a map block next to the text it belongs to. The reader scrolls, and can also zoom, pan and click on the map. A good story map has a clear storyline, and every photo, video and map element is there because it supports that storyline.\nYour story map must fit the theme your group was allocated for the Urban Project. Plan the storyline before you start building:\n\nWhat is the one thing you want a reader to understand about your theme in your study area?\nWhich evidence do you have for it: which sites, which photos, which part of your route?\nHow do you split it up: the worksheet limits the number of main sections, so decide what each section is for (for instance: the study area and aim, what you observed, and what you learned from the methods and experience).\n\nWrite the headings down before you open the builder. This takes five minutes and saves most of the time you would otherwise lose to rearranging blocks.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nArcGIS StoryMaps changes its layout regularly. This chapter describes what to click by its label. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
     ]
   },
   {
-    "objectID": "01-fieldwork.html#what-you-will-collect",
-    "href": "01-fieldwork.html#what-you-will-collect",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html#create-the-story",
+    "href": "03-storymap.html#create-the-story",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "Your group collects two datasets: your route as a line, and your sites as points. You collect each with a different tool:\n\n\n\nWhat\nTool\nHow it works\n\n\n\n\nYour route\nStrava\nA phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a .gpx file.\n\n\nYour sites\nUCL Geography Field Survey\nA web form that opens in your phone’s browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no copying of coordinates by hand.\n\n\n\nEveryone records the route on their own phone, so you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites only need to be submitted once per working group, so you will agree who does that.\n\n\n\n\n\n\nNoteIf your screen looks different\n\n\n\nApps and websites change their layout regularly. This chapter therefore describes what to tap by its label (e.g. Record) rather than showing screenshots. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.",
+    "text": "Go to https://uclondon.maps.arcgis.com, sign in with UCL SSO, and open StoryMaps (from the app launcher or the top menu).\nClick New story. The story builder opens: you write directly in the page, and add content with the + button that appears between blocks.\nClick the title placeholder and type your main title: short, specific, and about your theme, not just “My story map”.\nIn the cover, add your candidate number and your working group number as the subtitle. Do not put your name anywhere. If your name is shown as the author on the cover, remove it in the cover settings.\nChoose a cover design that suits your theme and a cover image from your group’s photos. \n\nYour story saves automatically as a draft in your own ArcGIS Online content.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
     ]
   },
   {
-    "objectID": "01-fieldwork.html#before-the-session",
-    "href": "01-fieldwork.html#before-the-session",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html#add-your-text",
+    "href": "03-storymap.html#add-your-text",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "Do this in the week before the session.\n\n\n\nInstall Strava from the App Store or Google Play and create a free account. You do not need a paid subscription. Remember your login details: you will need them on the Strava website later.\nWhen asked, allow location access While Using the App.\nMake your activities private: tap the You tab, then the settings cog (top right), and go to Privacy Controls → Activities → Only You. You can still export private activities.\n\n\n\n\n\nBoth Strava and your web browser (for the field survey) need access to your location. On an iPhone, both settings are under Settings → Apps:\n\nStrava: Settings → Apps → Strava → Location. Select While Using the App and keep Precise Location switched on.\n\nSafari: Settings → Apps → Safari, then scroll a long way down to Location. Select Allow or Ask, not Deny.\n\n\nOn Android, go to Settings → Apps → Strava → Permissions → Location, choose Allow only while using the app and switch on Use precise location. Do the same for Chrome.\n\n\n\n\nOpen the UCL Geography Field Survey on your phone. It opens in your browser; there is nothing to install.\nSign in with your UCL account. If you are asked for Your ArcGIS organization’s URL, type uclondon, tap Continue, then UCL SSO, and sign in as you would for Moodle. You do not need to fill in the survey yet.\n\n\n\n\n\n\n\nTipSave it to your home screen\n\n\n\nTo find the survey quickly in the field, in Safari use Share → Add to Home Screen; in Chrome use the ⋮ menu → Add to Home screen.\n\n\n\n\n\n\nSomewhere outside, open Strava, tap Record, choose Walk as the activity type, and start. You can lock your phone; Strava keeps recording.\nWalk for about 10 minutes.\nStop Strava (Stop → Finish), name the activity GEOG0187 test walk, and Save it.\nCheck that your route looks right on the map, and notice how much battery the walk used.\n\n\n\n\n\nYour phone, charged, with the test walk saved in Strava.\nYour Strava login details.\nAnything that did not work, or that you were unsure about.",
+    "text": "Click below the cover and start typing. Use Heading (from the text style menu) for each of your main sections, so that the story gets a clear structure and a navigation bar. Keep paragraphs short: people read web pages differently from essays.\nWrite for a reader who was not on the trip. The text has to explain the aim, the place, and what you did and learned, in your own words. The worksheet sets the word limit.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
     ]
   },
   {
-    "objectID": "01-fieldwork.html#in-the-session",
-    "href": "01-fieldwork.html#in-the-session",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html#add-your-map",
+    "href": "03-storymap.html#add-your-map",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "We start with a live demonstration: your Affiliate Lecturer has done the same test walk with the same instructions, and will show how to get the route out of Strava, how to fill in the field survey, and what the data look like in ArcGIS Online. You then do the same:\n\nExport your test walk. The .gpx file can only be downloaded from the Strava website, not from the app, so use a laptop or computer. Log in at strava.com, open your test walk, open the ⋯ (more actions) menu next to the activity and choose Export GPX. Check that a .gpx file has been downloaded. \nTry the field survey. Open the survey from your home screen and submit one test entry from the room:\n\nData collection: select Fieldwork - Test.\nGroup number: 0.\nSite ID: S00.\nLocation: tap Allow when asked, and check the dot on the map is roughly where you are. If it is off, wait a few seconds or drag it to the right spot.\nPhoto and a short note: anything will do.\nTap Submit and check that you see a confirmation. \n\nFix problems. Work through anything that did not work with the people around you and with staff. The troubleshooting table covers the most common issues.\nPlan as a working group. Agree who submits the sites (one or two people, so that each site is entered only once) and who takes over if their phone runs out of battery. Agree how your sites relate to your Urban Project theme.\nAgree on site IDs. Number your sites S01, S02, S03, and so on, per group, and enter the same ID in the survey and on any notes, photos or recordings you make outside it. That is how you will match them to your points on the map later.\n\nBy the end of the session everyone should have exported a .gpx file and submitted one test entry from their own phone.",
+    "text": "Click + where the map should go and choose Map.\nSelect My content, and choose the web map you saved last week. Click Add.\nIf asked about sharing, agree to share the map at the same level as the story (you will make the story public at the end; see Share and submit).\nUse the map block’s Options to switch on the legend and the zoom buttons, and to set the starting view to your study area.\nClick a point to check that the pop-up still shows the site ID, note and photo. \n\nIf you want the map to change as the reader scrolls through the text, try a Sidecar or Immersive block: they place the text in a panel that scrolls over a full-screen map. It is nice to have, not a requirement.\n\n\n\n\n\n\nNoteThe map lives in two places\n\n\n\nYour web map is a separate item from your story. If you change the map later (for example, to restyle a layer), those changes show up in the story automatically. Do not delete the web map or its layers before you have submitted.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
     ]
   },
   {
-    "objectID": "01-fieldwork.html#in-catalonia",
-    "href": "01-fieldwork.html#in-catalonia",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html#add-photos-and-captions",
+    "href": "03-storymap.html#add-photos-and-captions",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "Everyone starts Strava when your group starts walking, and stops it when you finish. One recording per outing is fine; you can have several.\nSubmit one survey entry per site, while you are standing at the site, with Data collection set to your fieldwork group (not Fieldwork - Test) and your own working group number.\nCharge your phone every night and bring a power bank if you have one. GPS and the camera use a lot of battery.\nNo signal or no mobile data? Strava keeps recording without data and uploads when you are back online. The survey needs a connection to submit: if you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. Check your phone contract for roaming charges before you go.\nBe considerate. Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.",
+    "text": "Click + → Image and upload a photo from your computer. Resize large photos first if uploads are slow.\nAdd a caption under every photo that says what it shows and why it matters for your story. If it comes from your group’s shared folder, say so.\nAdd alt text so the image can be understood by someone using a screen reader. \n\nChoose photos that support your argument. Five good photos you can refer to in the text are better than fifteen that only decorate the page.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
     ]
   },
   {
-    "objectID": "01-fieldwork.html#after-the-trip",
-    "href": "01-fieldwork.html#after-the-trip",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html#add-video",
+    "href": "03-storymap.html#add-video",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "Your sites are already in ArcGIS Online. Before the next session:\n\nExport your own route. Download the .gpx file(s) of your recordings from the Strava website, as in the session. If your recording failed, ask someone in your working group for a copy of theirs.\nShare everything else. Put extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. Avoid WhatsApp for photos: it compresses them and removes their location information.",
+    "text": "Short clips from the field can add atmosphere or an interview that photos cannot show.\n\nClick + → Video.\nEither Upload the file, or paste a link from a video site.\nAdd a caption.\n\nKeep clips short, and check the worksheet for how many are allowed and how long they may be. Only include people who have agreed to be filmed.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
     ]
   },
   {
-    "objectID": "01-fieldwork.html#troubleshooting",
-    "href": "01-fieldwork.html#troubleshooting",
-    "title": "1 Collecting Spatial Data",
+    "objectID": "03-storymap.html#share-and-submit",
+    "href": "03-storymap.html#share-and-submit",
+    "title": "3 Building a Story Map",
     "section": "",
-    "text": "Problem\nWhat to try\n\n\n\n\nStrava does not record, or the route is a straight line\nCheck location access is set to While Using the App with Precise Location on. Do not force-close the app while recording. Turn off Low Power Mode if the route has gaps.\n\n\nNo Export GPX option\nUse the Strava website on a laptop, not the app or a phone browser. You can only export your own activities.\n\n\nThe survey asks me to sign in again\nSign in as in the setup: organisation URL uclondon, then UCL SSO. You may need to do this again after a while, also in Catalonia.\n\n\nThe survey cannot find my location\nAllow location for your browser (see above), then reload the form. Indoors or between tall buildings it can take a little while; step into the open.\n\n\nThe point is in the wrong place\nDrag the dot on the map to the correct location before submitting.\n\n\nNo confirmation after Submit\nCheck you have a connection, then tap Submit again. Required fields that are missing are highlighted in the form.\n\n\nPhoto will not upload\nTry again on wifi, or submit without the photo and note the site ID on the photo instead.",
+    "text": "You submit the link to your story map, so anyone with the link must be able to open it.\n\nClick Share (top right) and set the visibility to Everyone (public). Make sure the web map and its layers are shared at the same level if the builder asks.\nClick Publish. Copy the story’s URL.\nOpen the URL in a private/incognito browser window. This shows you what a marker will see. Check that the map, pop-ups, photos and video all work without being signed in.\n\nThe submission itself (the cover sheet with your link) is explained in the worksheet brief and on Moodle.",
     "crumbs": [
-      "Spatial Data Collection",
-      "1 Collecting Spatial Data"
+      "Mapping",
+      "3 Building a Story Map"
+    ]
+  },
+  {
+    "objectID": "03-storymap.html#check-before-you-leave",
+    "href": "03-storymap.html#check-before-you-leave",
+    "title": "3 Building a Story Map",
+    "section": "",
+    "text": "By the end of the session your story map should have:\n\na title, your candidate number and group number, and no name;\nyour main headings in place, even if some are still empty;\nyour web map embedded, with legend and zoom, and working pop-ups;\nat least one photo with a caption;\na link that opens when you are signed out.\n\nYou have until the worksheet deadline to finish. Use the remaining time for the text, the remaining photos and videos, and for checking your story map against the brief.",
+    "crumbs": [
+      "Mapping",
+      "3 Building a Story Map"
+    ]
+  },
+  {
+    "objectID": "03-storymap.html#troubleshooting",
+    "href": "03-storymap.html#troubleshooting",
+    "title": "3 Building a Story Map",
+    "section": "",
+    "text": "Problem\nWhat to try\n\n\n\n\nI cannot find my web map\nContent → My content, or search for GEOG0187. Save it first if you did not last week.\n\n\nThe map shows no pop-up photos\nOpen the web map again and check Attachments is on under Pop-ups.\n\n\nThe map does not load when signed out\nShare the web map and its layers with Everyone (public), then reload in a private window.\n\n\nMy name is shown on the cover\nRemove it from the author setting in the cover options. Submissions are marked anonymously.\n\n\nPhoto or video upload fails\nReduce the file size, try a different browser, or use a link for the video.\n\n\nI lost my story\nStoryMaps → My stories. Drafts are saved automatically.",
+    "crumbs": [
+      "Mapping",
+      "3 Building a Story Map"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quantitative Skills",
+    "section": "",
+    "text": "Welcome to the Quantitative Skills strand of GEOG0187 Foundations of Geography II. This term has three parts:\n\nSpatial Data Collection. Before the field trip to Catalonia, you prepare to collect your own spatial data: the routes you walk and the sites you record.\nMapping. After the trip, you map your field data in ArcGIS Online, turn it into a story map, and learn to work with and evaluate secondary data.\nStatistics. Finally, you use R to describe data, quantify uncertainty, and compare groups.\n\n\n\n\nMoodle is the central point of contact for GEOG0187 and it is where all important information will be communicated, such as session dates, group allocations and assessment information. This workbook contains the material for the Quantitative Skills sessions.\n\n\n\nEach session starts with a short introduction, after which you work through the material in this workbook at your own pace, with Affiliate Lecturers and Teaching Assistants on hand to help. Some sessions ask you to do a short task before you come to class: this is flagged at the top of the relevant chapter.\n\n\n\nThe topics are listed below. Chapters are released ahead of each session; check Moodle for the exact dates.\n\n\n\nSession\nSection\nTopic\n\n\n\n\n1\nSpatial Data Collection\nCollecting Spatial Data\n\n\n2\nMapping\nMapping Your Field Data\n\n\n3\nMapping\nTelling Stories with Maps\n\n\n4\nMapping\nWorking with Secondary Data\n\n\n5\nStatistics\nDescribing Data\n\n\n6\nStatistics\nSamples and Uncertainty\n\n\n7\nStatistics\nComparing Groups\n\n\n\n\n\n\nThis workbook is created using the Quarto publishing system. Elements of this workbook are partially based on and modified from:\n\nPrevious GEOG0013: Geography in the Field 1 GIS content created by Anwar Musah\nThe GEOG0018: Methods in Human Geography workbook by Justin van Dijk",
+    "crumbs": [
+      "Module overview",
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Quantitative Skills",
+    "section": "",
+    "text": "Welcome to the Quantitative Skills strand of GEOG0187 Foundations of Geography II. This term has three parts:\n\nSpatial Data Collection. Before the field trip to Catalonia, you prepare to collect your own spatial data: the routes you walk and the sites you record.\nMapping. After the trip, you map your field data in ArcGIS Online, turn it into a story map, and learn to work with and evaluate secondary data.\nStatistics. Finally, you use R to describe data, quantify uncertainty, and compare groups.",
+    "crumbs": [
+      "Module overview",
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#moodle",
+    "href": "index.html#moodle",
+    "title": "Quantitative Skills",
+    "section": "",
+    "text": "Moodle is the central point of contact for GEOG0187 and it is where all important information will be communicated, such as session dates, group allocations and assessment information. This workbook contains the material for the Quantitative Skills sessions.",
+    "crumbs": [
+      "Module overview",
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#how-the-sessions-work",
+    "href": "index.html#how-the-sessions-work",
+    "title": "Quantitative Skills",
+    "section": "",
+    "text": "Each session starts with a short introduction, after which you work through the material in this workbook at your own pace, with Affiliate Lecturers and Teaching Assistants on hand to help. Some sessions ask you to do a short task before you come to class: this is flagged at the top of the relevant chapter.",
+    "crumbs": [
+      "Module overview",
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#module-overview",
+    "href": "index.html#module-overview",
+    "title": "Quantitative Skills",
+    "section": "",
+    "text": "The topics are listed below. Chapters are released ahead of each session; check Moodle for the exact dates.\n\n\n\nSession\nSection\nTopic\n\n\n\n\n1\nSpatial Data Collection\nCollecting Spatial Data\n\n\n2\nMapping\nMapping Your Field Data\n\n\n3\nMapping\nTelling Stories with Maps\n\n\n4\nMapping\nWorking with Secondary Data\n\n\n5\nStatistics\nDescribing Data\n\n\n6\nStatistics\nSamples and Uncertainty\n\n\n7\nStatistics\nComparing Groups",
+    "crumbs": [
+      "Module overview",
+      "Welcome"
+    ]
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "Quantitative Skills",
+    "section": "",
+    "text": "This workbook is created using the Quarto publishing system. Elements of this workbook are partially based on and modified from:\n\nPrevious GEOG0013: Geography in the Field 1 GIS content created by Anwar Musah\nThe GEOG0018: Methods in Human Geography workbook by Justin van Dijk",
+    "crumbs": [
+      "Module overview",
+      "Welcome"
     ]
   }
 ]

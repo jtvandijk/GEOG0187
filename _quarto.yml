@@ -54,5 +54,7 @@ website:
             file: 02-mapping.qmd
           - text: "3 Building a Story Map"
             file: 03-storymap.qmd
+          - text: "4 Using Secondary Data"
+            file: 04-secondary.qmd
 
 editor: source

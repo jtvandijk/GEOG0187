@@ -7,6 +7,7 @@ urls:
   w01: "01-fieldwork.html"
   w02: "02-mapping.html"
   w03: "03-storymap.html"
+  w04: "04-secondary.html"
 
 # Fieldwork data collection (session 1). 
 fieldwork:
@@ -17,3 +18,10 @@ fieldwork:
 arcgis:
   org: "https://uclondon.maps.arcgis.com"
   layer: "UCL Geography Field Survey"
+
+# Secondary data pack (session 4, 26 Feb). Names must match the layers published in the UCL org.
+secondary:
+  bcn_sections: "GEOG0187 Barcelona - Census sections (income)"
+  bcn_barris: "GEOG0187 Barcelona - Neighbourhoods"
+  bcn_districts: "GEOG0187 Barcelona - Districts"
+  london_lsoa: "Lower Super Output Area (LSOA) IMD2019 (WGS84)"
