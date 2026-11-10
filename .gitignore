@@ -19,3 +19,6 @@ _todo-*.md
 
 # local tooling
 .claude/
+
+# Worksheet briefs: rendered to PDF for Moodle, not part of the site
+_worksheets/
