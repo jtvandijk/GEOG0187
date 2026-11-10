@@ -97,7 +97,7 @@ We will start with a live demonstration of a test walk done with the same instru
 1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava website, not from the app, so you will need a laptop or computer for this step. Log in at [strava.com](https://www.strava.com), open your test walk, open the [⋯]{.ui} (more actions) menu next to the activity, and choose [Export GPX]{.ui}. Check that a `.gpx` file has been downloaded.
 <!-- SCREENSHOT 4: Strava website, activity page with the ⋯ menu open and "Export GPX" visible. images/w01/strava-export.png -->
 2. **Try the field survey.** Open the survey from your home screen and submit one test entry from the room, filling it in as follows:
-   - For **Data collection**, select `Fieldwork - Test`.
+   - For **Data collection**, select `Fieldwork - Test`. This option is *only* for today: in Catalonia you will choose a different one (see [In Catalonia](#in-catalonia)).
    - For **Group number**, enter `0`.
    - For **Site ID**, enter `S00`.
    - For **Location**, tap [Allow]{.ui} when asked, and check that the dot on the map is roughly where you are. If it is not, wait a few seconds or drag it to the right spot.
@@ -123,10 +123,21 @@ Next, sit down with your working group and agree how you will collect your data 
 - **Site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, within your group, and use the same ID in the survey and on any notes, photos or recordings you make outside it. This is how you will match them to your points on the map later on.
 
 ## In Catalonia
-Once you are in Catalonia, there are a few things to keep in mind:
+Once you are in Catalonia, the person logging the sites submits one survey entry per site, while standing at the site. The first two fields decide whose data an entry belongs to, so please get them right every time:
+
+| Field | What to enter |
+| :---- | :------------ |
+| **Data collection** | `Fieldwork - Catalonia Group 1` if you travel {{< var fieldwork.g1_dates >}}; `Fieldwork - Catalonia Group 2` if you travel {{< var fieldwork.g2_dates >}}. |
+| **Group number** | Your own working group number. |
+
+::: {.callout-important}
+## Do not use `Fieldwork - Test` in Catalonia
+Entries submitted as `Fieldwork - Test` or with group number `0` will not show up with your group's data. If you notice that you have made this mistake, tell the teaching staff after the trip.
+:::
+
+There are a few other things to keep in mind:
 
 - Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
-- Whoever logs the sites submits one survey entry per site, while you are standing at the site. Set **Data collection** to *your* fieldwork group (not `Fieldwork - Test`), and use your own working group number.
 - Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.
 - If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map.
 - Please be considerate. Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.

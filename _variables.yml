@@ -15,6 +15,8 @@ urls:
 # Fieldwork data collection (session 1). 
 fieldwork:
   survey: "https://arcg.is/vbWLC5"
+  g1_dates: "on the first trip (see Moodle for dates)"
+  g2_dates: "on the second trip (see Moodle for dates)"
 
 
 # ArcGIS Online (session 2 onwards).
