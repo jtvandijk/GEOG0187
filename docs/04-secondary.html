@@ -413,7 +413,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="using-secondary-data" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Using Secondary Data</h1>
-<p>So far you have mapped data that <strong>you</strong> collected. Most of the maps you will meet in geography, however, are made from <strong>secondary data</strong>: data collected by someone else, for their own purposes, and made available for others to reuse. This week you learn to find such data, put it on a map, and ask whether it is fit for the question you want to answer. This is the skill behind the second GIS worksheet.</p>
+<p>So far, we have mapped data that you collected yourself. Most of the maps you will come across in geography, however, are made from <strong>secondary data</strong>: data collected by someone else, for their own purposes, and made available for others to reuse. This week, we will look at how to find such data, how to put them on a map, and how to decide whether they are fit for the question you want to answer. These are the skills behind the second GIS worksheet.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -424,12 +424,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Sign in to ArcGIS Online with <span class="ui">UCL SSO</span> (see <a href="02-mapping.html#open-map-viewer">Open Map Viewer</a>) and have a browser open. Know your <strong>fieldwork city</strong>: <strong>Barcelona</strong> if you went on the Catalonia trip, <strong>London</strong> otherwise. Everyone does the same exercise, with a different data pack.</p>
+<p>Sign in to ArcGIS Online with <span class="ui">UCL SSO</span> (see <a href="02-mapping.html#open-map-viewer">Open Map Viewer</a>) and have a browser open. You will also need to know your fieldwork city: Barcelona if you went on the Catalonia trip, and London otherwise. Everyone does the same exercise, but with a different data pack.</p>
 </div>
 </div>
 <section id="secondary-data-and-where-it-comes-from" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="secondary-data-and-where-it-comes-from"><span class="header-section-number">4.1</span> Secondary data and where it comes from</h2>
-<p>Secondary data are produced by <strong>organisations</strong>: statistical agencies, city councils, researchers or companies. Before you use any of them, find out five things. You will need them for your own referencing, and for the critical evaluation the worksheet asks for.</p>
+<p>Secondary data are produced by organisations such as statistical agencies, city councils, researchers or companies. Before you use any of them, you should find out five things. You will need the answers for your own referencing, as well as for the critical evaluation the worksheet asks for.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 53%">
@@ -464,32 +464,33 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<p>You usually find these answers in the dataset’s <strong>description</strong> or <strong>metadata</strong> page, which is part of why you should always start there and not with the map.</p>
+<p>You can usually find these answers in the dataset’s description or metadata page, which is one reason why you should always start there rather than with the map.</p>
 </section>
 <section id="choropleth-maps" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="choropleth-maps"><span class="header-section-number">4.2</span> Choropleth maps</h2>
-<p>A <strong>choropleth map</strong> shades areas (polygons) by the value of a numerical variable, such as income, density or deprivation. They are easy to make and easy to get wrong, because each of the following choices changes what the map seems to say:</p>
+<p>A <strong>choropleth map</strong> shades areas (polygons) by the value of a numerical variable, such as income, density or deprivation. Choropleth maps are easy to make, but they are also easy to get wrong, because each of the following choices changes what the map seems to say:</p>
 <ul>
-<li><strong>The variable.</strong> Use <em>rates</em> or <em>averages</em> (income per person, % of residents) rather than raw totals (total income): areas with more people will otherwise look “bigger” for no interesting reason.</li>
-<li><strong>The classes.</strong> The values are split into groups, each with a colour. With <em>equal intervals</em> the classes have the same width; with <em>quantiles</em> they have the same number of areas. The same data can look very different.</li>
-<li><strong>The colours.</strong> Use a single-hue ramp from light to dark for values that go from low to high. Avoid rainbow palettes.</li>
-<li><strong>The scale.</strong> The same variable can look different for small areas than for large ones. Averaging over a large area hides differences inside it.</li>
+<li><strong>The variable.</strong> Use <em>rates</em> or <em>averages</em> (income per person, % of residents) rather than raw totals (total income). Otherwise, areas with more people will look “bigger” for no interesting reason.</li>
+<li><strong>The classes.</strong> The values are split into groups, each with its own colour. With <em>equal intervals</em>, the classes all have the same width; with <em>quantiles</em>, they all contain the same number of areas. The same data can look very different depending on which you choose.</li>
+<li><strong>The colours.</strong> Use a single-hue ramp from light to dark for values that go from low to high, and avoid rainbow palettes.</li>
+<li><strong>The scale.</strong> The same variable can look different for small areas than for large ones, because averaging over a large area hides the differences inside it.</li>
 </ul>
 </section>
 <section id="add-your-data-pack" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="add-your-data-pack"><span class="header-section-number">4.3</span> Add your data pack</h2>
-<p>Open a new map (<span class="ui">Map</span>) and pick a quiet basemap. Then follow the instructions for your city.</p>
+<p>Let us start by opening a new map (<span class="ui">Map</span>) and picking a quiet basemap. You can then follow the instructions for your city.</p>
 <section id="barcelona" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="barcelona"><span class="header-section-number">4.3.1</span> Barcelona</h3>
+<p>For Barcelona, the data pack consists of three layers that we have prepared for you:</p>
 <ol type="1">
 <li>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">My organization</span>, and search for <code>GEOG0187 Barcelona</code>.</li>
-<li>Add <code>GEOG0187 Barcelona - Census sections (income)</code>. It has one polygon per <strong>census section</strong> (the smallest statistical area) and these attributes:
+<li>Add <code>GEOG0187 Barcelona - Census sections (income)</code>. This layer has one polygon per <strong>census section</strong> (the smallest statistical area), with the following attributes:
 <ul>
 <li><code>disp_income_pc_2023_eur</code>: disposable household income per person, 2023;</li>
 <li><code>mean_taxable_income_2024_eur</code>: mean taxable income per unit of consumption, 2024;</li>
-<li><code>gini_2024_pct</code>: the Gini index of tax income, 2024 (higher means a more unequal distribution).</li>
+<li><code>gini_2024_pct</code>: the Gini index of tax income, 2024 (a higher value means a more unequal distribution).</li>
 </ul></li>
-<li>Add <code>GEOG0187 Barcelona - Neighbourhoods</code> and <code>GEOG0187 Barcelona - Districts</code>: boundaries of the 73 neighbourhoods and 10 districts. You will use these as <strong>context</strong>.</li>
+<li>Add <code>GEOG0187 Barcelona - Neighbourhoods</code> and <code>GEOG0187 Barcelona - Districts</code>, which contain the boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.</li>
 </ol>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -507,11 +508,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="london" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="london"><span class="header-section-number">4.3.2</span> London</h3>
+<p>For London, we will use the official deprivation data, which are already available in ArcGIS Online:</p>
 <ol type="1">
 <li>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">ArcGIS Online</span>, and search for <code>Lower Level Super Output Area (LSOAs) IMD2025 (WGS84)</code> from <em>gis@communities.gov.uk</em>.</li>
-<li>Add the layer. It holds one polygon for every <strong>LSOA</strong> in England (areas of about 1,500 residents), with the <strong>Index of Multiple Deprivation (2025)</strong> <em>rank</em> and <em>decile</em>.</li>
-<li>To see only London, use <span class="ui">Filter</span>: <code>LSOA Name</code> (<code>LSOA21NM</code>) <em>starts with</em> the name of a borough (for example <code>Camden</code>). Add more conditions with <em>or</em> for the other boroughs you want.</li>
-<li>For <strong>context</strong> and for comparing scales, also add <code>Local Authority (Lower Tier) IMD2025 (WGS84)</code> (same publisher): one polygon per local authority, including the London boroughs (filter on <code>LAD24NM</code>). Put it above the LSOAs with no fill and a visible outline.</li>
+<li>Add the layer. It contains one polygon for every <strong>LSOA</strong> in England (small areas of about 1,500 residents), with the <em>rank</em> and <em>decile</em> of the Index of Multiple Deprivation (2025).</li>
+<li>To see only London, use <span class="ui">Filter</span>: set <code>LSOA Name</code> (<code>LSOA21NM</code>) <em>starts with</em> the name of a borough (for example <code>Camden</code>). You can add more conditions with <em>or</em> for any other boroughs you want to include.</li>
+<li>For context, and to compare scales, also add <code>Local Authority (Lower Tier) IMD2025 (WGS84)</code> from the same publisher. This layer has one polygon per local authority, including the London boroughs (filter on <code>LAD24NM</code>). Place it above the LSOAs, with no fill and a visible outline.</li>
 </ol>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -530,69 +532,72 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="make-the-choropleth" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="make-the-choropleth"><span class="header-section-number">4.4</span> Make the choropleth</h2>
+<p>Now that the data are on the map, we can turn the main layer into a choropleth:</p>
 <ol type="1">
 <li>Select the main layer and click <span class="ui">Styles</span>.</li>
-<li>Under <span class="ui">Choose attributes</span>, pick the numerical variable (Barcelona: <code>disp_income_pc_2023_eur</code>; London: <code>IMDRank</code>), then choose <span class="ui">Counts and Amounts (Color)</span> and click <span class="ui">Style options</span>.</li>
-<li>Under <span class="ui">Classify data</span>, try <span class="ui">Natural breaks</span>, <span class="ui">Quantile</span> and <span class="ui">Equal interval</span>, with 5 classes each time. Look at how the map changes.</li>
-<li>Choose one single-hue colour ramp. Switch off or thin the outlines of the polygons if they clutter the map.</li>
-<li>Check the <strong>legend</strong>: it should say what is being shown and in which units.</li>
+<li>Under <span class="ui">Choose attributes</span>, pick the numerical variable (<code>disp_income_pc_2023_eur</code> for Barcelona, <code>IMDRank</code> for London). Then choose <span class="ui">Counts and Amounts (Color)</span> and click <span class="ui">Style options</span>.</li>
+<li>Under <span class="ui">Classify data</span>, try <span class="ui">Natural breaks</span>, <span class="ui">Quantile</span> and <span class="ui">Equal interval</span>, with 5 classes each time, and look at how the map changes.</li>
+<li>Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.</li>
+<li>Check the legend: it should say what is being shown, and in which units.</li>
 </ol>
-<p>Pick the classification you can best defend, and be ready to explain why.</p>
+<p>In the end, pick the classification you can best defend, and be ready to explain why you chose it.</p>
 </section>
 <section id="compare-scales-barcelona" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="compare-scales-barcelona"><span class="header-section-number">4.5</span> Compare scales (Barcelona)</h2>
+<p>Next, let us see how much the picture depends on the size of the areas:</p>
 <ol type="1">
-<li>Put the neighbourhoods and districts layers <em>above</em> your income layer and set their fill to <em>none</em>, with a visible outline.</li>
-<li>Zoom into one district. How much does income vary between the sections <em>within</em> a neighbourhood, compared with between neighbourhoods?</li>
+<li>Put the neighbourhoods and districts layers <em>above</em> your income layer, and set their fill to <em>none</em> with a visible outline.</li>
+<li>Zoom into one district. How much does income vary between the sections <em>within</em> a neighbourhood, compared with the variation between neighbourhoods?</li>
 </ol>
-<p>London users: do the same with the boroughs. Compare the pattern of LSOAs <em>within</em> a borough with the single borough outline. Why might one borough-level summary hide a lot?</p>
+<p>If you are working with the London data, you can do the same with the boroughs. Compare the pattern of LSOAs <em>within</em> a borough with the single borough outline. Why might one borough-level summary hide a lot?</p>
 </section>
 <section id="write-the-pop-up" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="write-the-pop-up"><span class="header-section-number">4.6</span> Write the pop-up</h2>
-<p>Pop-ups should do more than show numbers.</p>
+<p>A good pop-up does more than just show numbers. Let us set one up for the main layer:</p>
 <ol type="1">
 <li>Select the main layer and click <span class="ui">Pop-ups</span>.</li>
 <li>Set the title to the neighbourhood (Barcelona) or the LSOA name (London).</li>
-<li>Show the value with a <strong>clear name and unit</strong>, e.g.&nbsp;<em>Disposable income per person (2023): €{disp_income_pc_2023_eur}</em>.</li>
-<li>Add a <strong>short interpretive note</strong>: one sentence on what the value means in context.</li>
-<li>Click a few areas to check.</li>
+<li>Show the value with a clear name and unit, for example <em>Disposable income per person (2023): €{disp_income_pc_2023_eur}</em>.</li>
+<li>Add a short interpretive note: one sentence on what the value means in context.</li>
+<li>Click on a few areas to check the result.</li>
 </ol>
 </section>
 <section id="evaluate-your-data" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="evaluate-your-data"><span class="header-section-number">4.7</span> Evaluate your data</h2>
-<p>Choose <strong>one</strong> variable from your pack and answer the five questions from <a href="#secondary-data-and-where-it-comes-from">Secondary data and where it comes from</a>. Then add two or three limitations. Think about:</p>
+<p>To finish, choose one variable from your data pack and answer the five questions from <a href="#secondary-data-and-where-it-comes-from">Secondary data and where it comes from</a>. Then think of two or three limitations of the data. The following questions can help you with this:</p>
 <ul>
-<li><strong>Scale:</strong> what is hidden by showing averages for areas?</li>
-<li><strong>Completeness:</strong> are there areas missing? In the Barcelona layer, <code>mean_taxable_income_2024_eur</code> is empty for three sections: why might data be missing?</li>
-<li><strong>Method:</strong> is it a count, an estimate or a model? (The London index gives <em>ranks</em>: what does a rank not tell you?)</li>
-<li><strong>Time:</strong> is the year the same as your fieldwork?</li>
+<li><strong>Scale:</strong> what is hidden when we show averages for areas?</li>
+<li><strong>Completeness:</strong> are there areas missing? In the Barcelona layer, <code>mean_taxable_income_2024_eur</code> is empty for three sections. Why might these data be missing?</li>
+<li><strong>Method:</strong> is the variable a count, an estimate or the output of a model? (The London index gives <em>ranks</em>: what does a rank not tell you?)</li>
+<li><strong>Time:</strong> does the data refer to the same year as your fieldwork?</li>
 <li><strong>Bias:</strong> who is more likely to be missing from, or poorly represented in, the underlying data?</li>
 </ul>
-<p>Write your answers as notes; you will need them for the worksheet.</p>
+<p>Keep your answers as notes, because you will need them for the worksheet.</p>
 </section>
 <section id="save-your-map" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="save-your-map"><span class="header-section-number">4.8</span> Save your map</h2>
-<p><span class="ui">Save and open</span> → <span class="ui">Save as</span>, with a title like <code>GEOG0187 – Secondary data – Surname</code>. You will build on this map for the second story map.</p>
+<p>Save your map via <span class="ui">Save and open</span> → <span class="ui">Save as</span>, with a title such as <code>GEOG0187 – Secondary data – Surname</code>. You will build on this map for the second story map.</p>
 </section>
 <section id="check-before-you-leave" class="level2" data-number="4.9">
 <h2 data-number="4.9" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">4.9</span> Check before you leave</h2>
+<p>By the end of the session, you should have:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">your main layer shaded by one numerical variable;</label></li>
 <li><label><input type="checkbox">a context layer (boundaries) on the map;</label></li>
-<li><label><input type="checkbox">a legend that explains the variable and units;</label></li>
+<li><label><input type="checkbox">a legend that explains the variable and its units;</label></li>
 <li><label><input type="checkbox">a pop-up with a value and an interpretive note;</label></li>
 <li><label><input type="checkbox">notes on the five questions and two or three limitations of your data.</label></li>
 </ul>
 </section>
 <section id="find-your-own-data" class="level2" data-number="4.10">
 <h2 data-number="4.10" class="anchored" data-anchor-id="find-your-own-data"><span class="header-section-number">4.10</span> Find your own data</h2>
-<p>For the worksheet you do not have to use the pack above. Good places to look:</p>
+<p>For the worksheet, you do not have to use the data pack above. If you would like to find your own data, the following are good places to start:</p>
 <ul>
-<li><strong>ArcGIS Living Atlas</strong>: <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">Living Atlas</span>.</li>
-<li><strong>Open Data BCN</strong> (<a href="https://opendata-ajuntament.barcelona.cat/en/">opendata-ajuntament.barcelona.cat</a>) for Barcelona.</li>
-<li><strong>London Datastore</strong> (<a href="https://data.london.gov.uk">data.london.gov.uk</a>), <strong>ONS</strong> (<a href="https://www.ons.gov.uk">ons.gov.uk</a>) and <strong>data.gov.uk</strong> for London and the UK.</li>
+<li>ArcGIS Living Atlas, via <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">Living Atlas</span>.</li>
+<li>Open Data BCN (<a href="https://opendata-ajuntament.barcelona.cat/en/">opendata-ajuntament.barcelona.cat</a>) for Barcelona.</li>
+<li>The London Datastore (<a href="https://data.london.gov.uk">data.london.gov.uk</a>), the ONS (<a href="https://www.ons.gov.uk">ons.gov.uk</a>) and data.gov.uk for London and the UK.</li>
 </ul>
-<p>Check the licence, and always record the name, publisher and year for your references.</p>
+<p>Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.</p>
 </section>
 <section id="troubleshooting" class="level2" data-number="4.11">
 <h2 data-number="4.11" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">4.11</span> Troubleshooting</h2>
@@ -610,15 +615,15 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">The Barcelona layers do not appear</td>
-<td style="text-align: left;">Search <span class="ui">My organization</span>, not <span class="ui">My content</span>, and check you signed in through UCL SSO. Tell staff if the layers are missing.</td>
+<td style="text-align: left;">Search <span class="ui">My organization</span>, not <span class="ui">My content</span>, and check that you signed in through <span class="ui">UCL SSO</span>. Let staff know if the layers are missing.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The London layer is slow or looks wrong</td>
-<td style="text-align: left;">Apply the borough filter first, then zoom in.</td>
+<td style="text-align: left;">Apply the borough filter first, and then zoom in.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">The map looks all one colour</td>
-<td style="text-align: left;">Check the classification and the number of classes. Try <em>quantile</em>.</td>
+<td style="text-align: left;">The map looks like it is all one colour</td>
+<td style="text-align: left;">Check the classification and the number of classes, and try <em>quantile</em>.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The legend shows odd numbers</td>
@@ -626,7 +631,7 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="odd">
 <td style="text-align: left;">A value is empty in the pop-up</td>
-<td style="text-align: left;">The data may be missing for that area. Say so in your evaluation.</td>
+<td style="text-align: left;">The data may be missing for that area. If so, mention this in your evaluation.</td>
 </tr>
 </tbody>
 </table>

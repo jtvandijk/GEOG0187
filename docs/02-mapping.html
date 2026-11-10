@@ -408,7 +408,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="mapping-your-field-data" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Mapping Your Field Data</h1>
-<p>In Catalonia your working group recorded sites in the field survey, and you recorded your route in Strava. This week you bring the two together on one map in <strong>ArcGIS Online</strong>. Everyone makes their <strong>own</strong> map. Next week you will turn this map into a <a href="03-storymap.html">story map</a>, so make sure you save it at the end of the session.</p>
+<p>In Catalonia, your working group recorded sites using the field survey, and you recorded your route in Strava. This week, we will bring the two together on one map in <strong>ArcGIS Online</strong>. Everyone makes their own map. Next week, you will turn this map into a <a href="03-storymap.html">story map</a>, so please make sure you save it at the end of the session.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -419,19 +419,19 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Have your route exported as a <code>.gpx</code> file from the Strava website (see <a href="01-fieldwork.html#after-the-trip">After the trip</a>), and know your <strong>fieldwork group</strong> and <strong>working group number</strong>. If your own recording failed, ask someone in your working group for a copy of their <code>.gpx</code> file.</p>
+<p>Make sure you have exported your route as a <code>.gpx</code> file from the Strava website (see <a href="01-fieldwork.html#after-the-trip">After the trip</a>), and that you know your fieldwork group and working group number. If your own recording failed, ask someone in your working group for a copy of their <code>.gpx</code> file.</p>
 </div>
 </div>
 <section id="layers-and-attributes" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="layers-and-attributes"><span class="header-section-number">2.1</span> Layers and attributes</h2>
-<p>In Session 1 you saw that spatial data come as <strong>points</strong>, <strong>lines</strong> and <strong>polygons</strong>. A GIS keeps each dataset as a separate <strong>layer</strong>, and stacks the layers on top of each other to make a map:</p>
+<p>In Session 1, we saw that spatial data come as <strong>points</strong>, <strong>lines</strong> and <strong>polygons</strong>. A GIS keeps each dataset as a separate <strong>layer</strong>, and stacks these layers on top of each other to make a map. On our map, we will have three of them:</p>
 <ul>
-<li>Your <strong>sites</strong> are a point layer: one point per survey entry.</li>
-<li>Your <strong>route</strong> is a line layer: the track Strava recorded.</li>
-<li>The <strong>basemap</strong> at the bottom is the background (streets, satellite imagery, terrain) that gives your data context.</li>
+<li>Your sites form a point layer, with one point per survey entry.</li>
+<li>Your route forms a line layer: the track that Strava recorded.</li>
+<li>The basemap at the bottom is the background (streets, satellite imagery, terrain) that gives your data context.</li>
 </ul>
-<p>Each feature in a layer also carries <strong>attributes</strong>: the information stored about it, such as the site ID, note and photo you entered in the survey. In ArcGIS Online you see a feature’s attributes in its <strong>pop-up</strong> when you click on it, and you can use them to <strong>filter</strong> a layer (only show some features) or <strong>style</strong> it (e.g.&nbsp;colour points by category).</p>
-<p>A map on a flat screen is always a <em>projection</em> of the curved Earth, which distorts distances and areas somewhat. ArcGIS Online takes care of this for you; we will not need to worry about it in this module.</p>
+<p>Each feature in a layer also carries <strong>attributes</strong>: the information stored about it, such as the site ID, note and photo you entered in the survey. In ArcGIS Online, you can see a feature’s attributes in its <strong>pop-up</strong> when you click on it. You can also use attributes to <strong>filter</strong> a layer, so that only some features are shown, or to <strong>style</strong> it, for instance by colouring points by category.</p>
+<p>A map on a flat screen is always a <em>projection</em> of the curved Earth, which distorts distances and areas to some extent. ArcGIS Online takes care of this for us, so we will not need to worry about it in this module.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -442,77 +442,80 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>ArcGIS Online changes its layout regularly. This chapter describes <em>what</em> to click by its label (e.g.&nbsp;<span class="ui">Add</span>). If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.</p>
+<p>ArcGIS Online changes its layout regularly. This chapter therefore describes <em>what</em> to click by its label (e.g.&nbsp;<span class="ui">Add</span>). If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.</p>
 </div>
 </div>
 </section>
 <section id="open-map-viewer" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="open-map-viewer"><span class="header-section-number">2.2</span> Open Map Viewer</h2>
+<p>Let us start by signing in to ArcGIS Online and opening an empty map:</p>
 <ol type="1">
-<li>Go to <a href="https://uclondon.maps.arcgis.com">https://uclondon.maps.arcgis.com</a>, click <span class="ui">UCL SSO</span>, and sign in as you would for Moodle. Use a laptop or computer, not your phone.</li>
+<li>Go to <a href="https://uclondon.maps.arcgis.com">https://uclondon.maps.arcgis.com</a>, click <span class="ui">UCL SSO</span>, and sign in as you would for Moodle. Please use a laptop or computer for this, not your phone.</li>
 <li>Open <span class="ui">Map</span> from the top menu. This opens <strong>Map Viewer</strong> with an empty map.</li>
-<li>The left-hand toolbar holds what is <em>in</em> your map (<span class="ui">Layers</span>, <span class="ui">Add</span>, <span class="ui">Basemap</span>, <span class="ui">Save and open</span>). The right-hand toolbar holds settings for the selected layer (<span class="ui">Properties</span>, <span class="ui">Styles</span>, <span class="ui">Filter</span>, <span class="ui">Pop-ups</span>). <!-- SCREENSHOT 1: Map Viewer, empty map, both toolbars visible. images/w02/map-viewer.png --></li>
+<li>Take a moment to look around. The left-hand toolbar holds what is <em>in</em> your map (<span class="ui">Layers</span>, <span class="ui">Add</span>, <span class="ui">Basemap</span>, <span class="ui">Save and open</span>), whilst the right-hand toolbar holds the settings for the selected layer (<span class="ui">Properties</span>, <span class="ui">Styles</span>, <span class="ui">Filter</span>, <span class="ui">Pop-ups</span>). <!-- SCREENSHOT 1: Map Viewer, empty map, both toolbars visible. images/w02/map-viewer.png --></li>
 </ol>
 </section>
 <section id="choose-a-basemap" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="choose-a-basemap"><span class="header-section-number">2.3</span> Choose a basemap</h2>
-<p>Click <span class="ui">Basemap</span> and try a few options. A quiet basemap such as <em>Light Gray Canvas</em> or <em>OpenStreetMap</em> makes your own data stand out; <em>Imagery</em> shows what the places look like from above. You can change it again at any time.</p>
+<p>Click <span class="ui">Basemap</span> and try a few of the options. A quiet basemap such as <em>Light Gray Canvas</em> or <em>OpenStreetMap</em> makes your own data stand out, whereas <em>Imagery</em> shows what the places look like from above. You can change the basemap again at any time.</p>
 </section>
 <section id="add-your-groups-sites" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="add-your-groups-sites"><span class="header-section-number">2.4</span> Add your group’s sites</h2>
-<p>All field survey entries, from every group, are in one layer. You add that layer and then filter it to your own working group.</p>
+<p>All field survey entries, from every group, are stored in a single layer. We will add that layer to our map and then filter it so that only your own working group’s sites are shown:</p>
 <ol type="1">
 <li>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span>. Switch from <span class="ui">My content</span> to <span class="ui">My organization</span>, and search for <code>UCL Geography Field Survey</code>. <!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png --></li>
-<li>Click <span class="ui">Add</span> on the layer, and close the browse panel. The map zooms to the points: you will see the entries of the whole year.</li>
-<li>With the layer selected, click <span class="ui">Filter</span> on the right-hand toolbar, then <span class="ui">Add new</span>:
+<li>Click <span class="ui">Add</span> on the layer, and close the browse panel. The map will zoom to the points, and you will see the entries of the whole year.</li>
+<li>With the layer selected, click <span class="ui">Filter</span> on the right-hand toolbar, then <span class="ui">Add new</span>, and set up the following conditions:
 <ul>
 <li><strong>Data collection</strong> <em>is</em> your fieldwork group (e.g.&nbsp;<code>Fieldwork - Catalonia Group 1</code>).</li>
-<li>Click <span class="ui">Add new</span> again: <strong>Working group number</strong> <em>is</em> your number.</li>
+<li>Click <span class="ui">Add new</span> again, and set <strong>Working group number</strong> <em>is</em> your number.</li>
 <li>Click <span class="ui">Save</span>. Only your group’s sites should now be visible. <!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png --></li>
 </ul></li>
-<li>Zoom to your sites (in <span class="ui">Layers</span>, open the <span class="ui">⋯</span> menu of the layer → <span class="ui">Zoom to</span>) and click a point. Its pop-up shows the attributes and photo your group entered.</li>
+<li>Zoom to your sites (in <span class="ui">Layers</span>, open the <span class="ui">⋯</span> menu of the layer → <span class="ui">Zoom to</span>) and click on a point. Its pop-up shows the attributes and photo your group entered.</li>
 </ol>
-<p>The filter only changes <em>your</em> map. Nobody else’s data are deleted or changed.</p>
+<p>Note that the filter only changes <em>your</em> map: nobody else’s data are deleted or changed.</p>
 </section>
 <section id="add-your-route" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="add-your-route"><span class="header-section-number">2.5</span> Add your route</h2>
+<p>Next, we will add the route you exported from Strava:</p>
 <ol type="1">
 <li>Click <span class="ui">Add</span> → <span class="ui">Add layer from file</span>, and select your <code>.gpx</code> file.</li>
-<li>When asked, choose to <strong>create a hosted feature layer</strong> (so the route is stored in your own ArcGIS Online content), give it a name such as <code>CAT1_WG05 route</code>, and click <span class="ui">Create and add to map</span>. <!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png --></li>
-<li>The route appears as a line on the map. Check that it matches where you walked. If you have several recordings, add each <code>.gpx</code> file in the same way.</li>
+<li>When asked, choose to create a <strong>hosted feature layer</strong>, so that the route is stored in your own ArcGIS Online content. Give it a name such as <code>CAT1_WG05 route</code>, and click <span class="ui">Create and add to map</span>. <!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png --></li>
+<li>The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can add each <code>.gpx</code> file in the same way.</li>
 </ol>
 </section>
 <section id="style-your-layers" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="style-your-layers"><span class="header-section-number">2.6</span> Style your layers</h2>
-<p>Select a layer in <span class="ui">Layers</span> and click <span class="ui">Styles</span> on the right-hand toolbar.</p>
+<p>To change how a layer looks, select it in <span class="ui">Layers</span> and click <span class="ui">Styles</span> on the right-hand toolbar. We will style both layers in turn:</p>
 <ul>
-<li><strong>Route</strong>: keep the <span class="ui">Location (single symbol)</span> style, click <span class="ui">Style options</span> and change the line colour and width so the route is clearly visible on your basemap.</li>
-<li><strong>Sites</strong>: change the symbol, size and colour so the points stand out against the route. If you want, you can instead style them by an attribute, but a single clear symbol is fine for now.</li>
+<li>For the route, keep the <span class="ui">Location (single symbol)</span> style, click <span class="ui">Style options</span>, and change the line colour and width so that the route is clearly visible on your basemap.</li>
+<li>For the sites, change the symbol, size and colour so that the points stand out against the route. You could also style them by an attribute instead, but a single clear symbol is fine for now.</li>
 </ul>
-<p>Aim for a map that someone who was not there can read at a glance: two clearly different layers and nothing that distracts from them.</p>
+<p>What we are aiming for is a map that someone who was not there can read at a glance: two clearly different layers, and nothing that distracts from them.</p>
 </section>
 <section id="set-up-the-pop-ups" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="set-up-the-pop-ups"><span class="header-section-number">2.7</span> Set up the pop-ups</h2>
-<p>Select the sites layer and click <span class="ui">Pop-ups</span>.</p>
+<p>By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered. Let us tidy it up by selecting the sites layer and clicking <span class="ui">Pop-ups</span>:</p>
 <ol type="1">
-<li>Set the <strong>title</strong> to the site ID: click the title, type <code>{</code>, and choose the Site ID field.</li>
-<li>Under <span class="ui">Fields list</span>, keep the fields that matter (site ID, note) and remove the rest.</li>
-<li>Check that <span class="ui">Attachments</span> is included, so the photo shows.</li>
-<li>Click a few points on the map to check the result. <!-- SCREENSHOT 5: Pop-ups pane configured, with an open pop-up showing title, note and photo. images/w02/popup.png --></li>
+<li>Set the <strong>title</strong> to the site ID by clicking on the title, typing <code>{</code>, and choosing the Site ID field.</li>
+<li>Under <span class="ui">Fields list</span>, keep the fields that matter (site ID and note) and remove the rest.</li>
+<li>Check that <span class="ui">Attachments</span> is included, so that the photo is shown.</li>
+<li>Click on a few points on the map to check the result. <!-- SCREENSHOT 5: Pop-ups pane configured, with an open pop-up showing title, note and photo. images/w02/popup.png --></li>
 </ol>
 </section>
 <section id="save-your-map" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="save-your-map"><span class="header-section-number">2.8</span> Save your map</h2>
+<p>Finally, we need to save the map so that you can open it again next week:</p>
 <ol type="1">
 <li>Click <span class="ui">Save and open</span> → <span class="ui">Save as</span>.</li>
-<li>Title: <code>GEOG0187 – CAT1_WG05 – Surname</code> (with your own trip, working group number and surname). Add a short summary, e.g.&nbsp;<em>Sites and route from fieldwork in Barcelona</em>.</li>
-<li>Click <span class="ui">Save</span>. The map is now in <span class="ui">Content</span> → <span class="ui">My content</span>, and you can open it again next week.</li>
+<li>Use <code>GEOG0187 – CAT1_WG05 – Surname</code> as the title, with your own trip, working group number and surname. Add a short summary, for example <em>Sites and route from fieldwork in Barcelona</em>.</li>
+<li>Click <span class="ui">Save</span>. The map will now be in <span class="ui">Content</span> → <span class="ui">My content</span>.</li>
 </ol>
-<p>You do not need to share the map with anyone.</p>
+<p>You do not need to share the map with anyone at this point.</p>
 </section>
 <section id="check-before-you-leave" class="level2" data-number="2.9">
 <h2 data-number="2.9" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">2.9</span> Check before you leave</h2>
-<p>By the end of the session your saved map should have:</p>
+<p>By the end of the session, your saved map should have:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">a basemap of your choice;</label></li>
 <li><label><input type="checkbox">your working group’s sites, and only those;</label></li>
@@ -520,7 +523,7 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">clear styling for both layers;</label></li>
 <li><label><input type="checkbox">pop-ups that show the site ID, note and photo. <!-- SCREENSHOT 6: the finished map (test data): basemap, styled route and sites. images/w02/finished-map.png --></label></li>
 </ul>
-<p>If you finish early: use the <span class="ui">Measure</span> tool (right-hand toolbar) to find how far you walked, try a different basemap, or add labels with the site IDs (<span class="ui">Labels</span> on the right-hand toolbar).</p>
+<p>If you finish early, you could use the <span class="ui">Measure</span> tool (right-hand toolbar) to find out how far you walked, try a different basemap, or add labels with the site IDs (<span class="ui">Labels</span> on the right-hand toolbar).</p>
 </section>
 <section id="troubleshooting" class="level2" data-number="2.10">
 <h2 data-number="2.10" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">2.10</span> Troubleshooting</h2>
@@ -538,19 +541,19 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">The survey layer does not appear in the search</td>
-<td style="text-align: left;">Check you are searching <span class="ui">My organization</span>, not <span class="ui">My content</span>, and that you signed in through <strong>UCL SSO</strong>.</td>
+<td style="text-align: left;">Check that you are searching <span class="ui">My organization</span>, not <span class="ui">My content</span>, and that you signed in through <span class="ui">UCL SSO</span>.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">No sites left after filtering</td>
+<td style="text-align: left;">No sites are left after filtering</td>
 <td style="text-align: left;">Check the exact fieldwork group and working group number, and that your group did not use <code>Fieldwork - Test</code> by mistake. Ask staff if your sites are missing.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">I do not have a <code>.gpx</code> file</td>
-<td style="text-align: left;">Ask someone in your working group for theirs. In the meantime, practise with the demo route from your Affiliate Lecturer.</td>
+<td style="text-align: left;">Ask someone in your working group for theirs. In the meantime, you can practise with the demo route from your Affiliate Lecturer.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The <code>.gpx</code> file will not upload</td>
-<td style="text-align: left;">Check the file ends in <code>.gpx</code> and was exported from the Strava <em>website</em>. Try a different browser.</td>
+<td style="text-align: left;">Check that the file ends in <code>.gpx</code> and was exported from the Strava <em>website</em>. You could also try a different browser.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The route is a straight line or has big jumps</td>
@@ -558,11 +561,11 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td style="text-align: left;">The photo does not show in the pop-up</td>
-<td style="text-align: left;">Check <span class="ui">Attachments</span> is switched on under <span class="ui">Pop-ups</span>. Not every entry has a photo.</td>
+<td style="text-align: left;">Check that <span class="ui">Attachments</span> is switched on under <span class="ui">Pop-ups</span>. Note that not every entry has a photo.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">I cannot find my map next time</td>
-<td style="text-align: left;"><span class="ui">Content</span> → <span class="ui">My content</span>, or search for <code>GEOG0187</code>.</td>
+<td style="text-align: left;">Go to <span class="ui">Content</span> → <span class="ui">My content</span>, or search for <code>GEOG0187</code>.</td>
 </tr>
 </tbody>
 </table>

@@ -4,15 +4,15 @@ number-offset: 3
 
 # Using Secondary Data
 
-So far you have mapped data that **you** collected. Most of the maps you will meet in geography, however, are made from **secondary data**: data collected by someone else, for their own purposes, and made available for others to reuse. This week you learn to find such data, put it on a map, and ask whether it is fit for the question you want to answer. This is the skill behind the second GIS worksheet.
+So far, we have mapped data that you collected yourself. Most of the maps you will come across in geography, however, are made from **secondary data**: data collected by someone else, for their own purposes, and made available for others to reuse. This week, we will look at how to find such data, how to put them on a map, and how to decide whether they are fit for the question you want to answer. These are the skills behind the second GIS worksheet.
 
 ::: {.callout-important}
 ## Before the session
-Sign in to ArcGIS Online with [UCL SSO]{.ui} (see [Open Map Viewer]({{< var urls.w02 >}}#open-map-viewer)) and have a browser open. Know your **fieldwork city**: **Barcelona** if you went on the Catalonia trip, **London** otherwise. Everyone does the same exercise, with a different data pack.
+Sign in to ArcGIS Online with [UCL SSO]{.ui} (see [Open Map Viewer]({{< var urls.w02 >}}#open-map-viewer)) and have a browser open. You will also need to know your fieldwork city: Barcelona if you went on the Catalonia trip, and London otherwise. Everyone does the same exercise, but with a different data pack.
 :::
 
 ## Secondary data and where it comes from
-Secondary data are produced by **organisations**: statistical agencies, city councils, researchers or companies. Before you use any of them, find out five things. You will need them for your own referencing, and for the critical evaluation the worksheet asks for.
+Secondary data are produced by organisations such as statistical agencies, city councils, researchers or companies. Before you use any of them, you should find out five things. You will need the answers for your own referencing, as well as for the critical evaluation the worksheet asks for.
 
 | Question | Example |
 | :------- | :------ |
@@ -22,26 +22,28 @@ Secondary data are produced by **organisations**: statistical agencies, city cou
 | **When** does it refer to? | Income in 2023 |
 | **Where**: for which areas? | 1,068 census sections |
 
-You usually find these answers in the dataset's **description** or **metadata** page, which is part of why you should always start there and not with the map.
+You can usually find these answers in the dataset's description or metadata page, which is one reason why you should always start there rather than with the map.
 
 ## Choropleth maps
-A **choropleth map** shades areas (polygons) by the value of a numerical variable, such as income, density or deprivation. They are easy to make and easy to get wrong, because each of the following choices changes what the map seems to say:
+A **choropleth map** shades areas (polygons) by the value of a numerical variable, such as income, density or deprivation. Choropleth maps are easy to make, but they are also easy to get wrong, because each of the following choices changes what the map seems to say:
 
-- **The variable.** Use *rates* or *averages* (income per person, % of residents) rather than raw totals (total income): areas with more people will otherwise look "bigger" for no interesting reason.
-- **The classes.** The values are split into groups, each with a colour. With *equal intervals* the classes have the same width; with *quantiles* they have the same number of areas. The same data can look very different.
-- **The colours.** Use a single-hue ramp from light to dark for values that go from low to high. Avoid rainbow palettes.
-- **The scale.** The same variable can look different for small areas than for large ones. Averaging over a large area hides differences inside it.
+- **The variable.** Use *rates* or *averages* (income per person, % of residents) rather than raw totals (total income). Otherwise, areas with more people will look "bigger" for no interesting reason.
+- **The classes.** The values are split into groups, each with its own colour. With *equal intervals*, the classes all have the same width; with *quantiles*, they all contain the same number of areas. The same data can look very different depending on which you choose.
+- **The colours.** Use a single-hue ramp from light to dark for values that go from low to high, and avoid rainbow palettes.
+- **The scale.** The same variable can look different for small areas than for large ones, because averaging over a large area hides the differences inside it.
 
 ## Add your data pack
-Open a new map ([Map]{.ui}) and pick a quiet basemap. Then follow the instructions for your city.
+Let us start by opening a new map ([Map]{.ui}) and picking a quiet basemap. You can then follow the instructions for your city.
 
 ### Barcelona
+For Barcelona, the data pack consists of three layers that we have prepared for you:
+
 1. Click [Add]{.ui} → [Browse layers]{.ui} → [My organization]{.ui}, and search for `GEOG0187 Barcelona`.
-2. Add `{{< var secondary.bcn_sections >}}`. It has one polygon per **census section** (the smallest statistical area) and these attributes:
+2. Add `{{< var secondary.bcn_sections >}}`. This layer has one polygon per **census section** (the smallest statistical area), with the following attributes:
    - `disp_income_pc_2023_eur`: disposable household income per person, 2023;
    - `mean_taxable_income_2024_eur`: mean taxable income per unit of consumption, 2024;
-   - `gini_2024_pct`: the Gini index of tax income, 2024 (higher means a more unequal distribution).
-3. Add `{{< var secondary.bcn_barris >}}` and `{{< var secondary.bcn_districts >}}`: boundaries of the 73 neighbourhoods and 10 districts. You will use these as **context**.
+   - `gini_2024_pct`: the Gini index of tax income, 2024 (a higher value means a more unequal distribution).
+3. Add `{{< var secondary.bcn_barris >}}` and `{{< var secondary.bcn_districts >}}`, which contain the boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.
 
 ::: {.callout-note}
 ## Data source
@@ -49,10 +51,12 @@ Barcelona City Council, *Open Data BCN* (CC BY 4.0), based on the Idescat income
 :::
 
 ### London
+For London, we will use the official deprivation data, which are already available in ArcGIS Online:
+
 1. Click [Add]{.ui} → [Browse layers]{.ui} → [ArcGIS Online]{.ui}, and search for `{{< var secondary.london_lsoa >}}` from *gis@communities.gov.uk*.
-2. Add the layer. It holds one polygon for every **LSOA** in England (areas of about 1,500 residents), with the **Index of Multiple Deprivation (2025)** *rank* and *decile*.
-3. To see only London, use [Filter]{.ui}: `LSOA Name` (`LSOA21NM`) *starts with* the name of a borough (for example `Camden`). Add more conditions with *or* for the other boroughs you want.
-4. For **context** and for comparing scales, also add `{{< var secondary.london_boroughs >}}` (same publisher): one polygon per local authority, including the London boroughs (filter on `LAD24NM`). Put it above the LSOAs with no fill and a visible outline.
+2. Add the layer. It contains one polygon for every **LSOA** in England (small areas of about 1,500 residents), with the *rank* and *decile* of the Index of Multiple Deprivation (2025).
+3. To see only London, use [Filter]{.ui}: set `LSOA Name` (`LSOA21NM`) *starts with* the name of a borough (for example `Camden`). You can add more conditions with *or* for any other boroughs you want to include.
+4. For context, and to compare scales, also add `{{< var secondary.london_boroughs >}}` from the same publisher. This layer has one polygon per local authority, including the London boroughs (filter on `LAD24NM`). Place it above the LSOAs, with no fill and a visible outline.
 
 ::: {.callout-note}
 ## Data source
@@ -60,64 +64,70 @@ Ministry of Housing, Communities & Local Government, *English Indices of Depriva
 :::
 
 ## Make the choropleth
-1. Select the main layer and click [Styles]{.ui}.
-2. Under [Choose attributes]{.ui}, pick the numerical variable (Barcelona: `disp_income_pc_2023_eur`; London: `IMDRank`), then choose [Counts and Amounts (Color)]{.ui} and click [Style options]{.ui}.
-3. Under [Classify data]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui}, with 5 classes each time. Look at how the map changes.
-4. Choose one single-hue colour ramp. Switch off or thin the outlines of the polygons if they clutter the map.
-5. Check the **legend**: it should say what is being shown and in which units.
+Now that the data are on the map, we can turn the main layer into a choropleth:
 
-Pick the classification you can best defend, and be ready to explain why.
+1. Select the main layer and click [Styles]{.ui}.
+2. Under [Choose attributes]{.ui}, pick the numerical variable (`disp_income_pc_2023_eur` for Barcelona, `IMDRank` for London). Then choose [Counts and Amounts (Color)]{.ui} and click [Style options]{.ui}.
+3. Under [Classify data]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui}, with 5 classes each time, and look at how the map changes.
+4. Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.
+5. Check the legend: it should say what is being shown, and in which units.
+
+In the end, pick the classification you can best defend, and be ready to explain why you chose it.
 
 ## Compare scales (Barcelona)
-1. Put the neighbourhoods and districts layers *above* your income layer and set their fill to *none*, with a visible outline.
-2. Zoom into one district. How much does income vary between the sections *within* a neighbourhood, compared with between neighbourhoods?
+Next, let us see how much the picture depends on the size of the areas:
 
-London users: do the same with the boroughs. Compare the pattern of LSOAs *within* a borough with the single borough outline. Why might one borough-level summary hide a lot?
+1. Put the neighbourhoods and districts layers *above* your income layer, and set their fill to *none* with a visible outline.
+2. Zoom into one district. How much does income vary between the sections *within* a neighbourhood, compared with the variation between neighbourhoods?
+
+If you are working with the London data, you can do the same with the boroughs. Compare the pattern of LSOAs *within* a borough with the single borough outline. Why might one borough-level summary hide a lot?
 
 ## Write the pop-up
-Pop-ups should do more than show numbers.
+A good pop-up does more than just show numbers. Let us set one up for the main layer:
 
 1. Select the main layer and click [Pop-ups]{.ui}.
 2. Set the title to the neighbourhood (Barcelona) or the LSOA name (London).
-3. Show the value with a **clear name and unit**, e.g. *Disposable income per person (2023): €{disp_income_pc_2023_eur}*.
-4. Add a **short interpretive note**: one sentence on what the value means in context.
-5. Click a few areas to check.
+3. Show the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*.
+4. Add a short interpretive note: one sentence on what the value means in context.
+5. Click on a few areas to check the result.
 
 ## Evaluate your data
-Choose **one** variable from your pack and answer the five questions from [Secondary data and where it comes from](#secondary-data-and-where-it-comes-from). Then add two or three limitations. Think about:
+To finish, choose one variable from your data pack and answer the five questions from [Secondary data and where it comes from](#secondary-data-and-where-it-comes-from). Then think of two or three limitations of the data. The following questions can help you with this:
 
-- **Scale:** what is hidden by showing averages for areas?
-- **Completeness:** are there areas missing? In the Barcelona layer, `mean_taxable_income_2024_eur` is empty for three sections: why might data be missing?
-- **Method:** is it a count, an estimate or a model? (The London index gives *ranks*: what does a rank not tell you?)
-- **Time:** is the year the same as your fieldwork?
+- **Scale:** what is hidden when we show averages for areas?
+- **Completeness:** are there areas missing? In the Barcelona layer, `mean_taxable_income_2024_eur` is empty for three sections. Why might these data be missing?
+- **Method:** is the variable a count, an estimate or the output of a model? (The London index gives *ranks*: what does a rank not tell you?)
+- **Time:** does the data refer to the same year as your fieldwork?
 - **Bias:** who is more likely to be missing from, or poorly represented in, the underlying data?
 
-Write your answers as notes; you will need them for the worksheet.
+Keep your answers as notes, because you will need them for the worksheet.
 
 ## Save your map
-[Save and open]{.ui} → [Save as]{.ui}, with a title like `GEOG0187 – Secondary data – Surname`. You will build on this map for the second story map.
+Save your map via [Save and open]{.ui} → [Save as]{.ui}, with a title such as `GEOG0187 – Secondary data – Surname`. You will build on this map for the second story map.
 
 ## Check before you leave
+By the end of the session, you should have:
+
 - [ ] your main layer shaded by one numerical variable;
 - [ ] a context layer (boundaries) on the map;
-- [ ] a legend that explains the variable and units;
+- [ ] a legend that explains the variable and its units;
 - [ ] a pop-up with a value and an interpretive note;
 - [ ] notes on the five questions and two or three limitations of your data.
 
 ## Find your own data
-For the worksheet you do not have to use the pack above. Good places to look:
+For the worksheet, you do not have to use the data pack above. If you would like to find your own data, the following are good places to start:
 
-- **ArcGIS Living Atlas**: [Add]{.ui} → [Browse layers]{.ui} → [Living Atlas]{.ui}.
-- **Open Data BCN** ([opendata-ajuntament.barcelona.cat](https://opendata-ajuntament.barcelona.cat/en/)) for Barcelona.
-- **London Datastore** ([data.london.gov.uk](https://data.london.gov.uk)), **ONS** ([ons.gov.uk](https://www.ons.gov.uk)) and **data.gov.uk** for London and the UK.
+- ArcGIS Living Atlas, via [Add]{.ui} → [Browse layers]{.ui} → [Living Atlas]{.ui}.
+- Open Data BCN ([opendata-ajuntament.barcelona.cat](https://opendata-ajuntament.barcelona.cat/en/)) for Barcelona.
+- The London Datastore ([data.london.gov.uk](https://data.london.gov.uk)), the ONS ([ons.gov.uk](https://www.ons.gov.uk)) and data.gov.uk for London and the UK.
 
-Check the licence, and always record the name, publisher and year for your references.
+Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.
 
 ## Troubleshooting
 | Problem | What to try |
 | :------ | :---------- |
-| The Barcelona layers do not appear | Search [My organization]{.ui}, not [My content]{.ui}, and check you signed in through UCL SSO. Tell staff if the layers are missing. |
-| The London layer is slow or looks wrong | Apply the borough filter first, then zoom in. |
-| The map looks all one colour | Check the classification and the number of classes. Try *quantile*. |
+| The Barcelona layers do not appear | Search [My organization]{.ui}, not [My content]{.ui}, and check that you signed in through [UCL SSO]{.ui}. Let staff know if the layers are missing. |
+| The London layer is slow or looks wrong | Apply the borough filter first, and then zoom in. |
+| The map looks like it is all one colour | Check the classification and the number of classes, and try *quantile*. |
 | The legend shows odd numbers | Edit the legend labels, or round the values in the style options. |
-| A value is empty in the pop-up | The data may be missing for that area. Say so in your evaluation. |
+| A value is empty in the pop-up | The data may be missing for that area. If so, mention this in your evaluation. |

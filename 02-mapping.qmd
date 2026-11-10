@@ -4,85 +4,91 @@ number-offset: 1
 
 # Mapping Your Field Data
 
-In Catalonia your working group recorded sites in the field survey, and you recorded your route in Strava. This week you bring the two together on one map in **ArcGIS Online**. Everyone makes their **own** map. Next week you will turn this map into a [story map]({{< var urls.w03 >}}), so make sure you save it at the end of the session.
+In Catalonia, your working group recorded sites using the field survey, and you recorded your route in Strava. This week, we will bring the two together on one map in **ArcGIS Online**. Everyone makes their own map. Next week, you will turn this map into a [story map]({{< var urls.w03 >}}), so please make sure you save it at the end of the session.
 
 ::: {.callout-important}
 ## Before the session
-Have your route exported as a `.gpx` file from the Strava website (see [After the trip]({{< var urls.w01 >}}#after-the-trip)), and know your **fieldwork group** and **working group number**. If your own recording failed, ask someone in your working group for a copy of their `.gpx` file.
+Make sure you have exported your route as a `.gpx` file from the Strava website (see [After the trip]({{< var urls.w01 >}}#after-the-trip)), and that you know your fieldwork group and working group number. If your own recording failed, ask someone in your working group for a copy of their `.gpx` file.
 :::
 
 ## Layers and attributes
-In Session 1 you saw that spatial data come as **points**, **lines** and **polygons**. A GIS keeps each dataset as a separate **layer**, and stacks the layers on top of each other to make a map:
+In Session 1, we saw that spatial data come as **points**, **lines** and **polygons**. A GIS keeps each dataset as a separate **layer**, and stacks these layers on top of each other to make a map. On our map, we will have three of them:
 
-- Your **sites** are a point layer: one point per survey entry.
-- Your **route** is a line layer: the track Strava recorded.
-- The **basemap** at the bottom is the background (streets, satellite imagery, terrain) that gives your data context.
+- Your sites form a point layer, with one point per survey entry.
+- Your route forms a line layer: the track that Strava recorded.
+- The basemap at the bottom is the background (streets, satellite imagery, terrain) that gives your data context.
 
-Each feature in a layer also carries **attributes**: the information stored about it, such as the site ID, note and photo you entered in the survey. In ArcGIS Online you see a feature's attributes in its **pop-up** when you click on it, and you can use them to **filter** a layer (only show some features) or **style** it (e.g. colour points by category).
+Each feature in a layer also carries **attributes**: the information stored about it, such as the site ID, note and photo you entered in the survey. In ArcGIS Online, you can see a feature's attributes in its **pop-up** when you click on it. You can also use attributes to **filter** a layer, so that only some features are shown, or to **style** it, for instance by colouring points by category.
 
-A map on a flat screen is always a *projection* of the curved Earth, which distorts distances and areas somewhat. ArcGIS Online takes care of this for you; we will not need to worry about it in this module.
+A map on a flat screen is always a *projection* of the curved Earth, which distorts distances and areas to some extent. ArcGIS Online takes care of this for us, so we will not need to worry about it in this module.
 
 ::: {.callout-note}
 ## If your screen looks different
-ArcGIS Online changes its layout regularly. This chapter describes *what* to click by its label (e.g. [Add]{.ui}). If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.
+ArcGIS Online changes its layout regularly. This chapter therefore describes *what* to click by its label (e.g. [Add]{.ui}). If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.
 :::
 
 ## Open Map Viewer
-1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), click [UCL SSO]{.ui}, and sign in as you would for Moodle. Use a laptop or computer, not your phone.
+Let us start by signing in to ArcGIS Online and opening an empty map:
+
+1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), click [UCL SSO]{.ui}, and sign in as you would for Moodle. Please use a laptop or computer for this, not your phone.
 2. Open [Map]{.ui} from the top menu. This opens **Map Viewer** with an empty map.
-3. The left-hand toolbar holds what is *in* your map ([Layers]{.ui}, [Add]{.ui}, [Basemap]{.ui}, [Save and open]{.ui}). The right-hand toolbar holds settings for the selected layer ([Properties]{.ui}, [Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}).
+3. Take a moment to look around. The left-hand toolbar holds what is *in* your map ([Layers]{.ui}, [Add]{.ui}, [Basemap]{.ui}, [Save and open]{.ui}), whilst the right-hand toolbar holds the settings for the selected layer ([Properties]{.ui}, [Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}).
 <!-- SCREENSHOT 1: Map Viewer, empty map, both toolbars visible. images/w02/map-viewer.png -->
 
 ## Choose a basemap
-Click [Basemap]{.ui} and try a few options. A quiet basemap such as *Light Gray Canvas* or *OpenStreetMap* makes your own data stand out; *Imagery* shows what the places look like from above. You can change it again at any time.
+Click [Basemap]{.ui} and try a few of the options. A quiet basemap such as *Light Gray Canvas* or *OpenStreetMap* makes your own data stand out, whereas *Imagery* shows what the places look like from above. You can change the basemap again at any time.
 
 ## Add your group's sites
-All field survey entries, from every group, are in one layer. You add that layer and then filter it to your own working group.
+All field survey entries, from every group, are stored in a single layer. We will add that layer to our map and then filter it so that only your own working group's sites are shown:
 
 1. Click [Add]{.ui} → [Browse layers]{.ui}. Switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`.
 <!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png -->
-2. Click [Add]{.ui} on the layer, and close the browse panel. The map zooms to the points: you will see the entries of the whole year.
-3. With the layer selected, click [Filter]{.ui} on the right-hand toolbar, then [Add new]{.ui}:
+2. Click [Add]{.ui} on the layer, and close the browse panel. The map will zoom to the points, and you will see the entries of the whole year.
+3. With the layer selected, click [Filter]{.ui} on the right-hand toolbar, then [Add new]{.ui}, and set up the following conditions:
    - **Data collection** *is* your fieldwork group (e.g. `Fieldwork - Catalonia Group 1`).
-   - Click [Add new]{.ui} again: **Working group number** *is* your number.
+   - Click [Add new]{.ui} again, and set **Working group number** *is* your number.
    - Click [Save]{.ui}. Only your group's sites should now be visible.
 <!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png -->
-4. Zoom to your sites (in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to]{.ui}) and click a point. Its pop-up shows the attributes and photo your group entered.
+4. Zoom to your sites (in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to]{.ui}) and click on a point. Its pop-up shows the attributes and photo your group entered.
 
-The filter only changes *your* map. Nobody else's data are deleted or changed.
+Note that the filter only changes *your* map: nobody else's data are deleted or changed.
 
 ## Add your route
+Next, we will add the route you exported from Strava:
+
 1. Click [Add]{.ui} → [Add layer from file]{.ui}, and select your `.gpx` file.
-2. When asked, choose to **create a hosted feature layer** (so the route is stored in your own ArcGIS Online content), give it a name such as `CAT1_WG05 route`, and click [Create and add to map]{.ui}.
+2. When asked, choose to create a **hosted feature layer**, so that the route is stored in your own ArcGIS Online content. Give it a name such as `CAT1_WG05 route`, and click [Create and add to map]{.ui}.
 <!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png -->
-3. The route appears as a line on the map. Check that it matches where you walked. If you have several recordings, add each `.gpx` file in the same way.
+3. The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can add each `.gpx` file in the same way.
 
 ## Style your layers
-Select a layer in [Layers]{.ui} and click [Styles]{.ui} on the right-hand toolbar.
+To change how a layer looks, select it in [Layers]{.ui} and click [Styles]{.ui} on the right-hand toolbar. We will style both layers in turn:
 
-- **Route**: keep the [Location (single symbol)]{.ui} style, click [Style options]{.ui} and change the line colour and width so the route is clearly visible on your basemap.
-- **Sites**: change the symbol, size and colour so the points stand out against the route. If you want, you can instead style them by an attribute, but a single clear symbol is fine for now.
+- For the route, keep the [Location (single symbol)]{.ui} style, click [Style options]{.ui}, and change the line colour and width so that the route is clearly visible on your basemap.
+- For the sites, change the symbol, size and colour so that the points stand out against the route. You could also style them by an attribute instead, but a single clear symbol is fine for now.
 
-Aim for a map that someone who was not there can read at a glance: two clearly different layers and nothing that distracts from them.
+What we are aiming for is a map that someone who was not there can read at a glance: two clearly different layers, and nothing that distracts from them.
 
 ## Set up the pop-ups
-Select the sites layer and click [Pop-ups]{.ui}.
+By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered. Let us tidy it up by selecting the sites layer and clicking [Pop-ups]{.ui}:
 
-1. Set the **title** to the site ID: click the title, type `{`, and choose the Site ID field.
-2. Under [Fields list]{.ui}, keep the fields that matter (site ID, note) and remove the rest.
-3. Check that [Attachments]{.ui} is included, so the photo shows.
-4. Click a few points on the map to check the result.
+1. Set the **title** to the site ID by clicking on the title, typing `{`, and choosing the Site ID field.
+2. Under [Fields list]{.ui}, keep the fields that matter (site ID and note) and remove the rest.
+3. Check that [Attachments]{.ui} is included, so that the photo is shown.
+4. Click on a few points on the map to check the result.
 <!-- SCREENSHOT 5: Pop-ups pane configured, with an open pop-up showing title, note and photo. images/w02/popup.png -->
 
 ## Save your map
-1. Click [Save and open]{.ui} → [Save as]{.ui}.
-2. Title: `GEOG0187 – CAT1_WG05 – Surname` (with your own trip, working group number and surname). Add a short summary, e.g. *Sites and route from fieldwork in Barcelona*.
-3. Click [Save]{.ui}. The map is now in [Content]{.ui} → [My content]{.ui}, and you can open it again next week.
+Finally, we need to save the map so that you can open it again next week:
 
-You do not need to share the map with anyone.
+1. Click [Save and open]{.ui} → [Save as]{.ui}.
+2. Use `GEOG0187 – CAT1_WG05 – Surname` as the title, with your own trip, working group number and surname. Add a short summary, for example *Sites and route from fieldwork in Barcelona*.
+3. Click [Save]{.ui}. The map will now be in [Content]{.ui} → [My content]{.ui}.
+
+You do not need to share the map with anyone at this point.
 
 ## Check before you leave
-By the end of the session your saved map should have:
+By the end of the session, your saved map should have:
 
 - [ ] a basemap of your choice;
 - [ ] your working group's sites, and only those;
@@ -91,15 +97,15 @@ By the end of the session your saved map should have:
 - [ ] pop-ups that show the site ID, note and photo.
 <!-- SCREENSHOT 6: the finished map (test data): basemap, styled route and sites. images/w02/finished-map.png -->
 
-If you finish early: use the [Measure]{.ui} tool (right-hand toolbar) to find how far you walked, try a different basemap, or add labels with the site IDs ([Labels]{.ui} on the right-hand toolbar).
+If you finish early, you could use the [Measure]{.ui} tool (right-hand toolbar) to find out how far you walked, try a different basemap, or add labels with the site IDs ([Labels]{.ui} on the right-hand toolbar).
 
 ## Troubleshooting
 | Problem | What to try |
 | :------ | :---------- |
-| The survey layer does not appear in the search | Check you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through **UCL SSO**. |
-| No sites left after filtering | Check the exact fieldwork group and working group number, and that your group did not use `Fieldwork - Test` by mistake. Ask staff if your sites are missing. |
-| I do not have a `.gpx` file | Ask someone in your working group for theirs. In the meantime, practise with the demo route from your Affiliate Lecturer. |
-| The `.gpx` file will not upload | Check the file ends in `.gpx` and was exported from the Strava *website*. Try a different browser. |
+| The survey layer does not appear in the search | Check that you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through [UCL SSO]{.ui}. |
+| No sites are left after filtering | Check the exact fieldwork group and working group number, and that your group did not use `Fieldwork - Test` by mistake. Ask staff if your sites are missing. |
+| I do not have a `.gpx` file | Ask someone in your working group for theirs. In the meantime, you can practise with the demo route from your Affiliate Lecturer. |
+| The `.gpx` file will not upload | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
 | The route is a straight line or has big jumps | The GPS signal was lost during recording. Use another group member's route if theirs is better. |
-| The photo does not show in the pop-up | Check [Attachments]{.ui} is switched on under [Pop-ups]{.ui}. Not every entry has a photo. |
-| I cannot find my map next time | [Content]{.ui} → [My content]{.ui}, or search for `GEOG0187`. |
+| The photo does not show in the pop-up | Check that [Attachments]{.ui} is switched on under [Pop-ups]{.ui}. Note that not every entry has a photo. |
+| I cannot find my map next time | Go to [Content]{.ui} → [My content]{.ui}, or search for `GEOG0187`. |
