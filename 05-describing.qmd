@@ -4,11 +4,11 @@ number-offset: 4
 
 # Describing Data
 
-In Term 1 you used R to describe data and even ran a t-test. The next three sessions go back over that ground more slowly, and with a purpose: to understand what the numbers mean, how sure we can be about them, and when a difference is real. We use one question throughout: **who breathes the most polluted air in London?** This week you set up a tidy workflow and describe the data. This session and the next feed the first statistics worksheet.
+In Term 1, you used R to describe data and even ran a t-test. Over the next three sessions, we will go back over some of this ground, but more slowly and with a clear purpose: to understand what the numbers mean, how sure we can be about them, and when a difference between groups is real. We will use one question throughout: **who breathes the most polluted air in London?** This week, we will set up a tidy workflow in R and use it to describe our data. This session and the next link to the first statistics worksheet.
 
 ::: {.callout-important}
 ## Before the session
-Have **R** and **RStudio** working on your laptop (you installed them in Term 1; [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere) is a fallback). Then run this once in the RStudio console:
+Make sure **R** and **RStudio** are working on your laptop. You installed both in Term 1; if you run into problems, you can use [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere) instead. Then run the following once in the RStudio console to install the `tidyverse`:
 
 ```r
 install.packages('tidyverse')
@@ -16,12 +16,12 @@ install.packages('tidyverse')
 :::
 
 ## Air pollution in London
-**Nitrogen dioxide** (NO~2~) comes mostly from road traffic, and long-term exposure is linked to asthma and other respiratory disease. The World Health Organization's guideline for the annual mean is **10 µg/m³**, with *interim targets* of 40, 30 and 20 µg/m³ for places still far above it; the UK legal limit is **40 µg/m³**. Fine particles (PM~2.5~) come from traffic, wood burning and many other sources; the WHO guideline is **5 µg/m³**.
+**Nitrogen dioxide** (NO~2~) mostly comes from road traffic, and long-term exposure is linked to asthma and other respiratory diseases. The World Health Organization (WHO) recommends that the annual mean should not exceed **10 µg/m³**, with *interim targets* of 40, 30 and 20 µg/m³ for places that are still far above this guideline. The UK legal limit is **40 µg/m³**. Fine particulate matter (PM~2.5~) comes from traffic, wood burning and many other sources, and has a WHO guideline of **5 µg/m³**.
 
-The values in our data are **averages over whole LSOAs**: no LSOA as a whole is above the legal limit, but many roadside spots inside them are. Air quality is a physical question, but who is exposed is a social one. Researchers call this **environmental justice**: are poorer neighbourhoods exposed to more pollution than richer ones? Over three sessions you will describe, estimate and test exactly that.
+Air pollution is a physical phenomenon, but who is exposed to it is a social question. Researchers refer to this as **environmental justice**: are poorer neighbourhoods exposed to more pollution than richer ones? Over the next three sessions, we will describe, estimate and test exactly that.
 
 ## The data
-Your dataset has one row for each of London's **4,994 LSOAs** (Lower Super Output Areas: small areas of about 1,500 residents).
+We will be using a dataset that contains one row for each of London's 4,994 Lower Super Output Areas (LSOAs): small statistical areas with, on average, about 1,500 residents. For each LSOA, the dataset contains the following variables:
 
 | Column | Description |
 | :----- | :---------- |
@@ -32,12 +32,16 @@ Your dataset has one row for each of London's **4,994 LSOAs** (Lower Super Outpu
 | `imd_score`, `imd_decile` | Index of Multiple Deprivation 2025: score, and decile within England (1 = most deprived 10%) |
 | `income_score` | Share of residents who are income-deprived (0 to 1) |
 
+The NO~2~ and PM~2.5~ values are **averages over whole LSOAs**. No LSOA as a whole is above the UK legal limit, but many roadside locations within them are.
+
 ::: {.callout-note}
 ## Data sources
 Greater London Authority, *London Atmospheric Emissions Inventory (LAEI) 2022*, 20 m concentration grids, averaged per LSOA by GEOG0187 staff. Ministry of Housing, Communities & Local Government, *English Indices of Deprivation 2025*. LSOA boundaries: Office for National Statistics. All under the Open Government Licence v3.0.
 :::
 
-## Set up your project
+## Setting up your project
+Before we can load the data, we need to set up an RStudio project for the three statistics sessions:
+
 1. In RStudio, go to [File]{.ui} → [New Project]{.ui} → [New Directory]{.ui} → [New Project]{.ui}. Call it `GEOG0187-stats`, save it somewhere sensible (not your Downloads folder), and click [Create Project]{.ui}.
 2. In the [Files]{.ui} pane, click [New Folder]{.ui} and create a folder called `data`.
 3. Download the dataset and save it in that `data` folder:
@@ -46,14 +50,16 @@ Greater London Authority, *London Atmospheric Emissions Inventory (LAEI) 2022*, 
 | :--- | :--- | :--- |
 | London LSOA air quality and deprivation | `csv` | [Download]({{< var data.lsoa_csv >}}) |
 
-4. Create a new script ([File]{.ui} → [New File]{.ui} → [R Script]{.ui}) and save it as `w05-describing.R`. Type (or copy) the code below into the script and run it line by line with `Ctrl` + `Enter` (`Cmd` + `Return` on a Mac).
+4. Create a new script ([File]{.ui} → [New File]{.ui} → [R Script]{.ui}) and save it as `w05-describing.R`. Type or copy the code from this page into your script, and run it line by line with `Ctrl` + `Enter` (`Cmd` + `Return` on a Mac).
 
 ::: {.callout-tip}
-Use the same project for all three statistics sessions: one project, one `data` folder, one script per week. If R says it cannot find the file, check that the project is open (its name shows in the top-right corner of RStudio) and that the file is in the `data` folder with exactly this name.
+We will use the same project for all three statistics sessions, with one `data` folder and one script per week. If R tells you it cannot find the file, check that the project is open (its name is shown in the top-right corner of RStudio) and that the file is saved in the `data` folder under exactly this name.
 :::
 
 ## A tidy workflow
-In Term 1 you worked in **base R**: `read.csv()`, the `$` operator and functions such as `tapply()`. We now switch to the **tidyverse**, a set of packages that share one way of working: you take a dataset, and pass it through a series of small steps with the pipe, `|>`, read as *"and then"*. This is also what you will use in GEOG0018 next year.
+In Term 1, you worked with **base R**: functions such as `read.csv()` and `tapply()`, and the `$` operator. In these sessions, we will switch to the **tidyverse**: a collection of packages that share a common way of working. You take a dataset and pass it through a series of small steps using the pipe, `|>`, which you can read as *"and then"*. This is also how R is used in most Year 2 methods modules.
+
+Let us start by loading the `tidyverse` and reading in the data. The `glimpse()` function gives us a first look at the dataset: the number of rows and columns, the type of each column, and the first few values.
 
 ```{r}
 #| label: 05-load
@@ -69,7 +75,7 @@ lsoa <- read_csv('data/london-lsoa-air-quality.csv')
 glimpse(lsoa)
 ```
 
-The tidyverse is built around a handful of **verbs**, each doing one thing:
+The tidyverse is built around a small number of **verbs**, each of which does one thing. The table below lists the most important ones, together with their base R equivalents from Term 1:
 
 | Verb | What it does | Base R from Term 1 |
 | :--- | :----------- | :----------------- |
@@ -79,6 +85,8 @@ The tidyverse is built around a handful of **verbs**, each doing one thing:
 | `arrange()` | sort rows | `df[order(df$a), ]` |
 | `group_by()` + `summarise()` | summarise per group | `tapply(df$a, df$g, mean)` |
 | `count()` | count rows per group | `table(df$g)` |
+
+Let us try some of these. Each pipe below starts with the dataset and passes it through one or more verbs:
 
 ```{r}
 #| label: 05-verbs
@@ -99,7 +107,7 @@ lsoa |>
   nrow()
 ```
 
-`mutate()` adds columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so here we flag each LSOA that is above the WHO interim target of 20 µg/m³. We also divide London into five equal groups (**quintiles**) by income deprivation, from 1 (least deprived fifth) to 5 (most deprived fifth). We save the result, because we will use both new columns again.
+We can use `mutate()` to add new columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so instead we will flag each LSOA that is above the WHO interim target of 20 µg/m³. We will also divide London's LSOAs into five equally sized groups (**quintiles**) based on income deprivation, from 1 (the least deprived fifth) to 5 (the most deprived fifth). Because we will use both new columns again, we save the result by assigning it back to `lsoa`:
 
 ```{r}
 #| label: 05-mutate
@@ -115,11 +123,11 @@ lsoa |>
 ```
 
 ::: {.callout-note}
-Why income and not the full deprivation index? The IMD includes a *Living Environment* domain that partly measures air quality. Comparing NO~2~ with the IMD would partly compare air pollution with itself. Income deprivation avoids that.
+Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a *Living Environment* domain that partly measures air quality, so comparing NO~2~ with the IMD would partly mean comparing air pollution with itself. Income deprivation avoids this problem.
 :::
 
-## Describe one variable
-To describe a numerical variable you report three things: its **centre**, its **spread** and its **shape**.
+## Describing a single variable
+When we describe a numerical variable, we usually report three things: its **centre**, its **spread** and its **shape**. We can calculate the most common summary statistics in one go with `summarise()`:
 
 ```{r}
 #| label: 05-describe
@@ -135,11 +143,11 @@ lsoa |>
             max = max(no2))
 ```
 
-- **Centre**: the *mean* is the average; the *median* is the middle value. If they differ much, the distribution is skewed or has outliers.
-- **Spread**: the *standard deviation* (sd) is roughly the typical distance from the mean; the *interquartile range* (IQR) is the range of the middle 50% of values.
-- **Shape**: is the distribution symmetric, skewed, or does it have more than one peak? For this you need a plot.
+- **Centre**: the *mean* is the average, and the *median* is the middle value. If the two differ a lot, the distribution is skewed or contains outliers.
+- **Spread**: the *standard deviation* (sd) is roughly the typical distance of a value from the mean, and the *interquartile range* (IQR) is the range covered by the middle 50% of values.
+- **Shape**: is the distribution symmetric or skewed, and does it have one peak or more? To see this, we need a plot.
 
-We keep using **base R** for plots, as in Term 1. The `$` operator still works on a tidyverse dataset.
+For plotting, we will keep using **base R**, as in Term 1. Note that the `$` operator still works on a dataset loaded with the tidyverse:
 
 ```{r}
 #| label: fig-05-hist
@@ -154,11 +162,11 @@ abline(v = 20, lty = 2)
 ```
 
 ::: {.callout-tip}
-Proportions are means too: `above_20` is `TRUE` (1) or `FALSE` (0), so its mean is the share of LSOAs above the interim target. Try `mean(lsoa$above_20)`. What does the answer tell you?
+Proportions are means too. Because `above_20` is either `TRUE` (1) or `FALSE` (0), its mean is the share of LSOAs above the interim target. Try running `mean(lsoa$above_20)`. What does the answer tell you?
 :::
 
-### Who is the average?
-The mean above treats every LSOA as one unit. But LSOAs differ in size, and a statement about *people* should count people. A **population-weighted mean** does that:
+### Areas or people?
+The mean we calculated treats every LSOA as one unit. However, LSOAs differ in the number of people who live in them, and if we want to say something about *people*, we should count people. A **population-weighted mean** does exactly that:
 
 ```{r}
 #| label: 05-weighted
@@ -169,10 +177,10 @@ lsoa |>
             mean_resident = weighted.mean(no2, population))
 ```
 
-Here the two are close, but always ask: *is my unit the area or the person?*
+In this case the two values are very close, but it is always worth asking yourself whether your unit of analysis is the area or the person.
 
-## Describe by group
-Now compare groups with `group_by()` and `summarise()`, the tidy equivalent of `tapply()`.
+## Describing groups
+We can compare groups by combining `group_by()` with `summarise()`, the tidyverse equivalent of `tapply()`. Let us compare NO~2~ levels in Inner and Outer London:
 
 ```{r}
 #| label: 05-group
@@ -186,7 +194,7 @@ lsoa |>
             sd = sd(no2))
 ```
 
-A **boxplot** shows the median, the IQR (the box) and outliers for each group side by side. The formula `no2 ~ inner_outer` reads as "NO~2~ by Inner/Outer London".
+A **boxplot** shows the median, the IQR (the box) and any outliers for each group side by side. The formula `no2 ~ inner_outer` can be read as "NO~2~ by Inner or Outer London":
 
 ```{r}
 #| label: fig-05-box-io
@@ -198,7 +206,7 @@ boxplot(no2 ~ inner_outer, data = lsoa,
         xlab = '', ylab = 'Annual mean NO2 (µg/m³)')
 ```
 
-The same works for the boroughs. With 33 groups, sorting helps:
+The same approach works for the boroughs. With 33 boroughs, it helps to sort the result, so that we can look at the boroughs with the highest and the lowest levels:
 
 ```{r}
 #| label: 05-borough
@@ -216,8 +224,8 @@ head(borough_no2, 5)
 tail(borough_no2, 5)
 ```
 
-## Two variables: pollution and deprivation
-Back to the environmental justice question. Summarise and plot NO~2~ by income quintile:
+## Pollution and deprivation
+Let us now return to our environmental justice question, and look at NO~2~ levels for each income deprivation quintile:
 
 ```{r}
 #| label: 05-quintile
@@ -231,6 +239,8 @@ lsoa |>
             sd = sd(no2))
 ```
 
+And plot the result:
+
 ```{r}
 #| label: fig-05-box-quintile
 #| fig-cap: NO2 by income deprivation quintile (1 = least deprived fifth of London LSOAs).
@@ -241,21 +251,25 @@ boxplot(no2 ~ income_quintile, data = lsoa,
         ylab = 'Annual mean NO2 (µg/m³)')
 ```
 
-Look carefully before you conclude. Is the pattern the same all the way from quintile 1 to 5? Remember that deprived areas and polluted areas are both more common in Inner London: repeat the summary **within** Inner and Outer London (`group_by(inner_outer, income_quintile)`) and see whether the pattern holds.
+It is worth looking carefully before drawing any conclusions. Is the pattern the same all the way from quintile 1 to quintile 5? Also remember that both deprived areas and polluted areas are more common in Inner London. Repeat the summary **within** Inner and Outer London, using `group_by(inner_outer, income_quintile)`, and see whether the pattern still holds.
 
 ::: {.callout-warning}
-Describing is not explaining. A difference between groups tells you *that* exposure is unequal, not *why*: roads, housing, history and planning all play a part.
+Describing is not the same as explaining. A difference between groups tells us *that* exposure is unequal, but not *why*: roads, housing, history and planning all play a part.
 :::
 
-## Write it up
-A good description of a variable states:
+## Reporting your results
+Numbers only become useful once we put them into words. In a report, an essay or a worksheet, you would describe your data in a short paragraph supported by a figure, rather than by copying R output. A good description covers:
 
 - **what** was measured, in which **units**, for which **units of analysis** (LSOAs, people), and **how many**;
-- the **centre** and **spread**, with the right measures (median and IQR for skewed data);
-- the **shape**, with a figure;
-- how groups **differ**, in numbers and in a figure, with careful wording.
+- the **centre** and **spread**, with suitable measures (median and IQR if the data are skewed);
+- the **shape**, shown in a figure that you refer to;
+- how groups **differ**, in numbers and in words, without claiming more than the data show.
 
-For example: *"Across London's 4,994 LSOAs, modelled annual mean NO~2~ in 2022 had a median of ... µg/m³ (IQR ...). Every LSOA exceeded the WHO guideline of 10 µg/m³, and ...% exceeded the interim target of 20 µg/m³."* Write two or three sentences like this for PM~2.5~.
+Based on this session's results, this could look as follows:
+
+> Across London's `r format(nrow(lsoa), big.mark = ',')` LSOAs, modelled annual mean NO~2~ in 2022 had a median of `r sprintf('%.1f', median(lsoa$no2))` µg/m³ (IQR `r sprintf('%.1f', IQR(lsoa$no2))` µg/m³), ranging from `r min(lsoa$no2)` to `r max(lsoa$no2)` µg/m³. Every LSOA was above the WHO guideline of 10 µg/m³, and `r round(100 * mean(lsoa$above_20))`% were above the interim target of 20 µg/m³. Levels were clearly higher in Inner London (median `r sprintf('%.1f', median(lsoa$no2[lsoa$inner_outer == 'Inner']))` µg/m³) than in Outer London (`r sprintf('%.1f', median(lsoa$no2[lsoa$inner_outer == 'Outer']))` µg/m³).
+
+Now try to write a similar paragraph for PM~2.5~.
 
 ## Check before you leave
 - [ ] a project `GEOG0187-stats` with the data in `data/` and a saved script `w05-describing.R`;

@@ -448,13 +448,13 @@ window.Quarto = {
   <ul>
   <li><a href="#testing-differences" id="toc-testing-differences" class="nav-link active" data-scroll-target="#testing-differences"><span class="header-section-number">7</span> Testing Differences</a>
   <ul class="collapse">
-  <li><a href="#the-question" id="toc-the-question" class="nav-link" data-scroll-target="#the-question"><span class="header-section-number">7.1</span> The question</a></li>
-  <li><a href="#describe-first" id="toc-describe-first" class="nav-link" data-scroll-target="#describe-first"><span class="header-section-number">7.2</span> Describe first</a></li>
+  <li><a href="#pollution-and-deprivation-in-outer-london" id="toc-pollution-and-deprivation-in-outer-london" class="nav-link" data-scroll-target="#pollution-and-deprivation-in-outer-london"><span class="header-section-number">7.1</span> Pollution and deprivation in Outer London</a></li>
+  <li><a href="#describing-the-groups" id="toc-describing-the-groups" class="nav-link" data-scroll-target="#describing-the-groups"><span class="header-section-number">7.2</span> Describing the groups</a></li>
   <li><a href="#hypotheses" id="toc-hypotheses" class="nav-link" data-scroll-target="#hypotheses"><span class="header-section-number">7.3</span> Hypotheses</a></li>
   <li><a href="#a-permutation-test" id="toc-a-permutation-test" class="nav-link" data-scroll-target="#a-permutation-test"><span class="header-section-number">7.4</span> A permutation test</a></li>
   <li><a href="#welchs-t-test" id="toc-welchs-t-test" class="nav-link" data-scroll-target="#welchs-t-test"><span class="header-section-number">7.5</span> Welch’s t-test</a></li>
   <li><a href="#effect-size-how-big-is-the-difference" id="toc-effect-size-how-big-is-the-difference" class="nav-link" data-scroll-target="#effect-size-how-big-is-the-difference"><span class="header-section-number">7.6</span> Effect size: how big is the difference?</a></li>
-  <li><a href="#check-against-the-truth" id="toc-check-against-the-truth" class="nav-link" data-scroll-target="#check-against-the-truth"><span class="header-section-number">7.7</span> Check against the truth</a></li>
+  <li><a href="#checking-against-the-population" id="toc-checking-against-the-population" class="nav-link" data-scroll-target="#checking-against-the-population"><span class="header-section-number">7.7</span> Checking against the population</a></li>
   <li><a href="#common-misconceptions" id="toc-common-misconceptions" class="nav-link" data-scroll-target="#common-misconceptions"><span class="header-section-number">7.8</span> Common misconceptions</a>
   <ul class="collapse">
   <li><a href="#the-p-value-is-the-probability-that-h0-is-true" id="toc-the-p-value-is-the-probability-that-h0-is-true" class="nav-link" data-scroll-target="#the-p-value-is-the-probability-that-h0-is-true"><span class="header-section-number">7.8.1</span> “The p-value is the probability that H<sub>0</sub> is true”</a></li>
@@ -462,7 +462,7 @@ window.Quarto = {
   <li><a href="#significant-means-important" id="toc-significant-means-important" class="nav-link" data-scroll-target="#significant-means-important"><span class="header-section-number">7.8.3</span> “Significant means important”</a></li>
   <li><a href="#test-enough-things-and-report-the-significant-one" id="toc-test-enough-things-and-report-the-significant-one" class="nav-link" data-scroll-target="#test-enough-things-and-report-the-significant-one"><span class="header-section-number">7.8.4</span> “Test enough things and report the significant one”</a></li>
   </ul></li>
-  <li><a href="#write-it-up" id="toc-write-it-up" class="nav-link" data-scroll-target="#write-it-up"><span class="header-section-number">7.9</span> Write it up</a></li>
+  <li><a href="#reporting-your-results" id="toc-reporting-your-results" class="nav-link" data-scroll-target="#reporting-your-results"><span class="header-section-number">7.9</span> Reporting your results</a></li>
   <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead"><span class="header-section-number">7.10</span> Looking ahead</a></li>
   <li><a href="#check-before-you-leave" id="toc-check-before-you-leave" class="nav-link" data-scroll-target="#check-before-you-leave"><span class="header-section-number">7.11</span> Check before you leave</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">7.12</span> Troubleshooting</a></li>
@@ -479,7 +479,8 @@ window.Quarto = {
 
 <section id="testing-differences" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Testing Differences</h1>
-<p>Two sessions ago you saw that more deprived LSOAs tend to have higher NO<sub>2</sub>. Last week you saw that a sample never matches the population exactly. Put the two together and you get this week’s question: <strong>if I see a difference between two groups in my sample, is it a real difference, or could it just be sampling variability?</strong> That is what a <strong>hypothesis test</strong> answers. You ran a t-test in Term 1; this week you find out what it actually does, what its result does and does not mean, and how to report it. This session feeds the second statistics worksheet, and you can start your analysis in class.</p>
+<p>Two sessions ago, we saw that more deprived LSOAs tend to have somewhat higher levels of NO<sub>2</sub>. Last week, we saw that a sample never matches the population exactly. This week, we bring the two together. When we see a difference between two groups in a sample, how do we know whether it reflects a real difference in the population, or whether it could simply be the result of which LSOAs happened to end up in our sample? This is the question a <strong>hypothesis test</strong> tries to answer.</p>
+<p>You already ran a t-test in Term 1. This week, we will look at what such a test actually does, what its result does and does not tell us, and how to report it. This session links to the second statistics worksheet, so you can use the time in class to make a start on your own analysis.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -493,10 +494,11 @@ window.Quarto = {
 <p>Open your <code>GEOG0187-stats</code> project. Create a new script, <code>w07-testing.R</code>. Have a look back at <a href="06-uncertainty.html#confidence-intervals">Confidence intervals</a> from last week.</p>
 </div>
 </div>
-<section id="the-question" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="the-question"><span class="header-section-number">7.1</span> The question</h2>
-<p>We ask: <strong>in Outer London, are LSOAs in the most income-deprived fifth exposed to more NO<sub>2</sub> than LSOAs in the least deprived fifth?</strong></p>
-<p>As last week, we pretend we can only measure a sample: <strong>30 LSOAs from each group</strong>. And, as last week, we can check our answer against the full data at the end.</p>
+<section id="pollution-and-deprivation-in-outer-london" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="pollution-and-deprivation-in-outer-london"><span class="header-section-number">7.1</span> Pollution and deprivation in Outer London</h2>
+<p>In Session 5, we found that the link between income deprivation and NO<sub>2</sub> looked different in Inner and Outer London. In this session, we will focus on Outer London and look at whether LSOAs in the most income-deprived fifth of London are exposed to higher levels of NO<sub>2</sub> than LSOAs in the least deprived fifth.</p>
+<p>Just like last week, we will pretend that we cannot measure every LSOA and instead only have data for a random sample: in this case, 30 LSOAs from each group. Because we do in fact have data for all LSOAs, we can check at the end how close our sample got to the true answer.</p>
+<p>Let us start by loading the data, adding the income deprivation quintiles we created in Session 5, and selecting the two groups we want to compare:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -530,14 +532,14 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><code>factor()</code> with <code>levels</code> fixes the order of the groups. R then always compares <em>Most deprived</em> minus <em>Least deprived</em>, so a positive difference means more NO<sub>2</sub> in the most deprived LSOAs.</p>
+<p>The <code>factor()</code> function with <code>levels</code> fixes the order of the two groups. This means R will always calculate <em>Most deprived</em> minus <em>Least deprived</em>, so that a positive difference means higher NO<sub>2</sub> in the most deprived LSOAs.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="describe-first" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="describe-first"><span class="header-section-number">7.2</span> Describe first</h2>
-<p>Never test what you have not looked at.</p>
+<section id="describing-the-groups" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="describing-the-groups"><span class="header-section-number">7.2</span> Describing the groups</h2>
+<p>Before running any test, it is always a good idea to describe and plot the data first. Let us look at the mean and standard deviation of NO<sub>2</sub> in both groups, and store the difference between the two means as <code>obs_diff</code> as we will need it again later:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -565,6 +567,7 @@ window.Quarto = {
 <pre><code>[1] 1.94</code></pre>
 </div>
 </div>
+<p>We can then compare the two groups visually with a boxplot:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -587,20 +590,20 @@ Figure&nbsp;1: NO2 in samples of 30 Outer London LSOAs from the most and least i
 </div>
 </div>
 </div>
-<p>The most deprived LSOAs in our sample have higher NO<sub>2</sub>. But the two boxes overlap a lot, and last week showed that sample means move around. Could a difference this large appear by chance, even if the two groups were the same in the population?</p>
+<p>In our sample, NO<sub>2</sub> levels are higher in the most deprived LSOAs. However, the two boxes overlap considerably, and last week we saw that sample means vary from one sample to the next. So could a difference this large also appear by chance, even if there were no difference between the two groups in the population?</p>
 </section>
 <section id="hypotheses" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="hypotheses"><span class="header-section-number">7.3</span> Hypotheses</h2>
-<p>A test starts from a <strong>null hypothesis</strong> (H<sub>0</sub>): the boring explanation, which we try to find evidence against.</p>
+<p>Every hypothesis test starts with a <strong>null hypothesis</strong> (H<sub>0</sub>). This is the ‘nothing is going on’ explanation, against which we look for evidence. It comes with an <strong>alternative hypothesis</strong> (H<sub>1</sub>). For our question, these are:</p>
 <ul>
-<li><strong>H<sub>0</sub></strong>: in the population, mean NO<sub>2</sub> is the same in both groups. Any difference in the sample is sampling variability.</li>
-<li><strong>H<sub>1</sub></strong> (alternative): in the population, mean NO<sub>2</sub> differs between the groups.</li>
+<li><strong>H<sub>0</sub></strong>: in the population, mean NO<sub>2</sub> is the same in both groups, and any difference we see in our sample is due to sampling variability.</li>
+<li><strong>H<sub>1</sub></strong>: in the population, mean NO<sub>2</sub> differs between the two groups.</li>
 </ul>
-<p>We then ask: <strong>if H<sub>0</sub> were true, how surprising would our data be?</strong></p>
+<p>The test then answers one specific question: <em>if H<sub>0</sub> were true, how surprising would the data we observed be?</em></p>
 </section>
 <section id="a-permutation-test" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="a-permutation-test"><span class="header-section-number">7.4</span> A permutation test</h2>
-<p>If H<sub>0</sub> is true, the labels <em>Most deprived</em> and <em>Least deprived</em> do not matter: any LSOA could just as well have had the other label. So we can <strong>shuffle</strong> the labels at random, recompute the difference, and do that thousands of times. This shows us which differences we would expect from chance alone.</p>
+<p>If H<sub>0</sub> is true, the labels <em>Most deprived</em> and <em>Least deprived</em> do not tell us anything about NO<sub>2</sub>: any LSOA could just as well have had the other label. This gives us a simple way to see what chance alone can produce. We randomly shuffle the labels, calculate the difference between the two group means again, and repeat this thousands of times. This is called a <strong>permutation test</strong>, and we can run it with <code>replicate()</code>, which you used last week:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -615,6 +618,7 @@ Figure&nbsp;1: NO2 in samples of 30 Outer London LSOAs from the most and least i
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
+<p>Let us plot the 5,000 differences, together with the difference we actually observed:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -640,7 +644,7 @@ Figure&nbsp;2: Differences in means after shuffling the group labels 5,000 times
 </div>
 </div>
 </div>
-<p>The <strong>p-value</strong> is the share of shuffles that give a difference at least as large as the one we observed, in either direction:</p>
+<p>Most shuffled differences are close to zero, as we would expect when the labels are meaningless. The <strong>p-value</strong> is the proportion of shuffles that produce a difference at least as large as the one we observed, in either direction:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -653,15 +657,15 @@ Figure&nbsp;2: Differences in means after shuffling the group labels 5,000 times
 <pre><code>[1] 0.0032</code></pre>
 </div>
 </div>
-<p>Very few shuffles produce a difference as large as ours. Data like ours would be very unlikely if H<sub>0</sub> were true, so we <strong>reject H<sub>0</sub></strong>: the data provide evidence of a difference. By convention, a p-value below <strong>0.05</strong> is called <em>statistically significant</em>. There is nothing special about 0.05, though, and it is better to report the p-value itself.</p>
+<p>Very few shuffles produce a difference as large as ours. In other words, data like ours would be very unlikely if H<sub>0</sub> were true, so we <strong>reject H<sub>0</sub></strong> and conclude that the data provide evidence of a difference between the two groups. By convention, a p-value below 0.05 is called <em>statistically significant</em>. There is nothing special about 0.05, however, so it is good practice to report the p-value itself.</p>
 </section>
 <section id="welchs-t-test" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="welchs-t-test"><span class="header-section-number">7.5</span> Welch’s t-test</h2>
-<p>The t-test does the same job with a formula instead of shuffling. It divides the observed difference by its <strong>standard error</strong>, which you met last week:</p>
+<p>The t-test does the same job as the permutation test, but uses a formula instead of shuffling. It divides the observed difference by its <strong>standard error</strong>, which we introduced last week:</p>
 <p><span class="math display">\[
 t = \frac{\bar{x}_1 - \bar{x}_2}{SE}, \qquad SE = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
 \]</span></p>
-<p>The larger <span class="math inline">\(t\)</span>, the further the difference is from zero in units of standard error, and the smaller the p-value. R’s default, <strong>Welch’s t-test</strong>, does not assume that both groups have the same spread, so it is the safe choice.</p>
+<p>The larger the value of <span class="math inline">\(t\)</span>, the further the observed difference is from zero relative to its standard error, and the smaller the p-value. By default, R runs <strong>Welch’s t-test</strong>, which does not assume that both groups have the same spread. This makes it a safe choice in most situations. We can run the test with the <code>t.test()</code> function:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -685,12 +689,12 @@ sample estimates:
                        20.75                        18.81 </code></pre>
 </div>
 </div>
-<p>Read the output from the top:</p>
+<p>The output contains a lot of information, so let us go through it from the top:</p>
 <ul>
-<li><code>t</code> and <code>df</code>: the test statistic and its degrees of freedom (with Welch’s test these need not be whole numbers);</li>
-<li><code>p-value</code>: close to the permutation test’s, as it should be;</li>
-<li><code>95 percent confidence interval</code>: the confidence interval for the <strong>difference</strong> in means;</li>
-<li><code>sample estimates</code>: the two group means.</li>
+<li><code>t</code> and <code>df</code> are the test statistic and its degrees of freedom. With Welch’s test, the degrees of freedom do not need to be a whole number.</li>
+<li><code>p-value</code> should be close to the p-value of our permutation test.</li>
+<li><code>95 percent confidence interval</code> is the confidence interval for the <strong>difference</strong> between the two means.</li>
+<li><code>sample estimates</code> are the means of the two groups.</li>
 </ul>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -698,14 +702,14 @@ sample estimates:
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>The t-test assumes the sample means are roughly normally distributed. Thanks to the central limit theorem (last week), that holds for moderate sample sizes like ours unless the data are very skewed or have extreme outliers. The permutation test does not need this assumption, which is why it is a good check. In GEOG0018 you will meet the <em>Mann-Whitney U test</em>, another alternative.</p>
+<p>The t-test assumes that the sample means are approximately normally distributed. Thanks to the central limit theorem, which we saw last week, this is usually the case for samples of this size, unless the data are very skewed or contain extreme outliers. The permutation test does not rely on this assumption, which makes it a useful check. Another alternative you may meet in Year 2 is the <em>Mann-Whitney U test</em>.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="effect-size-how-big-is-the-difference" class="level2" data-number="7.6">
 <h2 data-number="7.6" class="anchored" data-anchor-id="effect-size-how-big-is-the-difference"><span class="header-section-number">7.6</span> Effect size: how big is the difference?</h2>
-<p>A p-value tells you whether a difference is distinguishable from chance. It does not tell you whether it is <strong>large</strong>. Always report the <strong>effect size</strong> too. The most useful one is the difference itself, in the original units, with its confidence interval:</p>
+<p>A p-value tells us whether a difference can be distinguished from chance, but not whether the difference is <strong>large</strong>. For that, we need the <strong>effect size</strong>. The most useful effect size is often simply the difference itself, in the original units, together with its confidence interval:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -724,8 +728,8 @@ attr(,"conf.level")
 [1] 0.95</code></pre>
 </div>
 </div>
-<p>Is a difference of about 2 µg/m³ large? Compare it with something meaningful: the WHO guideline is 10 µg/m³, and last session the gap between Inner and Outer London was about 4 µg/m³.</p>
-<p>When variables have no natural unit, people use a <strong>standardised</strong> effect size such as <strong>Cohen’s d</strong>: the difference divided by the (pooled) standard deviation.</p>
+<p>Is a difference of about 2 µg/m³ large? It helps to compare it with something meaningful: the WHO guideline is 10 µg/m³, and in Session 5 we found a gap of about 4 µg/m³ between Inner and Outer London.</p>
+<p>When a variable does not have a natural unit, researchers often use a <strong>standardised</strong> effect size instead, such as <strong>Cohen’s d</strong>. This is the difference between the means divided by the (pooled) standard deviation of the two groups:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -742,11 +746,11 @@ attr(,"conf.level")
 <pre><code>[1] 0.8199486</code></pre>
 </div>
 </div>
-<p>As a rough guide, d of 0.2 is <em>small</em>, 0.5 <em>medium</em> and 0.8 <em>large</em>. These labels come from psychology; judge the size in context where you can.</p>
+<p>As a rough guide, a d of 0.2 is considered <em>small</em>, 0.5 <em>medium</em> and 0.8 <em>large</em>. These labels originally come from psychology, so where possible it is better to judge the size of a difference in its own context.</p>
 </section>
-<section id="check-against-the-truth" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="check-against-the-truth"><span class="header-section-number">7.7</span> Check against the truth</h2>
-<p>Because we have every LSOA, we can see what the population difference really is:</p>
+<section id="checking-against-the-population" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="checking-against-the-population"><span class="header-section-number">7.7</span> Checking against the population</h2>
+<p>Because we have data for every LSOA, we can do something that is never possible in real research: compare our sample result with the true difference in the population.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -761,18 +765,18 @@ attr(,"conf.level")
 <pre><code>[1] 1.978809</code></pre>
 </div>
 </div>
-<p>Does the confidence interval from our sample contain it? In real research you can never do this check, which is exactly why the interval matters.</p>
+<p>Does the confidence interval from our sample contain the true difference? In real research, we can never check this, which is exactly why reporting the confidence interval matters.</p>
 </section>
 <section id="common-misconceptions" class="level2" data-number="7.8">
 <h2 data-number="7.8" class="anchored" data-anchor-id="common-misconceptions"><span class="header-section-number">7.8</span> Common misconceptions</h2>
-<p>Hypothesis tests are easy to run and easy to misread. Four common mistakes:</p>
+<p>Hypothesis tests are easy to run, but also easy to misinterpret. Let us go through four common misconceptions.</p>
 <section id="the-p-value-is-the-probability-that-h0-is-true" class="level3" data-number="7.8.1">
 <h3 data-number="7.8.1" class="anchored" data-anchor-id="the-p-value-is-the-probability-that-h0-is-true"><span class="header-section-number">7.8.1</span> “The p-value is the probability that H<sub>0</sub> is true”</h3>
-<p>No.&nbsp;The p-value is calculated <strong>assuming</strong> H<sub>0</sub> is true: it is the probability of data at least as extreme as yours <em>if</em> there were no difference. A p-value of 0.01 does not mean a 1% chance that there is no difference.</p>
+<p>This is not the case. The p-value is calculated by <strong>assuming</strong> that H<sub>0</sub> is true: it is the probability of observing data at least as extreme as ours <em>if</em> there were no difference. A p-value of 0.01 therefore does not mean that there is a 1% chance that there is no difference.</p>
 </section>
 <section id="not-significant-means-no-difference" class="level3" data-number="7.8.2">
 <h3 data-number="7.8.2" class="anchored" data-anchor-id="not-significant-means-no-difference"><span class="header-section-number">7.8.2</span> “Not significant means no difference”</h3>
-<p>Repeat the test for <strong>Inner London</strong>:</p>
+<p>Let us run the same comparison for Inner London:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -806,6 +810,7 @@ sample estimates:
                     24.33667                     24.87667 </code></pre>
 </div>
 </div>
+<p>And compare the result with the true difference in Inner London:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -819,11 +824,11 @@ sample estimates:
 <pre><code>[1] -0.8525509</code></pre>
 </div>
 </div>
-<p>The test is not significant, yet in the population there <strong>is</strong> a difference (and in the opposite direction from Outer London: look back at Session 5). With 30 LSOAs per group, the test simply could not detect a difference this small. <em>Absence of evidence is not evidence of absence.</em> Look at the confidence interval: it tells you which differences are still plausible, including the true one.</p>
+<p>The test is not significant, yet there <strong>is</strong> a difference in the population, and it goes in the opposite direction from Outer London (as we saw in Session 5). With 30 LSOAs per group, the test simply could not detect a difference this small. Absence of evidence is not evidence of absence. The confidence interval is helpful here, as it shows the range of differences that are still consistent with our data, including the true one.</p>
 </section>
 <section id="significant-means-important" class="level3" data-number="7.8.3">
 <h3 data-number="7.8.3" class="anchored" data-anchor-id="significant-means-important"><span class="header-section-number">7.8.3</span> “Significant means important”</h3>
-<p>With enough data, even a tiny difference becomes significant. Compare the 4th and 5th income quintiles across all of London, with large samples:</p>
+<p>With enough data, even a very small difference becomes statistically significant. Let us compare the 4th and 5th income deprivation quintiles across London, this time with large samples of 800 LSOAs each:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -856,11 +861,11 @@ mean in group 4 mean in group 5
        22.02275        22.54175 </code></pre>
 </div>
 </div>
-<p>The p-value is small, but the difference is about half a µg/m³: statistically significant, but hardly important. This is why you report the <strong>effect size</strong>, not just the p-value.</p>
+<p>The p-value is small, but the difference is only about half a µg/m³. The result is statistically significant, but hardly important, which is why we should always report the effect size and not only the p-value.</p>
 </section>
 <section id="test-enough-things-and-report-the-significant-one" class="level3" data-number="7.8.4">
 <h3 data-number="7.8.4" class="anchored" data-anchor-id="test-enough-things-and-report-the-significant-one"><span class="header-section-number">7.8.4</span> “Test enough things and report the significant one”</h3>
-<p>If H<sub>0</sub> is true, a test at the 0.05 level still comes out significant 5% of the time, by definition. Here we draw two samples from the <strong>same</strong> group 1,000 times, so H<sub>0</sub> is true every time, and count the significant results:</p>
+<p>Even when H<sub>0</sub> is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the <strong>same</strong> group 1,000 times, so that H<sub>0</sub> is true every time, and counting how many of the tests are significant:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -888,30 +893,30 @@ mean in group 4 mean in group 5
 <pre><code>[1] 0.054</code></pre>
 </div>
 </div>
-<p>About one in twenty tests produces a “finding” from pure noise. If you compare all 33 boroughs with each other (528 pairs), you will find many significant differences whether or not they mean anything. Decide what to test <strong>before</strong> you look, and report everything you tested.</p>
+<p>About one in twenty tests produces a ‘finding’ from pure noise. If you were to compare all 33 boroughs with each other (528 pairs), you would find many significant differences, whether or not they mean anything. It is therefore important to decide what you will test <strong>before</strong> you look at the data, and to report every test you ran.</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Two more things a test cannot do. It cannot tell you <strong>why</strong> groups differ: Inner/Outer London, road networks and housing all matter. And our data describe <strong>areas</strong>, not people: an LSOA’s average NO<sub>2</sub> is not the exposure of every resident in it. Drawing conclusions about individuals from area data is called the <em>ecological fallacy</em>.</p>
+<p>There are two more things a test cannot do. First, it cannot tell us <strong>why</strong> groups differ: location in Inner or Outer London, road networks and housing all play a role. Second, our data describe <strong>areas</strong>, not people: the average NO<sub>2</sub> in an LSOA is not the exposure of every resident who lives there. Drawing conclusions about individuals from data about areas is known as the <em>ecological fallacy</em>.</p>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="write-it-up" class="level2" data-number="7.9">
-<h2 data-number="7.9" class="anchored" data-anchor-id="write-it-up"><span class="header-section-number">7.9</span> Write it up</h2>
-<p>Report the descriptives, the test, the effect size with its confidence interval, and a conclusion in words:</p>
+<section id="reporting-your-results" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="reporting-your-results"><span class="header-section-number">7.9</span> Reporting your results</h2>
+<p>When you report a comparison between two groups, for instance in an essay or a worksheet, include the descriptive statistics for both groups, the result of the test, the size of the difference with its confidence interval, and what this means in plain words. Report exact p-values (or <em>p</em> &lt; 0.001 for very small values) rather than only stating that a result is significant. Based on this session’s samples, this could look as follows:</p>
 <blockquote class="blockquote">
-<p><em>In random samples of 30 Outer London LSOAs from each group, mean annual NO<sub>2</sub> was … µg/m³ (SD …) in the most income-deprived fifth and … µg/m³ (SD …) in the least deprived fifth. The difference of … µg/m³ (95% CI … to …) was statistically significant (Welch’s t = …, df = …, p = …; permutation p = …), a … effect (d = …). Within Outer London, more deprived areas are exposed to somewhat higher NO<sub>2</sub> …</em></p>
+<p>In random samples of 30 Outer London LSOAs per group, mean annual NO<sub>2</sub> was 20.8 µg/m³ in the most income-deprived fifth and 18.8 µg/m³ in the least deprived fifth. The difference of 1.9 µg/m³ (95% CI 0.7 to 3.2) is unlikely to be due to sampling variability alone (Welch’s t = 3.18, df = 57.1, p = 0.002; permutation test p = 0.003). This is a difference of about 0.8 standard deviations, but small next to the gap between Inner and Outer London. In Outer London, more deprived areas are exposed to somewhat higher NO<sub>2</sub>; the data do not tell us why.</p>
 </blockquote>
-<p>Then try it yourself: choose <strong>one</strong> other comparison (for example PM<sub>2.5</sub> instead of NO<sub>2</sub>, or two boroughs), state H<sub>0</sub> and H<sub>1</sub> <strong>before</strong> you look at the data, and work through describe → test → effect size → write-up.</p>
+<p>Now try it yourself. Choose <strong>one</strong> other comparison, for example PM<sub>2.5</sub> instead of NO<sub>2</sub>, or two boroughs. Write down H<sub>0</sub> and H<sub>1</sub> <strong>before</strong> you look at the data, and then work through the same steps: describe, test, effect size and report.</p>
 </section>
 <section id="looking-ahead" class="level2" data-number="7.10">
 <h2 data-number="7.10" class="anchored" data-anchor-id="looking-ahead"><span class="header-section-number">7.10</span> Looking ahead</h2>
-<p>You can now describe data, estimate with uncertainty, and test a difference between two groups. In GEOG0018 next year you build on this with tests for more than two groups (ANOVA), for categorical data (chi-square), and with correlation and regression.</p>
+<p>Over these three sessions, you have learned to describe data, to estimate with uncertainty, and to test for a difference between two groups. In Year 2 methods modules, you can build on this with tests for more than two groups (ANOVA), tests for categorical data (chi-square), and correlation and regression.</p>
 </section>
 <section id="check-before-you-leave" class="level2" data-number="7.11">
 <h2 data-number="7.11" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">7.11</span> Check before you leave</h2>
@@ -921,7 +926,7 @@ mean in group 4 mean in group 5
 <li><label><input type="checkbox">a permutation test with its histogram and p-value, and a Welch’s t-test of the same comparison;</label></li>
 <li><label><input type="checkbox">the difference in means with its 95% confidence interval, and Cohen’s d;</label></li>
 <li><label><input type="checkbox">you can explain each of the four misconceptions in your own words;</label></li>
-<li><label><input type="checkbox">a written-up comparison of your own choice.</label></li>
+<li><label><input type="checkbox">a reported comparison of your own choice.</label></li>
 </ul>
 </section>
 <section id="troubleshooting" class="level2" data-number="7.12">

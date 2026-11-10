@@ -450,8 +450,8 @@ window.Quarto = {
   <li><a href="#samples-and-uncertainty" id="toc-samples-and-uncertainty" class="nav-link active" data-scroll-target="#samples-and-uncertainty"><span class="header-section-number">6</span> Samples and Uncertainty</a>
   <ul class="collapse">
   <li><a href="#population-and-sample" id="toc-population-and-sample" class="nav-link" data-scroll-target="#population-and-sample"><span class="header-section-number">6.1</span> Population and sample</a></li>
-  <li><a href="#take-a-sample" id="toc-take-a-sample" class="nav-link" data-scroll-target="#take-a-sample"><span class="header-section-number">6.2</span> Take a sample</a></li>
-  <li><a href="#many-samples" id="toc-many-samples" class="nav-link" data-scroll-target="#many-samples"><span class="header-section-number">6.3</span> Many samples</a></li>
+  <li><a href="#taking-a-sample" id="toc-taking-a-sample" class="nav-link" data-scroll-target="#taking-a-sample"><span class="header-section-number">6.2</span> Taking a sample</a></li>
+  <li><a href="#taking-many-samples" id="toc-taking-many-samples" class="nav-link" data-scroll-target="#taking-many-samples"><span class="header-section-number">6.3</span> Taking many samples</a></li>
   <li><a href="#the-standard-error" id="toc-the-standard-error" class="nav-link" data-scroll-target="#the-standard-error"><span class="header-section-number">6.4</span> The standard error</a></li>
   <li><a href="#sample-size" id="toc-sample-size" class="nav-link" data-scroll-target="#sample-size"><span class="header-section-number">6.5</span> Sample size</a></li>
   <li><a href="#confidence-intervals" id="toc-confidence-intervals" class="nav-link" data-scroll-target="#confidence-intervals"><span class="header-section-number">6.6</span> Confidence intervals</a>
@@ -459,7 +459,7 @@ window.Quarto = {
   <li><a href="#what-does-95-mean" id="toc-what-does-95-mean" class="nav-link" data-scroll-target="#what-does-95-mean"><span class="header-section-number">6.6.1</span> What does 95% mean?</a></li>
   </ul></li>
   <li><a href="#bias-what-a-confidence-interval-cannot-fix" id="toc-bias-what-a-confidence-interval-cannot-fix" class="nav-link" data-scroll-target="#bias-what-a-confidence-interval-cannot-fix"><span class="header-section-number">6.7</span> Bias: what a confidence interval cannot fix</a></li>
-  <li><a href="#write-it-up" id="toc-write-it-up" class="nav-link" data-scroll-target="#write-it-up"><span class="header-section-number">6.8</span> Write it up</a></li>
+  <li><a href="#reporting-your-results" id="toc-reporting-your-results" class="nav-link" data-scroll-target="#reporting-your-results"><span class="header-section-number">6.8</span> Reporting your results</a></li>
   <li><a href="#check-before-you-leave" id="toc-check-before-you-leave" class="nav-link" data-scroll-target="#check-before-you-leave"><span class="header-section-number">6.9</span> Check before you leave</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">6.10</span> Troubleshooting</a></li>
   </ul></li>
@@ -475,8 +475,8 @@ window.Quarto = {
 
 <section id="samples-and-uncertainty" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Samples and Uncertainty</h1>
-<p>Last week you described NO<sub>2</sub> for <strong>all</strong> 4,994 LSOAs in London. In practice we almost never have data for everything. Air pollution is <em>measured</em> at a few hundred monitoring sites; the values in our dataset come from a model that fills in the gaps. Surveys ask a few thousand people, not the whole country. So the real question is usually: <strong>if I only have a sample, how close am I to the truth, and how sure can I be?</strong></p>
-<p>This week we can answer that question exactly, because for once we know the truth. We treat the full dataset as the <strong>population</strong>, draw samples from it, and see how well they do.</p>
+<p>Last week, we described NO<sub>2</sub> levels for all 4,994 LSOAs in London. In practice, however, we hardly ever have data for everything. Air pollution is only <em>measured</em> at a few hundred monitoring sites across London, and the values in our dataset come from a model that fills in the gaps. Similarly, surveys ask a few thousand people rather than the whole country. The question we usually face is therefore: <strong>if we only have a sample, how close are we to the truth, and how sure can we be?</strong></p>
+<p>This week, we can answer that question precisely, because for once we know the truth. We will treat our full dataset as the <strong>population</strong>, draw samples from it, and see how well these samples do.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -487,17 +487,17 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Open your <code>GEOG0187-stats</code> project from <a href="05-describing.html">Session 5</a>. Create a new script, <code>w06-uncertainty.R</code>.</p>
+<p>Open the <code>GEOG0187-stats</code> project you created in <a href="05-describing.html">Session 5</a> and create a new script called <code>w06-uncertainty.R</code>.</p>
 </div>
 </div>
 <section id="population-and-sample" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="population-and-sample"><span class="header-section-number">6.1</span> Population and sample</h2>
-<p>Two words to keep apart:</p>
+<p>Before we start, it is important to distinguish between two terms:</p>
 <ul>
-<li>A <strong>parameter</strong> describes the <em>population</em>, e.g.&nbsp;the mean NO<sub>2</sub> across all 4,994 LSOAs. It is fixed, but usually unknown.</li>
-<li>A <strong>statistic</strong> describes a <em>sample</em>, e.g.&nbsp;the mean NO<sub>2</sub> in 30 LSOAs you happened to measure. It is known, but it changes from sample to sample.</li>
+<li>A <strong>parameter</strong> describes the <em>population</em>, for example the mean NO<sub>2</sub> across all 4,994 LSOAs. A parameter is fixed, but usually unknown.</li>
+<li>A <strong>statistic</strong> describes a <em>sample</em>, for example the mean NO<sub>2</sub> in the 30 LSOAs we happened to measure. A statistic is known, but changes from one sample to the next.</li>
 </ul>
-<p>We use statistics to <strong>estimate</strong> parameters. Start by loading the data and storing the true mean.</p>
+<p>We use statistics to <strong>estimate</strong> parameters. Let us start by loading the data and storing the true mean, which in real research we would not know:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -516,9 +516,9 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="take-a-sample" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="take-a-sample"><span class="header-section-number">6.2</span> Take a sample</h2>
-<p>Suppose you can afford monitors in 30 LSOAs, picked at random. <code>slice_sample()</code> picks random rows. Because the choice is random, we first fix R’s random number generator with <code>set.seed()</code>, so that you get the same sample every time you run the script.</p>
+<section id="taking-a-sample" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="taking-a-sample"><span class="header-section-number">6.2</span> Taking a sample</h2>
+<p>Suppose we can afford air quality monitors in 30 LSOAs, selected at random. We can use <code>slice_sample()</code> to pick 30 random rows from our dataset. Because the selection is random, we first fix R’s random number generator with <code>set.seed()</code>. This makes sure that we get the same sample every time we run the script:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -538,11 +538,11 @@ window.Quarto = {
 <pre><code>[1] 21.97</code></pre>
 </div>
 </div>
-<p>Your estimate is close to the true mean, but not equal to it. Change <code>38</code> to any other number, run the lines again, and compare with your neighbour: everyone gets a different estimate. This variation from sample to sample is called <strong>sampling variability</strong>, and it is the reason we need the rest of this session.</p>
+<p>Our estimate is close to the true mean, but not exactly the same. Now change <code>38</code> to any other number, run the lines again, and compare your result with your neighbour’s: everyone will get a slightly different estimate. This variation from one sample to the next is called <strong>sampling variability</strong>, and it is what the rest of this session is about.</p>
 </section>
-<section id="many-samples" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="many-samples"><span class="header-section-number">6.3</span> Many samples</h2>
-<p>What if we repeated the whole exercise 1,000 times? <code>replicate()</code> runs a piece of code many times and collects the results. For this we use base R’s <code>sample()</code>, which draws values from a single column.</p>
+<section id="taking-many-samples" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="taking-many-samples"><span class="header-section-number">6.3</span> Taking many samples</h2>
+<p>What happens if we repeat the whole exercise 1,000 times? We can do this with <code>replicate()</code>, which runs a piece of code many times and collects the results. Here we use base R’s <code>sample()</code> function, which draws random values from a single column:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -559,7 +559,7 @@ window.Quarto = {
 <pre><code>[1] 21.97000 21.98333 21.97000 22.44667 22.06667 22.74333</code></pre>
 </div>
 </div>
-<p>The distribution of all these sample means is called the <strong>sampling distribution</strong>.</p>
+<p>The distribution of all these sample means is called the <strong>sampling distribution</strong>. Let us plot it, together with the true mean:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -584,16 +584,16 @@ Figure&nbsp;1: Means of 1,000 random samples of 30 LSOAs. The dashed line is the
 </div>
 </div>
 </div>
-<p>Three things to notice:</p>
+<p>There are three things to notice here:</p>
 <ol type="1">
-<li>The sample means are centred on the <strong>true mean</strong>: a random sample gets it right <em>on average</em>.</li>
-<li>Individual samples miss by a bit, in either direction.</li>
-<li>The distribution is <strong>bell-shaped</strong>, even though NO<sub>2</sub> itself is somewhat skewed (look back at last week’s histogram). This is the <em>central limit theorem</em> at work.</li>
+<li>The sample means are centred on the <strong>true mean</strong>: on average, a random sample gets it right.</li>
+<li>Individual samples miss the true mean by a little, in either direction.</li>
+<li>The distribution is <strong>bell-shaped</strong>, even though NO<sub>2</sub> itself is somewhat skewed (have a look back at last week’s histogram). This is known as the <em>central limit theorem</em>.</li>
 </ol>
 </section>
 <section id="the-standard-error" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="the-standard-error"><span class="header-section-number">6.4</span> The standard error</h2>
-<p>The spread of the sampling distribution tells us how far a typical sample mean is from the truth. Its standard deviation has its own name: the <strong>standard error</strong> (SE).</p>
+<p>The spread of the sampling distribution tells us how far a typical sample mean is from the true mean. The standard deviation of the sampling distribution has its own name: the <strong>standard error</strong> (SE).</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -606,11 +606,11 @@ Figure&nbsp;1: Means of 1,000 random samples of 30 LSOAs. The dashed line is the
 <pre><code>[1] 0.5938312</code></pre>
 </div>
 </div>
-<p>In real life you cannot draw 1,000 samples; you have one. The useful result is that you can estimate the standard error from that one sample:</p>
+<p>In real research, we cannot draw 1,000 samples: we only have one. Fortunately, we can estimate the standard error from that single sample:</p>
 <p><span class="math display">\[
 SE = \frac{s}{\sqrt{n}}
 \]</span></p>
-<p>where <span class="math inline">\(s\)</span> is the standard deviation in your sample and <span class="math inline">\(n\)</span> the sample size.</p>
+<p>where <span class="math inline">\(s\)</span> is the standard deviation in the sample and <span class="math inline">\(n\)</span> is the sample size. Let us apply this to our sample:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -623,21 +623,21 @@ SE = \frac{s}{\sqrt{n}}
 <pre><code>[1] 0.5776717</code></pre>
 </div>
 </div>
-<p>The two values are close: one sample is enough to know roughly how precise it is.</p>
+<p>The two values are close, which means that a single sample is enough to tell us roughly how precise our estimate is.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Do not confuse the <strong>standard deviation</strong> and the <strong>standard error</strong>. The standard deviation describes how much LSOAs differ from each other. The standard error describes how much a <em>sample mean</em> would differ from sample to sample. Collecting more data does not make LSOAs more alike, but it does make your estimate of their mean more precise.</p>
+<p>Be careful not to confuse the <strong>standard deviation</strong> with the <strong>standard error</strong>. The standard deviation describes how much LSOAs differ from each other. The standard error describes how much a <em>sample mean</em> would vary from one sample to the next. Collecting more data does not make LSOAs more alike, but it does make our estimate of their mean more precise.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="sample-size" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="sample-size"><span class="header-section-number">6.5</span> Sample size</h2>
-<p>How does the standard error change with the size of the sample? Repeat the simulation for samples of 10, 30, 100 and 300 LSOAs.</p>
+<p>How does the standard error change with the size of the sample? We can find out by repeating our simulation for samples of 10, 30, 100 and 300 LSOAs:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -661,11 +661,11 @@ SE = \frac{s}{\sqrt{n}}
 4   300 0.181</code></pre>
 </div>
 </div>
-<p>The standard error falls as <span class="math inline">\(n\)</span> grows, but slowly: you need <strong>four times</strong> as many LSOAs to <strong>halve</strong> the standard error. That is the <span class="math inline">\(\sqrt{n}\)</span> in the formula, and it is why precision is expensive.</p>
+<p>The standard error becomes smaller as the sample gets larger, but only slowly: we need <strong>four times</strong> as many LSOAs to <strong>halve</strong> the standard error. This is the effect of the <span class="math inline">\(\sqrt{n}\)</span> in the formula, and it is why precision is expensive.</p>
 </section>
 <section id="confidence-intervals" class="level2" data-number="6.6">
 <h2 data-number="6.6" class="anchored" data-anchor-id="confidence-intervals"><span class="header-section-number">6.6</span> Confidence intervals</h2>
-<p>A sample mean on its own hides its uncertainty. A <strong>confidence interval</strong> (CI) shows it. Because the sampling distribution is bell-shaped, about 95% of sample means fall within 1.96 standard errors of the true mean. Turned around, a <strong>95% confidence interval</strong> is:</p>
+<p>A sample mean on its own hides how uncertain it is. A <strong>confidence interval</strong> (CI) makes this uncertainty visible. Because the sampling distribution is bell-shaped, about 95% of sample means fall within 1.96 standard errors of the true mean. Turning this around, we can calculate a <strong>95% confidence interval</strong> as:</p>
 <p><span class="math display">\[
 \bar{x} \pm 1.96 \times SE
 \]</span></p>
@@ -684,7 +684,7 @@ SE = \frac{s}{\sqrt{n}}
 20.83776 23.10224 </code></pre>
 </div>
 </div>
-<p>R calculates this for you with <code>t.test()</code>. It uses a slightly larger multiplier than 1.96 (from the <em>t</em> distribution) to allow for the fact that <span class="math inline">\(s\)</span> is itself estimated from a small sample, so the interval is a little wider.</p>
+<p>R can also calculate this for us with the <code>t.test()</code> function. This uses a slightly larger multiplier than 1.96, taken from the <em>t</em> distribution, to allow for the fact that <span class="math inline">\(s\)</span> is itself estimated from a small sample. As a result, the interval is a little wider:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -701,7 +701,7 @@ attr(,"conf.level")
 </div>
 <section id="what-does-95-mean" class="level3" data-number="6.6.1">
 <h3 data-number="6.6.1" class="anchored" data-anchor-id="what-does-95-mean"><span class="header-section-number">6.6.1</span> What does 95% mean?</h3>
-<p>The 95% does <strong>not</strong> mean there is a 95% chance that the true mean lies in <em>your</em> interval: the true mean is fixed, and your interval either contains it or not. It means that the <strong>method</strong> captures the true mean in 95% of samples. We can check that, because we know the truth. Draw 100 samples, compute a CI for each, and count how many contain the true mean.</p>
+<p>The 95% does <strong>not</strong> mean that there is a 95% chance that the true mean lies within <em>your</em> interval: the true mean is fixed, and your interval either contains it or it does not. Instead, it means that the <strong>method</strong> captures the true mean in 95% of samples. Because we know the true mean, we can check this. Let us draw 100 samples, calculate a confidence interval for each of them, and count how many contain the true mean:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -726,6 +726,7 @@ attr(,"conf.level")
 <pre><code>[1] 96</code></pre>
 </div>
 </div>
+<p>We can also plot all 100 intervals:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -752,12 +753,12 @@ Figure&nbsp;2: 95% confidence intervals from 100 samples of 30 LSOAs. Red interv
 </div>
 </div>
 </div>
-<p>Roughly 95 out of 100 intervals catch the true mean. In real research you never know whether <em>your</em> interval is one of the unlucky ones.</p>
+<p>Roughly 95 out of 100 intervals contain the true mean. In real research, however, we never know whether <em>our</em> interval is one of the unlucky ones.</p>
 </section>
 </section>
 <section id="bias-what-a-confidence-interval-cannot-fix" class="level2" data-number="6.7">
 <h2 data-number="6.7" class="anchored" data-anchor-id="bias-what-a-confidence-interval-cannot-fix"><span class="header-section-number">6.7</span> Bias: what a confidence interval cannot fix</h2>
-<p>Everything so far assumed a <strong>random</strong> sample. Suppose instead that all monitors were placed in Inner London, where it is easiest to get permission and where the pollution is expected to be.</p>
+<p>So far, we have assumed that our sample is <strong>random</strong>. Suppose instead that all monitors were placed in Inner London, for instance because that is where pollution is expected to be highest:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -782,26 +783,26 @@ attr(,"conf.level")
 <pre><code>[1] 21.74612</code></pre>
 </div>
 </div>
-<p>The interval looks just as precise, but it is in the wrong place. Taking a <em>larger</em> sample from Inner London would make the interval <em>narrower</em>, and still wrong. Confidence intervals measure <strong>random error</strong> (sampling variability), not <strong>bias</strong> (systematic error from <em>how</em> the data were collected). That is why the question <em>“how was this sample selected?”</em> comes before any calculation.</p>
+<p>The interval looks just as precise as before, but it is in the wrong place. Taking a <em>larger</em> sample from Inner London would make the interval <em>narrower</em>, but it would still be wrong. Confidence intervals capture <strong>random error</strong> (sampling variability), but not <strong>bias</strong>: systematic error caused by <em>how</em> the data were collected. This is why the question of how a sample was selected should always come before any calculation.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Think back to the fieldwork. Were your survey sites a random sample of the area? What would a confidence interval based on them tell you, and what would it not?</p>
+<p>Think back to your fieldwork. Were your survey sites a random sample of the area? What would a confidence interval based on these sites tell you, and what would it not tell you?</p>
 </div>
 </div>
 </div>
 </section>
-<section id="write-it-up" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="write-it-up"><span class="header-section-number">6.8</span> Write it up</h2>
-<p>Report an estimate <strong>with</strong> its uncertainty, and say what the sample is:</p>
+<section id="reporting-your-results" class="level2" data-number="6.8">
+<h2 data-number="6.8" class="anchored" data-anchor-id="reporting-your-results"><span class="header-section-number">6.8</span> Reporting your results</h2>
+<p>When you report an estimate based on a sample, for instance in an essay or a worksheet, you should report its uncertainty alongside it, explain how the sample was drawn, and interpret the interval in plain words. Based on this session’s sample, this could look as follows:</p>
 <blockquote class="blockquote">
-<p><em>In a random sample of 30 London LSOAs, mean annual NO<sub>2</sub> was … µg/m³ (95% CI … to …).</em></p>
+<p>In a random sample of 30 London LSOAs, mean annual NO<sub>2</sub> was 22.0 µg/m³ (95% CI 20.8 to 23.2 µg/m³). Values for London as a whole between these two numbers are consistent with our sample.</p>
 </blockquote>
-<p>and interpret the interval in words, without claiming a 95% <em>probability</em> about the true value.</p>
-<p>Now do the same for PM<sub>2.5</sub>: draw a random sample of 30 LSOAs, report the mean with a 95% CI, and check whether your interval contains the true mean.</p>
+<p>Avoid writing that there is a “95% probability” that the true mean lies in your interval (see <a href="#what-does-95-mean">What does 95% mean?</a>).</p>
+<p>Now try the same for PM<sub>2.5</sub>: draw a random sample of 30 LSOAs, report the mean with its 95% confidence interval, and check whether your interval contains the true mean.</p>
 </section>
 <section id="check-before-you-leave" class="level2" data-number="6.9">
 <h2 data-number="6.9" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">6.9</span> Check before you leave</h2>
@@ -811,7 +812,7 @@ attr(,"conf.level")
 <li><label><input type="checkbox">a histogram of a sampling distribution, and the standard error from simulation and from the formula;</label></li>
 <li><label><input type="checkbox">a 95% confidence interval from one sample, and the plot of 100 intervals;</label></li>
 <li><label><input type="checkbox">one or two sentences on why a biased sample cannot be rescued by a confidence interval;</label></li>
-<li><label><input type="checkbox">a write-up of the PM<sub>2.5</sub> estimate with its confidence interval.</label></li>
+<li><label><input type="checkbox">a short report of the PM<sub>2.5</sub> estimate with its confidence interval.</label></li>
 </ul>
 </section>
 <section id="troubleshooting" class="level2" data-number="6.10">

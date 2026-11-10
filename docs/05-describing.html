@@ -422,15 +422,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#air-pollution-in-london" id="toc-air-pollution-in-london" class="nav-link" data-scroll-target="#air-pollution-in-london"><span class="header-section-number">5.1</span> Air pollution in London</a></li>
   <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data"><span class="header-section-number">5.2</span> The data</a></li>
-  <li><a href="#set-up-your-project" id="toc-set-up-your-project" class="nav-link" data-scroll-target="#set-up-your-project"><span class="header-section-number">5.3</span> Set up your project</a></li>
+  <li><a href="#setting-up-your-project" id="toc-setting-up-your-project" class="nav-link" data-scroll-target="#setting-up-your-project"><span class="header-section-number">5.3</span> Setting up your project</a></li>
   <li><a href="#a-tidy-workflow" id="toc-a-tidy-workflow" class="nav-link" data-scroll-target="#a-tidy-workflow"><span class="header-section-number">5.4</span> A tidy workflow</a></li>
-  <li><a href="#describe-one-variable" id="toc-describe-one-variable" class="nav-link" data-scroll-target="#describe-one-variable"><span class="header-section-number">5.5</span> Describe one variable</a>
+  <li><a href="#describing-a-single-variable" id="toc-describing-a-single-variable" class="nav-link" data-scroll-target="#describing-a-single-variable"><span class="header-section-number">5.5</span> Describing a single variable</a>
   <ul class="collapse">
-  <li><a href="#who-is-the-average" id="toc-who-is-the-average" class="nav-link" data-scroll-target="#who-is-the-average"><span class="header-section-number">5.5.1</span> Who is the average?</a></li>
+  <li><a href="#areas-or-people" id="toc-areas-or-people" class="nav-link" data-scroll-target="#areas-or-people"><span class="header-section-number">5.5.1</span> Areas or people?</a></li>
   </ul></li>
-  <li><a href="#describe-by-group" id="toc-describe-by-group" class="nav-link" data-scroll-target="#describe-by-group"><span class="header-section-number">5.6</span> Describe by group</a></li>
-  <li><a href="#two-variables-pollution-and-deprivation" id="toc-two-variables-pollution-and-deprivation" class="nav-link" data-scroll-target="#two-variables-pollution-and-deprivation"><span class="header-section-number">5.7</span> Two variables: pollution and deprivation</a></li>
-  <li><a href="#write-it-up" id="toc-write-it-up" class="nav-link" data-scroll-target="#write-it-up"><span class="header-section-number">5.8</span> Write it up</a></li>
+  <li><a href="#describing-groups" id="toc-describing-groups" class="nav-link" data-scroll-target="#describing-groups"><span class="header-section-number">5.6</span> Describing groups</a></li>
+  <li><a href="#pollution-and-deprivation" id="toc-pollution-and-deprivation" class="nav-link" data-scroll-target="#pollution-and-deprivation"><span class="header-section-number">5.7</span> Pollution and deprivation</a></li>
+  <li><a href="#reporting-your-results" id="toc-reporting-your-results" class="nav-link" data-scroll-target="#reporting-your-results"><span class="header-section-number">5.8</span> Reporting your results</a></li>
   <li><a href="#check-before-you-leave" id="toc-check-before-you-leave" class="nav-link" data-scroll-target="#check-before-you-leave"><span class="header-section-number">5.9</span> Check before you leave</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">5.10</span> Troubleshooting</a></li>
   </ul></li>
@@ -446,7 +446,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="describing-data" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Describing Data</h1>
-<p>In Term 1 you used R to describe data and even ran a t-test. The next three sessions go back over that ground more slowly, and with a purpose: to understand what the numbers mean, how sure we can be about them, and when a difference is real. We use one question throughout: <strong>who breathes the most polluted air in London?</strong> This week you set up a tidy workflow and describe the data. This session and the next feed the first statistics worksheet.</p>
+<p>In Term 1, you used R to describe data and even ran a t-test. Over the next three sessions, we will go back over some of this ground, but more slowly and with a clear purpose: to understand what the numbers mean, how sure we can be about them, and when a difference between groups is real. We will use one question throughout: <strong>who breathes the most polluted air in London?</strong> This week, we will set up a tidy workflow in R and use it to describe our data. This session and the next link to the first statistics worksheet.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -457,18 +457,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Have <strong>R</strong> and <strong>RStudio</strong> working on your laptop (you installed them in Term 1; <a href="https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere">Desktop@UCL Anywhere</a> is a fallback). Then run this once in the RStudio console:</p>
+<p>Make sure <strong>R</strong> and <strong>RStudio</strong> are working on your laptop. You installed both in Term 1; if you run into problems, you can use <a href="https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere">Desktop@UCL Anywhere</a> instead. Then run the following once in the RStudio console to install the <code>tidyverse</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">'tidyverse'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <section id="air-pollution-in-london" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="air-pollution-in-london"><span class="header-section-number">5.1</span> Air pollution in London</h2>
-<p><strong>Nitrogen dioxide</strong> (NO<sub>2</sub>) comes mostly from road traffic, and long-term exposure is linked to asthma and other respiratory disease. The World Health Organization’s guideline for the annual mean is <strong>10 µg/m³</strong>, with <em>interim targets</em> of 40, 30 and 20 µg/m³ for places still far above it; the UK legal limit is <strong>40 µg/m³</strong>. Fine particles (PM<sub>2.5</sub>) come from traffic, wood burning and many other sources; the WHO guideline is <strong>5 µg/m³</strong>.</p>
-<p>The values in our data are <strong>averages over whole LSOAs</strong>: no LSOA as a whole is above the legal limit, but many roadside spots inside them are. Air quality is a physical question, but who is exposed is a social one. Researchers call this <strong>environmental justice</strong>: are poorer neighbourhoods exposed to more pollution than richer ones? Over three sessions you will describe, estimate and test exactly that.</p>
+<p><strong>Nitrogen dioxide</strong> (NO<sub>2</sub>) mostly comes from road traffic, and long-term exposure is linked to asthma and other respiratory diseases. The World Health Organization (WHO) recommends that the annual mean should not exceed <strong>10 µg/m³</strong>, with <em>interim targets</em> of 40, 30 and 20 µg/m³ for places that are still far above this guideline. The UK legal limit is <strong>40 µg/m³</strong>. Fine particulate matter (PM<sub>2.5</sub>) comes from traffic, wood burning and many other sources, and has a WHO guideline of <strong>5 µg/m³</strong>.</p>
+<p>Air pollution is a physical phenomenon, but who is exposed to it is a social question. Researchers refer to this as <strong>environmental justice</strong>: are poorer neighbourhoods exposed to more pollution than richer ones? Over the next three sessions, we will describe, estimate and test exactly that.</p>
 </section>
 <section id="the-data" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="the-data"><span class="header-section-number">5.2</span> The data</h2>
-<p>Your dataset has one row for each of London’s <strong>4,994 LSOAs</strong> (Lower Super Output Areas: small areas of about 1,500 residents).</p>
+<p>We will be using a dataset that contains one row for each of London’s 4,994 Lower Super Output Areas (LSOAs): small statistical areas with, on average, about 1,500 residents. For each LSOA, the dataset contains the following variables:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 35%">
@@ -507,6 +507,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
+<p>The NO<sub>2</sub> and PM<sub>2.5</sub> values are <strong>averages over whole LSOAs</strong>. No LSOA as a whole is above the UK legal limit, but many roadside locations within them are.</p>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -521,8 +522,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="set-up-your-project" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="set-up-your-project"><span class="header-section-number">5.3</span> Set up your project</h2>
+<section id="setting-up-your-project" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="setting-up-your-project"><span class="header-section-number">5.3</span> Setting up your project</h2>
+<p>Before we can load the data, we need to set up an RStudio project for the three statistics sessions:</p>
 <ol type="1">
 <li>In RStudio, go to <span class="ui">File</span> → <span class="ui">New Project</span> → <span class="ui">New Directory</span> → <span class="ui">New Project</span>. Call it <code>GEOG0187-stats</code>, save it somewhere sensible (not your Downloads folder), and click <span class="ui">Create Project</span>.</li>
 <li>In the <span class="ui">Files</span> pane, click <span class="ui">New Folder</span> and create a folder called <code>data</code>.</li>
@@ -545,7 +547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 <ol start="4" type="1">
-<li>Create a new script (<span class="ui">File</span> → <span class="ui">New File</span> → <span class="ui">R Script</span>) and save it as <code>w05-describing.R</code>. Type (or copy) the code below into the script and run it line by line with <code>Ctrl</code> + <code>Enter</code> (<code>Cmd</code> + <code>Return</code> on a Mac).</li>
+<li>Create a new script (<span class="ui">File</span> → <span class="ui">New File</span> → <span class="ui">R Script</span>) and save it as <code>w05-describing.R</code>. Type or copy the code from this page into your script, and run it line by line with <code>Ctrl</code> + <code>Enter</code> (<code>Cmd</code> + <code>Return</code> on a Mac).</li>
 </ol>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
@@ -553,14 +555,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Use the same project for all three statistics sessions: one project, one <code>data</code> folder, one script per week. If R says it cannot find the file, check that the project is open (its name shows in the top-right corner of RStudio) and that the file is in the <code>data</code> folder with exactly this name.</p>
+<p>We will use the same project for all three statistics sessions, with one <code>data</code> folder and one script per week. If R tells you it cannot find the file, check that the project is open (its name is shown in the top-right corner of RStudio) and that the file is saved in the <code>data</code> folder under exactly this name.</p>
 </div>
 </div>
 </div>
 </section>
 <section id="a-tidy-workflow" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="a-tidy-workflow"><span class="header-section-number">5.4</span> A tidy workflow</h2>
-<p>In Term 1 you worked in <strong>base R</strong>: <code>read.csv()</code>, the <code>$</code> operator and functions such as <code>tapply()</code>. We now switch to the <strong>tidyverse</strong>, a set of packages that share one way of working: you take a dataset, and pass it through a series of small steps with the pipe, <code>|&gt;</code>, read as <em>“and then”</em>. This is also what you will use in GEOG0018 next year.</p>
+<p>In Term 1, you worked with <strong>base R</strong>: functions such as <code>read.csv()</code> and <code>tapply()</code>, and the <code>$</code> operator. In these sessions, we will switch to the <strong>tidyverse</strong>: a collection of packages that share a common way of working. You take a dataset and pass it through a series of small steps using the pipe, <code>|&gt;</code>, which you can read as <em>“and then”</em>. This is also how R is used in most Year 2 methods modules.</p>
+<p>Let us start by loading the <code>tidyverse</code> and reading in the data. The <code>glimpse()</code> function gives us a first look at the dataset: the number of rows and columns, the type of each column, and the first few values.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -590,7 +593,7 @@ $ imd_decile   &lt;dbl&gt; 8, 10, 8, 5, 4, 2, 2, 2, 2, 2, 3, 3, 3, 4, 3, 3, 3, 3
 $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.403, 0…</code></pre>
 </div>
 </div>
-<p>The tidyverse is built around a handful of <strong>verbs</strong>, each doing one thing:</p>
+<p>The tidyverse is built around a small number of <strong>verbs</strong>, each of which does one thing. The table below lists the most important ones, together with their base R equivalents from Term 1:</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 11%">
@@ -637,6 +640,7 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 </tr>
 </tbody>
 </table>
+<p>Let us try some of these. Each pipe below starts with the dataset and passes it through one or more verbs:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -676,7 +680,7 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 <pre><code>[1] 39</code></pre>
 </div>
 </div>
-<p><code>mutate()</code> adds columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so here we flag each LSOA that is above the WHO interim target of 20 µg/m³. We also divide London into five equal groups (<strong>quintiles</strong>) by income deprivation, from 1 (least deprived fifth) to 5 (most deprived fifth). We save the result, because we will use both new columns again.</p>
+<p>We can use <code>mutate()</code> to add new columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so instead we will flag each LSOA that is above the WHO interim target of 20 µg/m³. We will also divide London’s LSOAs into five equally sized groups (<strong>quintiles</strong>) based on income deprivation, from 1 (the least deprived fifth) to 5 (the most deprived fifth). Because we will use both new columns again, we save the result by assigning it back to <code>lsoa</code>:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -708,14 +712,14 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Why income and not the full deprivation index? The IMD includes a <em>Living Environment</em> domain that partly measures air quality. Comparing NO<sub>2</sub> with the IMD would partly compare air pollution with itself. Income deprivation avoids that.</p>
+<p>Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a <em>Living Environment</em> domain that partly measures air quality, so comparing NO<sub>2</sub> with the IMD would partly mean comparing air pollution with itself. Income deprivation avoids this problem.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="describe-one-variable" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="describe-one-variable"><span class="header-section-number">5.5</span> Describe one variable</h2>
-<p>To describe a numerical variable you report three things: its <strong>centre</strong>, its <strong>spread</strong> and its <strong>shape</strong>.</p>
+<section id="describing-a-single-variable" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="describing-a-single-variable"><span class="header-section-number">5.5</span> Describing a single variable</h2>
+<p>When we describe a numerical variable, we usually report three things: its <strong>centre</strong>, its <strong>spread</strong> and its <strong>shape</strong>. We can calculate the most common summary statistics in one go with <code>summarise()</code>:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -739,11 +743,11 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 </div>
 </div>
 <ul>
-<li><strong>Centre</strong>: the <em>mean</em> is the average; the <em>median</em> is the middle value. If they differ much, the distribution is skewed or has outliers.</li>
-<li><strong>Spread</strong>: the <em>standard deviation</em> (sd) is roughly the typical distance from the mean; the <em>interquartile range</em> (IQR) is the range of the middle 50% of values.</li>
-<li><strong>Shape</strong>: is the distribution symmetric, skewed, or does it have more than one peak? For this you need a plot.</li>
+<li><strong>Centre</strong>: the <em>mean</em> is the average, and the <em>median</em> is the middle value. If the two differ a lot, the distribution is skewed or contains outliers.</li>
+<li><strong>Spread</strong>: the <em>standard deviation</em> (sd) is roughly the typical distance of a value from the mean, and the <em>interquartile range</em> (IQR) is the range covered by the middle 50% of values.</li>
+<li><strong>Shape</strong>: is the distribution symmetric or skewed, and does it have one peak or more? To see this, we need a plot.</li>
 </ul>
-<p>We keep using <strong>base R</strong> for plots, as in Term 1. The <code>$</code> operator still works on a tidyverse dataset.</p>
+<p>For plotting, we will keep using <strong>base R</strong>, as in Term 1. Note that the <code>$</code> operator still works on a dataset loaded with the tidyverse:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -775,13 +779,13 @@ Figure&nbsp;1: Distribution of annual mean NO2 across London LSOAs, 2022.
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Proportions are means too: <code>above_20</code> is <code>TRUE</code> (1) or <code>FALSE</code> (0), so its mean is the share of LSOAs above the interim target. Try <code>mean(lsoa$above_20)</code>. What does the answer tell you?</p>
+<p>Proportions are means too. Because <code>above_20</code> is either <code>TRUE</code> (1) or <code>FALSE</code> (0), its mean is the share of LSOAs above the interim target. Try running <code>mean(lsoa$above_20)</code>. What does the answer tell you?</p>
 </div>
 </div>
 </div>
-<section id="who-is-the-average" class="level3" data-number="5.5.1">
-<h3 data-number="5.5.1" class="anchored" data-anchor-id="who-is-the-average"><span class="header-section-number">5.5.1</span> Who is the average?</h3>
-<p>The mean above treats every LSOA as one unit. But LSOAs differ in size, and a statement about <em>people</em> should count people. A <strong>population-weighted mean</strong> does that:</p>
+<section id="areas-or-people" class="level3" data-number="5.5.1">
+<h3 data-number="5.5.1" class="anchored" data-anchor-id="areas-or-people"><span class="header-section-number">5.5.1</span> Areas or people?</h3>
+<p>The mean we calculated treats every LSOA as one unit. However, LSOAs differ in the number of people who live in them, and if we want to say something about <em>people</em>, we should count people. A <strong>population-weighted mean</strong> does exactly that:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -799,12 +803,12 @@ Figure&nbsp;1: Distribution of annual mean NO2 across London LSOAs, 2022.
 1      21.7          21.8</code></pre>
 </div>
 </div>
-<p>Here the two are close, but always ask: <em>is my unit the area or the person?</em></p>
+<p>In this case the two values are very close, but it is always worth asking yourself whether your unit of analysis is the area or the person.</p>
 </section>
 </section>
-<section id="describe-by-group" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="describe-by-group"><span class="header-section-number">5.6</span> Describe by group</h2>
-<p>Now compare groups with <code>group_by()</code> and <code>summarise()</code>, the tidy equivalent of <code>tapply()</code>.</p>
+<section id="describing-groups" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="describing-groups"><span class="header-section-number">5.6</span> Describing groups</h2>
+<p>We can compare groups by combining <code>group_by()</code> with <code>summarise()</code>, the tidyverse equivalent of <code>tapply()</code>. Let us compare NO<sub>2</sub> levels in Inner and Outer London:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -826,7 +830,7 @@ Figure&nbsp;1: Distribution of annual mean NO2 across London LSOAs, 2022.
 2 Outer        3028  20.0   20    2.31</code></pre>
 </div>
 </div>
-<p>A <strong>boxplot</strong> shows the median, the IQR (the box) and outliers for each group side by side. The formula <code>no2 ~ inner_outer</code> reads as “NO<sub>2</sub> by Inner/Outer London”.</p>
+<p>A <strong>boxplot</strong> shows the median, the IQR (the box) and any outliers for each group side by side. The formula <code>no2 ~ inner_outer</code> can be read as “NO<sub>2</sub> by Inner or Outer London”:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -850,7 +854,7 @@ Figure&nbsp;2: NO2 in Inner and Outer London LSOAs.
 </div>
 </div>
 </div>
-<p>The same works for the boroughs. With 33 groups, sorting helps:</p>
+<p>The same approach works for the boroughs. With 33 boroughs, it helps to sort the result, so that we can look at the boroughs with the highest and the lowest levels:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -890,9 +894,9 @@ Figure&nbsp;2: NO2 in Inner and Outer London LSOAs.
 </div>
 </div>
 </section>
-<section id="two-variables-pollution-and-deprivation" class="level2" data-number="5.7">
-<h2 data-number="5.7" class="anchored" data-anchor-id="two-variables-pollution-and-deprivation"><span class="header-section-number">5.7</span> Two variables: pollution and deprivation</h2>
-<p>Back to the environmental justice question. Summarise and plot NO<sub>2</sub> by income quintile:</p>
+<section id="pollution-and-deprivation" class="level2" data-number="5.7">
+<h2 data-number="5.7" class="anchored" data-anchor-id="pollution-and-deprivation"><span class="header-section-number">5.7</span> Pollution and deprivation</h2>
+<p>Let us now return to our environmental justice question, and look at NO<sub>2</sub> levels for each income deprivation quintile:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -917,6 +921,7 @@ Figure&nbsp;2: NO2 in Inner and Outer London LSOAs.
 5               5   998  22.5   22.1  3.00</code></pre>
 </div>
 </div>
+<p>And plot the result:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -940,28 +945,32 @@ Figure&nbsp;3: NO2 by income deprivation quintile (1 = least deprived fifth of L
 </div>
 </div>
 </div>
-<p>Look carefully before you conclude. Is the pattern the same all the way from quintile 1 to 5? Remember that deprived areas and polluted areas are both more common in Inner London: repeat the summary <strong>within</strong> Inner and Outer London (<code>group_by(inner_outer, income_quintile)</code>) and see whether the pattern holds.</p>
+<p>It is worth looking carefully before drawing any conclusions. Is the pattern the same all the way from quintile 1 to quintile 5? Also remember that both deprived areas and polluted areas are more common in Inner London. Repeat the summary <strong>within</strong> Inner and Outer London, using <code>group_by(inner_outer, income_quintile)</code>, and see whether the pattern still holds.</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Describing is not explaining. A difference between groups tells you <em>that</em> exposure is unequal, not <em>why</em>: roads, housing, history and planning all play a part.</p>
+<p>Describing is not the same as explaining. A difference between groups tells us <em>that</em> exposure is unequal, but not <em>why</em>: roads, housing, history and planning all play a part.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="write-it-up" class="level2" data-number="5.8">
-<h2 data-number="5.8" class="anchored" data-anchor-id="write-it-up"><span class="header-section-number">5.8</span> Write it up</h2>
-<p>A good description of a variable states:</p>
+<section id="reporting-your-results" class="level2" data-number="5.8">
+<h2 data-number="5.8" class="anchored" data-anchor-id="reporting-your-results"><span class="header-section-number">5.8</span> Reporting your results</h2>
+<p>Numbers only become useful once we put them into words. In a report, an essay or a worksheet, you would describe your data in a short paragraph supported by a figure, rather than by copying R output. A good description covers:</p>
 <ul>
 <li><strong>what</strong> was measured, in which <strong>units</strong>, for which <strong>units of analysis</strong> (LSOAs, people), and <strong>how many</strong>;</li>
-<li>the <strong>centre</strong> and <strong>spread</strong>, with the right measures (median and IQR for skewed data);</li>
-<li>the <strong>shape</strong>, with a figure;</li>
-<li>how groups <strong>differ</strong>, in numbers and in a figure, with careful wording.</li>
+<li>the <strong>centre</strong> and <strong>spread</strong>, with suitable measures (median and IQR if the data are skewed);</li>
+<li>the <strong>shape</strong>, shown in a figure that you refer to;</li>
+<li>how groups <strong>differ</strong>, in numbers and in words, without claiming more than the data show.</li>
 </ul>
-<p>For example: <em>“Across London’s 4,994 LSOAs, modelled annual mean NO<sub>2</sub> in 2022 had a median of … µg/m³ (IQR …). Every LSOA exceeded the WHO guideline of 10 µg/m³, and …% exceeded the interim target of 20 µg/m³.”</em> Write two or three sentences like this for PM<sub>2.5</sub>.</p>
+<p>Based on this session’s results, this could look as follows:</p>
+<blockquote class="blockquote">
+<p>Across London’s 4,994 LSOAs, modelled annual mean NO<sub>2</sub> in 2022 had a median of 21.4 µg/m³ (IQR 4.3 µg/m³), ranging from 13.1 to 36.3 µg/m³. Every LSOA was above the WHO guideline of 10 µg/m³, and 69% were above the interim target of 20 µg/m³. Levels were clearly higher in Inner London (median 24.2 µg/m³) than in Outer London (20.0 µg/m³).</p>
+</blockquote>
+<p>Now try to write a similar paragraph for PM<sub>2.5</sub>.</p>
 </section>
 <section id="check-before-you-leave" class="level2" data-number="5.9">
 <h2 data-number="5.9" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">5.9</span> Check before you leave</h2>
