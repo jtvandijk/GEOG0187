@@ -1,3 +1,7 @@
+---
+number-offset: 1
+---
+
 # Mapping Your Field Data
 
 In Catalonia your working group recorded sites in the field survey, and you recorded your route in Strava. This week you bring the two together on one map in **ArcGIS Online**. Everyone makes their **own** map. Next week you will turn this map into a story map, so make sure you save it at the end of the session.
@@ -27,6 +31,7 @@ ArcGIS Online changes its layout regularly. This chapter describes *what* to cli
 1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), click [UCL SSO]{.ui}, and sign in as you would for Moodle. Use a laptop or computer, not your phone.
 2. Open [Map]{.ui} from the top menu. This opens **Map Viewer** with an empty map.
 3. The left-hand toolbar holds what is *in* your map ([Layers]{.ui}, [Add]{.ui}, [Basemap]{.ui}, [Save and open]{.ui}). The right-hand toolbar holds settings for the selected layer ([Properties]{.ui}, [Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}).
+<!-- SCREENSHOT 1: Map Viewer, empty map, both toolbars visible. images/w02/map-viewer.png -->
 
 ## Choose a basemap
 Click [Basemap]{.ui} and try a few options. A quiet basemap such as *Light Gray Canvas* or *OpenStreetMap* makes your own data stand out; *Imagery* shows what the places look like from above. You can change it again at any time.
@@ -35,11 +40,13 @@ Click [Basemap]{.ui} and try a few options. A quiet basemap such as *Light Gray 
 All field survey entries, from every group, are in one layer. You add that layer and then filter it to your own working group.
 
 1. Click [Add]{.ui} → [Browse layers]{.ui}. Switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`.
+<!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png -->
 2. Click [Add]{.ui} on the layer, and close the browse panel. The map zooms to the points: you will see the entries of the whole year.
 3. With the layer selected, click [Filter]{.ui} on the right-hand toolbar, then [Add new]{.ui}:
    - **Data collection** *is* your fieldwork group (e.g. `Fieldwork - Catalonia Group 1`).
    - Click [Add new]{.ui} again: **Working group number** *is* your number.
    - Click [Save]{.ui}. Only your group's sites should now be visible.
+<!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png -->
 4. Zoom to your sites (in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to]{.ui}) and click a point. Its pop-up shows the attributes and photo your group entered.
 
 The filter only changes *your* map. Nobody else's data are deleted or changed.
@@ -47,6 +54,7 @@ The filter only changes *your* map. Nobody else's data are deleted or changed.
 ## Add your route
 1. Click [Add]{.ui} → [Add layer from file]{.ui}, and select your `.gpx` file.
 2. When asked, choose to **create a hosted feature layer** (so the route is stored in your own ArcGIS Online content), give it a name such as `CAT1_WG05 route`, and click [Create and add to map]{.ui}.
+<!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png -->
 3. The route appears as a line on the map. Check that it matches where you walked. If you have several recordings, add each `.gpx` file in the same way.
 
 ## Style your layers
@@ -64,6 +72,7 @@ Select the sites layer and click [Pop-ups]{.ui}.
 2. Under [Fields list]{.ui}, keep the fields that matter (site ID, note) and remove the rest.
 3. Check that [Attachments]{.ui} is included, so the photo shows.
 4. Click a few points on the map to check the result.
+<!-- SCREENSHOT 5: Pop-ups pane configured, with an open pop-up showing title, note and photo. images/w02/popup.png -->
 
 ## Save your map
 1. Click [Save and open]{.ui} → [Save as]{.ui}.
@@ -80,6 +89,7 @@ By the end of the session your saved map should have:
 - [ ] your route as a line;
 - [ ] clear styling for both layers;
 - [ ] pop-ups that show the site ID, note and photo.
+<!-- SCREENSHOT 6: the finished map (test data): basemap, styled route and sites. images/w02/finished-map.png -->
 
 If you finish early: use the [Measure]{.ui} tool (right-hand toolbar) to find how far you walked, try a different basemap, or add labels with the site IDs ([Labels]{.ui} on the right-hand toolbar).
 

@@ -46,9 +46,11 @@ website:
             file: index.qmd
       - section: "Spatial Data Collection"
         contents:
-          - 01-fieldwork.qmd
+          - text: "1 Collecting Spatial Data"
+            file: 01-fieldwork.qmd
       - section: "Mapping"
         contents:
-          - 02-mapping.qmd
+          - text: "2 Mapping Your Field Data"
+            file: 02-mapping.qmd
 
 editor: source
