@@ -11,12 +11,11 @@ urls:
   w05: "05-describing.html"
   w06: "06-uncertainty.html"
   w07: "07-testing.html"
+  links: "survey-links.html"
 
 # Fieldwork data collection (session 1). 
 fieldwork:
   survey: "https://arcg.is/vbWLC5"
-  g1_dates: "from 23 to 27 January"
-  g2_dates: "from 27 to 31 January"
 
 
 # ArcGIS Online (session 2 onwards).

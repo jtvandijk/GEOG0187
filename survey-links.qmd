@@ -1,0 +1,54 @@
+---
+number-sections: false
+---
+
+# Field Survey Links
+
+Every working group has its own link to the field survey. The link fills in your fieldwork group and working group number for you, and these cannot be changed in the form, so every site you log automatically ends up with your group.
+
+::: {.callout-important}
+## Only ever use your own group's link
+Find your fieldwork group and working group number below, and use that link and no other. Before you save it to your home screen, check that the top of the form shows *your* fieldwork group and working group number. If it does not, you have opened the wrong link.
+:::
+
+```{r}
+#| echo: false
+#| results: asis
+
+# Survey123 share link and the survey's *field names* and *choice values*
+# (not the labels students see). Check these in ArcGIS Online: open the
+# "_form" layer item -> Data -> Fields.
+survey   <- "https://survey123.arcgis.com/share/e30f10812c814bb4b7441aa7a64a692b"
+dc_field <- "data_collection"
+wg_field <- "working_group_number"
+dc_test  <- "Fieldwork - Test"
+dc_cat1  <- "Fieldwork - Catalonia Group 1"
+dc_cat2  <- "Fieldwork - Catalonia Group 2"
+n_groups <- 25
+
+survey_link <- function(dc, wg) {
+  paste0(survey, "?field:", dc_field, "=", utils::URLencode(dc, reserved = TRUE),
+         "&field:", wg_field, "=", wg)
+}
+
+group_table <- function(dc, label) {
+  rows <- vapply(seq_len(n_groups), function(wg) {
+    sprintf("| %d | [Open the survey for %s, working group %d](%s) |",
+            wg, label, wg, survey_link(dc, wg))
+  }, character(1))
+  cat("| Working group | Survey link |\n| :------------ | :---------- |\n")
+  cat(rows, sep = "\n")
+  cat("\n\n")
+}
+
+cat("## Test link\n\n")
+cat("Use this link only for the test entry in [Session 1](01-fieldwork.html#test-the-tools). ",
+    "It fills in `", dc_test, "` and working group `0`. Do not save it to your home screen.\n\n", sep = "")
+cat(sprintf("[Open the test survey](%s)\n\n", survey_link(dc_test, 0)))
+
+cat("## Catalonia Group 1 (23 to 27 January)\n\n")
+group_table(dc_cat1, "Catalonia Group 1")
+
+cat("## Catalonia Group 2 (27 to 31 January)\n\n")
+group_table(dc_cat2, "Catalonia Group 2")
+```

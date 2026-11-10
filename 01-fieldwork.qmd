@@ -7,6 +7,11 @@ On the field trip to Catalonia, your group will collect its own spatial data: th
 Please work through the [Before the session](#before-the-session) section below. It takes about 20 minutes, most of which is spent walking. There is nothing to hand in, but do bring your phone to the session, with your test walk saved in Strava.
 :::
 
+::: {.callout-important}
+## Every working group has its own survey link
+In Catalonia, your working group logs its sites with its *own* link to the field survey, which you find on the [Field Survey Links]({{< var urls.links >}}) page. The link fills in your fieldwork group and working group number for you, so that every site ends up with your group. Only ever use your own group's link, and use the test link only in the session.
+:::
+
 ## Spatial data and GIS
 Almost everything geographers study happens *somewhere*. **Spatial data** record not only *what* something is, but also *where* it is. A photo of a street vendor is data; the same photo together with the coordinates of where it was taken is spatial data, because we can place it on a map and relate it to everything else around it: the route you walked, the neighbourhood it sits in, or the census statistics for that area.
 
@@ -26,7 +31,7 @@ Your group will collect two datasets: your route as a line, and your sites as po
 | What       | Tool | How it works |
 | :--------- | :--- | :----------- |
 | Your route | [Strava](https://www.strava.com) | A phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a `.gpx` file. |
-| Your sites | [UCL Geography Field Survey]({{< var fieldwork.survey >}}) | A web form that opens in your phone's browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no need to copy coordinates by hand. |
+| Your sites | [UCL Geography Field Survey]({{< var urls.links >}}) | A web form that opens in your phone's browser. Each working group has its own link, which fills in your group for you. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no need to copy coordinates by hand. |
 
 Both datasets are collected once per working group. One or two people in your group record the route, and one person is responsible for logging the sites in the field survey, so you will need to agree who does what. Everyone does the setup and the test walk below, though, so that anyone can step in if a phone runs out of battery.
 
@@ -62,16 +67,11 @@ Both Strava and your web browser (which you will use for the field survey) need 
 
 On Android, go to [Settings]{.ui} → [Apps]{.ui} → [Strava]{.ui} → [Permissions]{.ui} → [Location]{.ui}, choose [Allow only while using the app]{.ui} and switch on [Use precise location]{.ui}. You can then do the same for [Chrome]{.ui}.
 
-### Save the field survey to your phone
+### Sign in to the field survey
 Next, we will make sure that you can open the field survey and sign in to it:
 
-1. Open the [UCL Geography Field Survey]({{< var fieldwork.survey >}}) on your phone. It opens in your browser, so there is nothing to install.
+1. On your phone, open the [Field Survey Links]({{< var urls.links >}}) page and tap [Open the test survey]{.ui}. The survey opens in your browser, so there is nothing to install.
 2. Sign in with your UCL account. If you are asked for *Your ArcGIS organization's URL*, type `uclondon`, tap [Continue]{.ui} and then [UCL SSO]{.ui}, and sign in as you would for Moodle. You do not need to fill in the survey yet.
-
-::: {.callout-tip}
-## Save it to your home screen
-To find the survey quickly in the field, you can add it to your home screen. In Safari, use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome, use the [⋮]{.ui} menu → [Add to Home screen]{.ui}.
-:::
 
 ### Do a test walk
 Finally, let us check that Strava actually records your route by going for a short test walk:
@@ -96,9 +96,8 @@ We will start with a live demonstration of a test walk done with the same instru
 
 1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava website, not from the app, so you will need a laptop or computer for this step. Log in at [strava.com](https://www.strava.com), open your test walk, open the [⋯]{.ui} (more actions) menu next to the activity, and choose [Export GPX]{.ui}. Check that a `.gpx` file has been downloaded.
 <!-- SCREENSHOT 4: Strava website, activity page with the ⋯ menu open and "Export GPX" visible. images/w01/strava-export.png -->
-2. **Try the field survey.** Open the survey from your home screen and submit one test entry from the room, filling it in as follows:
-   - For **Data collection**, select `Fieldwork - Test`. This option is *only* for today: in Catalonia you will choose a different one (see [In Catalonia](#in-catalonia)).
-   - For **Working group number**, enter `0`.
+2. **Try the field survey.** Open the [test survey]({{< var urls.links >}}#test-link) and submit one test entry from the room:
+   - **Data collection** and **Working group number** are already filled in as `Fieldwork - Test` and `0`, and cannot be changed.
    - For **Site ID**, enter `S00`.
    - For **Location**, tap [Allow]{.ui} when asked, and check that the dot on the map is roughly where you are. If it is not, wait a few seconds or drag it to the right spot.
    - For the **photo** and the **short note**, anything will do.
@@ -122,21 +121,17 @@ Next, sit down with your working group and agree how you will collect your data 
 - **Which sites.** Discuss what kind of sites you will record and how they relate to your Urban Project theme.
 - **Site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, within your group, and use the same ID in the survey and on any notes, photos or recordings you make outside it. This is how you will match them to your points on the map later on.
 
+Finally, whoever logs the sites, and whoever takes over from them, saves your group's survey link to their phone:
+
+1. Open the [Field Survey Links]({{< var urls.links >}}) page, find your fieldwork group and working group number, and tap your group's link.
+2. Check that the top of the form shows *your* fieldwork group and working group number.
+3. Add the survey to your home screen. In Safari, use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome, use the [⋮]{.ui} menu → [Add to Home screen]{.ui}. Give it a name you will recognise, such as `Survey WG05`.
+4. Close the survey without submitting anything. You will use it for the first time in Catalonia.
+
 ## In Catalonia
-Once you are in Catalonia, the person logging the sites submits one survey entry per site, while standing at the site. The first two fields decide whose data an entry belongs to, so please get them right every time:
+Once you are in Catalonia, there are a few things to keep in mind:
 
-| Field | What to enter |
-| :---- | :------------ |
-| **Data collection** | `Fieldwork - Catalonia Group 1` if you travel {{< var fieldwork.g1_dates >}}; `Fieldwork - Catalonia Group 2` if you travel {{< var fieldwork.g2_dates >}}. |
-| **Working group number** | Your own working group number. |
-
-::: {.callout-important}
-## Do not use `Fieldwork - Test` in Catalonia
-Entries submitted as `Fieldwork - Test`, or with the wrong working group number, will not show up with your group's data. Check both fields on your first entry of each day. If you do make a mistake, do *not* submit the site again: whoever submitted the entry can correct it in the [next session]({{< var urls.w02 >}}#fix-a-wrong-entry), without losing the location or photo.
-:::
-
-There are a few other things to keep in mind:
-
+- Whoever logs the sites opens the survey from the home screen icon you saved in the session, and submits one entry per site while standing at the site. Your fieldwork group and working group number are filled in for you, so you only add the site ID, location, photo and note.
 - Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
 - Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.
 - If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map.
@@ -158,6 +153,7 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | :------ | :---------- |
 | Strava does not record, or the route is a straight line | Check that location access is set to [While Using the App]{.ui} with [Precise Location]{.ui} on. Do not force-close the app while recording, and turn off Low Power Mode if the route has gaps. |
 | There is no [Export GPX]{.ui} option | Use the Strava website on a laptop, not the app or a phone browser. You can only export your *own* activities, so the export has to be done by whoever recorded the route, who then shares the file with the group. |
+| The form shows the wrong fieldwork group or working group number | You have opened the wrong link. Remove the icon from your home screen, open your own group's link from the [Field Survey Links]({{< var urls.links >}}) page, and save that one instead. |
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Drag the dot on the map to the correct location before submitting. |
