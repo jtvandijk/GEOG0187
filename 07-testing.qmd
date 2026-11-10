@@ -1,0 +1,306 @@
+---
+number-offset: 6
+---
+
+# Testing Differences
+
+Two sessions ago you saw that more deprived LSOAs tend to have higher NO~2~. Last week you saw that a sample never matches the population exactly. Put the two together and you get this week's question: **if I see a difference between two groups in my sample, is it a real difference, or could it just be sampling variability?** That is what a **hypothesis test** answers. You ran a t-test in Term 1; this week you find out what it actually does, what its result does and does not mean, and how to report it. This session feeds the second statistics worksheet, and you can start your analysis in class.
+
+::: {.callout-important}
+## Before the session
+Open your `GEOG0187-stats` project. Create a new script, `w07-testing.R`. Have a look back at [Confidence intervals]({{< var urls.w06 >}}#confidence-intervals) from last week.
+:::
+
+## The question
+We ask: **in Outer London, are LSOAs in the most income-deprived fifth exposed to more NO~2~ than LSOAs in the least deprived fifth?**
+
+As last week, we pretend we can only measure a sample: **30 LSOAs from each group**. And, as last week, we can check our answer against the full data at the end.
+
+```{r}
+#| label: 07-load
+#| filename: 'R code'
+#| message: false
+# load the tidyverse and the data
+library(tidyverse)
+lsoa <- read_csv('data/london-lsoa-air-quality.csv')
+
+# income deprivation quintiles across London, as in Session 5
+lsoa <- lsoa |>
+  mutate(income_quintile = ntile(income_score, 5))
+
+# Outer London, least (1) and most (5) deprived fifths only
+outer <- lsoa |>
+  filter(inner_outer == 'Outer', income_quintile %in% c(1, 5)) |>
+  mutate(group = if_else(income_quintile == 5, 'Most deprived', 'Least deprived'),
+         group = factor(group, levels = c('Most deprived', 'Least deprived')))
+
+# a random sample of 30 LSOAs from each group
+set.seed(48)
+my_sample <- outer |>
+  group_by(group) |>
+  slice_sample(n = 30) |>
+  ungroup()
+```
+
+::: {.callout-note}
+`factor()` with `levels` fixes the order of the groups. R then always compares *Most deprived* minus *Least deprived*, so a positive difference means more NO~2~ in the most deprived LSOAs.
+:::
+
+## Describe first
+Never test what you have not looked at.
+
+```{r}
+#| label: 07-describe
+#| filename: 'R code'
+# group summaries
+my_sample |>
+  group_by(group) |>
+  summarise(n = n(),
+            mean = mean(no2),
+            sd = sd(no2))
+
+# the observed difference in means
+obs_diff <- mean(my_sample$no2[my_sample$group == 'Most deprived']) -
+  mean(my_sample$no2[my_sample$group == 'Least deprived'])
+obs_diff
+```
+
+```{r}
+#| label: fig-07-box
+#| fig-cap: NO2 in samples of 30 Outer London LSOAs from the most and least income-deprived fifths.
+#| filename: 'R code'
+boxplot(no2 ~ group, data = my_sample,
+        main = 'NO2 in Outer London (samples of 30)',
+        xlab = '', ylab = 'Annual mean NO2 (µg/m³)')
+```
+
+The most deprived LSOAs in our sample have higher NO~2~. But the two boxes overlap a lot, and last week showed that sample means move around. Could a difference this large appear by chance, even if the two groups were the same in the population?
+
+## Hypotheses
+A test starts from a **null hypothesis** (H~0~): the boring explanation, which we try to find evidence against.
+
+- **H~0~**: in the population, mean NO~2~ is the same in both groups. Any difference in the sample is sampling variability.
+- **H~1~** (alternative): in the population, mean NO~2~ differs between the groups.
+
+We then ask: **if H~0~ were true, how surprising would our data be?**
+
+## A permutation test
+If H~0~ is true, the labels *Most deprived* and *Least deprived* do not matter: any LSOA could just as well have had the other label. So we can **shuffle** the labels at random, recompute the difference, and do that thousands of times. This shows us which differences we would expect from chance alone.
+
+```{r}
+#| label: 07-perm
+#| filename: 'R code'
+# shuffle the group labels 5,000 times; each time, compute the difference
+set.seed(48)
+perm_diffs <- replicate(5000, {
+  shuffled <- sample(my_sample$group)
+  mean(my_sample$no2[shuffled == 'Most deprived']) -
+    mean(my_sample$no2[shuffled == 'Least deprived'])
+})
+```
+
+```{r}
+#| label: fig-07-perm
+#| fig-cap: Differences in means after shuffling the group labels 5,000 times. The solid red line is the observed difference; the dashed line is the same difference in the other direction.
+#| filename: 'R code'
+hist(perm_diffs, breaks = 40,
+     xlim = range(perm_diffs, obs_diff, -obs_diff),
+     main = 'What chance alone produces',
+     xlab = 'Difference in mean NO2 (µg/m³)', ylab = 'Number of shuffles',
+     col = 'grey80', border = 'white')
+abline(v = c(obs_diff, -obs_diff), col = 'red', lty = c(1, 2))
+```
+
+The **p-value** is the share of shuffles that give a difference at least as large as the one we observed, in either direction:
+
+```{r}
+#| label: 07-perm-p
+#| filename: 'R code'
+# p-value: how often is chance at least as extreme as our data?
+mean(abs(perm_diffs) >= abs(obs_diff))
+```
+
+Very few shuffles produce a difference as large as ours. Data like ours would be very unlikely if H~0~ were true, so we **reject H~0~**: the data provide evidence of a difference. By convention, a p-value below **0.05** is called *statistically significant*. There is nothing special about 0.05, though, and it is better to report the p-value itself.
+
+## Welch's t-test
+The t-test does the same job with a formula instead of shuffling. It divides the observed difference by its **standard error**, which you met last week:
+
+$$
+t = \frac{\bar{x}_1 - \bar{x}_2}{SE}, \qquad SE = \sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}
+$$
+
+The larger $t$, the further the difference is from zero in units of standard error, and the smaller the p-value. R's default, **Welch's t-test**, does not assume that both groups have the same spread, so it is the safe choice.
+
+```{r}
+#| label: 07-ttest
+#| filename: 'R code'
+# Welch two-sample t-test: NO2 by group
+t_result <- t.test(no2 ~ group, data = my_sample)
+t_result
+```
+
+Read the output from the top:
+
+- `t` and `df`: the test statistic and its degrees of freedom (with Welch's test these need not be whole numbers);
+- `p-value`: close to the permutation test's, as it should be;
+- `95 percent confidence interval`: the confidence interval for the **difference** in means;
+- `sample estimates`: the two group means.
+
+::: {.callout-tip}
+The t-test assumes the sample means are roughly normally distributed. Thanks to the central limit theorem (last week), that holds for moderate sample sizes like ours unless the data are very skewed or have extreme outliers. The permutation test does not need this assumption, which is why it is a good check. In GEOG0018 you will meet the *Mann-Whitney U test*, another alternative.
+:::
+
+## Effect size: how big is the difference?
+A p-value tells you whether a difference is distinguishable from chance. It does not tell you whether it is **large**. Always report the **effect size** too. The most useful one is the difference itself, in the original units, with its confidence interval:
+
+```{r}
+#| label: 07-effect
+#| filename: 'R code'
+# difference in means (Most minus Least deprived) and its 95% CI
+unname(t_result$estimate[1] - t_result$estimate[2])
+t_result$conf.int
+```
+
+Is a difference of about 2 µg/m³ large? Compare it with something meaningful: the WHO guideline is 10 µg/m³, and last session the gap between Inner and Outer London was about 4 µg/m³.
+
+When variables have no natural unit, people use a **standardised** effect size such as **Cohen's d**: the difference divided by the (pooled) standard deviation.
+
+```{r}
+#| label: 07-cohen
+#| filename: 'R code'
+# Cohen's d: difference in standard deviation units
+sds <- my_sample |>
+  group_by(group) |>
+  summarise(sd = sd(no2))
+pooled_sd <- sqrt(mean(sds$sd^2))
+obs_diff / pooled_sd
+```
+
+As a rough guide, d of 0.2 is *small*, 0.5 *medium* and 0.8 *large*. These labels come from psychology; judge the size in context where you can.
+
+## Check against the truth
+Because we have every LSOA, we can see what the population difference really is:
+
+```{r}
+#| label: 07-truth
+#| filename: 'R code'
+# the true difference in Outer London
+true_diff <- mean(outer$no2[outer$group == 'Most deprived']) -
+  mean(outer$no2[outer$group == 'Least deprived'])
+true_diff
+```
+
+Does the confidence interval from our sample contain it? In real research you can never do this check, which is exactly why the interval matters.
+
+## Common misconceptions
+Hypothesis tests are easy to run and easy to misread. Four common mistakes:
+
+### "The p-value is the probability that H~0~ is true"
+No. The p-value is calculated **assuming** H~0~ is true: it is the probability of data at least as extreme as yours *if* there were no difference. A p-value of 0.01 does not mean a 1% chance that there is no difference.
+
+### "Not significant means no difference"
+Repeat the test for **Inner London**:
+
+```{r}
+#| label: 07-inner
+#| filename: 'R code'
+# the same comparison, in Inner London
+inner <- lsoa |>
+  filter(inner_outer == 'Inner', income_quintile %in% c(1, 5)) |>
+  mutate(group = if_else(income_quintile == 5, 'Most deprived', 'Least deprived'),
+         group = factor(group, levels = c('Most deprived', 'Least deprived')))
+
+set.seed(48)
+inner_sample <- inner |>
+  group_by(group) |>
+  slice_sample(n = 30) |>
+  ungroup()
+
+t.test(no2 ~ group, data = inner_sample)
+```
+
+```{r}
+#| label: 07-inner-truth
+#| filename: 'R code'
+# the true difference in Inner London
+mean(inner$no2[inner$group == 'Most deprived']) -
+  mean(inner$no2[inner$group == 'Least deprived'])
+```
+
+The test is not significant, yet in the population there **is** a difference (and in the opposite direction from Outer London: look back at Session 5). With 30 LSOAs per group, the test simply could not detect a difference this small. *Absence of evidence is not evidence of absence.* Look at the confidence interval: it tells you which differences are still plausible, including the true one.
+
+### "Significant means important"
+With enough data, even a tiny difference becomes significant. Compare the 4th and 5th income quintiles across all of London, with large samples:
+
+```{r}
+#| label: 07-large-n
+#| filename: 'R code'
+# a small difference, large samples
+large <- lsoa |>
+  filter(income_quintile %in% c(4, 5)) |>
+  mutate(group = factor(income_quintile))
+
+set.seed(48)
+large_sample <- large |>
+  group_by(group) |>
+  slice_sample(n = 800) |>
+  ungroup()
+
+t.test(no2 ~ group, data = large_sample)
+```
+
+The p-value is small, but the difference is about half a µg/m³: statistically significant, but hardly important. This is why you report the **effect size**, not just the p-value.
+
+### "Test enough things and report the significant one"
+If H~0~ is true, a test at the 0.05 level still comes out significant 5% of the time, by definition. Here we draw two samples from the **same** group 1,000 times, so H~0~ is true every time, and count the significant results:
+
+```{r}
+#| label: 07-multiple
+#| filename: 'R code'
+# 1,000 tests where there is no difference at all
+same_group <- lsoa |>
+  filter(inner_outer == 'Outer', income_quintile == 3)
+
+set.seed(48)
+p_values <- replicate(1000, {
+  a <- sample(same_group$no2, 30)
+  b <- sample(same_group$no2, 30)
+  t.test(a, b)$p.value
+})
+
+# how many are 'significant', and what share?
+sum(p_values < 0.05)
+mean(p_values < 0.05)
+```
+
+About one in twenty tests produces a "finding" from pure noise. If you compare all 33 boroughs with each other (528 pairs), you will find many significant differences whether or not they mean anything. Decide what to test **before** you look, and report everything you tested.
+
+::: {.callout-warning}
+Two more things a test cannot do. It cannot tell you **why** groups differ: Inner/Outer London, road networks and housing all matter. And our data describe **areas**, not people: an LSOA's average NO~2~ is not the exposure of every resident in it. Drawing conclusions about individuals from area data is called the *ecological fallacy*.
+:::
+
+## Write it up
+Report the descriptives, the test, the effect size with its confidence interval, and a conclusion in words:
+
+> *In random samples of 30 Outer London LSOAs from each group, mean annual NO~2~ was ... µg/m³ (SD ...) in the most income-deprived fifth and ... µg/m³ (SD ...) in the least deprived fifth. The difference of ... µg/m³ (95% CI ... to ...) was statistically significant (Welch's t = ..., df = ..., p = ...; permutation p = ...), a ... effect (d = ...). Within Outer London, more deprived areas are exposed to somewhat higher NO~2~ ...*
+
+Then try it yourself: choose **one** other comparison (for example PM~2.5~ instead of NO~2~, or two boroughs), state H~0~ and H~1~ **before** you look at the data, and work through describe → test → effect size → write-up.
+
+## Looking ahead
+You can now describe data, estimate with uncertainty, and test a difference between two groups. In GEOG0018 next year you build on this with tests for more than two groups (ANOVA), for categorical data (chi-square), and with correlation and regression.
+
+## Check before you leave
+- [ ] a saved script `w07-testing.R`;
+- [ ] you can state H~0~ and H~1~ for a comparison of two groups;
+- [ ] a permutation test with its histogram and p-value, and a Welch's t-test of the same comparison;
+- [ ] the difference in means with its 95% confidence interval, and Cohen's d;
+- [ ] you can explain each of the four misconceptions in your own words;
+- [ ] a written-up comparison of your own choice.
+
+## Troubleshooting
+| Problem | What to try |
+| :------ | :---------- |
+| `grouping factor must have exactly 2 levels` | Your data contain more (or fewer) than two groups. Check your `filter()`, and run `count(my_sample, group)`. |
+| The difference has the wrong sign | Check the order in `factor(..., levels = ...)`: R reports the first level minus the second. |
+| `object 'outer' not found` | Run your script from the top. |
+| My p-values differ slightly from the page | The permutation p-value depends on the random shuffles. Re-run `set.seed(48)` directly before `replicate()`. |

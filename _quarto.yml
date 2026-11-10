@@ -62,5 +62,7 @@ website:
             file: 05-describing.qmd
           - text: "6 Samples and Uncertainty"
             file: 06-uncertainty.qmd
+          - text: "7 Testing Differences"
+            file: 07-testing.qmd
 
 editor: source
