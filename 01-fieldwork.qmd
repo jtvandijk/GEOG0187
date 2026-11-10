@@ -98,7 +98,7 @@ We will start with a live demonstration of a test walk done with the same instru
 <!-- SCREENSHOT 4: Strava website, activity page with the ⋯ menu open and "Export GPX" visible. images/w01/strava-export.png -->
 2. **Try the field survey.** Open the survey from your home screen and submit one test entry from the room, filling it in as follows:
    - For **Data collection**, select `Fieldwork - Test`. This option is *only* for today: in Catalonia you will choose a different one (see [In Catalonia](#in-catalonia)).
-   - For **Group number**, enter `0`.
+   - For **Working group number**, enter `0`.
    - For **Site ID**, enter `S00`.
    - For **Location**, tap [Allow]{.ui} when asked, and check that the dot on the map is roughly where you are. If it is not, wait a few seconds or drag it to the right spot.
    - For the **photo** and the **short note**, anything will do.
@@ -128,11 +128,11 @@ Once you are in Catalonia, the person logging the sites submits one survey entry
 | Field | What to enter |
 | :---- | :------------ |
 | **Data collection** | `Fieldwork - Catalonia Group 1` if you travel {{< var fieldwork.g1_dates >}}; `Fieldwork - Catalonia Group 2` if you travel {{< var fieldwork.g2_dates >}}. |
-| **Group number** | Your own working group number. |
+| **Working group number** | Your own working group number. |
 
 ::: {.callout-important}
 ## Do not use `Fieldwork - Test` in Catalonia
-Entries submitted as `Fieldwork - Test`, or with the wrong group number, will not show up with your group's data. Check both fields on your first entry of each day. If you do make a mistake, do *not* submit the site again: whoever submitted the entry can correct it in the [next session]({{< var urls.w02 >}}#fix-a-wrong-entry), without losing the location or photo.
+Entries submitted as `Fieldwork - Test`, or with the wrong working group number, will not show up with your group's data. Check both fields on your first entry of each day. If you do make a mistake, do *not* submit the site again: whoever submitted the entry can correct it in the [next session]({{< var urls.w02 >}}#fix-a-wrong-entry), without losing the location or photo.
 :::
 
 There are a few other things to keep in mind:
