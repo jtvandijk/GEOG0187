@@ -94,3 +94,8 @@ body.quarto-dark div.sidebar-item-container:hover {
     font-weight: 600;
     white-space: nowrap;
 }
+
+/* keep step-by-step paths readable: no justification inside lists */
+main li, main li p {
+    text-align: left;
+}
