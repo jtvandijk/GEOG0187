@@ -19,7 +19,7 @@ Find your fieldwork group and working group number below, and use that link and 
 # (not the labels students see). Check these in ArcGIS Online: open the
 # "_form" layer item -> Data -> Fields.
 survey   <- "https://survey123.arcgis.com/share/e30f10812c814bb4b7441aa7a64a692b"
-dc_field <- "trip_and_group"
+dc_field <- "data_collection"
 wg_field <- "group_number"
 dc_test  <- "Fieldwork - Test"
 dc_cat1  <- "Fieldwork - Catalonia Group 1"
