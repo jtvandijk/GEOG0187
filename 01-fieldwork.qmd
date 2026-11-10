@@ -26,7 +26,7 @@ Your group collects two datasets: your route as a **line**, and your sites as **
 | What                  | Tool | Why |
 | :-------------------- | :--- | :-- |
 | Route (a line)        | [Strava](https://www.strava.com) app | Records your GPS track in the background, also without mobile data. Exported afterwards as a `.gpx` file. |
-| Sites (points)        | UCL Geography Field Survey (web form) | One form submission per site: your location, a photo and a short note. Submissions go straight into ArcGIS Online, so there is no copying of coordinates by hand. |
+| Sites (points)        | [UCL Geography Field Survey]({{< var fieldwork.survey >}}) (web form) | One form submission per site: your location, a photo and a short note. Submissions go straight into ArcGIS Online, so there is no copying of coordinates by hand. |
 
 **Everyone records the route on their own phone**, so you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites only need to be submitted once per working group, so you will agree who does that.
 
