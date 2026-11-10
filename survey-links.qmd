@@ -19,19 +19,19 @@ Find your fieldwork group and working group number below, and use that link and 
 # (not the labels students see). Check these in ArcGIS Online: open the
 # "_form" layer item -> Data -> Fields.
 survey   <- "https://survey123.arcgis.com/share/e30f10812c814bb4b7441aa7a64a692b"
-dc_field <- "data_collection"
-wg_field <- "working_group_number"
+dc_field <- "trip_and_group"
+wg_field <- "group_number"
 dc_test  <- "Fieldwork - Test"
 dc_cat1  <- "Fieldwork - Catalonia Group 1"
 dc_cat2  <- "Fieldwork - Catalonia Group 2"
-n_groups <- 25
+dc_ldn   <- "Fieldwork - London"
 
 survey_link <- function(dc, wg) {
   paste0(survey, "?field:", dc_field, "=", utils::URLencode(dc, reserved = TRUE),
          "&field:", wg_field, "=", wg)
 }
 
-group_table <- function(dc, label) {
+group_table <- function(dc, label, n_groups) {
   rows <- vapply(seq_len(n_groups), function(wg) {
     sprintf("| %d | [Open the survey for %s, working group %d](%s) |",
             wg, label, wg, survey_link(dc, wg))
@@ -47,8 +47,11 @@ cat("Use this link only for the test entry in [Session 1](01-fieldwork.html#test
 cat(sprintf("[Open the test survey](%s)\n\n", survey_link(dc_test, 0)))
 
 cat("## Catalonia Group 1 (23 to 27 January)\n\n")
-group_table(dc_cat1, "Catalonia Group 1")
+group_table(dc_cat1, "Catalonia Group 1", 25)
 
 cat("## Catalonia Group 2 (27 to 31 January)\n\n")
-group_table(dc_cat2, "Catalonia Group 2")
+group_table(dc_cat2, "Catalonia Group 2", 25)
+
+cat("## London\n\n")
+group_table(dc_ldn, "London", 5)
 ```

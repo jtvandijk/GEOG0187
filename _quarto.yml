@@ -48,8 +48,6 @@ website:
         contents:
           - text: "1 Fieldwork Preparation"
             file: 01-fieldwork.qmd
-          - text: "Field Survey Links"
-            file: survey-links.qmd
       - section: "Mapping"
         contents:
           - text: "2 Mapping Your Field Data"
@@ -66,5 +64,9 @@ website:
             file: 06-uncertainty.qmd
           - text: "7 Testing Differences"
             file: 07-testing.qmd
+      - section: "Fieldwork Logistics"
+        contents:
+          - text: "Field Survey Links"
+            file: survey-links.qmd
 
 editor: source
