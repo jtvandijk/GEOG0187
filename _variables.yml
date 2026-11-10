@@ -6,6 +6,7 @@ meta:
 urls:
   w01: "01-fieldwork.html"
   w02: "02-mapping.html"
+  w03: "03-storymap.html"
 
 # Fieldwork data collection (session 1). 
 fieldwork:

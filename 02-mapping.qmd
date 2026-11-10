@@ -4,7 +4,7 @@ number-offset: 1
 
 # Mapping Your Field Data
 
-In Catalonia your working group recorded sites in the field survey, and you recorded your route in Strava. This week you bring the two together on one map in **ArcGIS Online**. Everyone makes their **own** map. Next week you will turn this map into a story map, so make sure you save it at the end of the session.
+In Catalonia your working group recorded sites in the field survey, and you recorded your route in Strava. This week you bring the two together on one map in **ArcGIS Online**. Everyone makes their **own** map. Next week you will turn this map into a [story map]({{< var urls.w03 >}}), so make sure you save it at the end of the session.
 
 ::: {.callout-important}
 ## Before the session

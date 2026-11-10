@@ -1,0 +1,109 @@
+---
+number-offset: 2
+---
+
+# Building a Story Map
+
+Last week you made a map of your group's sites and route. This week you use it as the centre of a **story map**: a web page, built in **ArcGIS StoryMaps**, that combines text, photos, video and your interactive map to tell a short story about your theme. This is the format of the first GIS worksheet, so what you build this session is the start of your submission.
+
+::: {.callout-important}
+## Before the session
+Have the following ready:
+
+- your saved web map from last week (find it in [Content]{.ui} → [My content]{.ui});
+- your group's **photos** and any **videos**, downloaded to the laptop you will work on (your group shares these in its own OneDrive folder);
+- the **worksheet brief** for this task. The brief is the authority on what your story map must contain; this chapter shows you *how* to build it.
+:::
+
+## What is a story map?
+A story map is a scrolling web page in which you can place a **map block** next to the text it belongs to. The reader scrolls, and can also zoom, pan and click on the map. A good story map has a clear storyline, and every photo, video and map element is there because it supports that storyline.
+
+Your story map must fit the theme your group was allocated for the Urban Project. Plan the storyline *before* you start building:
+
+1. **What is the one thing** you want a reader to understand about your theme in your study area?
+2. **Which evidence** do you have for it: which sites, which photos, which part of your route?
+3. **How do you split it up**: the worksheet limits the number of main sections, so decide what each section is for (for instance: the study area and aim, what you observed, and what you learned from the methods and experience).
+
+Write the headings down before you open the builder. This takes five minutes and saves most of the time you would otherwise lose to rearranging blocks.
+
+::: {.callout-note}
+## If your screen looks different
+ArcGIS StoryMaps changes its layout regularly. This chapter describes *what* to click by its label. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.
+:::
+
+## Create the story
+1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), sign in with [UCL SSO]{.ui}, and open [StoryMaps]{.ui} (from the app launcher or the top menu).
+2. Click [New story]{.ui}. The **story builder** opens: you write directly in the page, and add content with the [+]{.ui} button that appears between blocks.
+3. Click the title placeholder and type your **main title**: short, specific, and about your theme, not just "My story map".
+4. In the cover, add your **candidate number** and your **working group number** as the subtitle. Do **not** put your name anywhere. If your name is shown as the author on the cover, remove it in the cover settings.
+5. Choose a cover design that suits your theme and a **cover image** from your group's photos.
+<!-- SCREENSHOT 1: story builder, cover with title, candidate number and group number. images/w03/cover.png -->
+
+Your story saves automatically as a draft in your own ArcGIS Online content.
+
+## Add your text
+Click below the cover and start typing. Use [Heading]{.ui} (from the text style menu) for each of your main sections, so that the story gets a clear structure and a navigation bar. Keep paragraphs short: people read web pages differently from essays.
+
+Write for a reader who was not on the trip. The text has to explain the aim, the place, and what you did and learned, in your own words. The worksheet sets the word limit.
+
+## Add your map
+1. Click [+]{.ui} where the map should go and choose [Map]{.ui}.
+2. Select [My content]{.ui}, and choose the web map you saved last week. Click [Add]{.ui}.
+3. If asked about sharing, agree to share the map at the same level as the story (you will make the story public at the end; see [Share and submit](#share-and-submit)).
+4. Use the map block's [Options]{.ui} to switch on the **legend** and the zoom buttons, and to set the starting view to your study area.
+5. Click a point to check that the pop-up still shows the site ID, note and photo.
+<!-- SCREENSHOT 2: map block in the story, with legend and zoom buttons. images/w03/map-block.png -->
+
+If you want the map to change as the reader scrolls through the text, try a [Sidecar]{.ui} or [Immersive]{.ui} block: they place the text in a panel that scrolls over a full-screen map. It is nice to have, not a requirement.
+
+::: {.callout-note}
+## The map lives in two places
+Your web map is a separate item from your story. If you change the map later (for example, to restyle a layer), those changes show up in the story automatically. Do not delete the web map or its layers before you have submitted.
+:::
+
+## Add photos and captions
+1. Click [+]{.ui} → [Image]{.ui} and upload a photo from your computer. Resize large photos first if uploads are slow.
+2. Add a **caption** under every photo that says what it shows and why it matters for your story. If it comes from your group's shared folder, say so.
+3. Add **alt text** so the image can be understood by someone using a screen reader.
+<!-- SCREENSHOT 3: an image block with caption and alt text. images/w03/image-block.png -->
+
+Choose photos that support your argument. Five good photos you can refer to in the text are better than fifteen that only decorate the page.
+
+## Add video
+Short clips from the field can add atmosphere or an interview that photos cannot show.
+
+1. Click [+]{.ui} → [Video]{.ui}.
+2. Either [Upload]{.ui} the file, or paste a link from a video site.
+3. Add a caption.
+
+Keep clips short, and check the worksheet for how many are allowed and how long they may be. Only include people who have agreed to be filmed.
+
+## Share and submit {#share-and-submit}
+You submit the **link** to your story map, so anyone with the link must be able to open it.
+
+1. Click [Share]{.ui} (top right) and set the visibility to [Everyone (public)]{.ui}. Make sure the web map and its layers are shared at the same level if the builder asks.
+2. Click [Publish]{.ui}. Copy the story's **URL**.
+3. Open the URL in a **private/incognito browser window**. This shows you what a marker will see. Check that the map, pop-ups, photos and video all work without being signed in.
+
+The submission itself (the cover sheet with your link) is explained in the worksheet brief and on Moodle.
+
+## Check before you leave
+By the end of the session your story map should have:
+
+- [ ] a title, your candidate number and group number, and **no** name;
+- [ ] your main headings in place, even if some are still empty;
+- [ ] your web map embedded, with legend and zoom, and working pop-ups;
+- [ ] at least one photo with a caption;
+- [ ] a link that opens when you are signed out.
+
+You have until the worksheet deadline to finish. Use the remaining time for the text, the remaining photos and videos, and for checking your story map against the brief.
+
+## Troubleshooting
+| Problem | What to try |
+| :------ | :---------- |
+| I cannot find my web map | [Content]{.ui} → [My content]{.ui}, or search for `GEOG0187`. Save it first if you did not last week. |
+| The map shows no pop-up photos | Open the web map again and check [Attachments]{.ui} is on under [Pop-ups]{.ui}. |
+| The map does not load when signed out | Share the web map and its layers with [Everyone (public)]{.ui}, then reload in a private window. |
+| My name is shown on the cover | Remove it from the author setting in the cover options. Submissions are marked anonymously. |
+| Photo or video upload fails | Reduce the file size, try a different browser, or use a link for the video. |
+| I lost my story | [StoryMaps]{.ui} → [My stories]{.ui}. Drafts are saved automatically. |
