@@ -28,7 +28,7 @@ Your group collects two datasets: your route as a **line**, and your sites as **
 | Route (a line)        | [Strava](https://www.strava.com) app | Records your GPS track in the background, also without mobile data. Exported afterwards as a `.gpx` file. |
 | Sites (points)        | UCL Geography Field Survey (web form) | One form submission per site: your location, a photo and a short note. Submissions go straight into ArcGIS Online, so there is no copying of coordinates by hand. |
 
-You only need *one* phone per group recording each, but install and test both on your own phone: if one phone runs out of battery in Catalonia, someone else can take over.
+**Everyone records the route on their own phone**, so you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites only need to be submitted once per working group, so you will agree who does that.
 
 ::: {.callout-note}
 ## If your screen looks different
@@ -77,31 +77,23 @@ We start with a live demonstration: your Affiliate Lecturer has done the same te
    - Tap [Submit]{.ui} and check that you see a confirmation.
 <!-- SCREENSHOT 5: the field survey on an iPhone, filled in, with the location map visible. images/w01/survey-form.png -->
 3. **Fix problems.** Work through anything that did not work with the people around you and with staff. The [troubleshooting table](#troubleshooting) covers the most common issues.
-4. **Plan as a working group.** Agree who records the route, who submits points, and who is the backup for each. Agree how your sites relate to your Urban Project theme.
+4. **Plan as a working group.** Agree who submits the sites (one or two people, so that each site is entered only once) and who takes over if their phone runs out of battery. Agree how your sites relate to your Urban Project theme.
 5. **Agree on site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, per group, and use the same ID everywhere: in the survey, in your field notebook, and in the names or captions of any extra photos, videos or audio. This is what lets you match your notes to your points later.
 
 By the end of the session everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
 
 ## In Catalonia
-- **Start Strava** when your group starts walking, and stop it when you finish. One recording per outing is fine; you can have several.
+- **Everyone starts Strava** when your group starts walking, and stops it when you finish. One recording per outing is fine; you can have several.
 - **Submit one survey entry per site**, while you are standing at the site, with **Data collection** set to *your* fieldwork group (not `Fieldwork - Test`) and your own working group number.
 - **Charge your phone** every night and bring a power bank if you have one. GPS and the camera use a lot of battery.
 - **No signal or no mobile data?** Strava keeps recording without data and uploads when you are back online. The survey needs a connection to submit: if you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. Check your phone contract for roaming charges before you go.
 - **Be considerate.** Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
 
 ## After the trip
-Your points are already in ArcGIS Online. The only thing you need to hand in is your route:
+Your sites are already in ArcGIS Online. Before the next session:
 
-1. One person per group exports the `.gpx` file(s) from the Strava website, as in the session.
-2. Rename the file to include your fieldwork group and working group number, for example `CAT1_WG05_route.gpx` for Catalonia Group 1, working group 5 (`CAT2_...` for Group 2, `LDN_...` for London).
-3. Upload it to {{< var fieldwork.upload >}}.
-
-::: {.callout-warning}
-## Deadline
-Upload your group's route by **{{< var fieldwork.deadline >}}**. Without it, your group cannot complete the next GIS session.
-:::
-
-Share extra photos, videos and notes within your group through a shared OneDrive folder. Avoid WhatsApp for this: it compresses photos and removes their location information.
+1. **Export your own route.** Download the `.gpx` file(s) of your recordings from the Strava website, as in the session. If your recording failed, ask someone in your working group for a copy of theirs.
+2. **Share everything else.** Put extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. Avoid WhatsApp for photos: it compresses them and removes their location information.
 
 ## Troubleshooting
 | Problem | What to try |

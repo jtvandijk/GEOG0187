@@ -6,8 +6,6 @@ meta:
 urls:
   w01: "01-fieldwork.html"
 
-# Fieldwork data collection (session 1). Replace the TBC values before publishing.
+# Fieldwork data collection (session 1). 
 fieldwork:
   survey: "https://arcg.is/vbWLC5"
-  upload: "the GEOG0187 Moodle page (TBC)"
-  deadline: "TBC (between Sunday 31 January and the next GIS session)"
