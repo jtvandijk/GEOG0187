@@ -1,0 +1,21 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+
+/.quarto/
+*_cache/
+
+# Claude Code session notes — internal, not for publication
+CLAUDE.md
+
+**/*.quarto_ipynb
+
+# Private planning notes, AL notes, form specs — never publish.
+# The underscore stops Quarto from rendering them into docs/.
+_notes/
+_todo-*.md
+
+# local tooling
+.claude/

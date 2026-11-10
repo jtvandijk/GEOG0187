@@ -1,0 +1,13 @@
+# global variables
+
+meta:
+  title: GEOG0187
+
+urls:
+  w01: "01-fieldwork.html"
+
+# Fieldwork data collection (session 1). Replace the TBC values before publishing.
+fieldwork:
+  survey: "https://survey123.arcgis.com/share/TBC"
+  upload: "the GEOG0187 Moodle page (TBC)"
+  deadline: "TBC (between Sunday 31 January and the next GIS session)"
