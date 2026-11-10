@@ -131,7 +131,8 @@ Finally, whoever logs the sites, and whoever takes over from them, saves your gr
 1. Open the [Field Survey Links]({{< var urls.links >}}) page, find your fieldwork group and working group number, and tap your group's link.
 2. Check that the top of the form shows *your* fieldwork group and working group number.
 3. Add the survey to your home screen. In Safari, use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome, use the [⋮]{.ui} menu → [Add to Home screen]{.ui}. Give it a name you will recognise, such as `Survey WG05`.
-4. Close the survey without submitting anything. You will use it for the first time in Catalonia.
+4. Open the survey from the new home screen icon, and show it to a member of the teaching staff before you leave the session, so that we can check together that it shows your group.
+5. Close the survey without submitting anything. You will use it for the first time in Catalonia.
 
 ## In Catalonia
 Once you are in Catalonia, there are a few things to keep in mind:

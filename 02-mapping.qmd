@@ -41,7 +41,7 @@ Click [Basemap]{.ui} and try a few of the options. A quiet basemap such as *Ligh
 ## Add your group's sites
 All field survey entries, from every group, are stored in a single layer. We will add that layer to our map and then filter it so that only your own working group's sites are shown:
 
-1. Click [Add]{.ui} → [Browse layers]{.ui}. Switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`.
+1. Click [Add]{.ui} → [Browse layers]{.ui}. Switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`. Make sure you pick the layer whose name ends in `_results`: there are other items with a very similar name, which will not work.
 <!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png -->
 2. Click [Add]{.ui} on the layer, and close the browse panel. The map will zoom to the points, and you will see the entries of the whole year.
 3. With the layer selected, click [Filter]{.ui} on the right-hand toolbar, then [Add new]{.ui}, and set up the following conditions:
