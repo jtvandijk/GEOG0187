@@ -40,17 +40,24 @@ Do this in the week before the session.
 
 ### Set up Strava
 1. Install **Strava** from the App Store or Google Play and create a free account. You do not need a paid subscription. Remember your login details: you will need them on the Strava website later.
-2. When asked, allow location access **While Using the App** and keep **Precise Location** switched on.
-<!-- SCREENSHOT 1: iPhone Settings → Strava → Location ("While Using the App", Precise Location on). images/w01/strava-location.png -->
-3. Make your activities private: in the app, go to [Settings]{.ui} → [Privacy Controls]{.ui} and set activities to [Only You]{.ui}. You can still export private activities.
-<!-- SCREENSHOT 2: Strava → Settings → Privacy Controls, activities set to "Only You". images/w01/strava-privacy.png -->
+2. When asked, allow location access **While Using the App**.
+3. Make your activities private: tap the [You]{.ui} tab, then the settings cog (top right), and go to [Privacy Controls]{.ui} → [Activities]{.ui} → [Only You]{.ui}. You can still export private activities.
+<!-- SCREENSHOT 2: Strava → You → settings cog → Privacy Controls → Activities → "Only You". images/w01/strava-privacy.png -->
+
+### Check your location settings
+Both Strava and your web browser (for the field survey) need access to your location. On an iPhone, both settings are under [Settings]{.ui} → [Apps]{.ui}:
+
+1. **Strava**: [Settings]{.ui} → [Apps]{.ui} → [Strava]{.ui} → [Location]{.ui}. Select [While Using the App]{.ui} and keep [Precise Location]{.ui} switched on.
+<!-- SCREENSHOT 1: iPhone Settings → Apps → Strava → Location ("While Using the App", Precise Location on). images/w01/strava-location.png -->
+2. **Safari**: [Settings]{.ui} → [Apps]{.ui} → [Safari]{.ui}, then scroll a long way down to [Location]{.ui}. Select [Allow]{.ui} or [Ask]{.ui}, not [Deny]{.ui}.
+<!-- SCREENSHOT 3: iPhone Settings → Apps → Safari → Location (Ask / Deny / Allow). images/w01/safari-location.png -->
+
+On Android, go to [Settings]{.ui} → [Apps]{.ui} → [Strava]{.ui} → [Permissions]{.ui} → [Location]{.ui}, choose [Allow only while using the app]{.ui} and switch on [Use precise location]{.ui}. Do the same for [Chrome]{.ui}.
 
 ### Save the field survey to your phone
 1. Open the [UCL Geography Field Survey]({{< var fieldwork.survey >}}) on your phone. It opens in your browser; there is nothing to install.
 2. Sign in with your UCL account. If you are asked for *Your ArcGIS organization's URL*, type `uclondon`, tap [Continue]{.ui}, then [UCL SSO]{.ui}, and sign in as you would for Moodle. You do not need to fill in the survey yet.
 3. Add it to your home screen so you can find it quickly in the field: in Safari use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome use the [⋮]{.ui} menu → [Add to Home screen]{.ui}.
-4. On an iPhone, check that websites can use your location: [Settings]{.ui} → [Privacy & Security]{.ui} → [Location Services]{.ui} → [Safari Websites]{.ui} → [While Using the App]{.ui}.
-<!-- SCREENSHOT 3: iPhone Settings → Privacy & Security → Location Services → Safari Websites ("While Using the App"). images/w01/safari-location.png -->
 
 ### Do a test walk
 1. Somewhere outside, open Strava, tap [Record]{.ui}, choose [Walk]{.ui} as the activity type, and start. You can lock your phone; Strava keeps recording.
