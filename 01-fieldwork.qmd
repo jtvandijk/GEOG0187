@@ -1,4 +1,4 @@
-# Collecting Spatial Data
+# Fieldwork Preparation
 
 On the field trip to Catalonia, your group will collect its own spatial data: the **route** you walk, and the **sites** you record for your Urban Project. After the trip, in the mapping sessions, we will put these data on a map, combine them with other data, and turn them into a story map. Anything you do not collect in Catalonia cannot be collected afterwards, so this week is all about making sure that everything works *before* you travel.
 
@@ -28,7 +28,7 @@ Your group will collect two datasets: your route as a line, and your sites as po
 | Your route | [Strava](https://www.strava.com) | A phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a `.gpx` file. |
 | Your sites | [UCL Geography Field Survey]({{< var fieldwork.survey >}}) | A web form that opens in your phone's browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no need to copy coordinates by hand. |
 
-Everyone records the route on their own phone, so that you each end up with your own copy and nothing is lost if one phone runs out of battery. Sites, on the other hand, only need to be submitted once per working group, so you will need to agree who does that.
+Both datasets are collected once per working group. One or two people in your group record the route, and one or two people submit the sites, so you will need to agree who does what. Everyone does the setup and the test walk below, though, so that anyone can step in if a phone runs out of battery.
 
 ::: {.callout-note}
 ## If your screen looks different
@@ -102,33 +102,45 @@ We will start with a live demonstration of a test walk done with the same instru
    - Tap [Submit]{.ui} and check that you see a confirmation.
 <!-- SCREENSHOT 5: the field survey on an iPhone, filled in, with the location map visible. images/w01/survey-form.png -->
 3. **Fix any problems.** Work through anything that did not work together with the people around you and with staff. The [troubleshooting table](#troubleshooting) covers the most common issues.
-4. **Plan as a working group.** Agree who will submit the sites (one or two people, so that each site is entered only once) and who takes over if their phone runs out of battery. Also discuss how your sites relate to your Urban Project theme.
-5. **Agree on site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, within your group, and use the same ID in the survey and on any notes, photos or recordings you make outside it. This is how you will match them to your points on the map later on.
 
 By the end of the session, everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
+
+### Plan your fieldwork
+Before you leave the session, sit down with your working group and agree how you will collect your data once you are in Catalonia:
+
+- **Who records the route.** Choose one or two people to record the route in Strava. With two, you still have a route if one recording fails. These people will also export the route after the trip and share it with the rest of the group.
+- **Who submits the sites.** Choose one or two people to fill in the field survey, so that each site is entered only once.
+- **Who takes over.** Agree who steps in if one of these phones runs out of battery.
+- **Which sites.** Discuss what kind of sites you will record and how they relate to your Urban Project theme.
+- **Site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, within your group, and use the same ID in the survey and on any notes, photos or recordings you make outside it. This is how you will match them to your points on the map later on.
 
 ## In Catalonia
 Once you are in Catalonia, there are a few things to keep in mind:
 
-- Everyone starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
+- Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
 - Submit one survey entry per site, while you are standing at the site. Set **Data collection** to *your* fieldwork group (not `Fieldwork - Test`), and use your own working group number.
-- Charge your phone every night and bring a power bank if you have one, because GPS and the camera use a lot of battery.
-- If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. It is also worth checking your phone contract for roaming charges before you go.
+- Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.
+- If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map.
 - Please be considerate. Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
+
+::: {.callout-tip}
+## Check your roaming charges
+Before you travel, check whether your phone contract includes mobile data in Spain, and what it costs if it does not. If in doubt, switch off mobile data and rely on wifi: Strava records without a connection, and you can submit survey entries later.
+:::
 
 ## After the trip
 Your sites will already be in ArcGIS Online, but there are two things to do before the next session:
 
-1. **Export your own route.** Download the `.gpx` file(s) of your recordings from the Strava website, just as you did in the session. If your recording failed, ask someone in your working group for a copy of theirs.
+1. **Export and share the route.** Whoever recorded the route downloads the `.gpx` file(s) from the Strava website, just as you did in the session, and shares them with the rest of the working group. If two people recorded, their routes should be the same, so one copy is enough; pick the one with the fewest gaps.
 2. **Share everything else.** Put any extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. It is best to avoid WhatsApp for photos, because it compresses them and removes their location information.
 
 ## Troubleshooting
 | Problem | What to try |
 | :------ | :---------- |
 | Strava does not record, or the route is a straight line | Check that location access is set to [While Using the App]{.ui} with [Precise Location]{.ui} on. Do not force-close the app while recording, and turn off Low Power Mode if the route has gaps. |
-| There is no [Export GPX]{.ui} option | Use the Strava website on a laptop, not the app or a phone browser. Note that you can only export your *own* activities. |
+| There is no [Export GPX]{.ui} option | Use the Strava website on a laptop, not the app or a phone browser. You can only export your *own* activities, so the export has to be done by whoever recorded the route, who then shares the file with the group. |
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
-| The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Indoors or between tall buildings it can take a little while, so step into the open. |
+| The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Drag the dot on the map to the correct location before submitting. |
 | There is no confirmation after [Submit]{.ui} | Check that you have a connection, then tap [Submit]{.ui} again. Any required fields that are missing are highlighted in the form. |
 | The photo will not upload | Try again on wifi, or submit without the photo and write the site ID down alongside the photo instead. |

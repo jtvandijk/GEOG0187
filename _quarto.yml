@@ -46,7 +46,7 @@ website:
             file: index.qmd
       - section: "Spatial Data Collection"
         contents:
-          - text: "1 Collecting Spatial Data"
+          - text: "1 Fieldwork Preparation"
             file: 01-fieldwork.qmd
       - section: "Mapping"
         contents:

@@ -20,7 +20,7 @@ The topics are listed below. Chapters are released ahead of each session; check 
 
 | Session | Section     | Topic |
 | :------ | :---------- | :---- |
-| 1       | Spatial Data Collection | [Collecting Spatial Data]({{< var urls.w01 >}}) |
+| 1       | Spatial Data Collection | [Fieldwork Preparation]({{< var urls.w01 >}}) |
 | 2       | Mapping     | [Mapping Your Field Data]({{< var urls.w02 >}}) |
 | 3       | Mapping     | [Building a Story Map]({{< var urls.w03 >}}) |
 | 4       | Mapping     | [Using Secondary Data]({{< var urls.w04 >}}) |
