@@ -28,7 +28,7 @@ Your group will collect two datasets: your route as a line, and your sites as po
 | Your route | [Strava](https://www.strava.com) | A phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a `.gpx` file. |
 | Your sites | [UCL Geography Field Survey]({{< var fieldwork.survey >}}) | A web form that opens in your phone's browser. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no need to copy coordinates by hand. |
 
-Both datasets are collected once per working group. One or two people in your group record the route, and one or two people submit the sites, so you will need to agree who does what. Everyone does the setup and the test walk below, though, so that anyone can step in if a phone runs out of battery.
+Both datasets are collected once per working group. One or two people in your group record the route, and one person is responsible for logging the sites in the field survey, so you will need to agree who does what. Everyone does the setup and the test walk below, though, so that anyone can step in if a phone runs out of battery.
 
 ::: {.callout-note}
 ## If your screen looks different
@@ -117,8 +117,8 @@ Time in the field is limited, and you do not want to spend it on fixing settings
 Next, sit down with your working group and agree how you will collect your data once you are in Catalonia:
 
 - **Who records the route.** Choose one or two people to record the route in Strava. With two, you still have a route if one recording fails. These people will also export the route after the trip and share it with the rest of the group.
-- **Who submits the sites.** Choose one or two people to fill in the field survey, so that each site is entered only once.
-- **Who takes over.** Agree who steps in if one of these phones runs out of battery.
+- **Who logs the sites.** Choose one person to be responsible for logging the sites in the field survey. The whole group decides what to record, but only this person submits the entries, so that each site is entered only once.
+- **Who takes over.** Agree who takes over the route recording or the site logging if one of these phones runs out of battery.
 - **Which sites.** Discuss what kind of sites you will record and how they relate to your Urban Project theme.
 - **Site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, within your group, and use the same ID in the survey and on any notes, photos or recordings you make outside it. This is how you will match them to your points on the map later on.
 
@@ -126,7 +126,7 @@ Next, sit down with your working group and agree how you will collect your data 
 Once you are in Catalonia, there are a few things to keep in mind:
 
 - Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
-- Submit one survey entry per site, while you are standing at the site. Set **Data collection** to *your* fieldwork group (not `Fieldwork - Test`), and use your own working group number.
+- Whoever logs the sites submits one survey entry per site, while you are standing at the site. Set **Data collection** to *your* fieldwork group (not `Fieldwork - Test`), and use your own working group number.
 - Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.
 - If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map.
 - Please be considerate. Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
