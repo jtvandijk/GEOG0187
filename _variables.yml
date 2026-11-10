@@ -24,4 +24,5 @@ secondary:
   bcn_sections: "GEOG0187 Barcelona - Census sections (income)"
   bcn_barris: "GEOG0187 Barcelona - Neighbourhoods"
   bcn_districts: "GEOG0187 Barcelona - Districts"
-  london_lsoa: "Lower Super Output Area (LSOA) IMD2019 (WGS84)"
+  london_lsoa: "Lower Level Super Output Area (LSOAs) IMD2025 (WGS84)"
+  london_boroughs: "Local Authority (Lower Tier) IMD2025 (WGS84)"

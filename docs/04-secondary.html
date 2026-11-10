@@ -478,10 +478,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="london" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="london"><span class="header-section-number">4.3.2</span> London</h3>
 <ol type="1">
-<li>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">ArcGIS Online</span>, and search for <code>Lower Super Output Area (LSOA) IMD2019 (WGS84)</code> from <em>gis@communities.gov.uk</em>.</li>
-<li>Add the layer. It holds one polygon for every <strong>LSOA</strong> in England (areas of about 1,500 residents), with the <strong>Index of Multiple Deprivation (2019)</strong> <em>rank</em> and <em>decile</em>.</li>
-<li>To see only London, use <span class="ui">Filter</span>: <code>lsoa11nm</code> <em>starts with</em> the name of a borough (for example <code>Camden</code>). Add more conditions with <em>or</em> for the other boroughs you want.</li>
-<li>Use the borough names as your <strong>context</strong>: turn on <span class="ui">Labels</span> for a borough’s LSOAs, or add a boundary layer for the London boroughs.</li>
+<li>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">ArcGIS Online</span>, and search for <code>Lower Level Super Output Area (LSOAs) IMD2025 (WGS84)</code> from <em>gis@communities.gov.uk</em>.</li>
+<li>Add the layer. It holds one polygon for every <strong>LSOA</strong> in England (areas of about 1,500 residents), with the <strong>Index of Multiple Deprivation (2025)</strong> <em>rank</em> and <em>decile</em>.</li>
+<li>To see only London, use <span class="ui">Filter</span>: <code>LSOA Name</code> (<code>LSOA21NM</code>) <em>starts with</em> the name of a borough (for example <code>Camden</code>). Add more conditions with <em>or</em> for the other boroughs you want.</li>
+<li>For <strong>context</strong> and for comparing scales, also add <code>Local Authority (Lower Tier) IMD2025 (WGS84)</code> (same publisher): one polygon per local authority, including the London boroughs (filter on <code>LAD24NM</code>). Put it above the LSOAs with no fill and a visible outline.</li>
 </ol>
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -493,7 +493,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ministry of Housing, Communities &amp; Local Government, <em>English Indices of Deprivation 2019</em> (Open Government Licence v3.0).</p>
+<p>Ministry of Housing, Communities &amp; Local Government, <em>English Indices of Deprivation 2025</em> (Open Government Licence v3.0).</p>
 </div>
 </div>
 </section>
@@ -515,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Put the neighbourhoods and districts layers <em>above</em> your income layer and set their fill to <em>none</em>, with a visible outline.</li>
 <li>Zoom into one district. How much does income vary between the sections <em>within</em> a neighbourhood, compared with between neighbourhoods?</li>
 </ol>
-<p>London users: do the same with the boroughs. Why might a borough-level average hide a lot?</p>
+<p>London users: do the same with the boroughs. Compare the pattern of LSOAs <em>within</em> a borough with the single borough outline. Why might one borough-level summary hide a lot?</p>
 </section>
 <section id="write-the-pop-up" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="write-the-pop-up"><span class="header-section-number">4.6</span> Write the pop-up</h2>

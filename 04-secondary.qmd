@@ -50,13 +50,13 @@ Barcelona City Council, *Open Data BCN* (CC BY 4.0), based on the Idescat income
 
 ### London
 1. Click [Add]{.ui} → [Browse layers]{.ui} → [ArcGIS Online]{.ui}, and search for `{{< var secondary.london_lsoa >}}` from *gis@communities.gov.uk*.
-2. Add the layer. It holds one polygon for every **LSOA** in England (areas of about 1,500 residents), with the **Index of Multiple Deprivation (2019)** *rank* and *decile*.
-3. To see only London, use [Filter]{.ui}: `lsoa11nm` *starts with* the name of a borough (for example `Camden`). Add more conditions with *or* for the other boroughs you want.
-4. Use the borough names as your **context**: turn on [Labels]{.ui} for a borough's LSOAs, or add a boundary layer for the London boroughs.
+2. Add the layer. It holds one polygon for every **LSOA** in England (areas of about 1,500 residents), with the **Index of Multiple Deprivation (2025)** *rank* and *decile*.
+3. To see only London, use [Filter]{.ui}: `LSOA Name` (`LSOA21NM`) *starts with* the name of a borough (for example `Camden`). Add more conditions with *or* for the other boroughs you want.
+4. For **context** and for comparing scales, also add `{{< var secondary.london_boroughs >}}` (same publisher): one polygon per local authority, including the London boroughs (filter on `LAD24NM`). Put it above the LSOAs with no fill and a visible outline.
 
 ::: {.callout-note}
 ## Data source
-Ministry of Housing, Communities & Local Government, *English Indices of Deprivation 2019* (Open Government Licence v3.0).
+Ministry of Housing, Communities & Local Government, *English Indices of Deprivation 2025* (Open Government Licence v3.0).
 :::
 
 ## Make the choropleth
@@ -72,7 +72,7 @@ Pick the classification you can best defend, and be ready to explain why.
 1. Put the neighbourhoods and districts layers *above* your income layer and set their fill to *none*, with a visible outline.
 2. Zoom into one district. How much does income vary between the sections *within* a neighbourhood, compared with between neighbourhoods?
 
-London users: do the same with the boroughs. Why might a borough-level average hide a lot?
+London users: do the same with the boroughs. Compare the pattern of LSOAs *within* a borough with the single borough outline. Why might one borough-level summary hide a lot?
 
 ## Write the pop-up
 Pop-ups should do more than show numbers.
