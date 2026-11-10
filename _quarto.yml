@@ -44,7 +44,7 @@ website:
         contents:
           - text: "Welcome"
             file: index.qmd
-      - section: "GIS"
+      - section: "Spatial Data Collection"
         contents:
           - 01-fieldwork.qmd
 

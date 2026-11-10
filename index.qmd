@@ -1,7 +1,11 @@
 # Quantitative Skills {.unnumbered}
 
 ## Welcome {.unnumbered}
-Welcome to the **Quantitative Skills** strand of **GEOG0187 Foundations of Geography II**. Over this term you will collect your own spatial data on the field trip, map it and turn it into a story map in ArcGIS Online, work with secondary data, and then use R to describe data, quantify uncertainty and test simple hypotheses.
+Welcome to the **Quantitative Skills** strand of **GEOG0187 Foundations of Geography II**. This term has three parts:
+
+- **Spatial Data Collection.** Before the field trip to Catalonia, you prepare to collect your own spatial data: the routes you walk and the sites you record.
+- **Mapping.** After the trip, you map your field data in ArcGIS Online, turn it into a story map, and learn to work with and evaluate secondary data.
+- **Statistics.** Finally, you use R to describe data, quantify uncertainty, and compare groups.
 
 ## Moodle {.unnumbered}
 [Moodle](https://moodle.ucl.ac.uk/) is the central point of contact for GEOG0187 and it is where all important information will be communicated, such as session dates, group allocations and assessment information. This workbook contains the material for the Quantitative Skills sessions.
@@ -14,10 +18,10 @@ The topics are listed below. Chapters are released ahead of each session; check 
 
 | Session | Section     | Topic |
 | :------ | :---------- | :---- |
-| 1       | GIS         | [Collecting Field Data]({{< var urls.w01 >}}) |
-| 2       | GIS         | Mapping Your Field Data |
-| 3       | GIS         | Telling Stories with Maps |
-| 4       | GIS         | Working with Secondary Data |
+| 1       | Spatial Data Collection | [Collecting Spatial Data]({{< var urls.w01 >}}) |
+| 2       | Mapping     | Mapping Your Field Data |
+| 3       | Mapping     | Telling Stories with Maps |
+| 4       | Mapping     | Working with Secondary Data |
 | 5       | Statistics  | Describing Data |
 | 6       | Statistics  | Samples and Uncertainty |
 | 7       | Statistics  | Comparing Groups |

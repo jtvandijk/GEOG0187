@@ -1,17 +1,32 @@
-# Collecting Field Data
+# Collecting Spatial Data
 
-On the field trip to Catalonia your group will record two kinds of spatial data: the **route** you walk, and **points of interest** that relate to your Urban Project theme. In the GIS sessions after the trip you will map these data and turn them into a story map. Data you do not collect in Catalonia cannot be collected afterwards, so this week is about making sure everything works *before* you travel.
+On the field trip to Catalonia your group will collect its own spatial data: the **route** you walk, and the **sites** you record for your Urban Project. After the trip, in the Mapping sessions, you will put these data on a map, combine them with other data, and build a story map. Data you do not collect in Catalonia cannot be collected afterwards, so this week is about making sure everything works *before* you travel.
 
 ::: {.callout-important}
 ## Before the session: set up and test walk
 Work through [Before the session](#before-the-session) below. It takes about 20 minutes, most of it walking. There is nothing to hand in: just **bring your phone, with your test walk saved in Strava**, to the session.
 :::
 
-## The two tools
+## Spatial data and GIS
+Almost everything geographers study happens *somewhere*. **Spatial data** record not only *what* something is, but also *where* it is. A photo of a street vendor is data; the same photo together with the coordinates of where it was taken is spatial data, because it can be placed on a map and related to everything else around it: the route you walked, the neighbourhood it sits in, or census statistics for that area.
+
+Most spatial data take one of three basic shapes:
+
+- **Points**: a single location, such as a site you record or a bus stop.
+- **Lines**: a sequence of locations, such as the route you walk.
+- **Polygons**: an area with a boundary, such as a neighbourhood or a census district.
+
+Locations are stored as **coordinates**: *latitude*, the position north or south of the equator, and *longitude*, the position east or west of the meridian through Greenwich. Plaça de Catalunya in Barcelona, for instance, is at about 41.387° N, 2.170° E. Your phone works out its coordinates from satellite positioning (GPS). Outdoors this is typically accurate to within 5 to 10 metres, but it gets worse between tall buildings and indoors, which is worth keeping in mind when you record sites in narrow streets.
+
+A **geographic information system (GIS)** is software for storing, combining, analysing and mapping spatial data. Because every record has a location, a GIS can overlay datasets that were collected separately, such as your sites, your route, a street map and census data, and help answer questions about *where* things happen and *what* is near what. In this module we use **ArcGIS Online**, a GIS that runs in your web browser.
+
+## What you will collect
+Your group collects two datasets: your route as a **line**, and your sites as **points**. You collect each with a different tool:
+
 | What                  | Tool | Why |
 | :-------------------- | :--- | :-- |
 | Route (a line)        | [Strava](https://www.strava.com) app | Records your GPS track in the background, also without mobile data. Exported afterwards as a `.gpx` file. |
-| Points of interest    | GEOG0187 field survey (web form) | One form submission per site: your location, a photo and a short note. Submissions go straight into ArcGIS Online, so there is no copying of coordinates by hand. |
+| Sites (points)        | GEOG0187 field survey (web form) | One form submission per site: your location, a photo and a short note. Submissions go straight into ArcGIS Online, so there is no copying of coordinates by hand. |
 
 You only need *one* phone per group recording each, but install and test both on your own phone: if one phone runs out of battery in Catalonia, someone else can take over.
 
