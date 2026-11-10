@@ -4,11 +4,11 @@ number-offset: 1
 
 # Mapping Your Field Data
 
-In Catalonia, your working group recorded sites using the field survey, and recorded your route in Strava. This week, we will bring the two together on one map in **ArcGIS Online**. Everyone makes their own map. Next week, you will turn this map into a [story map]({{< var urls.w03 >}}), so please make sure you save it at the end of the session.
+In Catalonia (or London), your working group recorded sites using the field survey, and recorded your route in Strava. This week, we will bring the two together on one map in **ArcGIS Online**. Everyone makes their own map. Next week, you will turn this map into a [story map]({{< var urls.w03 >}}), so please make sure you save it at the end of the session.
 
 ::: {.callout-important}
 ## Before the session
-Make sure you have a copy of your group's route as a `.gpx` file, exported from the Strava website by whoever recorded it (see [After the trip]({{< var urls.w01 >}}#after-the-trip)), and that you know your fieldwork group and working group number.
+Make sure you have a copy of your group's route as a `.gpx` file, exported from the Strava website by whoever recorded it (see [After the trip]({{< var urls.w01 >}}#after-the-trip)), and that you know your fieldwork group and working group number. You can look these up in your group's link on the [Field Survey Links]({{< var urls.links >}}) page.
 :::
 
 ## Layers and attributes
@@ -57,7 +57,7 @@ Note that the filter only changes *your* map: nobody else's data are deleted or 
 Next, we will add your group's route from Strava:
 
 1. Click [Add]{.ui} → [Add layer from file]{.ui}, and select your `.gpx` file.
-2. When asked, choose to create a **hosted feature layer**, so that the route is stored in your own ArcGIS Online content. Give it a name such as `CAT1_WG05 route`, and click [Create and add to map]{.ui}.
+2. When asked, choose to create a **hosted feature layer**, so that the route is stored in your own ArcGIS Online content. Give it a name such as `CAT1_WG05 route` (or `LDN_WG03 route` for London), and click [Create and add to map]{.ui}.
 <!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png -->
 3. The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can add each `.gpx` file in the same way.
 
@@ -106,6 +106,6 @@ If you finish early, you could use the [Measure]{.ui} tool (right-hand toolbar) 
 | No sites are left after filtering | Check that your filter uses exactly the same fieldwork group and working group number as your group's [survey link]({{< var urls.links >}}). If your sites are still missing, ask the teaching staff. |
 | I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the route from the live demonstration. |
 | The `.gpx` file will not upload | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
-| The route is a straight line or has big jumps | The GPS signal was lost during recording. Use another group member's route if theirs is better. |
+| The route is a straight line or has big jumps | The GPS signal was lost during recording. If two people in your group recorded the route, use the other recording. |
 | The photo does not show in the pop-up | Check that [Attachments]{.ui} is switched on under [Pop-ups]{.ui}. Note that not every entry has a photo. |
 | I cannot find my map next time | Go to [Content]{.ui} → [My content]{.ui}, or search for `GEOG0187`. |

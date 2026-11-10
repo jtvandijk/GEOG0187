@@ -9,7 +9,7 @@ Please work through the [Before the session](#before-the-session) section below.
 
 ::: {.callout-important}
 ## Every working group has its own survey link
-In Catalonia, your working group logs its sites with its *own* link to the field survey, which you find on the [Field Survey Links]({{< var urls.links >}}) page. The link fills in your fieldwork group and working group number for you, so that every site ends up with your group. Only ever use your own group's link, and use the test link only in the session.
+In Catalonia, your working group logs its sites with its *own* link to the field survey, which you find on the [Field Survey Links]({{< var urls.links >}}) page. The link fills in your fieldwork group and working group number for you, so that every site ends up with your group. Only ever use your own group's link. The test link is only for signing in and testing, before and during the session.
 :::
 
 ::: {.callout-note}
@@ -159,6 +159,7 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | Strava does not record, or the route is a straight line | Check that location access is set to [While Using the App]{.ui} with [Precise Location]{.ui} on. Do not force-close the app while recording, and turn off Low Power Mode if the route has gaps. |
 | There is no [Export GPX]{.ui} option | Use the Strava website on a laptop, not the app or a phone browser. You can only export your *own* activities, so the export has to be done by whoever recorded the route, who then shares the file with the group. |
 | The form shows the wrong fieldwork group or working group number | You have opened the wrong link. Remove the icon from your home screen, open your own group's link from the [Field Survey Links]({{< var urls.links >}}) page, and save that one instead. |
+| **Data collection** or the group number is empty | The link lost its details, for instance because you had to sign in first. Close the form without submitting, open your group's link again from the [Field Survey Links]({{< var urls.links >}}) page, and save that one to your home screen instead. |
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Drag the dot on the map to the correct location before submitting. |

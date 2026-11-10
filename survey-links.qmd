@@ -42,7 +42,7 @@ group_table <- function(dc, label, n_groups) {
 }
 
 cat("## Test link\n\n")
-cat("Use this link only for the test entry in [Session 1](01-fieldwork.html#test-the-tools). ",
+cat("Use this link only to sign in before [Session 1](01-fieldwork.html#sign-in-to-the-field-survey) and to submit your test entry [in the session](01-fieldwork.html#test-the-tools). ",
     "It fills in `", dc_test, "` and working group `0`. Do not save it to your home screen.\n\n", sep = "")
 cat(sprintf("[Open the test survey](%s)\n\n", survey_link(dc_test, 0)))
 
