@@ -132,7 +132,7 @@ Once you are in Catalonia, the person logging the sites submits one survey entry
 
 ::: {.callout-important}
 ## Do not use `Fieldwork - Test` in Catalonia
-Entries submitted as `Fieldwork - Test` or with group number `0` will not show up with your group's data. If you notice that you have made this mistake, tell the teaching staff after the trip.
+Entries submitted as `Fieldwork - Test`, or with the wrong group number, will not show up with your group's data. Check both fields on your first entry of each day. If you do make a mistake, do *not* submit the site again: whoever submitted the entry can correct it in the [next session]({{< var urls.w02 >}}#fix-a-wrong-entry), without losing the location or photo.
 :::
 
 There are a few other things to keep in mind:

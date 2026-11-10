@@ -53,6 +53,14 @@ All field survey entries, from every group, are stored in a single layer. We wil
 
 Note that the filter only changes *your* map: nobody else's data are deleted or changed.
 
+### Fix a wrong entry
+If some of your sites are missing, they were probably submitted with the wrong **Data collection** (e.g. `Fieldwork - Test`) or the wrong **Working group number**. You can only edit the entries you submitted yourself, so this is a job for whoever logged the sites in Catalonia:
+
+1. Change the filter so that it shows the value that was entered by mistake (e.g. **Data collection** *is* `Fieldwork - Test`), and find your entries by their site ID and location.
+2. Click [Edit]{.ui} on the right-hand toolbar, and click on one of your points to select it.
+3. Correct **Data collection** and/or **Working group number**, and click [Update]{.ui}. The location, note and photo stay as they are.
+4. Repeat for any other wrong entries, then set the filter back to your own group. Your sites now also show up in the maps of the rest of your working group.
+
 ## Add your route
 Next, we will add your group's route from Strava:
 
@@ -103,7 +111,7 @@ If you finish early, you could use the [Measure]{.ui} tool (right-hand toolbar) 
 | Problem | What to try |
 | :------ | :---------- |
 | The survey layer does not appear in the search | Check that you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through [UCL SSO]{.ui}. |
-| No sites are left after filtering | Check the exact fieldwork group and working group number, and that your group did not use `Fieldwork - Test` by mistake. Ask staff if your sites are missing. |
+| No sites are left after filtering | Check the exact fieldwork group and working group number in your filter. If the entries themselves are wrong, see [Fix a wrong entry](#fix-a-wrong-entry). |
 | I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the route from the live demonstration. |
 | The `.gpx` file will not upload | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
 | The route is a straight line or has big jumps | The GPS signal was lost during recording. Use another group member's route if theirs is better. |
