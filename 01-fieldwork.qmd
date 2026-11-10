@@ -69,22 +69,22 @@ We start with a live demonstration: your Affiliate Lecturer has done the same te
 1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava **website**, not from the app, so use a laptop or computer. Log in at [strava.com](https://www.strava.com), open your test walk, open the [⋯]{.ui} (more actions) menu next to the activity and choose [Export GPX]{.ui}. Check that a `.gpx` file has been downloaded.
 <!-- SCREENSHOT 4: Strava website, activity page with the ⋯ menu open and "Export GPX" visible. images/w01/strava-export.png -->
 2. **Try the field survey.** Open the survey from your home screen and submit one test entry from the room:
-   - **Data collection**: select `Fieldwork test`.
-   - **Group number**: your Urban Project group number, or `0` if you do not know it yet.
+   - **Data collection**: select `Fieldwork - Test`.
+   - **Group number**: `0`.
    - **Site ID**: `S00`.
    - **Location**: tap [Allow]{.ui} when asked, and check the dot on the map is roughly where you are. If it is off, wait a few seconds or drag it to the right spot.
    - **Photo** and a **short note**: anything will do.
    - Tap [Submit]{.ui} and check that you see a confirmation.
 <!-- SCREENSHOT 5: the field survey on an iPhone, filled in, with the location map visible. images/w01/survey-form.png -->
 3. **Fix problems.** Work through anything that did not work with the people around you and with staff. The [troubleshooting table](#troubleshooting) covers the most common issues.
-4. **Plan as a group.** Agree who records the route, who submits points, and who is the backup for each. Agree how your sites relate to your Urban Project theme.
+4. **Plan as a working group.** Agree who records the route, who submits points, and who is the backup for each. Agree how your sites relate to your Urban Project theme.
 5. **Agree on site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, per group, and use the same ID everywhere: in the survey, in your field notebook, and in the names or captions of any extra photos, videos or audio. This is what lets you match your notes to your points later.
 
 By the end of the session everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
 
 ## In Catalonia
 - **Start Strava** when your group starts walking, and stop it when you finish. One recording per outing is fine; you can have several.
-- **Submit one survey entry per site**, while you are standing at the site, with **Data collection** set to *your* trip (not `Fieldwork test`) and your own group number.
+- **Submit one survey entry per site**, while you are standing at the site, with **Data collection** set to *your* fieldwork group (not `Fieldwork - Test`) and your own working group number.
 - **Charge your phone** every night and bring a power bank if you have one. GPS and the camera use a lot of battery.
 - **No signal or no mobile data?** Strava keeps recording without data and uploads when you are back online. The survey needs a connection to submit: if you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map. Check your phone contract for roaming charges before you go.
 - **Be considerate.** Avoid photos in which people can be identified, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
@@ -93,7 +93,7 @@ By the end of the session everyone should have exported a `.gpx` file and submit
 Your points are already in ArcGIS Online. The only thing you need to hand in is your route:
 
 1. One person per group exports the `.gpx` file(s) from the Strava website, as in the session.
-2. Rename the file to include your trip and group, for example `T1_G05_route.gpx`.
+2. Rename the file to include your fieldwork group and working group number, for example `CAT1_WG05_route.gpx` for Catalonia Group 1, working group 5 (`CAT2_...` for Group 2, `LDN_...` for London).
 3. Upload it to {{< var fieldwork.upload >}}.
 
 ::: {.callout-warning}
