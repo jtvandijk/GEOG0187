@@ -18,7 +18,7 @@ Please make sure you have the following ready before the session starts:
 ## What is a story map?
 A story map is a scrolling web page in which you can place a map right next to the text it belongs to. The reader scrolls through the story, and can also zoom, pan and click on the map. A good story map has a clear storyline, and every photo, video and map element is there because it supports that storyline.
 
-For an example, have a look at [*Short revisit to the Cholera Outbreak in Soho, London (1854)*]({{< var examples.storymap >}}) by Anwar Musah, who taught GIS on this module for many years. It retells John Snow's famous map of cholera deaths around the Broad Street water pump, and shows how text, images and an interactive map can work together. It uses different data and is longer than your story map can be, so use it for inspiration, not as a template.
+For an example, have a look at [*Short revisit to the Cholera Outbreak in Soho, London (1854)*]({{< var examples.storymap >}}) by Dr Anwar Musah, who designed the original story map material for this module. It retells John Snow's famous map of cholera deaths around the Broad Street water pump, and shows how text, images and an interactive map can work together. It uses different data and is longer than your story map can be, so use it for inspiration, not as a template.
 
 Your story map must fit the theme your group was allocated for the Urban Project. It is worth planning the storyline *before* you start building, by asking yourself three questions:
 
