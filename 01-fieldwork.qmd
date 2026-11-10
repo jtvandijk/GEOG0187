@@ -70,7 +70,7 @@ We start with a live demonstration: your Affiliate Lecturer has done the same te
 <!-- SCREENSHOT 4: Strava website, activity page with the ⋯ menu open and "Export GPX" visible. images/w01/strava-export.png -->
 2. **Try the field survey.** Open the survey from your home screen and submit one test entry from the room:
    - **Trip**: select `Fieldwork Test`.
-   - **Group number**: your Urban Project group number.
+   - **Group number**: your Urban Project group number, or `0` if you do not know it yet.
    - **Site ID**: `S00`.
    - **Location**: tap [Allow]{.ui} when asked, and check the dot on the map is roughly where you are. If it is off, wait a few seconds or drag it to the right spot.
    - **Photo** and a **short note**: anything will do.
