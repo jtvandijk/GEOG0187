@@ -12,6 +12,11 @@ Please work through the [Before the session](#before-the-session) section below.
 In Catalonia, your working group logs its sites with its *own* link to the field survey, which you find on the [Field Survey Links]({{< var urls.links >}}) page. The link fills in your fieldwork group and working group number for you, so that every site ends up with your group. Only ever use your own group's link, and use the test link only in the session.
 :::
 
+::: {.callout-note}
+## Doing your fieldwork in London?
+This page is written for the field trip to Catalonia, but the same instructions apply to you. Wherever it says *Catalonia*, read *London*, and use the London links on the [Field Survey Links]({{< var urls.links >}}) page.
+:::
+
 ## Spatial data and GIS
 Almost everything geographers study happens *somewhere*. **Spatial data** record not only *what* something is, but also *where* it is. A photo of a street vendor is data; the same photo together with the coordinates of where it was taken is spatial data, because we can place it on a map and relate it to everything else around it: the route you walked, the neighbourhood it sits in, or the census statistics for that area.
 
