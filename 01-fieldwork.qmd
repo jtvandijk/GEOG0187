@@ -89,6 +89,9 @@ Please bring the following with you to the session:
 - a note of anything that did not work, or that you were unsure about.
 
 ## In the session
+The session has two parts. First, we will check that the tools work: that you can get your route out of Strava and submit an entry to the field survey. Then, you will plan with your working group how you will collect your data in Catalonia.
+
+### Test the tools
 We will start with a live demonstration of a test walk done with the same instructions, showing you how to get the route out of Strava, how to fill in the field survey, and what the data look like in ArcGIS Online. You will then do the same yourself:
 
 1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava website, not from the app, so you will need a laptop or computer for this step. Log in at [strava.com](https://www.strava.com), open your test walk, open the [⋯]{.ui} (more actions) menu next to the activity, and choose [Export GPX]{.ui}. Check that a `.gpx` file has been downloaded.
@@ -103,10 +106,10 @@ We will start with a live demonstration of a test walk done with the same instru
 <!-- SCREENSHOT 5: the field survey on an iPhone, filled in, with the location map visible. images/w01/survey-form.png -->
 3. **Fix any problems.** Work through anything that did not work together with the people around you and with staff. The [troubleshooting table](#troubleshooting) covers the most common issues.
 
-By the end of the session, everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
+By the end of this part, everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
 
 ### Plan your fieldwork
-Before you leave the session, sit down with your working group and agree how you will collect your data once you are in Catalonia:
+Next, sit down with your working group and agree how you will collect your data once you are in Catalonia:
 
 - **Who records the route.** Choose one or two people to record the route in Strava. With two, you still have a route if one recording fails. These people will also export the route after the trip and share it with the rest of the group.
 - **Who submits the sites.** Choose one or two people to fill in the field survey, so that each site is entered only once.
