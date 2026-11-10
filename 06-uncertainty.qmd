@@ -1,0 +1,246 @@
+---
+number-offset: 5
+---
+
+# Samples and Uncertainty
+
+Last week you described NO~2~ for **all** 4,994 LSOAs in London. In practice we almost never have data for everything. Air pollution is *measured* at a few hundred monitoring sites; the values in our dataset come from a model that fills in the gaps. Surveys ask a few thousand people, not the whole country. So the real question is usually: **if I only have a sample, how close am I to the truth, and how sure can I be?**
+
+This week we can answer that question exactly, because for once we know the truth. We treat the full dataset as the **population**, draw samples from it, and see how well they do.
+
+::: {.callout-important}
+## Before the session
+Open your `GEOG0187-stats` project from [Session 5]({{< var urls.w05 >}}). Create a new script, `w06-uncertainty.R`.
+:::
+
+## Population and sample
+Two words to keep apart:
+
+- A **parameter** describes the *population*, e.g. the mean NO~2~ across all 4,994 LSOAs. It is fixed, but usually unknown.
+- A **statistic** describes a *sample*, e.g. the mean NO~2~ in 30 LSOAs you happened to measure. It is known, but it changes from sample to sample.
+
+We use statistics to **estimate** parameters. Start by loading the data and storing the true mean.
+
+```{r}
+#| label: 06-load
+#| filename: 'R code'
+#| message: false
+# load the tidyverse and the data
+library(tidyverse)
+lsoa <- read_csv('data/london-lsoa-air-quality.csv')
+
+# the population mean: normally unknown!
+true_mean <- mean(lsoa$no2)
+true_mean
+```
+
+## Take a sample
+Suppose you can afford monitors in 30 LSOAs, picked at random. `slice_sample()` picks random rows. Because the choice is random, we first fix R's random number generator with `set.seed()`, so that you get the same sample every time you run the script.
+
+```{r}
+#| label: 06-sample
+#| filename: 'R code'
+# fix the random numbers (try your own number too)
+set.seed(38)
+
+# a random sample of 30 LSOAs
+my_sample <- lsoa |>
+  slice_sample(n = 30)
+
+# the sample mean: our estimate of the true mean
+mean(my_sample$no2)
+```
+
+Your estimate is close to the true mean, but not equal to it. Change `38` to any other number, run the lines again, and compare with your neighbour: everyone gets a different estimate. This variation from sample to sample is called **sampling variability**, and it is the reason we need the rest of this session.
+
+## Many samples
+What if we repeated the whole exercise 1,000 times? `replicate()` runs a piece of code many times and collects the results. For this we use base R's `sample()`, which draws values from a single column.
+
+```{r}
+#| label: 06-replicate
+#| filename: 'R code'
+# 1,000 samples of 30 LSOAs, keeping the mean of each
+set.seed(38)
+sample_means <- replicate(1000, mean(sample(lsoa$no2, 30)))
+
+# the first few sample means
+head(sample_means)
+```
+
+The distribution of all these sample means is called the **sampling distribution**.
+
+```{r}
+#| label: fig-06-sampling-dist
+#| fig-cap: Means of 1,000 random samples of 30 LSOAs. The dashed line is the true mean.
+#| filename: 'R code'
+hist(sample_means, breaks = 30,
+     main = 'Sampling distribution of the mean (n = 30)',
+     xlab = 'Sample mean NO2 (µg/m³)', ylab = 'Number of samples',
+     col = 'grey80', border = 'white')
+abline(v = true_mean, lty = 2)
+```
+
+Three things to notice:
+
+1. The sample means are centred on the **true mean**: a random sample gets it right *on average*.
+2. Individual samples miss by a bit, in either direction.
+3. The distribution is **bell-shaped**, even though NO~2~ itself is somewhat skewed (look back at last week's histogram). This is the *central limit theorem* at work.
+
+## The standard error
+The spread of the sampling distribution tells us how far a typical sample mean is from the truth. Its standard deviation has its own name: the **standard error** (SE).
+
+```{r}
+#| label: 06-se-sim
+#| filename: 'R code'
+# standard error: the sd of the sample means
+sd(sample_means)
+```
+
+In real life you cannot draw 1,000 samples; you have one. The useful result is that you can estimate the standard error from that one sample:
+
+$$
+SE = \frac{s}{\sqrt{n}}
+$$
+
+where $s$ is the standard deviation in your sample and $n$ the sample size.
+
+```{r}
+#| label: 06-se-formula
+#| filename: 'R code'
+# standard error estimated from one sample
+sd(my_sample$no2) / sqrt(30)
+```
+
+The two values are close: one sample is enough to know roughly how precise it is.
+
+::: {.callout-note}
+Do not confuse the **standard deviation** and the **standard error**. The standard deviation describes how much LSOAs differ from each other. The standard error describes how much a *sample mean* would differ from sample to sample. Collecting more data does not make LSOAs more alike, but it does make your estimate of their mean more precise.
+:::
+
+## Sample size
+How does the standard error change with the size of the sample? Repeat the simulation for samples of 10, 30, 100 and 300 LSOAs.
+
+```{r}
+#| label: 06-sample-size
+#| filename: 'R code'
+# simulated standard error for different sample sizes
+set.seed(38)
+sizes <- tibble(n = c(10, 30, 100, 300)) |>
+  rowwise() |>
+  mutate(se = sd(replicate(1000, mean(sample(lsoa$no2, n))))) |>
+  ungroup()
+sizes
+```
+
+The standard error falls as $n$ grows, but slowly: you need **four times** as many LSOAs to **halve** the standard error. That is the $\sqrt{n}$ in the formula, and it is why precision is expensive.
+
+## Confidence intervals
+A sample mean on its own hides its uncertainty. A **confidence interval** (CI) shows it. Because the sampling distribution is bell-shaped, about 95% of sample means fall within 1.96 standard errors of the true mean. Turned around, a **95% confidence interval** is:
+
+$$
+\bar{x} \pm 1.96 \times SE
+$$
+
+```{r}
+#| label: 06-ci
+#| filename: 'R code'
+# 95% confidence interval from our one sample
+m <- mean(my_sample$no2)
+se <- sd(my_sample$no2) / sqrt(30)
+c(lower = m - 1.96 * se, upper = m + 1.96 * se)
+```
+
+R calculates this for you with `t.test()`. It uses a slightly larger multiplier than 1.96 (from the *t* distribution) to allow for the fact that $s$ is itself estimated from a small sample, so the interval is a little wider.
+
+```{r}
+#| label: 06-ci-ttest
+#| filename: 'R code'
+# the same, from t.test()
+t.test(my_sample$no2)$conf.int
+```
+
+### What does 95% mean?
+The 95% does **not** mean there is a 95% chance that the true mean lies in *your* interval: the true mean is fixed, and your interval either contains it or not. It means that the **method** captures the true mean in 95% of samples. We can check that, because we know the truth. Draw 100 samples, compute a CI for each, and count how many contain the true mean.
+
+```{r}
+#| label: 06-ci-sim
+#| filename: 'R code'
+# 100 samples, a 95% CI for each
+set.seed(38)
+ci_sim <- tibble(sample_id = 1:100) |>
+  rowwise() |>
+  mutate(values = list(sample(lsoa$no2, 30)),
+         mean = mean(values),
+         se = sd(values) / sqrt(30),
+         lower = mean - 1.96 * se,
+         upper = mean + 1.96 * se) |>
+  ungroup() |>
+  mutate(hit = lower <= true_mean & upper >= true_mean)
+
+# how many intervals contain the true mean?
+sum(ci_sim$hit)
+```
+
+```{r}
+#| label: fig-06-ci-sim
+#| fig-cap: 95% confidence intervals from 100 samples of 30 LSOAs. Red intervals miss the true mean (dashed line).
+#| fig-height: 7
+#| filename: 'R code'
+# plot the intervals: grey = contains the true mean, red = misses
+plot(NULL, xlim = range(ci_sim$lower, ci_sim$upper), ylim = c(1, 100),
+     main = '100 confidence intervals',
+     xlab = 'NO2 (µg/m³)', ylab = 'Sample')
+segments(ci_sim$lower, ci_sim$sample_id, ci_sim$upper, ci_sim$sample_id,
+         col = ifelse(ci_sim$hit, 'grey40', 'red'))
+abline(v = true_mean, lty = 2)
+```
+
+Roughly 95 out of 100 intervals catch the true mean. In real research you never know whether *your* interval is one of the unlucky ones.
+
+## Bias: what a confidence interval cannot fix
+Everything so far assumed a **random** sample. Suppose instead that all monitors were placed in Inner London, where it is easiest to get permission and where the pollution is expected to be.
+
+```{r}
+#| label: 06-bias
+#| filename: 'R code'
+# a sample of 30 LSOAs from Inner London only
+set.seed(38)
+inner_sample <- lsoa |>
+  filter(inner_outer == 'Inner') |>
+  slice_sample(n = 30)
+
+# 95% CI from this sample, and the true London mean
+t.test(inner_sample$no2)$conf.int
+true_mean
+```
+
+The interval looks just as precise, but it is in the wrong place. Taking a *larger* sample from Inner London would make the interval *narrower*, and still wrong. Confidence intervals measure **random error** (sampling variability), not **bias** (systematic error from *how* the data were collected). That is why the question *"how was this sample selected?"* comes before any calculation.
+
+::: {.callout-tip}
+Think back to the fieldwork. Were your survey sites a random sample of the area? What would a confidence interval based on them tell you, and what would it not?
+:::
+
+## Write it up
+Report an estimate **with** its uncertainty, and say what the sample is:
+
+> *In a random sample of 30 London LSOAs, mean annual NO~2~ was ... µg/m³ (95% CI ... to ...).*
+
+and interpret the interval in words, without claiming a 95% *probability* about the true value.
+
+Now do the same for PM~2.5~: draw a random sample of 30 LSOAs, report the mean with a 95% CI, and check whether your interval contains the true mean.
+
+## Check before you leave
+- [ ] a saved script `w06-uncertainty.R`;
+- [ ] you can explain the difference between a parameter and a statistic, and between a standard deviation and a standard error;
+- [ ] a histogram of a sampling distribution, and the standard error from simulation and from the formula;
+- [ ] a 95% confidence interval from one sample, and the plot of 100 intervals;
+- [ ] one or two sentences on why a biased sample cannot be rescued by a confidence interval;
+- [ ] a write-up of the PM~2.5~ estimate with its confidence interval.
+
+## Troubleshooting
+| Problem | What to try |
+| :------ | :---------- |
+| My numbers differ from the page | Check that you ran `set.seed(38)` directly before the line that draws the sample. Any other seed gives different, equally valid, numbers. |
+| `object 'true_mean' not found` | Run your script from the top: later lines depend on earlier ones. |
+| The simulation takes a while | 1,000 repetitions takes a second or two. If it hangs, use [Session]{.ui} → [Interrupt R]{.ui} and check for typos. |
+| `Error in sample.int(...): cannot take a sample larger than the population` | You asked for more values than there are rows, e.g. in a filtered dataset. Use a smaller `n`. |

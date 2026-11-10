@@ -25,7 +25,7 @@ The topics are listed below. Chapters are released ahead of each session; check 
 | 3       | Mapping     | [Building a Story Map]({{< var urls.w03 >}}) |
 | 4       | Mapping     | [Using Secondary Data]({{< var urls.w04 >}}) |
 | 5       | Statistics  | [Describing Data]({{< var urls.w05 >}}) |
-| 6       | Statistics  | Samples and Uncertainty |
+| 6       | Statistics  | [Samples and Uncertainty]({{< var urls.w06 >}}) |
 | 7       | Statistics  | Testing Differences |
 
 ## Acknowledgements {.unnumbered}

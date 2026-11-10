@@ -60,5 +60,7 @@ website:
         contents:
           - text: "5 Describing Data"
             file: 05-describing.qmd
+          - text: "6 Samples and Uncertainty"
+            file: 06-uncertainty.qmd
 
 editor: source
