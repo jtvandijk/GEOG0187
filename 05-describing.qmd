@@ -282,7 +282,7 @@ Now try to write a similar paragraph for PM~2.5~.
 | Problem | What to try |
 | :------ | :---------- |
 | `could not find function "read_csv"` | Run `library(tidyverse)` first. If that fails, run `install.packages('tidyverse')`. |
-| `'data/london-lsoa-air-quality.csv' does not exist` | Is your project open? Is the file in the `data` folder, with exactly this name (no `(1)` added by your browser)? |
+| `'data/london-lsoa-air-quality.csv' does not exist` | Is your project open? Is the file in the `data` folder, with exactly this name? If you downloaded it twice, your browser may have saved it as `london-lsoa-air-quality (1).csv`: rename it. |
 | `object 'lsoa' not found` | Run the lines that create it first. Run your script from the top. |
-| `object 'income_quintile' not found` | You ran `mutate()` without saving the result: use `lsoa <- lsoa \|> mutate(...)`. |
+| `object 'income_quintile' not found` | You ran `mutate()` without saving the result. Start the line with `lsoa <-`, as in the code above, and run it again. |
 | A plot looks squashed | Make the [Plots]{.ui} pane bigger, or click [Zoom]{.ui}. |
