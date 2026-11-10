@@ -104,7 +104,7 @@ If you finish early, you could use the [Measure]{.ui} tool (right-hand toolbar) 
 | :------ | :---------- |
 | The survey layer does not appear in the search | Check that you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through [UCL SSO]{.ui}. |
 | No sites are left after filtering | Check the exact fieldwork group and working group number, and that your group did not use `Fieldwork - Test` by mistake. Ask staff if your sites are missing. |
-| I do not have a `.gpx` file | Ask someone in your working group for theirs. In the meantime, you can practise with the demo route from your Affiliate Lecturer. |
+| I do not have a `.gpx` file | Ask someone in your working group for theirs. In the meantime, you can practise with the route from the live demonstration. |
 | The `.gpx` file will not upload | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
 | The route is a straight line or has big jumps | The GPS signal was lost during recording. Use another group member's route if theirs is better. |
 | The photo does not show in the pop-up | Check that [Attachments]{.ui} is switched on under [Pop-ups]{.ui}. Note that not every entry has a photo. |
