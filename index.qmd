@@ -1,6 +1,6 @@
 # Quantitative Skills {.unnumbered}
 
-![](images/w00/qskills-welcome.png){width=100% fig-alt="Map of central London showing the Access to Healthy Assets and Hazards index by neighbourhood"}
+![](images/w00/qskills-welcome.jpg){width=100% fig-alt="Map of central London showing the Access to Healthy Assets and Hazards index by neighbourhood"}
 
 ## Welcome {.unnumbered}
 Welcome to the **Quantitative Skills** strand of **GEOG0187 Foundations of Geography II**. This term has three parts:
