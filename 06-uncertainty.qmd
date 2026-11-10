@@ -41,7 +41,7 @@ Suppose we can afford air quality monitors in 30 LSOAs, selected at random. We c
 #| label: 06-sample
 #| filename: 'R code'
 # fix the random numbers (try your own number too)
-set.seed(38)
+set.seed(48)
 
 # a random sample of 30 LSOAs
 my_sample <- lsoa |>
@@ -51,7 +51,7 @@ my_sample <- lsoa |>
 mean(my_sample$no2)
 ```
 
-Our estimate is close to the true mean, but not exactly the same. Now change `38` to any other number, run the lines again, and compare your result with your neighbour's: everyone will get a slightly different estimate. This variation from one sample to the next is called **sampling variability**, and it is what the rest of this session is about.
+Our estimate is close to the true mean, but not exactly the same. Now change `48` to any other number, run the lines again, and compare your result with your neighbour's: everyone will get a slightly different estimate. This variation from one sample to the next is called **sampling variability**, and it is what the rest of this session is about.
 
 ## Taking many samples
 What happens if we repeat the whole exercise 1,000 times? We can do this with `replicate()`, which runs a piece of code many times and collects the results. Here we use base R's `sample()` function, which draws random values from a single column:
@@ -60,7 +60,7 @@ What happens if we repeat the whole exercise 1,000 times? We can do this with `r
 #| label: 06-replicate
 #| filename: 'R code'
 # 1,000 samples of 30 LSOAs, keeping the mean of each
-set.seed(38)
+set.seed(48)
 sample_means <- replicate(1000, mean(sample(lsoa$no2, 30)))
 
 # the first few sample means
@@ -124,7 +124,7 @@ How does the standard error change with the size of the sample? We can find out 
 #| label: 06-sample-size
 #| filename: 'R code'
 # simulated standard error for different sample sizes
-set.seed(38)
+set.seed(48)
 sizes <- tibble(n = c(10, 30, 100, 300)) |>
   rowwise() |>
   mutate(se = sd(replicate(1000, mean(sample(lsoa$no2, n))))) |>
@@ -166,7 +166,7 @@ The 95% does **not** mean that there is a 95% chance that the true mean lies wit
 #| label: 06-ci-sim
 #| filename: 'R code'
 # 100 samples, a 95% CI for each
-set.seed(38)
+set.seed(48)
 ci_sim <- tibble(sample_id = 1:100) |>
   rowwise() |>
   mutate(values = list(sample(lsoa$no2, 30)),
@@ -206,7 +206,7 @@ So far, we have assumed that our sample is **random**. Suppose instead that all 
 #| label: 06-bias
 #| filename: 'R code'
 # a sample of 30 LSOAs from Inner London only
-set.seed(38)
+set.seed(48)
 inner_sample <- lsoa |>
   filter(inner_outer == 'Inner') |>
   slice_sample(n = 30)
@@ -242,7 +242,7 @@ Now try the same for PM~2.5~: draw a random sample of 30 LSOAs, report the mean 
 ## Troubleshooting
 | Problem | What to try |
 | :------ | :---------- |
-| My numbers differ from the page | Check that you ran `set.seed(38)` directly before the line that draws the sample. Any other seed gives different, equally valid, numbers. |
+| My numbers differ from the page | Check that you ran `set.seed(48)` directly before the line that draws the sample. Any other seed gives different, equally valid, numbers. |
 | `object 'true_mean' not found` | Run your script from the top: later lines depend on earlier ones. |
 | The simulation takes a while | 1,000 repetitions takes a second or two. If it hangs, use [Session]{.ui} → [Interrupt R]{.ui} and check for typos. |
 | `Error in sample.int(...): cannot take a sample larger than the population` | You asked for more values than there are rows, e.g. in a filtered dataset. Use a smaller `n`. |

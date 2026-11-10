@@ -525,7 +525,7 @@ window.Quarto = {
 <pre><strong>R code</strong></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fix the random numbers (try your own number too)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">38</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">48</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># a random sample of 30 LSOAs</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>my_sample <span class="ot">&lt;-</span> lsoa <span class="sc">|&gt;</span></span>
@@ -535,10 +535,10 @@ window.Quarto = {
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(my_sample<span class="sc">$</span>no2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 21.97</code></pre>
+<pre><code>[1] 21.30667</code></pre>
 </div>
 </div>
-<p>Our estimate is close to the true mean, but not exactly the same. Now change <code>38</code> to any other number, run the lines again, and compare your result with your neighbour’s: everyone will get a slightly different estimate. This variation from one sample to the next is called <strong>sampling variability</strong>, and it is what the rest of this session is about.</p>
+<p>Our estimate is close to the true mean, but not exactly the same. Now change <code>48</code> to any other number, run the lines again, and compare your result with your neighbour’s: everyone will get a slightly different estimate. This variation from one sample to the next is called <strong>sampling variability</strong>, and it is what the rest of this session is about.</p>
 </section>
 <section id="taking-many-samples" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="taking-many-samples"><span class="header-section-number">6.3</span> Taking many samples</h2>
@@ -549,14 +549,14 @@ window.Quarto = {
 <pre><strong>R code</strong></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1,000 samples of 30 LSOAs, keeping the mean of each</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">38</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">48</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>sample_means <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">mean</span>(<span class="fu">sample</span>(lsoa<span class="sc">$</span>no2, <span class="dv">30</span>)))</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># the first few sample means</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(sample_means)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 21.97000 21.98333 21.97000 22.44667 22.06667 22.74333</code></pre>
+<pre><code>[1] 21.30667 22.23000 21.86000 21.73333 22.78667 21.72000</code></pre>
 </div>
 </div>
 <p>The distribution of all these sample means is called the <strong>sampling distribution</strong>. Let us plot it, together with the true mean:</p>
@@ -603,7 +603,7 @@ Figure&nbsp;1: Means of 1,000 random samples of 30 LSOAs. The dashed line is the
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(sample_means)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5938312</code></pre>
+<pre><code>[1] 0.567464</code></pre>
 </div>
 </div>
 <p>In real research, we cannot draw 1,000 samples: we only have one. Fortunately, we can estimate the standard error from that single sample:</p>
@@ -620,7 +620,7 @@ SE = \frac{s}{\sqrt{n}}
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(my_sample<span class="sc">$</span>no2) <span class="sc">/</span> <span class="fu">sqrt</span>(<span class="dv">30</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5776717</code></pre>
+<pre><code>[1] 0.4820915</code></pre>
 </div>
 </div>
 <p>The two values are close, which means that a single sample is enough to tell us roughly how precise our estimate is.</p>
@@ -644,7 +644,7 @@ SE = \frac{s}{\sqrt{n}}
 <pre><strong>R code</strong></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># simulated standard error for different sample sizes</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">38</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">48</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>sizes <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">n =</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">30</span>, <span class="dv">100</span>, <span class="dv">300</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">se =</span> <span class="fu">sd</span>(<span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">mean</span>(<span class="fu">sample</span>(lsoa<span class="sc">$</span>no2, n))))) <span class="sc">|&gt;</span></span>
@@ -655,10 +655,10 @@ SE = \frac{s}{\sqrt{n}}
 <pre><code># A tibble: 4 × 2
       n    se
   &lt;dbl&gt; &lt;dbl&gt;
-1    10 1.05 
-2    30 0.608
-3   100 0.326
-4   300 0.181</code></pre>
+1    10 1.02 
+2    30 0.592
+3   100 0.328
+4   300 0.186</code></pre>
 </div>
 </div>
 <p>The standard error becomes smaller as the sample gets larger, but only slowly: we need <strong>four times</strong> as many LSOAs to <strong>halve</strong> the standard error. This is the effect of the <span class="math inline">\(\sqrt{n}\)</span> in the formula, and it is why precision is expensive.</p>
@@ -681,7 +681,7 @@ SE = \frac{s}{\sqrt{n}}
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   lower    upper 
-20.83776 23.10224 </code></pre>
+20.36177 22.25157 </code></pre>
 </div>
 </div>
 <p>R can also calculate this for us with the <code>t.test()</code> function. This uses a slightly larger multiplier than 1.96, taken from the <em>t</em> distribution, to allow for the fact that <span class="math inline">\(s\)</span> is itself estimated from a small sample. As a result, the interval is a little wider:</p>
@@ -694,7 +694,7 @@ SE = \frac{s}{\sqrt{n}}
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(my_sample<span class="sc">$</span>no2)<span class="sc">$</span>conf.int</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 20.78853 23.15147
+<pre><code>[1] 20.32068 22.29265
 attr(,"conf.level")
 [1] 0.95</code></pre>
 </div>
@@ -708,7 +708,7 @@ attr(,"conf.level")
 <pre><strong>R code</strong></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 100 samples, a 95% CI for each</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">38</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">48</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>ci_sim <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">sample_id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>) <span class="sc">|&gt;</span></span>
 <span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span></span>
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">values =</span> <span class="fu">list</span>(<span class="fu">sample</span>(lsoa<span class="sc">$</span>no2, <span class="dv">30</span>)),</span>
@@ -723,7 +723,7 @@ attr(,"conf.level")
 <span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(ci_sim<span class="sc">$</span>hit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 96</code></pre>
+<pre><code>[1] 94</code></pre>
 </div>
 </div>
 <p>We can also plot all 100 intervals:</p>
@@ -765,7 +765,7 @@ Figure&nbsp;2: 95% confidence intervals from 100 samples of 30 LSOAs. Red interv
 <pre><strong>R code</strong></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a sample of 30 LSOAs from Inner London only</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">38</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">48</span>)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>inner_sample <span class="ot">&lt;-</span> lsoa <span class="sc">|&gt;</span></span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(inner_outer <span class="sc">==</span> <span class="st">'Inner'</span>) <span class="sc">|&gt;</span></span>
 <span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">30</span>)</span>
@@ -774,7 +774,7 @@ Figure&nbsp;2: 95% confidence intervals from 100 samples of 30 LSOAs. Red interv
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(inner_sample<span class="sc">$</span>no2)<span class="sc">$</span>conf.int</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 23.65598 25.74402
+<pre><code>[1] 24.41852 26.87481
 attr(,"conf.level")
 [1] 0.95</code></pre>
 </div>
@@ -799,7 +799,7 @@ attr(,"conf.level")
 <h2 data-number="6.8" class="anchored" data-anchor-id="reporting-your-results"><span class="header-section-number">6.8</span> Reporting your results</h2>
 <p>When you report an estimate based on a sample, for instance in an essay or a worksheet, you should report its uncertainty alongside it, explain how the sample was drawn, and interpret the interval in plain words. Based on this session’s sample, this could look as follows:</p>
 <blockquote class="blockquote">
-<p>In a random sample of 30 London LSOAs, mean annual NO<sub>2</sub> was 22.0 µg/m³ (95% CI 20.8 to 23.2 µg/m³). Values for London as a whole between these two numbers are consistent with our sample.</p>
+<p>In a random sample of 30 London LSOAs, mean annual NO<sub>2</sub> was 21.3 µg/m³ (95% CI 20.3 to 22.3 µg/m³). Values for London as a whole between these two numbers are consistent with our sample.</p>
 </blockquote>
 <p>Avoid writing that there is a “95% probability” that the true mean lies in your interval (see <a href="#what-does-95-mean">What does 95% mean?</a>).</p>
 <p>Now try the same for PM<sub>2.5</sub>: draw a random sample of 30 LSOAs, report the mean with its 95% confidence interval, and check whether your interval contains the true mean.</p>
@@ -831,7 +831,7 @@ attr(,"conf.level")
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">My numbers differ from the page</td>
-<td style="text-align: left;">Check that you ran <code>set.seed(38)</code> directly before the line that draws the sample. Any other seed gives different, equally valid, numbers.</td>
+<td style="text-align: left;">Check that you ran <code>set.seed(48)</code> directly before the line that draws the sample. Any other seed gives different, equally valid, numbers.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>object 'true_mean' not found</code></td>
