@@ -45,8 +45,11 @@ All field survey entries, from every group, are stored in a single layer. We wil
 <!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png -->
 2. Click [Add]{.ui} on the layer, and close the browse panel. The map will zoom to the points, and you will see the entries of the whole year.
 3. In [Layers]{.ui} (left-hand toolbar), click the survey layer so that it is highlighted. Then click [Filter]{.ui} on the right-hand toolbar (the funnel icon), then [Add new]{.ui}, and set up the following conditions:
-   - **Data collection** *is* your fieldwork group (e.g. `Fieldwork - Catalonia Group 1`).
-   - Click [Add new]{.ui} again, and set **Group number** *is* your working group number. (In the survey this was called *Working group number*, but in Map Viewer the field is shown as *Group number*.)
+   - **Data collection** *is* your fieldwork group:
+     - `Fieldwork - Catalonia Group 1` if you were in Catalonia from 23 to 27 January;
+     - `Fieldwork - Catalonia Group 2` if you were in Catalonia from 27 to 31 January;
+     - `Fieldwork - London` if you did your fieldwork in London.
+   - Click [Add new]{.ui} again, and set **Group number** *is* your group number (your Catalonia or London working group number, e.g. `5`).
    - Click [Save]{.ui}. Only your group's sites should now be visible.
 <!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png -->
 4. Zoom to your sites (in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to]{.ui}) and click on a point. Its pop-up shows the attributes and photo your group entered.
