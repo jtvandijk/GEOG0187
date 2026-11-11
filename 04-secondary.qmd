@@ -164,7 +164,7 @@ For the worksheet, you do not have to use the data pack above. If you would like
 
 ::: {.callout-warning}
 ## Tables are not maps
-Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to *join* it to a boundary layer, which we do not cover in this module. So look for data that already include their geometry: a layer in ArcGIS Online or the Living Atlas, or a download offered as GeoJSON, a zipped shapefile, or a CSV with coordinates.
+Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to *join* it to a boundary layer, which we do not cover in this module. So look for data that already include their geometry: a layer in ArcGIS Online or the Living Atlas, or a download offered as GeoJSON or a zipped shapefile, which you can add with [Add]{.ui} → [Add layer from file]{.ui}.
 :::
 
 Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.
