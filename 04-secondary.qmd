@@ -144,7 +144,7 @@ To finish, choose one variable from your data pack and answer the five questions
 Keep your answers as notes, because you will need them for the worksheet.
 
 ## Save your map
-Save your map via [Save and open]{.ui} → [Save as]{.ui}, with a title such as `GEOG0187 – Secondary data – Surname`. You will build on this map for the second story map.
+Save your map via [Save and open]{.ui} → [Save as]{.ui}, with a title such as `GEOG0187 – Secondary data` (without your name, as for the first map). You will build on this map for the second story map.
 
 ## Before you leave
 By the end of this session, you should have:
