@@ -404,11 +404,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#secondary-data-and-where-it-comes-from" id="toc-secondary-data-and-where-it-comes-from" class="nav-link" data-scroll-target="#secondary-data-and-where-it-comes-from"><span class="header-section-number">4.1</span> Secondary data and where it comes from</a></li>
   <li><a href="#choropleth-maps" id="toc-choropleth-maps" class="nav-link" data-scroll-target="#choropleth-maps"><span class="header-section-number">4.2</span> Choropleth maps</a></li>
-  <li><a href="#add-your-data-pack" id="toc-add-your-data-pack" class="nav-link" data-scroll-target="#add-your-data-pack"><span class="header-section-number">4.3</span> Add your data pack</a>
-  <ul class="collapse">
-  <li><a href="#barcelona" id="toc-barcelona" class="nav-link" data-scroll-target="#barcelona"><span class="header-section-number">4.3.1</span> Barcelona</a></li>
-  <li><a href="#london" id="toc-london" class="nav-link" data-scroll-target="#london"><span class="header-section-number">4.3.2</span> London</a></li>
-  </ul></li>
+  <li><a href="#add-your-data-pack" id="toc-add-your-data-pack" class="nav-link" data-scroll-target="#add-your-data-pack"><span class="header-section-number">4.3</span> Add your data pack</a></li>
   <li><a href="#make-the-choropleth" id="toc-make-the-choropleth" class="nav-link" data-scroll-target="#make-the-choropleth"><span class="header-section-number">4.4</span> Make the choropleth</a></li>
   <li><a href="#compare-scales" id="toc-compare-scales" class="nav-link" data-scroll-target="#compare-scales"><span class="header-section-number">4.5</span> Compare scales</a></li>
   <li><a href="#write-the-pop-up" id="toc-write-the-pop-up" class="nav-link" data-scroll-target="#write-the-pop-up"><span class="header-section-number">4.6</span> Write the pop-up</a></li>
@@ -441,7 +437,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Sign in to ArcGIS Online with <span class="ui">UCL SSO</span> (see <a href="02-mapping.html#open-map-viewer">Open Map Viewer</a>) and have a browser open. You will also need to know your fieldwork city: Barcelona if you went on the Catalonia trip, and London otherwise. Everyone does the same exercise, but with a different data pack.</p>
+<p>Sign in to ArcGIS Online with <span class="ui">UCL SSO</span> (see <a href="02-mapping.html#open-map-viewer">Open Map Viewer</a>) and have a browser open. In this session, everyone works with data for Barcelona, including those of you who did their fieldwork in London. For the worksheet, you can apply the same steps to data for London (see <a href="#find-your-own-data">Find your own data</a>).</p>
 </div>
 </div>
 <section id="secondary-data-and-where-it-comes-from" class="level2" data-number="4.1">
@@ -495,7 +491,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="add-your-data-pack" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="add-your-data-pack"><span class="header-section-number">4.3</span> Add your data pack</h2>
-<p>Let us start by opening a new map (<span class="ui">Map</span>) and picking a quiet basemap. You can then follow the instructions for your city.</p>
+<p>Let us start by opening a new map (<span class="ui">Map</span>) and picking a quiet basemap.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -509,9 +505,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Remember how Map Viewer is laid out. The left-hand toolbar holds what is <em>in</em> your map (<span class="ui">Add</span>, <span class="ui">Layers</span>, <span class="ui">Legend</span>, <span class="ui">Save and open</span>); the right-hand toolbar holds the settings (<span class="ui">Styles</span>, <span class="ui">Filter</span>, <span class="ui">Pop-ups</span>) for whichever layer is selected. So we always work in two steps: first click the layer in <span class="ui">Layers</span> so that it is highlighted, and then click the tool on the right. The name at the top of the right-hand panel tells you which layer you are changing.</p>
 </div>
 </div>
-<section id="barcelona" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="barcelona"><span class="header-section-number">4.3.1</span> Barcelona</h3>
-<p>For Barcelona, the data pack consists of three layers that we have prepared for you:</p>
+<p>The data pack consists of three layers for Barcelona that we have prepared for you:</p>
 <ol type="1">
 <li>Click <span class="ui">Add</span> on the left-hand toolbar → <span class="ui">Browse layers</span>. Switch the drop-down at the top from <span class="ui">My content</span> to <span class="ui">My organization</span>, and search for <code>GEOG0187 Barcelona</code>.</li>
 <li>Add <code>GEOG0187 Barcelona - Census sections (income)</code>. This layer has one polygon per <strong>census section</strong> (the smallest statistical area), with the following attributes:
@@ -540,36 +534,12 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="london" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="london"><span class="header-section-number">4.3.2</span> London</h3>
-<p>For London, we will use the official deprivation data, which are already available in ArcGIS Online:</p>
-<ol type="1">
-<li>Click <span class="ui">Add</span> on the left-hand toolbar → <span class="ui">Browse layers</span>. Switch the drop-down at the top to <span class="ui">ArcGIS Online</span>, and search for <code>Lower Level Super Output Area (LSOAs) IMD2025 (WGS84)</code> from <em>gis@communities.gov.uk</em>.</li>
-<li>Add the layer. It contains one polygon for every <strong>LSOA</strong> in England (small areas of about 1,500 residents), with the <em>rank</em> and <em>decile</em> of the Index of Multiple Deprivation (2025).</li>
-<li>To see only London, click the layer in <span class="ui">Layers</span>, then <span class="ui">Filter</span> on the right-hand toolbar → <span class="ui">Add new</span>. Set <code>LSOA Name</code> (<code>LSOA21NM</code>) <em>starts with</em> the name of a borough (for example <code>Camden</code>). You can add more conditions with <em>or</em> for any other boroughs you want to include.</li>
-<li>For context, and to compare scales, also add <code>Local Authority (Lower Tier) IMD2025 (WGS84)</code> from the same publisher. This layer has one polygon per local authority, including the London boroughs (filter on <code>LAD24NM</code>). In <span class="ui">Layers</span>, drag it <em>above</em> the LSOAs, and give it no fill and a visible outline (see <a href="#compare-scales">Compare scales</a> for how).</li>
-</ol>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Data source
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Ministry of Housing, Communities &amp; Local Government, <em>English Indices of Deprivation 2025</em> (Open Government Licence v3.0).</p>
-</div>
-</div>
-</section>
-</section>
 <section id="make-the-choropleth" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="make-the-choropleth"><span class="header-section-number">4.4</span> Make the choropleth</h2>
 <p>Now that the data are on the map, we can turn the main layer into a choropleth:</p>
 <ol type="1">
-<li>In <span class="ui">Layers</span>, click the main layer (the census sections, or the LSOAs for London), and then click <span class="ui">Styles</span> on the right-hand toolbar.</li>
-<li>Under <span class="ui">Choose attributes</span>, click <span class="ui">+ Field</span> and pick the numerical variable: <code>disp_income_pc_2023_eur</code> for Barcelona, <code>IMDRank</code> for London.</li>
+<li>In <span class="ui">Layers</span>, click the census sections layer, and then click <span class="ui">Styles</span> on the right-hand toolbar.</li>
+<li>Under <span class="ui">Choose attributes</span>, click <span class="ui">+ Field</span> and pick <code>disp_income_pc_2023_eur</code>.</li>
 <li>Under <span class="ui">Pick a style</span>, select <span class="ui">Counts and Amounts (color)</span> and click <span class="ui">Style options</span>.</li>
 </ol>
 <p><img src="images/w04/styles.png" class="img-fluid" alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected"></p>
@@ -583,7 +553,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>With <span class="ui">Equal interval</span>, every class has the same width; with <span class="ui">Quantile</span>, every class contains the same number of areas. In Barcelona, a few sections have much higher incomes than the rest. Which of the two do you expect to show most of the city in the same colour? For London, the variable is a <em>rank</em>: do you expect the two classifications to look different at all? Write down your guess before the next step.</p>
+<p>With <span class="ui">Equal interval</span>, every class has the same width; with <span class="ui">Quantile</span>, every class contains the same number of areas. In Barcelona, a few sections have much higher incomes than the rest. Which of the two do you expect to show most of the city in the same colour? Write down your guess before the next step.</p>
 </div>
 </div>
 <ol start="4" type="1">
@@ -633,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you are working with the London data, do the same with the boroughs. Compare the pattern of LSOAs <em>within</em> a borough with the single borough outline. Why might one borough-level summary hide a lot?</p>
+<p>Restyle the census sections by <code>gini_2024_pct</code> instead. Are the most unequal sections also the poorest ones? Then switch back to income.</p>
 </div>
 </div>
 </section>
@@ -641,9 +611,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4.6" class="anchored" data-anchor-id="write-the-pop-up"><span class="header-section-number">4.6</span> Write the pop-up</h2>
 <p>A good pop-up does more than just show numbers. Let us set one up for the main layer:</p>
 <ol type="1">
-<li><p>First, switch off the pop-ups of the boundary layers. Otherwise, clicking on the map opens the neighbourhood or district instead of the census section. In <span class="ui">Layers</span>, click the neighbourhoods layer, then <span class="ui">Pop-ups</span> on the right-hand toolbar, and switch off <span class="ui">Enable pop-ups</span>. Do the same for the districts (or the boroughs, for London).</p></li>
+<li><p>First, switch off the pop-ups of the boundary layers. Otherwise, clicking on the map opens the neighbourhood or district instead of the census section. In <span class="ui">Layers</span>, click the neighbourhoods layer, then <span class="ui">Pop-ups</span> on the right-hand toolbar, and switch off <span class="ui">Enable pop-ups</span>. Do the same for the districts.</p></li>
 <li><p>Now click the main layer in <span class="ui">Layers</span>, and then <span class="ui">Pop-ups</span> on the right-hand toolbar.</p></li>
-<li><p>Click <span class="ui">Title</span> and set it to the neighbourhood (Barcelona) or the LSOA name (London).</p></li>
+<li><p>Click <span class="ui">Title</span> and set it to the neighbourhood.</p></li>
 <li><p>By default, the pop-up also contains a <span class="ui">Fields list</span> with every attribute in the layer. Remove it by clicking the <span class="ui">⋯</span> next to <span class="ui">Fields list</span> → <span class="ui">Delete</span>.</p></li>
 <li><p>Click <span class="ui">Add content</span> → <span class="ui">Text</span>, and then <span class="ui">Edit text</span>. Write the value with a clear name and unit, for example <em>Disposable income per person (2023): €{disp_income_pc_2023_eur}</em>. To avoid typos in the field name, insert it with the <span class="ui">{}</span> button in the text toolbar rather than typing it.</p></li>
 <li><p>Below that, add a short interpretive note: one sentence on what the value means in context. Click <span class="ui">OK</span>.</p></li>
@@ -657,7 +627,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Scale:</strong> what is hidden when we show averages for areas?</li>
 <li><strong>Completeness:</strong> are there areas missing? In the Barcelona layer, <code>mean_taxable_income_2024_eur</code> is empty for three sections. Why might these data be missing?</li>
-<li><strong>Method:</strong> is the variable a count, an estimate or the output of a model? (The London index gives <em>ranks</em>: what does a rank not tell you?)</li>
+<li><strong>Method:</strong> is the variable a count, an estimate or the output of a model? (Disposable income is estimated from tax records and surveys: who might these miss?)</li>
 <li><strong>Time:</strong> does the data refer to the same year as your fieldwork?</li>
 <li><strong>Bias:</strong> who is more likely to be missing from, or poorly represented in, the underlying data?</li>
 </ul>
@@ -684,7 +654,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>ArcGIS Living Atlas, via <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">Living Atlas</span>.</li>
 <li>Open Data BCN (<a href="https://opendata-ajuntament.barcelona.cat/en/">opendata-ajuntament.barcelona.cat</a>) for Barcelona.</li>
-<li>The London Datastore (<a href="https://data.london.gov.uk">data.london.gov.uk</a>), the ONS (<a href="https://www.ons.gov.uk">ons.gov.uk</a>) and data.gov.uk for London and the UK.</li>
+<li>The London Datastore (<a href="https://data.london.gov.uk">data.london.gov.uk</a>), the ONS (<a href="https://www.ons.gov.uk">ons.gov.uk</a>) and data.gov.uk for London and the UK. The <em>English Indices of Deprivation 2025</em> are also available as a layer in ArcGIS Online, under <span class="ui">Browse layers</span> → <span class="ui">ArcGIS Online</span>.</li>
 </ul>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -716,26 +686,22 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">Search <span class="ui">My organization</span>, not <span class="ui">My content</span>, and check that you signed in through <span class="ui">UCL SSO</span>. Let staff know if the layers are missing.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">The London layer is slow or looks wrong</td>
-<td style="text-align: left;">Apply the borough filter first, and then zoom in.</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">The map looks like it is all one colour</td>
 <td style="text-align: left;">Check the classification and the number of classes, and try <em>quantile</em>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">The legend shows odd numbers</td>
 <td style="text-align: left;">Edit the legend labels, or round the values in the style options.</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">Clicking the map opens a neighbourhood, district or borough</td>
+<tr class="even">
+<td style="text-align: left;">Clicking the map opens a neighbourhood or district</td>
 <td style="text-align: left;">Switch off <span class="ui">Enable pop-ups</span> for the boundary layers (see <a href="#write-the-pop-up">Write the pop-up</a>).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">The boundary layers hide the colours underneath</td>
 <td style="text-align: left;">Set their fill to <em>no colour</em> (see <a href="#compare-scales">Compare scales</a>), and check that they are above the main layer in <span class="ui">Layers</span>.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">A value is empty in the pop-up</td>
 <td style="text-align: left;">The data may be missing for that area. If so, mention this in your evaluation.</td>
 </tr>
