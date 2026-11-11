@@ -4,10 +4,10 @@ number-sections: false
 
 # Field Survey Links
 
-Every working group has its own link to the field survey. The link fills in your fieldwork group and working group number for you, and these cannot be changed in the form, so every site you log automatically ends up with your group.
+Every working group has its own link to the field survey. The link fills in your fieldwork group and working group number for you, and these cannot be changed in the form, so every site you log automatically ends up with your working group.
 
 ::: {.callout-important}
-## Only ever use your own group's link
+## Only ever use your own working group's link
 Find your fieldwork group and working group number below, and use that link and no other. Before you save it to your home screen, check that the top of the form shows *your* fieldwork group and working group number. If it does not, you have opened the wrong link.
 :::
 

@@ -4,14 +4,14 @@ number-offset: 2
 
 # Building a Story Map
 
-Last week, you made a map of your group's sites and route. This week, we will use that map as the centre of a **story map**: a web page, built in ArcGIS StoryMaps, that combines text, photos, video and your interactive map to tell a short story about your theme. A story map is also the format of the first GIS worksheet, so what you build in this session is the start of your submission.
+Last week, you made a map of your working group's sites and route. This week, we will use that map as the centre of a **story map**: a web page, built in ArcGIS StoryMaps, that combines text, photos, video and your interactive map to tell a short story about your theme. A story map is also the format of the first GIS worksheet, so what you build in this session is the start of your submission.
 
 ::: {.callout-important}
 ## Before the session
 Please make sure you have the following ready before the session starts:
 
 - your saved web map from last week, which you can find in [Content]{.ui} → [My content]{.ui};
-- your group's photos and any videos, downloaded to the laptop you will be working on (your group shares these in its own OneDrive folder);
+- your working group's photos and any videos, downloaded to the laptop you will be working on (your working group shares these in its own OneDrive folder);
 - the worksheet brief for this task. The brief sets out what your story map must contain; this chapter shows you *how* to build it.
 :::
 
@@ -20,7 +20,7 @@ A story map is a scrolling web page in which you can place a map right next to t
 
 For an example, have a look at [*Short revisit to the Cholera Outbreak in Soho, London (1854)*]({{< var examples.storymap >}}) by Dr Anwar Musah, who designed the original story map material for this module. It retells John Snow's famous map of cholera deaths around the Broad Street water pump, and shows how text, images and an interactive map can work together. It uses different data and is longer than your story map can be, so use it for inspiration, not as a template.
 
-Your story map must fit the theme your group was allocated for the Urban Project. It is worth planning the storyline *before* you start building, by asking yourself three questions:
+Your story map must fit the theme your working group was allocated for the Urban Project. It is worth planning the storyline *before* you start building, by asking yourself three questions:
 
 1. What is the one thing you want a reader to understand about your theme in your study area?
 2. Which evidence do you have for it: which sites, which photos, and which part of your route?
@@ -39,8 +39,8 @@ Let us start by creating a new story and setting up its cover:
 1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), sign in with [UCL SSO]{.ui}, and open [StoryMaps]{.ui} from the app launcher or the top menu.
 2. Click [New story]{.ui}. This opens the **story builder**, in which you write directly in the page and add content with the [+]{.ui} button that appears between blocks.
 3. Click on the title placeholder and type your main title. Keep it short and specific, and make it about your theme rather than something like "My story map".
-4. In the cover, add your candidate number and your fieldwork group and working group number (for example `CAT1_WG05`) as the subtitle. Please do not put your name anywhere: if your name is shown as the author on the cover, remove it in the cover settings. A story map you submit as a formative worksheet does not need to be anonymous, but it may become part of your portfolio, which is marked anonymously, so it is easiest to leave your name out from the start.
-5. Choose a cover design that suits your theme, and pick a cover image from your group's photos.
+4. In the cover, add your candidate number and your group code (for example `CAT1_WG05`, as in the title of your map) as the subtitle. Please do not put your name anywhere: if your name is shown as the author on the cover, remove it in the cover settings. A story map you submit as a formative worksheet does not need to be anonymous, but it may become part of your portfolio, which is marked anonymously, so it is easiest to leave your name out from the start.
+5. Choose a cover design that suits your theme, and pick a cover image from your working group's photos.
 <!-- SCREENSHOT 1: story builder, cover with title, candidate number and group number. images/w03/cover.png -->
 
 Your story is saved automatically as a draft in your own ArcGIS Online content.
@@ -76,7 +76,7 @@ Your web map is a separate item from your story. If you change the map later, fo
 Photos are where your story comes to life. To add one:
 
 1. Click [+]{.ui} → [Image]{.ui} and upload a photo from your computer. If uploads are slow, resize large photos first.
-2. Add a **caption** under every photo that says what it shows and why it matters for your story. If the photo comes from your group's shared folder, mention this.
+2. Add a **caption** under every photo that says what it shows and why it matters for your story. If the photo comes from your working group's shared folder, mention this.
 3. Add **alt text**, so that the image can be understood by someone using a screen reader.
 <!-- SCREENSHOT 3: an image block with caption and alt text. images/w03/image-block.png -->
 
@@ -108,7 +108,7 @@ The submission itself is explained in the worksheet brief and on Moodle.
 ## Before you leave
 By the end of this session, your story map should have:
 
-- [ ] a title, your candidate number, your fieldwork group and working group number, and no name;
+- [ ] a title, your candidate number, your group code, and no name;
 - [ ] your main headings in place, even if some sections are still empty;
 - [ ] your web map embedded, with a legend, zoom and expand buttons, and working pop-ups;
 - [ ] at least one photo with a caption;

@@ -1,6 +1,6 @@
 # Fieldwork Preparation
 
-On the field trip to Catalonia, your group will collect its own spatial data: the **route** you walk, and the **sites** you record for your Urban Project. After the trip, in the mapping sessions, we will put these data on a map, combine them with other data, and turn them into a story map. Anything you do not collect in Catalonia cannot be collected afterwards, so this week is all about making sure that everything works *before* you travel.
+On the field trip to Catalonia, your working group will collect its own spatial data: the **route** you walk, and the **sites** you record for your Urban Project. After the trip, in the mapping sessions, we will put these data on a map, combine them with other data, and turn them into a story map. Anything you do not collect in Catalonia cannot be collected afterwards, so this week is all about making sure that everything works *before* you travel.
 
 ::: {.callout-important}
 ## Before the session: set up and test walk
@@ -9,7 +9,7 @@ Please work through the [Before the session](#before-the-session) section below.
 
 ::: {.callout-important}
 ## Every working group has its own survey link
-In Catalonia, your working group logs its sites with its *own* link to the field survey, which you find on the [Field Survey Links]({{< var urls.links >}}) page. The link fills in your fieldwork group and working group number for you, so that every site ends up with your group. Only ever use your own group's link. The test link is only for signing in and testing, before and during the session.
+In Catalonia, your working group logs its sites with its *own* link to the field survey, which you find on the [Field Survey Links]({{< var urls.links >}}) page. The link fills in your fieldwork group and working group number for you, so that every site ends up with your working group. Only ever use your own working group's link. The test link is only for signing in and testing, before and during the session.
 :::
 
 ::: {.callout-note}
@@ -31,14 +31,14 @@ Locations are stored as **coordinates**: the *latitude*, which is the position n
 A **geographic information system (GIS)** is software for storing, combining, analysing and mapping spatial data. Because every record has a location, a GIS can overlay datasets that were collected separately, such as your sites, your route, a street map and census data, and help us answer questions about *where* things happen and *what* is near what. In this module, we will use ArcGIS Online, a GIS that runs in your web browser.
 
 ## What you will collect
-Your group will collect two datasets: your route as a line, and your sites as points. Each of these is collected with a different tool:
+Your working group will collect two datasets: your route as a line, and your sites as points. Each of these is collected with a different tool:
 
 | What       | Tool | How it works |
 | :--------- | :--- | :----------- |
 | Your route | [Strava](https://www.strava.com) | A phone app that records your GPS track in the background, also without mobile data. You export it afterwards as a `.gpx` file. |
-| Your sites | [UCL Geography Field Survey]({{< var urls.links >}}) | A web form that opens in your phone's browser. Each working group has its own link, which fills in your group for you. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no need to copy coordinates by hand. |
+| Your sites | [UCL Geography Field Survey]({{< var urls.links >}}) | A web form that opens in your phone's browser. Each working group has its own link, which fills in your fieldwork group and working group number for you. Each entry records your location, a photo and a short note, and goes straight into ArcGIS Online, so there is no need to copy coordinates by hand. |
 
-Both datasets are collected once per working group. One or two people in your group record the route, and one person is responsible for logging the sites in the field survey, so you will need to agree who does what. Everyone does the setup and the test walk below, though, so that anyone can step in if a phone runs out of battery.
+Both datasets are collected once per working group. One or two people in your working group record the route, and one person is responsible for logging the sites in the field survey, so you will need to agree who does what. Everyone does the setup and the test walk below, though, so that anyone can step in if a phone runs out of battery.
 
 ::: {.callout-note}
 ## If your screen looks different
@@ -121,17 +121,17 @@ Time in the field is limited, and you do not want to spend it on fixing settings
 Next, sit down with your working group and agree how you will collect your data once you are in Catalonia:
 
 - **Who records the route.** Choose one or two people to record the route in Strava. With two, you still have a route if one recording fails. These people will also export the route after the trip and share it with the rest of the group.
-- **Who logs the sites.** Choose one person to be responsible for logging the sites in the field survey. The whole group decides what to record, but only this person submits the entries, so that each site is entered only once.
+- **Who logs the sites.** Choose one person to be responsible for logging the sites in the field survey. The whole working group decides what to record, but only this person submits the entries, so that each site is entered only once.
 - **Who takes over.** Agree who takes over the route recording or the site logging if one of these phones runs out of battery.
 - **Which sites.** Discuss what kind of sites you will record and how they relate to your Urban Project theme.
-- **Site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, within your group, and use the same ID in the survey and on any notes, photos or recordings you make outside it. This is how you will match them to your points on the map later on.
+- **Site IDs.** Number your sites `S01`, `S02`, `S03`, and so on, within your working group, and use the same ID in the survey and on any notes, photos or recordings you make outside it. This is how you will match them to your points on the map later on.
 
-Finally, whoever logs the sites, and whoever takes over from them, saves your group's survey link to their phone:
+Finally, whoever logs the sites, and whoever takes over from them, saves your working group's survey link to their phone:
 
-1. Open the [Field Survey Links]({{< var urls.links >}}) page, find your fieldwork group and working group number, and tap your group's link.
+1. Open the [Field Survey Links]({{< var urls.links >}}) page, find your fieldwork group and working group number, and tap your working group's link.
 2. Check that the top of the form shows *your* fieldwork group and working group number.
 3. Add the survey to your home screen. In Safari, use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome, use the [⋮]{.ui} menu → [Add to Home screen]{.ui}. Give it a name you will recognise, such as `Survey WG05`.
-4. Open the survey from the new home screen icon, and show it to a member of the teaching staff before you leave the session, so that we can check together that it shows your group.
+4. Open the survey from the new home screen icon, and show it to a member of the teaching staff before you leave the session, so that we can check together that it shows your fieldwork group and working group number.
 5. Close the survey without submitting anything. You will use it for the first time in Catalonia.
 
 ## In Catalonia
@@ -159,8 +159,8 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | :------ | :---------- |
 | Strava does not record, or the route is a straight line | Check that location access is set to [While Using the App]{.ui} with [Precise Location]{.ui} on. Do not force-close the app while recording, and turn off Low Power Mode if the route has gaps. |
 | There is no [Export GPX]{.ui} option | Use the Strava website on a laptop, not the app or a phone browser. You can only export your *own* activities, so the export has to be done by whoever recorded the route, who then shares the file with the group. |
-| The form shows the wrong fieldwork group or working group number | You have opened the wrong link. Remove the icon from your home screen, open your own group's link from the [Field Survey Links]({{< var urls.links >}}) page, and save that one instead. |
-| **Data collection** or the group number is empty | The link lost its details, for instance because you had to sign in first. Close the form without submitting, open your group's link again from the [Field Survey Links]({{< var urls.links >}}) page, and save that one to your home screen instead. |
+| The form shows the wrong fieldwork group or working group number | You have opened the wrong link. Remove the icon from your home screen, open your own working group's link from the [Field Survey Links]({{< var urls.links >}}) page, and save that one instead. |
+| **Data collection** or **Working group number** is empty | The link lost its details, for instance because you had to sign in first. Close the form without submitting, open your working group's link again from the [Field Survey Links]({{< var urls.links >}}) page, and save that one to your home screen instead. |
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Drag the dot on the map to the correct location before submitting. |
