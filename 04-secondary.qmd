@@ -162,6 +162,11 @@ For the worksheet, you do not have to use the data pack above. If you would like
 - Open Data BCN ([opendata-ajuntament.barcelona.cat](https://opendata-ajuntament.barcelona.cat/en/)) for Barcelona.
 - The London Datastore ([data.london.gov.uk](https://data.london.gov.uk)), the ONS ([ons.gov.uk](https://www.ons.gov.uk)) and data.gov.uk for London and the UK.
 
+::: {.callout-warning}
+## Tables are not maps
+Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to *join* it to a boundary layer, which we do not cover in this module. So look for data that already include their geometry: a layer in ArcGIS Online or the Living Atlas, or a download offered as GeoJSON, a zipped shapefile, or a CSV with coordinates.
+:::
+
 Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.
 
 ## Troubleshooting
