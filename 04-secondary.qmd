@@ -45,6 +45,8 @@ For Barcelona, the data pack consists of three layers that we have prepared for 
    - `gini_2024_pct`: the Gini index of tax income, 2024 (a higher value means a more unequal distribution).
 3. Add `{{< var secondary.bcn_barris >}}` and `{{< var secondary.bcn_districts >}}`, which contain the boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.
 
+<!-- SCREENSHOT 1: Browse layers, My organization, search 'GEOG0187 Barcelona' showing the three layers. images/w04/browse-bcn.png -->
+
 ::: {.callout-note}
 ## Data source
 Barcelona City Council, *Open Data BCN* (CC BY 4.0), based on the Idescat income account and the INE Household Income Distribution Atlas. Sections, neighbourhoods and districts come from the *Administrative units of the city of Barcelona* dataset.
@@ -75,6 +77,8 @@ With [Equal interval]{.ui}, every class has the same width; with [Quantile]{.ui}
 :::
 
 3. Under [Classify data]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui}, with 5 classes each time, and look at how the map changes. Was your guess right?
+
+<!-- SCREENSHOT 2: Style options with Classify data open (Quantile, 5 classes), Barcelona income map behind it. images/w04/classify.png -->
 4. Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.
 5. Check the legend: it should say what is being shown, and in which units.
 
@@ -85,6 +89,8 @@ Next, let us see how much the picture depends on the size of the areas:
 
 1. Put the neighbourhoods and districts layers *above* your income layer, and set their fill to *none* with a visible outline.
 2. Zoom into one district.
+
+<!-- SCREENSHOT 3: one district zoomed in, census sections shaded, neighbourhood + district outlines on top, no fill. images/w04/scales.png -->
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
@@ -104,6 +110,8 @@ A good pop-up does more than just show numbers. Let us set one up for the main l
 3. Show the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*.
 4. Add a short interpretive note: one sentence on what the value means in context.
 5. Click on a few areas to check the result.
+
+<!-- SCREENSHOT 4: configured pop-up open on a census section (neighbourhood title, income with unit, interpretive note). images/w04/popup.png -->
 
 ## Evaluate your data
 To finish, choose one variable from your data pack and answer the five questions from [Secondary data and where it comes from](#secondary-data-and-where-it-comes-from). Then think of two or three limitations of the data. The following questions can help you with this:
