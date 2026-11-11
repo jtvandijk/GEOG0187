@@ -25,9 +25,9 @@ arcgis:
 
 # Secondary data pack (session 4, 26 Feb). Names must match the layers published in the UCL org.
 secondary:
-  bcn_sections: "GEOG0187 Barcelona - Census sections (income)"
-  bcn_barris: "GEOG0187 Barcelona - Neighbourhoods"
-  bcn_districts: "GEOG0187 Barcelona - Districts"
+  bcn_sections: "bcn_sections"
+  bcn_barris: "bcn_barris"
+  bcn_districts: "bcn_districts"
   london_lsoa: "Lower Level Super Output Area (LSOAs) IMD2025 (WGS84)"
   london_boroughs: "Local Authority (Lower Tier) IMD2025 (WGS84)"
 
