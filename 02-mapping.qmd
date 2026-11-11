@@ -103,7 +103,7 @@ By default, a pop-up shows every attribute in the layer, which quickly becomes c
 Finally, we need to save the map so that you can open it again next week:
 
 1. Click [Save and open]{.ui} → [Save as]{.ui}.
-2. Use `GEOG0187 – CAT1_WG05` as the title, with your own trip and working group number. Please do not add your name: the map ends up in your story map, which is marked anonymously. Add a short summary, for example *Sites and route from fieldwork in Barcelona*.
+2. Use `GEOG0187 – CAT1_WG05` as the title, with your own trip and working group number. Please do not add your name: the map ends up in your story map, which may become part of your portfolio, and the portfolio is marked anonymously. Add a short summary, for example *Sites and route from fieldwork in Barcelona*.
 3. Click [Save]{.ui}. The map will now be in [Content]{.ui} → [My content]{.ui}.
 
 You do not need to share the map with anyone at this point.
