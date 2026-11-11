@@ -30,7 +30,7 @@ A **choropleth map** shades areas (polygons) by the value of a numerical variabl
 - **The variable.** Use *rates* or *averages* (income per person, % of residents) rather than raw totals (total income). Otherwise, areas with more people will look "bigger" for no interesting reason.
 - **The classes.** The values are split into groups, each with its own colour. With *equal intervals*, the classes all have the same width; with *quantiles*, they all contain the same number of areas. The same data can look very different depending on which you choose.
 - **The colours.** Use a single-hue ramp from light to dark for values that go from low to high, and avoid rainbow palettes.
-- **The scale.** The same variable can look different for small areas than for large ones, because averaging over a large area hides the differences inside it.
+- **The scale.** The same variable can look different for small areas than for large ones, because averaging over a large area hides the differences inside it. This is known as the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem) (MAUP).
 
 ## Add your data pack
 Let us start by opening a new map ([Map]{.ui}) and picking a quiet basemap. You can then follow the instructions for your city.

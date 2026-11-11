@@ -490,7 +490,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>The variable.</strong> Use <em>rates</em> or <em>averages</em> (income per person, % of residents) rather than raw totals (total income). Otherwise, areas with more people will look “bigger” for no interesting reason.</li>
 <li><strong>The classes.</strong> The values are split into groups, each with its own colour. With <em>equal intervals</em>, the classes all have the same width; with <em>quantiles</em>, they all contain the same number of areas. The same data can look very different depending on which you choose.</li>
 <li><strong>The colours.</strong> Use a single-hue ramp from light to dark for values that go from low to high, and avoid rainbow palettes.</li>
-<li><strong>The scale.</strong> The same variable can look different for small areas than for large ones, because averaging over a large area hides the differences inside it.</li>
+<li><strong>The scale.</strong> The same variable can look different for small areas than for large ones, because averaging over a large area hides the differences inside it. This is known as the <a href="https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem">modifiable areal unit problem</a> (MAUP).</li>
 </ul>
 </section>
 <section id="add-your-data-pack" class="level2" data-number="4.3">
@@ -509,6 +509,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Add <code>GEOG0187 Barcelona - Neighbourhoods</code> and <code>GEOG0187 Barcelona - Districts</code>, which contain the boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.</li>
 </ol>
+<!-- SCREENSHOT 1: Browse layers, My organization, search 'GEOG0187 Barcelona' showing the three layers. images/w04/browse-bcn.png -->
 <div class="callout callout-style-simple callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -569,6 +570,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <ol start="3" type="1">
 <li>Under <span class="ui">Classify data</span>, try <span class="ui">Natural breaks</span>, <span class="ui">Quantile</span> and <span class="ui">Equal interval</span>, with 5 classes each time, and look at how the map changes. Was your guess right?</li>
+</ol>
+<!-- SCREENSHOT 2: Style options with Classify data open (Quantile, 5 classes), Barcelona income map behind it. images/w04/classify.png -->
+<ol start="4" type="1">
 <li>Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.</li>
 <li>Check the legend: it should say what is being shown, and in which units.</li>
 </ol>
@@ -581,6 +585,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Put the neighbourhoods and districts layers <em>above</em> your income layer, and set their fill to <em>none</em> with a visible outline.</li>
 <li>Zoom into one district.</li>
 </ol>
+<!-- SCREENSHOT 3: one district zoomed in, census sections shaded, neighbourhood + district outlines on top, no fill. images/w04/scales.png -->
 <div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -618,6 +623,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Add a short interpretive note: one sentence on what the value means in context.</li>
 <li>Click on a few areas to check the result.</li>
 </ol>
+<!-- SCREENSHOT 4: configured pop-up open on a census section (neighbourhood title, income with unit, interpretive note). images/w04/popup.png -->
 </section>
 <section id="evaluate-your-data" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="evaluate-your-data"><span class="header-section-number">4.7</span> Evaluate your data</h2>
