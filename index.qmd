@@ -31,5 +31,5 @@ The topics are listed below. Chapters are released ahead of each session; check 
 ## Acknowledgements {.unnumbered}
 This workbook is created using the [Quarto](https://quarto.org/) publishing system. Elements of this workbook are partially based on and modified from:
 
-- Previous [GEOG0013: Geography in the Field 1](https://www.ucl.ac.uk/module-catalogue/modules/GEOG0013) GIS content created by Anwar Musah
+- Previous [GEOG0013: Geography in the Field 1](https://www.ucl.ac.uk/module-catalogue/modules/GEOG0013) GIS content created by Dr Anwar Musah
 - The [GEOG0018: Methods in Human Geography](https://jtvandijk.github.io/GEOG0018/) workbook by [Justin van Dijk](https://www.mappingdutchman.com)
