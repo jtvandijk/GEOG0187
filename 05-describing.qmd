@@ -6,6 +6,8 @@ number-offset: 4
 
 In Term 1, you used R to describe data and even ran a t-test. Over the next three sessions, we will go back over some of this ground, but more slowly and with a clear purpose: to understand what the numbers mean, how sure we can be about them, and when a difference between groups is real. We will use one question throughout: **who breathes the most polluted air in London?** This week, we will set up a tidy workflow in R and use it to describe our data. This session and the next link to the first statistics worksheet.
 
+The code is a means to an end. What matters is that you understand what each step does and why, so that you can tell whether a result makes sense, whoever wrote the code. Throughout these sessions, we will therefore regularly ask you to **predict** a result before you run the code, and then **check** whether you were right.
+
 ::: {.callout-important}
 ## Before the session
 Make sure **R** and **RStudio** are working on your laptop. You installed both in Term 1; if you run into problems, you can use [Desktop@UCL Anywhere](https://www.ucl.ac.uk/isd/services/computers/remote-access/desktopucl-anywhere) instead. Then run the following once in the RStudio console to install the `tidyverse`:
@@ -107,6 +109,8 @@ lsoa |>
   nrow()
 ```
 
+Rather than writing new code from scratch, it is often quicker to adapt code that already works. Change the first pipe so that it shows the five LSOAs with the **lowest** PM~2.5~, and the last one so that it counts the LSOAs in a borough of your choice with NO~2~ above 20.
+
 We can use `mutate()` to add new columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so instead we will flag each LSOA that is above the WHO interim target of 20 µg/m³. We will also divide London's LSOAs into five equally sized groups (**quintiles**) based on income deprivation, from 1 (the least deprived fifth) to 5 (the most deprived fifth). Because we will use both new columns again, we save the result by assigning it back to `lsoa`:
 
 ```{r}
@@ -127,7 +131,9 @@ Why do we use income deprivation rather than the overall Index of Multiple Depri
 :::
 
 ## Describing a single variable
-When we describe a numerical variable, we usually report three things: its **centre**, its **spread** and its **shape**. We can calculate the most common summary statistics in one go with `summarise()`:
+When we describe a numerical variable, we usually report three things: its **centre**, its **spread** and its **shape**. We can calculate the most common summary statistics in one go with `summarise()`.
+
+**Predict first:** a few LSOAs have much higher NO~2~ than the rest (you saw the top five above). Do you expect the mean to be above or below the median? Run the code and check.
 
 ```{r}
 #| label: 05-describe
@@ -225,7 +231,9 @@ tail(borough_no2, 5)
 ```
 
 ## Pollution and deprivation
-Let us now return to our environmental justice question, and look at NO~2~ levels for each income deprivation quintile:
+Let us now return to our environmental justice question, and look at NO~2~ levels for each income deprivation quintile.
+
+**Predict first:** which quintile do you expect to have the highest NO~2~, and do you expect a steady increase from quintile 1 to quintile 5?
 
 ```{r}
 #| label: 05-quintile

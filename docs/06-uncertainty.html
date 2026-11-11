@@ -576,7 +576,8 @@ window.Quarto = {
 <pre><code>[1] 21.30667 22.23000 21.86000 21.73333 22.78667 21.72000</code></pre>
 </div>
 </div>
-<p>The distribution of all these sample means is called the <strong>sampling distribution</strong>. Let us plot it, together with the true mean:</p>
+<p>The distribution of all these sample means is called the <strong>sampling distribution</strong>.</p>
+<p><strong>Predict first:</strong> where do you expect the 1,000 sample means to be centred, and will they be more or less spread out than the NO<sub>2</sub> values of individual LSOAs in last week’s histogram? Now plot them, together with the true mean:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -654,7 +655,8 @@ SE = \frac{s}{\sqrt{n}}
 </section>
 <section id="sample-size" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="sample-size"><span class="header-section-number">6.5</span> Sample size</h2>
-<p>How does the standard error change with the size of the sample? We can find out by repeating our simulation for samples of 10, 30, 100 and 300 LSOAs:</p>
+<p>How does the standard error change with the size of the sample? We can find out by repeating our simulation for samples of 10, 30, 100 and 300 LSOAs.</p>
+<p><strong>Predict first:</strong> a sample of 300 LSOAs is ten times larger than a sample of 30. Do you expect its standard error to be ten times smaller?</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -718,7 +720,7 @@ attr(,"conf.level")
 </div>
 <section id="what-does-95-mean" class="level3" data-number="6.6.1">
 <h3 data-number="6.6.1" class="anchored" data-anchor-id="what-does-95-mean"><span class="header-section-number">6.6.1</span> What does 95% mean?</h3>
-<p>The 95% does <strong>not</strong> mean that there is a 95% chance that the true mean lies within <em>your</em> interval: the true mean is fixed, and your interval either contains it or it does not. Instead, it means that the <strong>method</strong> captures the true mean in 95% of samples. Because we know the true mean, we can check this. Let us draw 100 samples, calculate a confidence interval for each of them, and count how many contain the true mean:</p>
+<p>The 95% does <strong>not</strong> mean that there is a 95% chance that the true mean lies within <em>your</em> interval: the true mean is fixed, and your interval either contains it or it does not. Instead, it means that the <strong>method</strong> captures the true mean in 95% of samples. Because we know the true mean, we can check this. Let us draw 100 samples, calculate a confidence interval for each of them, and count how many contain the true mean. Before you run the code, write down how many you expect:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -801,6 +803,7 @@ attr(,"conf.level")
 </div>
 </div>
 <p>The interval looks just as precise as before, but it is in the wrong place. Taking a <em>larger</em> sample from Inner London would make the interval <em>narrower</em>, but it would still be wrong. Confidence intervals capture <strong>random error</strong> (sampling variability), but not <strong>bias</strong>: systematic error caused by <em>how</em> the data were collected. This is why the question of how a sample was selected should always come before any calculation.</p>
+<p>Now change <code>'Inner'</code> to <code>'Outer'</code> in the code above. Before you run it, predict whether the interval will be too high or too low, and then check.</p>
 <div class="callout callout-style-simple callout-tip">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">

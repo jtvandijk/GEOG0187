@@ -67,7 +67,9 @@ sample_means <- replicate(1000, mean(sample(lsoa$no2, 30)))
 head(sample_means)
 ```
 
-The distribution of all these sample means is called the **sampling distribution**. Let us plot it, together with the true mean:
+The distribution of all these sample means is called the **sampling distribution**.
+
+**Predict first:** where do you expect the 1,000 sample means to be centred, and will they be more or less spread out than the NO~2~ values of individual LSOAs in last week's histogram? Now plot them, together with the true mean:
 
 ```{r}
 #| label: fig-06-sampling-dist
@@ -118,7 +120,9 @@ Be careful not to confuse the **standard deviation** with the **standard error**
 :::
 
 ## Sample size
-How does the standard error change with the size of the sample? We can find out by repeating our simulation for samples of 10, 30, 100 and 300 LSOAs:
+How does the standard error change with the size of the sample? We can find out by repeating our simulation for samples of 10, 30, 100 and 300 LSOAs.
+
+**Predict first:** a sample of 300 LSOAs is ten times larger than a sample of 30. Do you expect its standard error to be ten times smaller?
 
 ```{r}
 #| label: 06-sample-size
@@ -160,7 +164,7 @@ t.test(my_sample$no2)$conf.int
 ```
 
 ### What does 95% mean?
-The 95% does **not** mean that there is a 95% chance that the true mean lies within *your* interval: the true mean is fixed, and your interval either contains it or it does not. Instead, it means that the **method** captures the true mean in 95% of samples. Because we know the true mean, we can check this. Let us draw 100 samples, calculate a confidence interval for each of them, and count how many contain the true mean:
+The 95% does **not** mean that there is a 95% chance that the true mean lies within *your* interval: the true mean is fixed, and your interval either contains it or it does not. Instead, it means that the **method** captures the true mean in 95% of samples. Because we know the true mean, we can check this. Let us draw 100 samples, calculate a confidence interval for each of them, and count how many contain the true mean. Before you run the code, write down how many you expect:
 
 ```{r}
 #| label: 06-ci-sim
@@ -217,6 +221,8 @@ true_mean
 ```
 
 The interval looks just as precise as before, but it is in the wrong place. Taking a *larger* sample from Inner London would make the interval *narrower*, but it would still be wrong. Confidence intervals capture **random error** (sampling variability), but not **bias**: systematic error caused by *how* the data were collected. This is why the question of how a sample was selected should always come before any calculation.
+
+Now change `'Inner'` to `'Outer'` in the code above. Before you run it, predict whether the interval will be too high or too low, and then check.
 
 ::: {.callout-tip}
 Think back to your fieldwork. Were your survey sites a random sample of the area? What would a confidence interval based on these sites tell you, and what would it not tell you?

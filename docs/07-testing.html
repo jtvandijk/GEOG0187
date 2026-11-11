@@ -636,7 +636,7 @@ Figure&nbsp;1: NO2 in samples of 30 Outer London LSOAs from the most and least i
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-<p>Let us plot the 5,000 differences, together with the difference we actually observed:</p>
+<p><strong>Predict first:</strong> if the labels are shuffled at random, what do you expect the typical difference between the two groups to be? Let us plot the 5,000 differences, together with the difference we actually observed:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -784,6 +784,7 @@ attr(,"conf.level")
 </div>
 </div>
 <p>Does the confidence interval from our sample contain the true difference? In real research, we can never check this, which is exactly why reporting the confidence interval matters.</p>
+<p>Go back to the start of the session, change <code>set.seed(48)</code> before <code>slice_sample()</code> to a number of your own, and run the sample, the t-test and this check again. Does your new interval contain the true difference? Compare with your neighbours: what share of your intervals would you expect to miss?</p>
 </section>
 <section id="common-misconceptions" class="level2" data-number="7.8">
 <h2 data-number="7.8" class="anchored" data-anchor-id="common-misconceptions"><span class="header-section-number">7.8</span> Common misconceptions</h2>
@@ -883,7 +884,7 @@ mean in group 4 mean in group 5
 </section>
 <section id="test-enough-things-and-report-the-significant-one" class="level3" data-number="7.8.4">
 <h3 data-number="7.8.4" class="anchored" data-anchor-id="test-enough-things-and-report-the-significant-one"><span class="header-section-number">7.8.4</span> “Test enough things and report the significant one”</h3>
-<p>Even when H<sub>0</sub> is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the <strong>same</strong> group 1,000 times, so that H<sub>0</sub> is true every time, and counting how many of the tests are significant:</p>
+<p>Even when H<sub>0</sub> is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the <strong>same</strong> group 1,000 times, so that H<sub>0</sub> is true every time, and counting how many of the tests are significant. Before you run the code, write down how many of the 1,000 tests you expect to be significant:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">

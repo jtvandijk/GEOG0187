@@ -105,7 +105,7 @@ perm_diffs <- replicate(5000, {
 })
 ```
 
-Let us plot the 5,000 differences, together with the difference we actually observed:
+**Predict first:** if the labels are shuffled at random, what do you expect the typical difference between the two groups to be? Let us plot the 5,000 differences, together with the difference we actually observed:
 
 ```{r}
 #| label: fig-07-perm
@@ -200,6 +200,8 @@ true_diff
 
 Does the confidence interval from our sample contain the true difference? In real research, we can never check this, which is exactly why reporting the confidence interval matters.
 
+Go back to the start of the session, change `set.seed(48)` before `slice_sample()` to a number of your own, and run the sample, the t-test and this check again. Does your new interval contain the true difference? Compare with your neighbours: what share of your intervals would you expect to miss?
+
 ## Common misconceptions
 Hypothesis tests are easy to run, but also easy to misinterpret. Let us go through four common misconceptions.
 
@@ -262,7 +264,7 @@ t.test(no2 ~ group, data = large_sample)
 The p-value is small, but the difference is only about half a µg/m³. The result is statistically significant, but hardly important, which is why we should always report the effect size and not only the p-value.
 
 ### "Test enough things and report the significant one"
-Even when H~0~ is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the **same** group 1,000 times, so that H~0~ is true every time, and counting how many of the tests are significant:
+Even when H~0~ is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the **same** group 1,000 times, so that H~0~ is true every time, and counting how many of the tests are significant. Before you run the code, write down how many of the 1,000 tests you expect to be significant:
 
 ```{r}
 #| label: 07-multiple
