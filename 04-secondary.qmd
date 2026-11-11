@@ -128,8 +128,6 @@ A good pop-up does more than just show numbers. Let us set one up for the main l
 5. Click [Add content]{.ui} → [Text]{.ui}, and then [Edit text]{.ui}. Write the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*. To avoid typos in the field name, insert it with the [{}]{.ui} button in the text toolbar rather than typing it.
 6. Below that, add a short interpretive note: one sentence on what the value means in context. Click [OK]{.ui}.
 
-![](images/w04/popup-text.png){fig-alt="Text editor for the pop-up, with the line Disposable income per person (2023) followed by the income field in curly brackets"}
-
 7. Click on a few areas to check the result.
 
 ![](images/w04/popup.png){fig-alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block"}
