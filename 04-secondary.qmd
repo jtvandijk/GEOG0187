@@ -53,6 +53,12 @@ The data pack consists of three layers for Barcelona that we have prepared for y
 
 4. Open [Layers]{.ui} and check the order. The layer at the *top* of the list is drawn on top of the others, so the census sections should be at the *bottom*, with the neighbourhoods above them and the districts at the top. If the order is different, drag the layers by their handle (⠿) on the left.
 
+
+::: {.callout-tip}
+## Save early
+Save your map now, via [Save and open]{.ui} → [Save as]{.ui}, with the title from [Save your map](#save-your-map). From then on, use [Save and open]{.ui} → [Save]{.ui} every now and then. If the session ends before you finish, your work so far is safe.
+:::
+
 ::: {.callout-note}
 ## Data source
 Barcelona City Council, *Open Data BCN* (CC BY 4.0), based on the Idescat income account and the INE Household Income Distribution Atlas. Sections, neighbourhoods and districts come from the *Administrative units of the city of Barcelona* dataset.

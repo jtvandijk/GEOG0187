@@ -66,6 +66,12 @@ Next, we will add your group's route from Strava:
 <!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png -->
 3. The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can add each `.gpx` file in the same way.
 
+
+::: {.callout-tip}
+## Save early
+Save your map now, via [Save and open]{.ui} → [Save as]{.ui}, with the title from [Save your map](#save-your-map). From then on, use [Save and open]{.ui} → [Save]{.ui} every now and then. If the session ends before you finish, your work so far is safe.
+:::
+
 ## Style your layers
 First, let us make the [Layers]{.ui} list, and with it the legend, readable for someone else:
 
