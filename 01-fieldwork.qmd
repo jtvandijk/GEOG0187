@@ -141,7 +141,7 @@ Once you are in Catalonia, there are a few things to keep in mind:
 - Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
 - Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.
 - If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map.
-- Please be considerate. Survey entries can be seen by anyone at UCL with an ArcGIS Online account, so avoid photos in which people can be identified, keep personal details out of your notes, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
+- Please be considerate. Survey entries will be **public**, because they appear in the story maps you publish later on. So do not take photos in which people's faces can be recognised, do not put anyone's name or other personal details in your notes, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
 
 ::: {.callout-tip}
 ## Check your roaming charges

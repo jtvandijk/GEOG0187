@@ -99,7 +99,7 @@ Finally, settle on one classification for your map and note down why you chose i
 Next, let us see how much the picture depends on the size of the areas. For this, the boundary layers need to show only their outlines:
 
 1. In [Layers]{.ui}, click the neighbourhoods layer, and then click [Styles]{.ui} on the right-hand toolbar.
-2. Under [Location (Single symbol)]{.ui}, click the pencil next to [Symbol style]{.ui}.
+2. A boundary layer has only one style, [Location (Single symbol)]{.ui}. Click [Style options]{.ui} under it, and then the pencil next to [Symbol style]{.ui}.
 3. Next to [Fill color]{.ui}, click the *no colour* button (the circle with a line through it, on the far right). Keep a dark [Outline color]{.ui}.
 4. Close the [Symbol style]{.ui} panel and click [Done]{.ui}.
 5. Do the same for the districts, with a thicker outline (for example 2 or 3 px under [Outline width]{.ui}), so that you can tell the two apart.
@@ -124,7 +124,7 @@ A good pop-up does more than just show numbers. Let us set one up for the main l
 1. First, switch off the pop-ups of the boundary layers. Otherwise, clicking on the map opens the neighbourhood or district instead of the census section. In [Layers]{.ui}, click the neighbourhoods layer, then [Pop-ups]{.ui} on the right-hand toolbar, and switch off [Enable pop-ups]{.ui}. Do the same for the districts (or the boroughs, for London).
 2. Now click the main layer in [Layers]{.ui}, and then [Pop-ups]{.ui} on the right-hand toolbar.
 3. Click [Title]{.ui} and set it to the neighbourhood (Barcelona) or the LSOA name (London).
-4. By default, the pop-up also contains a [Fields list]{.ui} with every attribute in the layer. Remove it via its [⋯]{.ui} menu.
+4. By default, the pop-up also contains a [Fields list]{.ui} with every attribute in the layer. Remove it by clicking the [⋯]{.ui} next to [Fields list]{.ui} → [Delete]{.ui}.
 5. Click [Add content]{.ui} → [Text]{.ui}, and then [Edit text]{.ui}. Write the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*. To avoid typos in the field name, insert it with the [{}]{.ui} button in the text toolbar rather than typing it.
 6. Below that, add a short interpretive note: one sentence on what the value means in context. Click [OK]{.ui}.
 
