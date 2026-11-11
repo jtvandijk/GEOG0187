@@ -414,7 +414,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#write-the-pop-up" id="toc-write-the-pop-up" class="nav-link" data-scroll-target="#write-the-pop-up"><span class="header-section-number">4.6</span> Write the pop-up</a></li>
   <li><a href="#evaluate-your-data" id="toc-evaluate-your-data" class="nav-link" data-scroll-target="#evaluate-your-data"><span class="header-section-number">4.7</span> Evaluate your data</a></li>
   <li><a href="#save-your-map" id="toc-save-your-map" class="nav-link" data-scroll-target="#save-your-map"><span class="header-section-number">4.8</span> Save your map</a></li>
-  <li><a href="#check-before-you-leave" id="toc-check-before-you-leave" class="nav-link" data-scroll-target="#check-before-you-leave"><span class="header-section-number">4.9</span> Check before you leave</a></li>
+  <li><a href="#before-you-leave" id="toc-before-you-leave" class="nav-link" data-scroll-target="#before-you-leave"><span class="header-section-number">4.9</span> Before you leave</a></li>
   <li><a href="#find-your-own-data" id="toc-find-your-own-data" class="nav-link" data-scroll-target="#find-your-own-data"><span class="header-section-number">4.10</span> Find your own data</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">4.11</span> Troubleshooting</a></li>
   </ul></li>
@@ -553,7 +553,22 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Select the main layer and click <span class="ui">Styles</span>.</li>
 <li>Under <span class="ui">Choose attributes</span>, pick the numerical variable (<code>disp_income_pc_2023_eur</code> for Barcelona, <code>IMDRank</code> for London). Then choose <span class="ui">Counts and Amounts (Color)</span> and click <span class="ui">Style options</span>.</li>
-<li>Under <span class="ui">Classify data</span>, try <span class="ui">Natural breaks</span>, <span class="ui">Quantile</span> and <span class="ui">Equal interval</span>, with 5 classes each time, and look at how the map changes.</li>
+</ol>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>With <span class="ui">Equal interval</span>, every class has the same width; with <span class="ui">Quantile</span>, every class contains the same number of areas. In Barcelona, a few sections have much higher incomes than the rest. Which of the two do you expect to show most of the city in the same colour? For London, the variable is a <em>rank</em>: do you expect the two classifications to look different at all? Write down your guess before the next step.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Under <span class="ui">Classify data</span>, try <span class="ui">Natural breaks</span>, <span class="ui">Quantile</span> and <span class="ui">Equal interval</span>, with 5 classes each time, and look at how the map changes. Was your guess right?</li>
 <li>Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.</li>
 <li>Check the legend: it should say what is being shown, and in which units.</li>
 </ol>
@@ -564,9 +579,34 @@ ul.task-list li input[type="checkbox"] {
 <p>Next, let us see how much the picture depends on the size of the areas:</p>
 <ol type="1">
 <li>Put the neighbourhoods and districts layers <em>above</em> your income layer, and set their fill to <em>none</em> with a visible outline.</li>
-<li>Zoom into one district. How much does income vary between the sections <em>within</em> a neighbourhood, compared with the variation between neighbourhoods?</li>
+<li>Zoom into one district.</li>
 </ol>
-<p>If you are working with the London data, you can do the same with the boroughs. Compare the pattern of LSOAs <em>within</em> a borough with the single borough outline. Why might one borough-level summary hide a lot?</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do you expect income to vary more <em>between</em> neighbourhoods or <em>within</em> them, between the census sections of a single neighbourhood? Then compare a few neighbourhoods on the map and check.</p>
+</div>
+</div>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Try it yourself
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are working with the London data, do the same with the boroughs. Compare the pattern of LSOAs <em>within</em> a borough with the single borough outline. Why might one borough-level summary hide a lot?</p>
+</div>
+</div>
 </section>
 <section id="write-the-pop-up" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="write-the-pop-up"><span class="header-section-number">4.6</span> Write the pop-up</h2>
@@ -595,9 +635,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4.8" class="anchored" data-anchor-id="save-your-map"><span class="header-section-number">4.8</span> Save your map</h2>
 <p>Save your map via <span class="ui">Save and open</span> → <span class="ui">Save as</span>, with a title such as <code>GEOG0187 – Secondary data – Surname</code>. You will build on this map for the second story map.</p>
 </section>
-<section id="check-before-you-leave" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">4.9</span> Check before you leave</h2>
-<p>By the end of the session, you should have:</p>
+<section id="before-you-leave" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="before-you-leave"><span class="header-section-number">4.9</span> Before you leave</h2>
+<p>By the end of this session, you should have:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">your main layer shaded by one numerical variable;</label></li>
 <li><label><input type="checkbox">a context layer (boundaries) on the map;</label></li>

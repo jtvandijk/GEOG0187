@@ -51,6 +51,11 @@ All field survey entries, from every group, are stored in a single layer. We wil
 <!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png -->
 4. Zoom to your sites (in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to]{.ui}) and click on a point. Its pop-up shows the attributes and photo your group entered.
 
+::: {.callout-note .exercise icon=false}
+## Predict first
+How many sites did your group log? Write the number down, then count the points on your filtered map. If the two do not match, check both filter conditions.
+:::
+
 Note that the filter only changes *your* map: nobody else's data are deleted or changed.
 
 ## Add your route
@@ -68,6 +73,11 @@ To change how a layer looks, select it in [Layers]{.ui} and click [Styles]{.ui} 
 - For the sites, change the symbol, size and colour so that the points stand out against the route. You could also style them by an attribute instead, but a single clear symbol is fine for now.
 
 What we are aiming for is a map that someone who was not there can read at a glance: two clearly different layers, and nothing that distracts from them.
+
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Switch between two or three basemaps now that your layers are styled. Which one works best with your colours, and why? Adjust your styling if needed.
+:::
 
 ## Set up the pop-ups
 By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered. Let us tidy it up by selecting the sites layer and clicking [Pop-ups]{.ui}:
@@ -87,8 +97,8 @@ Finally, we need to save the map so that you can open it again next week:
 
 You do not need to share the map with anyone at this point.
 
-## Check before you leave
-By the end of the session, your saved map should have:
+## Before you leave
+By the end of this session, your saved map should have:
 
 - [ ] a basemap of your choice;
 - [ ] your working group's sites, and only those;
@@ -97,7 +107,10 @@ By the end of the session, your saved map should have:
 - [ ] pop-ups that show the site ID, note and photo.
 <!-- SCREENSHOT 6: the finished map (test data): basemap, styled route and sites. images/w02/finished-map.png -->
 
-If you finish early, you could use the [Measure]{.ui} tool (right-hand toolbar) to find out how far you walked, try a different basemap, or add labels with the site IDs ([Labels]{.ui} on the right-hand toolbar).
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+If you finish early, estimate how far your group walked, and then check with the [Measure]{.ui} tool (right-hand toolbar). You could also add labels with the site IDs ([Labels]{.ui} on the right-hand toolbar): does this make the map easier or harder to read?
+:::
 
 ## Troubleshooting
 | Problem | What to try |

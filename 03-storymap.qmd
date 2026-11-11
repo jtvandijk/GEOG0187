@@ -50,6 +50,11 @@ To add text, click below the cover and start typing. Use [Heading]{.ui} from the
 
 Write for a reader who was not on the trip. Your text should explain the aim, the place, and what you did and learned, in your own words. The worksheet sets the word limit.
 
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Once your headings are in place, show only the headings to the person next to you. Can they tell what your story is about, and in which order it will unfold? If not, rework the headings before you write the text.
+:::
+
 ## Add your map
 Next, we will add the web map you made last week:
 
@@ -77,6 +82,11 @@ Photos are where your story comes to life. To add one:
 
 Choose photos that support your argument: five good photos that you refer to in the text are better than fifteen that only decorate the page.
 
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+For each photo you plan to use, say in one sentence why it is in your story. If you cannot, leave it out.
+:::
+
 ## Add video
 Short clips from the field can add atmosphere, or an interview, in a way that photos cannot. Adding a video works much like adding a photo:
 
@@ -95,8 +105,8 @@ What you submit is the link to your story map, so anyone with the link must be a
 
 The submission itself is explained in the worksheet brief and on Moodle.
 
-## Check before you leave
-By the end of the session, your story map should have:
+## Before you leave
+By the end of this session, your story map should have:
 
 - [ ] a title, your candidate number and group number, and no name;
 - [ ] your main headings in place, even if some sections are still empty;

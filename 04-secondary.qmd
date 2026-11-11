@@ -68,7 +68,13 @@ Now that the data are on the map, we can turn the main layer into a choropleth:
 
 1. Select the main layer and click [Styles]{.ui}.
 2. Under [Choose attributes]{.ui}, pick the numerical variable (`disp_income_pc_2023_eur` for Barcelona, `IMDRank` for London). Then choose [Counts and Amounts (Color)]{.ui} and click [Style options]{.ui}.
-3. Under [Classify data]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui}, with 5 classes each time, and look at how the map changes.
+
+::: {.callout-note .exercise icon=false}
+## Predict first
+With [Equal interval]{.ui}, every class has the same width; with [Quantile]{.ui}, every class contains the same number of areas. In Barcelona, a few sections have much higher incomes than the rest. Which of the two do you expect to show most of the city in the same colour? For London, the variable is a *rank*: do you expect the two classifications to look different at all? Write down your guess before the next step.
+:::
+
+3. Under [Classify data]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui}, with 5 classes each time, and look at how the map changes. Was your guess right?
 4. Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.
 5. Check the legend: it should say what is being shown, and in which units.
 
@@ -78,9 +84,17 @@ In the end, pick the classification you can best defend, and be ready to explain
 Next, let us see how much the picture depends on the size of the areas:
 
 1. Put the neighbourhoods and districts layers *above* your income layer, and set their fill to *none* with a visible outline.
-2. Zoom into one district. How much does income vary between the sections *within* a neighbourhood, compared with the variation between neighbourhoods?
+2. Zoom into one district.
 
-If you are working with the London data, you can do the same with the boroughs. Compare the pattern of LSOAs *within* a borough with the single borough outline. Why might one borough-level summary hide a lot?
+::: {.callout-note .exercise icon=false}
+## Predict first
+Do you expect income to vary more *between* neighbourhoods or *within* them, between the census sections of a single neighbourhood? Then compare a few neighbourhoods on the map and check.
+:::
+
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+If you are working with the London data, do the same with the boroughs. Compare the pattern of LSOAs *within* a borough with the single borough outline. Why might one borough-level summary hide a lot?
+:::
 
 ## Write the pop-up
 A good pop-up does more than just show numbers. Let us set one up for the main layer:
@@ -105,8 +119,8 @@ Keep your answers as notes, because you will need them for the worksheet.
 ## Save your map
 Save your map via [Save and open]{.ui} → [Save as]{.ui}, with a title such as `GEOG0187 – Secondary data – Surname`. You will build on this map for the second story map.
 
-## Check before you leave
-By the end of the session, you should have:
+## Before you leave
+By the end of this session, you should have:
 
 - [ ] your main layer shaded by one numerical variable;
 - [ ] a context layer (boundaries) on the map;
