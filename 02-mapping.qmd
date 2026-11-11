@@ -67,6 +67,11 @@ Next, we will add your group's route from Strava:
 3. The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can add each `.gpx` file in the same way.
 
 ## Style your layers
+First, let us make the [Layers]{.ui} list, and with it the legend, readable for someone else:
+
+1. Give both layers a clear name, such as `Survey sites` and `Route`: open the [⋯]{.ui} menu of the layer in [Layers]{.ui} → [Rename]{.ui}. This only changes the name in your map, not the original layer.
+2. Check the order of the layers. The layer at the *top* of the list is drawn on top of the others. Because you added the route last, it is now on top, and may hide some of your sites. Drag the sites above the route by their handle (⠿).
+
 To change how a layer looks, select it in [Layers]{.ui} and click [Styles]{.ui} on the right-hand toolbar. We will style both layers in turn:
 
 - For the route, keep the [Location (single symbol)]{.ui} style, click [Style options]{.ui}, and change the line colour and width so that the route is clearly visible on your basemap.

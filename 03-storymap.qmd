@@ -39,7 +39,7 @@ Let us start by creating a new story and setting up its cover:
 1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), sign in with [UCL SSO]{.ui}, and open [StoryMaps]{.ui} from the app launcher or the top menu.
 2. Click [New story]{.ui}. This opens the **story builder**, in which you write directly in the page and add content with the [+]{.ui} button that appears between blocks.
 3. Click on the title placeholder and type your main title. Keep it short and specific, and make it about your theme rather than something like "My story map".
-4. In the cover, add your candidate number and your working group number as the subtitle. Please do not put your name anywhere: if your name is shown as the author on the cover, remove it in the cover settings.
+4. In the cover, add your candidate number and your fieldwork group and working group number (for example `CAT1_WG05`) as the subtitle. Please do not put your name anywhere: if your name is shown as the author on the cover, remove it in the cover settings.
 5. Choose a cover design that suits your theme, and pick a cover image from your group's photos.
 <!-- SCREENSHOT 1: story builder, cover with title, candidate number and group number. images/w03/cover.png -->
 
@@ -61,7 +61,7 @@ Next, we will add the web map you made last week:
 1. Click [+]{.ui} where the map should go and choose [Map]{.ui}.
 2. Select [My content]{.ui}, choose the web map you saved last week, and click [Add]{.ui}.
 3. If you are asked about sharing, agree to share the map at the same level as the story. You will make the story public at the end (see [Share and submit](#share-and-submit)).
-4. Use the map block's [Options]{.ui} to switch on the legend and the zoom buttons, and set the starting view to your study area.
+4. Use the map block's [Options]{.ui} to switch on the legend, the zoom buttons and the expand button (which lets the reader open the map full screen), and set the starting view to your study area.
 5. Click on a point to check that the pop-up still shows the site ID, note and photo.
 <!-- SCREENSHOT 2: map block in the story, with legend and zoom buttons. images/w03/map-block.png -->
 
@@ -108,9 +108,9 @@ The submission itself is explained in the worksheet brief and on Moodle.
 ## Before you leave
 By the end of this session, your story map should have:
 
-- [ ] a title, your candidate number and group number, and no name;
+- [ ] a title, your candidate number, your fieldwork group and working group number, and no name;
 - [ ] your main headings in place, even if some sections are still empty;
-- [ ] your web map embedded, with a legend, zoom buttons and working pop-ups;
+- [ ] your web map embedded, with a legend, zoom and expand buttons, and working pop-ups;
 - [ ] at least one photo with a caption;
 - [ ] a link that opens when you are signed out.
 
