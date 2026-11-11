@@ -91,7 +91,7 @@ With [Equal interval]{.ui}, every class has the same width; with [Quantile]{.ui}
 ![](images/w04/classify.png){fig-alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath"}
 
 5. Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.
-6. Click [Done]{.ui}, and open [Legend]{.ui} on the left-hand toolbar. Does the legend make clear what is being shown, and in which units? A name such as `disp_income_pc_2023_eur` does not. To change this, click [Fields]{.ui} on the right-hand toolbar, select the field, and give it a readable [Display name]{.ui}, such as *Disposable income per person, 2023 (€)*. You can rename the layer itself via its [⋯]{.ui} menu in [Layers]{.ui} → [Rename]{.ui}.
+6. Click [Done]{.ui}, and open [Legend]{.ui} on the left-hand toolbar. Does the legend make clear what is being shown, and in which units? A name such as `disp_income_pc_2023_eur` does not. To change this, click [Fields]{.ui} on the right-hand toolbar, and click on the field. In the panel that opens, type a readable [Display name]{.ui}, such as *Disposable income per person, 2023 (€)*. You can rename the layer itself via its [⋯]{.ui} menu in [Layers]{.ui} → [Rename]{.ui}.
 
 Finally, settle on one classification for your map and note down why you chose it: the worksheet asks you to justify this choice.
 
