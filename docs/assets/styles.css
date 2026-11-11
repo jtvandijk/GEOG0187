@@ -99,3 +99,16 @@ body.quarto-dark div.sidebar-item-container:hover {
 main li, main li p {
     text-align: left;
 }
+
+/* exercise callouts: 'Predict first' / 'Try it yourself' */
+.callout.exercise {
+    border-left-color: var(--main-color) !important;
+}
+
+.callout.exercise {
+    background-color: rgba(107, 63, 160, .05);
+}
+
+.callout.exercise .callout-title-container {
+    color: var(--main-color);
+}

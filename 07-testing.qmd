@@ -4,7 +4,7 @@ number-offset: 6
 
 # Testing Differences
 
-Two sessions ago, we saw that more deprived LSOAs tend to have somewhat higher levels of NO~2~. Last week, we saw that a sample never matches the population exactly. This week, we bring the two together. When we see a difference between two groups in a sample, how do we know whether it reflects a real difference in the population, or whether it could simply be the result of which LSOAs happened to end up in our sample? This is the question a **hypothesis test** tries to answer.
+We previously found that more deprived LSOAs tend to have somewhat higher levels of NO~2~. Last week, we saw that a sample never matches the population exactly. This week, we bring the two together. When we see a difference between two groups in a sample, how do we know whether it reflects a real difference in the population, or whether it could simply be the result of which LSOAs happened to end up in our sample? This is the question a **hypothesis test** tries to answer.
 
 You already ran a t-test in Term 1. This week, we will look at what such a test actually does, what its result does and does not tell us, and how to report it. This session links to the second statistics worksheet, so you can use the time in class to make a start on your own analysis.
 
@@ -14,11 +14,11 @@ Open your `GEOG0187-stats` project. Create a new script, `w07-testing.R`. Have a
 :::
 
 ## Pollution and deprivation in Outer London
-In Session 5, we found that the link between income deprivation and NO~2~ looked different in Inner and Outer London. In this session, we will focus on Outer London and look at whether LSOAs in the most income-deprived fifth of London are exposed to higher levels of NO~2~ than LSOAs in the least deprived fifth.
+We also found that the link between income deprivation and NO~2~ looked different in Inner and Outer London. In this session, we will focus on Outer London and look at whether LSOAs in the most income-deprived fifth of London are exposed to higher levels of NO~2~ than LSOAs in the least deprived fifth.
 
 Just like last week, we will pretend that we cannot measure every LSOA and instead only have data for a random sample: in this case, 30 LSOAs from each group. Because we do in fact have data for all LSOAs, we can check at the end how close our sample got to the true answer.
 
-Let us start by loading the data, adding the income deprivation quintiles we created in Session 5, and selecting the two groups we want to compare:
+Let us start by loading the data, adding the income deprivation quintiles we created before, and selecting the two groups we want to compare:
 
 ```{r}
 #| label: 07-load
@@ -28,7 +28,7 @@ Let us start by loading the data, adding the income deprivation quintiles we cre
 library(tidyverse)
 lsoa <- read_csv('data/london-lsoa-air-quality.csv')
 
-# income deprivation quintiles across London, as in Session 5
+# income deprivation quintiles across London, as before
 lsoa <- lsoa |>
   mutate(income_quintile = ntile(income_score, 5))
 
@@ -105,7 +105,12 @@ perm_diffs <- replicate(5000, {
 })
 ```
 
-**Predict first:** if the labels are shuffled at random, what do you expect the typical difference between the two groups to be? Let us plot the 5,000 differences, together with the difference we actually observed:
+::: {.callout-note .exercise icon=false}
+## Predict first
+If the labels are shuffled at random, what do you expect the typical difference between the two groups to be?
+:::
+
+Let us plot the 5,000 differences, together with the difference we actually observed:
 
 ```{r}
 #| label: fig-07-perm
@@ -169,7 +174,7 @@ unname(t_result$estimate[1] - t_result$estimate[2])
 t_result$conf.int
 ```
 
-Is a difference of about 2 µg/m³ large? It helps to compare it with something meaningful: the WHO guideline is 10 µg/m³, and in Session 5 we found a gap of about 4 µg/m³ between Inner and Outer London.
+Is a difference of about 2 µg/m³ large? It helps to compare it with something meaningful: the WHO guideline is 10 µg/m³, and we found a gap of about 4 µg/m³ between Inner and Outer London.
 
 When a variable does not have a natural unit, researchers often use a **standardised** effect size instead, such as **Cohen's d**. This is the difference between the means divided by the (pooled) standard deviation of the two groups:
 
@@ -200,7 +205,10 @@ true_diff
 
 Does the confidence interval from our sample contain the true difference? In real research, we can never check this, which is exactly why reporting the confidence interval matters.
 
+::: {.callout-note .exercise icon=false}
+## Try it yourself
 Go back to the start of the session, change `set.seed(48)` before `slice_sample()` to a number of your own, and run the sample, the t-test and this check again. Does your new interval contain the true difference? Compare with your neighbours: what share of your intervals would you expect to miss?
+:::
 
 ## Common misconceptions
 Hypothesis tests are easy to run, but also easy to misinterpret. Let us go through four common misconceptions.
@@ -239,7 +247,7 @@ mean(inner$no2[inner$group == 'Most deprived']) -
   mean(inner$no2[inner$group == 'Least deprived'])
 ```
 
-The test is not significant, yet there **is** a difference in the population, and it goes in the opposite direction from Outer London (as we saw in Session 5). With 30 LSOAs per group, the test simply could not detect a difference this small. Absence of evidence is not evidence of absence. The confidence interval is helpful here, as it shows the range of differences that are still consistent with our data, including the true one.
+The test is not significant, yet there **is** a difference in the population, and it goes in the opposite direction from Outer London (as we saw when we described the data). With 30 LSOAs per group, the test simply could not detect a difference this small. Absence of evidence is not evidence of absence. The confidence interval is helpful here, as it shows the range of differences that are still consistent with our data, including the true one.
 
 ### "Significant means important"
 With enough data, even a very small difference becomes statistically significant. Let us compare the 4th and 5th income deprivation quintiles across London, this time with large samples of 800 LSOAs each:
@@ -264,7 +272,12 @@ t.test(no2 ~ group, data = large_sample)
 The p-value is small, but the difference is only about half a µg/m³. The result is statistically significant, but hardly important, which is why we should always report the effect size and not only the p-value.
 
 ### "Test enough things and report the significant one"
-Even when H~0~ is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the **same** group 1,000 times, so that H~0~ is true every time, and counting how many of the tests are significant. Before you run the code, write down how many of the 1,000 tests you expect to be significant:
+Even when H~0~ is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the **same** group 1,000 times, so that H~0~ is true every time, and counting how many of the tests are significant.
+
+::: {.callout-note .exercise icon=false}
+## Predict first
+Before you run the code, write down how many of the 1,000 tests you expect to be significant.
+:::
 
 ```{r}
 #| label: 07-multiple
@@ -296,18 +309,23 @@ When you report a comparison between two groups, for instance in an essay or a w
 
 > In random samples of 30 Outer London LSOAs per group, mean annual NO~2~ was `r sprintf('%.1f', t_result$estimate[1])` µg/m³ in the most income-deprived fifth and `r sprintf('%.1f', t_result$estimate[2])` µg/m³ in the least deprived fifth. The difference of `r sprintf('%.1f', obs_diff)` µg/m³ (95% CI `r sprintf('%.1f', t_result$conf.int[1])` to `r sprintf('%.1f', t_result$conf.int[2])`) is unlikely to be due to sampling variability alone (Welch's t = `r sprintf('%.2f', t_result$statistic)`, df = `r sprintf('%.1f', t_result$parameter)`, p = `r sprintf('%.3f', t_result$p.value)`; permutation test p = `r sprintf('%.3f', mean(abs(perm_diffs) >= abs(obs_diff)))`). This is a difference of about `r sprintf('%.1f', obs_diff / pooled_sd)` standard deviations, but small next to the gap between Inner and Outer London. In Outer London, more deprived areas are exposed to somewhat higher NO~2~; the data do not tell us why.
 
-Now try it yourself. Choose **one** other comparison, for example PM~2.5~ instead of NO~2~, or two boroughs. Write down H~0~ and H~1~ **before** you look at the data, and then work through the same steps: describe, test, effect size and report.
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Choose **one** other comparison, for example PM~2.5~ instead of NO~2~, or two boroughs. Write down H~0~ and H~1~ **before** you look at the data, and then work through the same steps: describe, test, effect size and report.
+:::
 
 ## Looking ahead
-Over these three sessions, you have learned to describe data, to estimate with uncertainty, and to test for a difference between two groups. In Year 2 methods modules, you can build on this with tests for more than two groups (ANOVA), tests for categorical data (chi-square), and correlation and regression.
+Over these three sessions, you have learned to describe data, to estimate with uncertainty, and to test for a difference between two groups. In Year 2 methods modules, you will build on this foundation with more advanced statistical techniques.
 
-## Check before you leave
-- [ ] a saved script `w07-testing.R`;
-- [ ] you can state H~0~ and H~1~ for a comparison of two groups;
-- [ ] a permutation test with its histogram and p-value, and a Welch's t-test of the same comparison;
-- [ ] the difference in means with its 95% confidence interval, and Cohen's d;
-- [ ] you can explain each of the four misconceptions in your own words;
-- [ ] a reported comparison of your own choice.
+## Before you leave
+By the end of this session, you should have:
+
+- [ ] saved your script as `w07-testing.R`;
+- [ ] stated H~0~ and H~1~ for a comparison of two groups;
+- [ ] run a permutation test, with its histogram and p-value, and a Welch's t-test on the same comparison;
+- [ ] reported the difference in means with its 95% confidence interval, and Cohen's d;
+- [ ] explained each of the four misconceptions in your own words;
+- [ ] reported a comparison of your own choice.
 
 ## Troubleshooting
 | Problem | What to try |

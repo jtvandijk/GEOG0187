@@ -448,7 +448,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#describing-groups" id="toc-describing-groups" class="nav-link" data-scroll-target="#describing-groups"><span class="header-section-number">5.6</span> Describing groups</a></li>
   <li><a href="#pollution-and-deprivation" id="toc-pollution-and-deprivation" class="nav-link" data-scroll-target="#pollution-and-deprivation"><span class="header-section-number">5.7</span> Pollution and deprivation</a></li>
   <li><a href="#reporting-your-results" id="toc-reporting-your-results" class="nav-link" data-scroll-target="#reporting-your-results"><span class="header-section-number">5.8</span> Reporting your results</a></li>
-  <li><a href="#check-before-you-leave" id="toc-check-before-you-leave" class="nav-link" data-scroll-target="#check-before-you-leave"><span class="header-section-number">5.9</span> Check before you leave</a></li>
+  <li><a href="#before-you-leave" id="toc-before-you-leave" class="nav-link" data-scroll-target="#before-you-leave"><span class="header-section-number">5.9</span> Before you leave</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">5.10</span> Troubleshooting</a></li>
   </ul></li>
   </ul>
@@ -463,8 +463,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="describing-data" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Describing Data</h1>
-<p>In Term 1, you used R to describe data and even ran a t-test. Over the next three sessions, we will go back over some of this ground, but more slowly and with a clear purpose: to understand what the numbers mean, how sure we can be about them, and when a difference between groups is real. We will use one question throughout: <strong>who breathes the most polluted air in London?</strong> This week, we will set up a tidy workflow in R and use it to describe our data. This session and the next link to the first statistics worksheet.</p>
-<p>The code is a means to an end. What matters is that you understand what each step does and why, so that you can tell whether a result makes sense, whoever wrote the code. Throughout these sessions, we will therefore regularly ask you to <strong>predict</strong> a result before you run the code, and then <strong>check</strong> whether you were right.</p>
+<p>In Term 1, you used R to describe data and conducted some basic statistical testing. Over the next three sessions, we will go back over some of this ground, but more slowly and with a clear purpose: to understand what the numbers mean, how sure we can be about them, and when a difference between groups is real. We will use one question throughout: <strong>who breathes the most polluted air in London?</strong> This week, we will set up a <em>tidy</em> workflow in R and use it to describe our data. This session and the next link to the first statistics worksheet.</p>
+<p>The code is a means to an end. What matters is that you understand what each step does and why, so that you can tell whether a result makes sense. Throughout these sessions, we will therefore regularly ask you to <strong>predict</strong> a result before you run the code, and then <strong>check</strong> whether you were right.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -536,7 +536,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Greater London Authority, <em>London Atmospheric Emissions Inventory (LAEI) 2022</em>, 20 m concentration grids, averaged per LSOA by GEOG0187 staff. Ministry of Housing, Communities &amp; Local Government, <em>English Indices of Deprivation 2025</em>. LSOA boundaries: Office for National Statistics. All under the Open Government Licence v3.0.</p>
+<p>Greater London Authority, <em>London Atmospheric Emissions Inventory (LAEI) 2022</em>, 20 m concentration grids, averaged per LSOA. Ministry of Housing, Communities &amp; Local Government, <em>English Indices of Deprivation 2025</em>. LSOA boundaries: Office for National Statistics. All under the Open Government Licence v3.0.</p>
 </div>
 </div>
 </section>
@@ -698,7 +698,19 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 <pre><code>[1] 39</code></pre>
 </div>
 </div>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Try it yourself
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Rather than writing new code from scratch, it is often quicker to adapt code that already works. Change the first pipe so that it shows the five LSOAs with the <strong>lowest</strong> PM<sub>2.5</sub>, and the last one so that it counts the LSOAs in a borough of your choice with NO<sub>2</sub> above 20.</p>
+</div>
+</div>
 <p>We can use <code>mutate()</code> to add new columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so instead we will flag each LSOA that is above the WHO interim target of 20 µg/m³. We will also divide London’s LSOAs into five equally sized groups (<strong>quintiles</strong>) based on income deprivation, from 1 (the least deprived fifth) to 5 (the most deprived fifth). Because we will use both new columns again, we save the result by assigning it back to <code>lsoa</code>:</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -731,7 +743,7 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a <em>Living Environment</em> domain that partly measures air quality, so comparing NO<sub>2</sub> with the IMD would partly mean comparing air pollution with itself. Income deprivation avoids this problem.</p>
+<p>Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a <em>Living Environment</em> domain that partly measures air quality, so comparing NO<sub>2</sub> with the IMD would partly mean comparing air pollution with itself. Using Income deprivation only avoids this problem.</p>
 </div>
 </div>
 </div>
@@ -739,7 +751,19 @@ $ income_score &lt;dbl&gt; 0.013, 0.018, 0.107, 0.211, 0.343, 0.486, 0.510, 0.40
 <section id="describing-a-single-variable" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="describing-a-single-variable"><span class="header-section-number">5.5</span> Describing a single variable</h2>
 <p>When we describe a numerical variable, we usually report three things: its <strong>centre</strong>, its <strong>spread</strong> and its <strong>shape</strong>. We can calculate the most common summary statistics in one go with <code>summarise()</code>.</p>
-<p><strong>Predict first:</strong> a few LSOAs have much higher NO<sub>2</sub> than the rest (you saw the top five above). Do you expect the mean to be above or below the median? Run the code and check.</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A few LSOAs have much higher NO<sub>2</sub> than the rest (you saw the top five above). Do you expect the mean to be above or below the median? Run the code and check.</p>
+</div>
+</div>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -793,14 +817,17 @@ Figure&nbsp;1: Distribution of annual mean NO2 across London LSOAs, 2022.
 </div>
 </div>
 </div>
-<div class="callout callout-style-simple callout-tip">
-<div class="callout-body d-flex">
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
-<div class="callout-body-container">
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Try it yourself
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Proportions are means too. Because <code>above_20</code> is either <code>TRUE</code> (1) or <code>FALSE</code> (0), its mean is the share of LSOAs above the interim target. Try running <code>mean(lsoa$above_20)</code>. What does the answer tell you?</p>
-</div>
 </div>
 </div>
 <section id="areas-or-people" class="level3" data-number="5.5.1">
@@ -917,7 +944,19 @@ Figure&nbsp;2: NO2 in Inner and Outer London LSOAs.
 <section id="pollution-and-deprivation" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="pollution-and-deprivation"><span class="header-section-number">5.7</span> Pollution and deprivation</h2>
 <p>Let us now return to our environmental justice question, and look at NO<sub>2</sub> levels for each income deprivation quintile.</p>
-<p><strong>Predict first:</strong> which quintile do you expect to have the highest NO<sub>2</sub>, and do you expect a steady increase from quintile 1 to quintile 5?</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Which quintile do you expect to have the highest NO<sub>2</sub>, and do you expect a steady increase from quintile 1 to quintile 5?</p>
+</div>
+</div>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -966,7 +1005,20 @@ Figure&nbsp;3: NO2 by income deprivation quintile (1 = least deprived fifth of L
 </div>
 </div>
 </div>
-<p>It is worth looking carefully before drawing any conclusions. Is the pattern the same all the way from quintile 1 to quintile 5? Also remember that both deprived areas and polluted areas are more common in Inner London. Repeat the summary <strong>within</strong> Inner and Outer London, using <code>group_by(inner_outer, income_quintile)</code>, and see whether the pattern still holds.</p>
+<p>It is worth looking carefully before drawing any conclusions. Is the pattern the same all the way from quintile 1 to quintile 5? Also remember that both deprived areas and polluted areas are more common in Inner London.</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Try it yourself
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Repeat the summary <strong>within</strong> Inner and Outer London, using <code>group_by(inner_outer, income_quintile)</code>. Before you run it, predict whether the pattern will still hold in both parts of London, and then check.</p>
+</div>
+</div>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
@@ -980,7 +1032,7 @@ Figure&nbsp;3: NO2 by income deprivation quintile (1 = least deprived fifth of L
 </section>
 <section id="reporting-your-results" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="reporting-your-results"><span class="header-section-number">5.8</span> Reporting your results</h2>
-<p>Numbers only become useful once we put them into words. In a report, an essay or a worksheet, you would describe your data in a short paragraph supported by a figure, rather than by copying R output. A good description covers:</p>
+<p>In a report, an essay or a worksheet, we describe our data in a short paragraph supported by a figure, rather than by copying R output. A good description covers:</p>
 <ul>
 <li><strong>what</strong> was measured, in which <strong>units</strong>, for which <strong>units of analysis</strong> (LSOAs, people), and <strong>how many</strong>;</li>
 <li>the <strong>centre</strong> and <strong>spread</strong>, with suitable measures (median and IQR if the data are skewed);</li>
@@ -991,16 +1043,29 @@ Figure&nbsp;3: NO2 by income deprivation quintile (1 = least deprived fifth of L
 <blockquote class="blockquote">
 <p>Across London’s 4,994 LSOAs, modelled annual mean NO<sub>2</sub> in 2022 had a median of 21.4 µg/m³ (IQR 4.3 µg/m³), ranging from 13.1 to 36.3 µg/m³. Every LSOA was above the WHO guideline of 10 µg/m³, and 69% were above the interim target of 20 µg/m³. Levels were clearly higher in Inner London (median 24.2 µg/m³) than in Outer London (20.0 µg/m³).</p>
 </blockquote>
-<p>Now try to write a similar paragraph for PM<sub>2.5</sub>.</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Try it yourself
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write a similar paragraph for PM<sub>2.5</sub>.</p>
+</div>
+</div>
 </section>
-<section id="check-before-you-leave" class="level2" data-number="5.9">
-<h2 data-number="5.9" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">5.9</span> Check before you leave</h2>
+<section id="before-you-leave" class="level2" data-number="5.9">
+<h2 data-number="5.9" class="anchored" data-anchor-id="before-you-leave"><span class="header-section-number">5.9</span> Before you leave</h2>
+<p>By the end of this session, you should have:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">a project <code>GEOG0187-stats</code> with the data in <code>data/</code> and a saved script <code>w05-describing.R</code>;</label></li>
-<li><label><input type="checkbox">you can use <code>select()</code>, <code>filter()</code>, <code>mutate()</code>, <code>arrange()</code>, <code>group_by()</code> + <code>summarise()</code> and <code>count()</code>;</label></li>
-<li><label><input type="checkbox">a description (centre, spread, shape) of NO<sub>2</sub> and PM<sub>2.5</sub> with a histogram;</label></li>
-<li><label><input type="checkbox">a comparison of NO<sub>2</sub> between groups, with a boxplot;</label></li>
-<li><label><input type="checkbox">two or three sentences that describe the data, written as you would in the worksheet.</label></li>
+<li><label><input type="checkbox">set up a project <code>GEOG0187-stats</code>, with the data in <code>data/</code> and your script saved as <code>w05-describing.R</code>;</label></li>
+<li><label><input type="checkbox">used <code>select()</code>, <code>filter()</code>, <code>mutate()</code>, <code>arrange()</code>, <code>group_by()</code> + <code>summarise()</code> and <code>count()</code>;</label></li>
+<li><label><input type="checkbox">described NO<sub>2</sub> and PM<sub>2.5</sub> (centre, spread and shape), with a histogram;</label></li>
+<li><label><input type="checkbox">compared NO<sub>2</sub> between groups, with a boxplot;</label></li>
+<li><label><input type="checkbox">written two or three sentences that describe the data, as you would in the worksheet.</label></li>
 </ul>
 </section>
 <section id="troubleshooting" class="level2" data-number="5.10">

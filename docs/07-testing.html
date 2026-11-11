@@ -482,7 +482,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#reporting-your-results" id="toc-reporting-your-results" class="nav-link" data-scroll-target="#reporting-your-results"><span class="header-section-number">7.9</span> Reporting your results</a></li>
   <li><a href="#looking-ahead" id="toc-looking-ahead" class="nav-link" data-scroll-target="#looking-ahead"><span class="header-section-number">7.10</span> Looking ahead</a></li>
-  <li><a href="#check-before-you-leave" id="toc-check-before-you-leave" class="nav-link" data-scroll-target="#check-before-you-leave"><span class="header-section-number">7.11</span> Check before you leave</a></li>
+  <li><a href="#before-you-leave" id="toc-before-you-leave" class="nav-link" data-scroll-target="#before-you-leave"><span class="header-section-number">7.11</span> Before you leave</a></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">7.12</span> Troubleshooting</a></li>
   </ul></li>
   </ul>
@@ -497,7 +497,7 @@ window.Quarto = {
 
 <section id="testing-differences" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Testing Differences</h1>
-<p>Two sessions ago, we saw that more deprived LSOAs tend to have somewhat higher levels of NO<sub>2</sub>. Last week, we saw that a sample never matches the population exactly. This week, we bring the two together. When we see a difference between two groups in a sample, how do we know whether it reflects a real difference in the population, or whether it could simply be the result of which LSOAs happened to end up in our sample? This is the question a <strong>hypothesis test</strong> tries to answer.</p>
+<p>We previously found that more deprived LSOAs tend to have somewhat higher levels of NO<sub>2</sub>. Last week, we saw that a sample never matches the population exactly. This week, we bring the two together. When we see a difference between two groups in a sample, how do we know whether it reflects a real difference in the population, or whether it could simply be the result of which LSOAs happened to end up in our sample? This is the question a <strong>hypothesis test</strong> tries to answer.</p>
 <p>You already ran a t-test in Term 1. This week, we will look at what such a test actually does, what its result does and does not tell us, and how to report it. This session links to the second statistics worksheet, so you can use the time in class to make a start on your own analysis.</p>
 <div class="callout callout-style-simple callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -514,9 +514,9 @@ window.Quarto = {
 </div>
 <section id="pollution-and-deprivation-in-outer-london" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="pollution-and-deprivation-in-outer-london"><span class="header-section-number">7.1</span> Pollution and deprivation in Outer London</h2>
-<p>In Session 5, we found that the link between income deprivation and NO<sub>2</sub> looked different in Inner and Outer London. In this session, we will focus on Outer London and look at whether LSOAs in the most income-deprived fifth of London are exposed to higher levels of NO<sub>2</sub> than LSOAs in the least deprived fifth.</p>
+<p>We also found that the link between income deprivation and NO<sub>2</sub> looked different in Inner and Outer London. In this session, we will focus on Outer London and look at whether LSOAs in the most income-deprived fifth of London are exposed to higher levels of NO<sub>2</sub> than LSOAs in the least deprived fifth.</p>
 <p>Just like last week, we will pretend that we cannot measure every LSOA and instead only have data for a random sample: in this case, 30 LSOAs from each group. Because we do in fact have data for all LSOAs, we can check at the end how close our sample got to the true answer.</p>
-<p>Let us start by loading the data, adding the income deprivation quintiles we created in Session 5, and selecting the two groups we want to compare:</p>
+<p>Let us start by loading the data, adding the income deprivation quintiles we created before, and selecting the two groups we want to compare:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -526,7 +526,7 @@ window.Quarto = {
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>lsoa <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'data/london-lsoa-air-quality.csv'</span>)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># income deprivation quintiles across London, as in Session 5</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># income deprivation quintiles across London, as before</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>lsoa <span class="ot">&lt;-</span> lsoa <span class="sc">|&gt;</span></span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">income_quintile =</span> <span class="fu">ntile</span>(income_score, <span class="dv">5</span>))</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
@@ -636,7 +636,20 @@ Figure&nbsp;1: NO2 in samples of 30 Outer London LSOAs from the most and least i
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-<p><strong>Predict first:</strong> if the labels are shuffled at random, what do you expect the typical difference between the two groups to be? Let us plot the 5,000 differences, together with the difference we actually observed:</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the labels are shuffled at random, what do you expect the typical difference between the two groups to be?</p>
+</div>
+</div>
+<p>Let us plot the 5,000 differences, together with the difference we actually observed:</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -746,7 +759,7 @@ attr(,"conf.level")
 [1] 0.95</code></pre>
 </div>
 </div>
-<p>Is a difference of about 2 µg/m³ large? It helps to compare it with something meaningful: the WHO guideline is 10 µg/m³, and in Session 5 we found a gap of about 4 µg/m³ between Inner and Outer London.</p>
+<p>Is a difference of about 2 µg/m³ large? It helps to compare it with something meaningful: the WHO guideline is 10 µg/m³, and we found a gap of about 4 µg/m³ between Inner and Outer London.</p>
 <p>When a variable does not have a natural unit, researchers often use a <strong>standardised</strong> effect size instead, such as <strong>Cohen’s d</strong>. This is the difference between the means divided by the (pooled) standard deviation of the two groups:</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -784,7 +797,19 @@ attr(,"conf.level")
 </div>
 </div>
 <p>Does the confidence interval from our sample contain the true difference? In real research, we can never check this, which is exactly why reporting the confidence interval matters.</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Try it yourself
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Go back to the start of the session, change <code>set.seed(48)</code> before <code>slice_sample()</code> to a number of your own, and run the sample, the t-test and this check again. Does your new interval contain the true difference? Compare with your neighbours: what share of your intervals would you expect to miss?</p>
+</div>
+</div>
 </section>
 <section id="common-misconceptions" class="level2" data-number="7.8">
 <h2 data-number="7.8" class="anchored" data-anchor-id="common-misconceptions"><span class="header-section-number">7.8</span> Common misconceptions</h2>
@@ -843,7 +868,7 @@ sample estimates:
 <pre><code>[1] -0.8525509</code></pre>
 </div>
 </div>
-<p>The test is not significant, yet there <strong>is</strong> a difference in the population, and it goes in the opposite direction from Outer London (as we saw in Session 5). With 30 LSOAs per group, the test simply could not detect a difference this small. Absence of evidence is not evidence of absence. The confidence interval is helpful here, as it shows the range of differences that are still consistent with our data, including the true one.</p>
+<p>The test is not significant, yet there <strong>is</strong> a difference in the population, and it goes in the opposite direction from Outer London (as we saw when we described the data). With 30 LSOAs per group, the test simply could not detect a difference this small. Absence of evidence is not evidence of absence. The confidence interval is helpful here, as it shows the range of differences that are still consistent with our data, including the true one.</p>
 </section>
 <section id="significant-means-important" class="level3" data-number="7.8.3">
 <h3 data-number="7.8.3" class="anchored" data-anchor-id="significant-means-important"><span class="header-section-number">7.8.3</span> “Significant means important”</h3>
@@ -884,7 +909,20 @@ mean in group 4 mean in group 5
 </section>
 <section id="test-enough-things-and-report-the-significant-one" class="level3" data-number="7.8.4">
 <h3 data-number="7.8.4" class="anchored" data-anchor-id="test-enough-things-and-report-the-significant-one"><span class="header-section-number">7.8.4</span> “Test enough things and report the significant one”</h3>
-<p>Even when H<sub>0</sub> is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the <strong>same</strong> group 1,000 times, so that H<sub>0</sub> is true every time, and counting how many of the tests are significant. Before you run the code, write down how many of the 1,000 tests you expect to be significant:</p>
+<p>Even when H<sub>0</sub> is true, a test at the 0.05 level will still come out significant 5% of the time. We can see this by drawing two samples from the <strong>same</strong> group 1,000 times, so that H<sub>0</sub> is true every time, and counting how many of the tests are significant.</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Predict first
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you run the code, write down how many of the 1,000 tests you expect to be significant.</p>
+</div>
+</div>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -931,21 +969,34 @@ mean in group 4 mean in group 5
 <blockquote class="blockquote">
 <p>In random samples of 30 Outer London LSOAs per group, mean annual NO<sub>2</sub> was 20.8 µg/m³ in the most income-deprived fifth and 18.8 µg/m³ in the least deprived fifth. The difference of 1.9 µg/m³ (95% CI 0.7 to 3.2) is unlikely to be due to sampling variability alone (Welch’s t = 3.18, df = 57.1, p = 0.002; permutation test p = 0.003). This is a difference of about 0.8 standard deviations, but small next to the gap between Inner and Outer London. In Outer London, more deprived areas are exposed to somewhat higher NO<sub>2</sub>; the data do not tell us why.</p>
 </blockquote>
-<p>Now try it yourself. Choose <strong>one</strong> other comparison, for example PM<sub>2.5</sub> instead of NO<sub>2</sub>, or two boroughs. Write down H<sub>0</sub> and H<sub>1</sub> <strong>before</strong> you look at the data, and then work through the same steps: describe, test, effect size and report.</p>
+<div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Try it yourself
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Choose <strong>one</strong> other comparison, for example PM<sub>2.5</sub> instead of NO<sub>2</sub>, or two boroughs. Write down H<sub>0</sub> and H<sub>1</sub> <strong>before</strong> you look at the data, and then work through the same steps: describe, test, effect size and report.</p>
+</div>
+</div>
 </section>
 <section id="looking-ahead" class="level2" data-number="7.10">
 <h2 data-number="7.10" class="anchored" data-anchor-id="looking-ahead"><span class="header-section-number">7.10</span> Looking ahead</h2>
-<p>Over these three sessions, you have learned to describe data, to estimate with uncertainty, and to test for a difference between two groups. In Year 2 methods modules, you can build on this with tests for more than two groups (ANOVA), tests for categorical data (chi-square), and correlation and regression.</p>
+<p>Over these three sessions, you have learned to describe data, to estimate with uncertainty, and to test for a difference between two groups. In Year 2 methods modules, you will build on this foundation with more advanced statistical techniques.</p>
 </section>
-<section id="check-before-you-leave" class="level2" data-number="7.11">
-<h2 data-number="7.11" class="anchored" data-anchor-id="check-before-you-leave"><span class="header-section-number">7.11</span> Check before you leave</h2>
+<section id="before-you-leave" class="level2" data-number="7.11">
+<h2 data-number="7.11" class="anchored" data-anchor-id="before-you-leave"><span class="header-section-number">7.11</span> Before you leave</h2>
+<p>By the end of this session, you should have:</p>
 <ul class="task-list">
-<li><label><input type="checkbox">a saved script <code>w07-testing.R</code>;</label></li>
-<li><label><input type="checkbox">you can state H<sub>0</sub> and H<sub>1</sub> for a comparison of two groups;</label></li>
-<li><label><input type="checkbox">a permutation test with its histogram and p-value, and a Welch’s t-test of the same comparison;</label></li>
-<li><label><input type="checkbox">the difference in means with its 95% confidence interval, and Cohen’s d;</label></li>
-<li><label><input type="checkbox">you can explain each of the four misconceptions in your own words;</label></li>
-<li><label><input type="checkbox">a reported comparison of your own choice.</label></li>
+<li><label><input type="checkbox">saved your script as <code>w07-testing.R</code>;</label></li>
+<li><label><input type="checkbox">stated H<sub>0</sub> and H<sub>1</sub> for a comparison of two groups;</label></li>
+<li><label><input type="checkbox">run a permutation test, with its histogram and p-value, and a Welch’s t-test on the same comparison;</label></li>
+<li><label><input type="checkbox">reported the difference in means with its 95% confidence interval, and Cohen’s d;</label></li>
+<li><label><input type="checkbox">explained each of the four misconceptions in your own words;</label></li>
+<li><label><input type="checkbox">reported a comparison of your own choice.</label></li>
 </ul>
 </section>
 <section id="troubleshooting" class="level2" data-number="7.12">

@@ -6,7 +6,7 @@ number-offset: 5
 
 Last week, we described NO~2~ levels for all 4,994 LSOAs in London. In practice, however, we hardly ever have data for everything. Air pollution is only *measured* at a few hundred monitoring sites across London, and the values in our dataset come from a model that fills in the gaps. Similarly, surveys ask a few thousand people rather than the whole country. The question we usually face is therefore: **if we only have a sample, how close are we to the truth, and how sure can we be?**
 
-This week, we can answer that question precisely, because for once we know the truth. We will treat our full dataset as the **population**, draw samples from it, and see how well these samples do.
+Because our dataset covers every LSOA in London, we are in the unusual position of knowing the true answer. This week, we will treat the full dataset as the **population**, draw samples from it, and see how close these samples get.
 
 ::: {.callout-important}
 ## Before the session
@@ -51,7 +51,14 @@ my_sample <- lsoa |>
 mean(my_sample$no2)
 ```
 
-Our estimate is close to the true mean, but not exactly the same. Now change `48` to any other number, run the lines again, and compare your result with your neighbour's: everyone will get a slightly different estimate. This variation from one sample to the next is called **sampling variability**, and it is what the rest of this session is about.
+Our estimate is close to the true mean, but not exactly the same.
+
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Change `48` to any other number, run the lines again, and compare your result with your neighbour's.
+:::
+
+Everyone will get a slightly different estimate. This variation from one sample to the next is called **sampling variability**, and it is what the rest of this session is about.
 
 ## Taking many samples
 What happens if we repeat the whole exercise 1,000 times? We can do this with `replicate()`, which runs a piece of code many times and collects the results. Here we use base R's `sample()` function, which draws random values from a single column:
@@ -69,7 +76,12 @@ head(sample_means)
 
 The distribution of all these sample means is called the **sampling distribution**.
 
-**Predict first:** where do you expect the 1,000 sample means to be centred, and will they be more or less spread out than the NO~2~ values of individual LSOAs in last week's histogram? Now plot them, together with the true mean:
+::: {.callout-note .exercise icon=false}
+## Predict first
+Where do you expect the 1,000 sample means to be centred, and will they be more or less spread out than the NO~2~ values of individual LSOAs in last week's histogram?
+:::
+
+Let us plot the sample means, together with the true mean:
 
 ```{r}
 #| label: fig-06-sampling-dist
@@ -122,7 +134,10 @@ Be careful not to confuse the **standard deviation** with the **standard error**
 ## Sample size
 How does the standard error change with the size of the sample? We can find out by repeating our simulation for samples of 10, 30, 100 and 300 LSOAs.
 
-**Predict first:** a sample of 300 LSOAs is ten times larger than a sample of 30. Do you expect its standard error to be ten times smaller?
+::: {.callout-note .exercise icon=false}
+## Predict first
+A sample of 300 LSOAs is ten times larger than a sample of 30. Do you expect its standard error to be ten times smaller?
+:::
 
 ```{r}
 #| label: 06-sample-size
@@ -164,7 +179,12 @@ t.test(my_sample$no2)$conf.int
 ```
 
 ### What does 95% mean?
-The 95% does **not** mean that there is a 95% chance that the true mean lies within *your* interval: the true mean is fixed, and your interval either contains it or it does not. Instead, it means that the **method** captures the true mean in 95% of samples. Because we know the true mean, we can check this. Let us draw 100 samples, calculate a confidence interval for each of them, and count how many contain the true mean. Before you run the code, write down how many you expect:
+The 95% does **not** mean that there is a 95% chance that the true mean lies within *your* interval: the true mean is fixed, and your interval either contains it or it does not. Instead, it means that the **method** captures the true mean in 95% of samples. Because we know the true mean, we can check this. Let us draw 100 samples, calculate a confidence interval for each of them, and count how many contain the true mean.
+
+::: {.callout-note .exercise icon=false}
+## Predict first
+Before you run the code, write down how many of the 100 intervals you expect to contain the true mean.
+:::
 
 ```{r}
 #| label: 06-ci-sim
@@ -222,7 +242,10 @@ true_mean
 
 The interval looks just as precise as before, but it is in the wrong place. Taking a *larger* sample from Inner London would make the interval *narrower*, but it would still be wrong. Confidence intervals capture **random error** (sampling variability), but not **bias**: systematic error caused by *how* the data were collected. This is why the question of how a sample was selected should always come before any calculation.
 
-Now change `'Inner'` to `'Outer'` in the code above. Before you run it, predict whether the interval will be too high or too low, and then check.
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Change `'Inner'` to `'Outer'` in the code above. Before you run it, predict whether the interval will be too high or too low, and then check.
+:::
 
 ::: {.callout-tip}
 Think back to your fieldwork. Were your survey sites a random sample of the area? What would a confidence interval based on these sites tell you, and what would it not tell you?
@@ -235,15 +258,20 @@ When you report an estimate based on a sample, for instance in an essay or a wor
 
 Avoid writing that there is a "95% probability" that the true mean lies in your interval (see [What does 95% mean?](#what-does-95-mean)).
 
-Now try the same for PM~2.5~: draw a random sample of 30 LSOAs, report the mean with its 95% confidence interval, and check whether your interval contains the true mean.
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Do the same for PM~2.5~: draw a random sample of 30 LSOAs, report the mean with its 95% confidence interval, and check whether your interval contains the true mean.
+:::
 
-## Check before you leave
-- [ ] a saved script `w06-uncertainty.R`;
-- [ ] you can explain the difference between a parameter and a statistic, and between a standard deviation and a standard error;
-- [ ] a histogram of a sampling distribution, and the standard error from simulation and from the formula;
-- [ ] a 95% confidence interval from one sample, and the plot of 100 intervals;
-- [ ] one or two sentences on why a biased sample cannot be rescued by a confidence interval;
-- [ ] a short report of the PM~2.5~ estimate with its confidence interval.
+## Before you leave
+By the end of this session, you should have:
+
+- [ ] saved your script as `w06-uncertainty.R`;
+- [ ] explained, in your own words, the difference between a parameter and a statistic, and between a standard deviation and a standard error;
+- [ ] plotted a sampling distribution, and calculated the standard error by simulation and with the formula;
+- [ ] calculated a 95% confidence interval from one sample, and plotted 100 intervals;
+- [ ] explained in one or two sentences why a confidence interval cannot fix a biased sample;
+- [ ] reported a PM~2.5~ estimate with its confidence interval.
 
 ## Troubleshooting
 | Problem | What to try |

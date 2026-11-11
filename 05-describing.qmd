@@ -4,9 +4,9 @@ number-offset: 4
 
 # Describing Data
 
-In Term 1, you used R to describe data and even ran a t-test. Over the next three sessions, we will go back over some of this ground, but more slowly and with a clear purpose: to understand what the numbers mean, how sure we can be about them, and when a difference between groups is real. We will use one question throughout: **who breathes the most polluted air in London?** This week, we will set up a tidy workflow in R and use it to describe our data. This session and the next link to the first statistics worksheet.
+In Term 1, you used R to describe data and conducted some basic statistical testing. Over the next three sessions, we will go back over some of this ground, but more slowly and with a clear purpose: to understand what the numbers mean, how sure we can be about them, and when a difference between groups is real. We will use one question throughout: **who breathes the most polluted air in London?** This week, we will set up a *tidy* workflow in R and use it to describe our data. This session and the next link to the first statistics worksheet.
 
-The code is a means to an end. What matters is that you understand what each step does and why, so that you can tell whether a result makes sense, whoever wrote the code. Throughout these sessions, we will therefore regularly ask you to **predict** a result before you run the code, and then **check** whether you were right.
+The code is a means to an end. What matters is that you understand what each step does and why, so that you can tell whether a result makes sense. Throughout these sessions, we will therefore regularly ask you to **predict** a result before you run the code, and then **check** whether you were right.
 
 ::: {.callout-important}
 ## Before the session
@@ -38,7 +38,7 @@ The NO~2~ and PM~2.5~ values are **averages over whole LSOAs**. No LSOA as a who
 
 ::: {.callout-note}
 ## Data sources
-Greater London Authority, *London Atmospheric Emissions Inventory (LAEI) 2022*, 20 m concentration grids, averaged per LSOA by GEOG0187 staff. Ministry of Housing, Communities & Local Government, *English Indices of Deprivation 2025*. LSOA boundaries: Office for National Statistics. All under the Open Government Licence v3.0.
+Greater London Authority, *London Atmospheric Emissions Inventory (LAEI) 2022*, 20 m concentration grids, averaged per LSOA. Ministry of Housing, Communities & Local Government, *English Indices of Deprivation 2025*. LSOA boundaries: Office for National Statistics. All under the Open Government Licence v3.0.
 :::
 
 ## Setting up your project
@@ -109,7 +109,10 @@ lsoa |>
   nrow()
 ```
 
+::: {.callout-note .exercise icon=false}
+## Try it yourself
 Rather than writing new code from scratch, it is often quicker to adapt code that already works. Change the first pipe so that it shows the five LSOAs with the **lowest** PM~2.5~, and the last one so that it counts the LSOAs in a borough of your choice with NO~2~ above 20.
+:::
 
 We can use `mutate()` to add new columns. Every LSOA in London is above the WHO guideline of 10 µg/m³, so instead we will flag each LSOA that is above the WHO interim target of 20 µg/m³. We will also divide London's LSOAs into five equally sized groups (**quintiles**) based on income deprivation, from 1 (the least deprived fifth) to 5 (the most deprived fifth). Because we will use both new columns again, we save the result by assigning it back to `lsoa`:
 
@@ -127,13 +130,16 @@ lsoa |>
 ```
 
 ::: {.callout-note}
-Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a *Living Environment* domain that partly measures air quality, so comparing NO~2~ with the IMD would partly mean comparing air pollution with itself. Income deprivation avoids this problem.
+Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a *Living Environment* domain that partly measures air quality, so comparing NO~2~ with the IMD would partly mean comparing air pollution with itself. Using Income deprivation only avoids this problem.
 :::
 
 ## Describing a single variable
 When we describe a numerical variable, we usually report three things: its **centre**, its **spread** and its **shape**. We can calculate the most common summary statistics in one go with `summarise()`.
 
-**Predict first:** a few LSOAs have much higher NO~2~ than the rest (you saw the top five above). Do you expect the mean to be above or below the median? Run the code and check.
+::: {.callout-note .exercise icon=false}
+## Predict first
+A few LSOAs have much higher NO~2~ than the rest (you saw the top five above). Do you expect the mean to be above or below the median? Run the code and check.
+:::
 
 ```{r}
 #| label: 05-describe
@@ -167,7 +173,8 @@ hist(lsoa$no2, breaks = 40,
 abline(v = 20, lty = 2)
 ```
 
-::: {.callout-tip}
+::: {.callout-note .exercise icon=false}
+## Try it yourself
 Proportions are means too. Because `above_20` is either `TRUE` (1) or `FALSE` (0), its mean is the share of LSOAs above the interim target. Try running `mean(lsoa$above_20)`. What does the answer tell you?
 :::
 
@@ -233,7 +240,10 @@ tail(borough_no2, 5)
 ## Pollution and deprivation
 Let us now return to our environmental justice question, and look at NO~2~ levels for each income deprivation quintile.
 
-**Predict first:** which quintile do you expect to have the highest NO~2~, and do you expect a steady increase from quintile 1 to quintile 5?
+::: {.callout-note .exercise icon=false}
+## Predict first
+Which quintile do you expect to have the highest NO~2~, and do you expect a steady increase from quintile 1 to quintile 5?
+:::
 
 ```{r}
 #| label: 05-quintile
@@ -259,14 +269,19 @@ boxplot(no2 ~ income_quintile, data = lsoa,
         ylab = 'Annual mean NO2 (µg/m³)')
 ```
 
-It is worth looking carefully before drawing any conclusions. Is the pattern the same all the way from quintile 1 to quintile 5? Also remember that both deprived areas and polluted areas are more common in Inner London. Repeat the summary **within** Inner and Outer London, using `group_by(inner_outer, income_quintile)`, and see whether the pattern still holds.
+It is worth looking carefully before drawing any conclusions. Is the pattern the same all the way from quintile 1 to quintile 5? Also remember that both deprived areas and polluted areas are more common in Inner London.
+
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Repeat the summary **within** Inner and Outer London, using `group_by(inner_outer, income_quintile)`. Before you run it, predict whether the pattern will still hold in both parts of London, and then check.
+:::
 
 ::: {.callout-warning}
 Describing is not the same as explaining. A difference between groups tells us *that* exposure is unequal, but not *why*: roads, housing, history and planning all play a part.
 :::
 
 ## Reporting your results
-Numbers only become useful once we put them into words. In a report, an essay or a worksheet, you would describe your data in a short paragraph supported by a figure, rather than by copying R output. A good description covers:
+In a report, an essay or a worksheet, we describe our data in a short paragraph supported by a figure, rather than by copying R output. A good description covers:
 
 - **what** was measured, in which **units**, for which **units of analysis** (LSOAs, people), and **how many**;
 - the **centre** and **spread**, with suitable measures (median and IQR if the data are skewed);
@@ -277,14 +292,19 @@ Based on this session's results, this could look as follows:
 
 > Across London's `r format(nrow(lsoa), big.mark = ',')` LSOAs, modelled annual mean NO~2~ in 2022 had a median of `r sprintf('%.1f', median(lsoa$no2))` µg/m³ (IQR `r sprintf('%.1f', IQR(lsoa$no2))` µg/m³), ranging from `r min(lsoa$no2)` to `r max(lsoa$no2)` µg/m³. Every LSOA was above the WHO guideline of 10 µg/m³, and `r round(100 * mean(lsoa$above_20))`% were above the interim target of 20 µg/m³. Levels were clearly higher in Inner London (median `r sprintf('%.1f', median(lsoa$no2[lsoa$inner_outer == 'Inner']))` µg/m³) than in Outer London (`r sprintf('%.1f', median(lsoa$no2[lsoa$inner_outer == 'Outer']))` µg/m³).
 
-Now try to write a similar paragraph for PM~2.5~.
+::: {.callout-note .exercise icon=false}
+## Try it yourself
+Write a similar paragraph for PM~2.5~.
+:::
 
-## Check before you leave
-- [ ] a project `GEOG0187-stats` with the data in `data/` and a saved script `w05-describing.R`;
-- [ ] you can use `select()`, `filter()`, `mutate()`, `arrange()`, `group_by()` + `summarise()` and `count()`;
-- [ ] a description (centre, spread, shape) of NO~2~ and PM~2.5~ with a histogram;
-- [ ] a comparison of NO~2~ between groups, with a boxplot;
-- [ ] two or three sentences that describe the data, written as you would in the worksheet.
+## Before you leave
+By the end of this session, you should have:
+
+- [ ] set up a project `GEOG0187-stats`, with the data in `data/` and your script saved as `w05-describing.R`;
+- [ ] used `select()`, `filter()`, `mutate()`, `arrange()`, `group_by()` + `summarise()` and `count()`;
+- [ ] described NO~2~ and PM~2.5~ (centre, spread and shape), with a histogram;
+- [ ] compared NO~2~ between groups, with a boxplot;
+- [ ] written two or three sentences that describe the data, as you would in the worksheet.
 
 ## Troubleshooting
 | Problem | What to try |
