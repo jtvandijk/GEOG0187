@@ -35,17 +35,24 @@ A **choropleth map** shades areas (polygons) by the value of a numerical variabl
 ## Add your data pack
 Let us start by opening a new map ([Map]{.ui}) and picking a quiet basemap. You can then follow the instructions for your city.
 
+::: {.callout-tip}
+## Left, then right
+Remember how Map Viewer is laid out. The left-hand toolbar holds what is *in* your map ([Add]{.ui}, [Layers]{.ui}, [Legend]{.ui}, [Save and open]{.ui}); the right-hand toolbar holds the settings ([Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}) for whichever layer is selected. So we always work in two steps: first click the layer in [Layers]{.ui} so that it is highlighted, and then click the tool on the right. The name at the top of the right-hand panel tells you which layer you are changing.
+:::
+
 ### Barcelona
 For Barcelona, the data pack consists of three layers that we have prepared for you:
 
-1. Click [Add]{.ui} → [Browse layers]{.ui} → [My organization]{.ui}, and search for `bcn`.
+1. Click [Add]{.ui} on the left-hand toolbar → [Browse layers]{.ui}. Switch the drop-down at the top from [My content]{.ui} to [My organization]{.ui}, and search for `GEOG0187 Barcelona`.
 2. Add `{{< var secondary.bcn_sections >}}`. This layer has one polygon per **census section** (the smallest statistical area), with the following attributes:
    - `disp_income_pc_2023_eur`: disposable household income per person, 2023;
    - `mean_taxable_income_2024_eur`: mean taxable income per unit of consumption, 2024;
    - `gini_2024_pct`: the Gini index of tax income, 2024 (a higher value means a more unequal distribution).
 3. Add `{{< var secondary.bcn_barris >}}` and `{{< var secondary.bcn_districts >}}`, which contain the boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.
 
-<!-- SCREENSHOT 1: Browse layers, My organization, search 'bcn' showing the three layers. images/w04/browse-bcn.png -->
+![](images/w04/browse-bcn.png){fig-alt="Browse layers panel set to My organization, with the three GEOG0187 Barcelona layers in the search results"}
+
+4. Open [Layers]{.ui} and check the order. The layer at the *top* of the list is drawn on top of the others, so the census sections should be at the *bottom*, with the neighbourhoods above them and the districts at the top. If the order is different, drag the layers by their handle (⠿) on the left.
 
 ::: {.callout-note}
 ## Data source
@@ -55,10 +62,10 @@ Barcelona City Council, *Open Data BCN* (CC BY 4.0), based on the Idescat income
 ### London
 For London, we will use the official deprivation data, which are already available in ArcGIS Online:
 
-1. Click [Add]{.ui} → [Browse layers]{.ui} → [ArcGIS Online]{.ui}, and search for `{{< var secondary.london_lsoa >}}` from *gis@communities.gov.uk*.
+1. Click [Add]{.ui} on the left-hand toolbar → [Browse layers]{.ui}. Switch the drop-down at the top to [ArcGIS Online]{.ui}, and search for `{{< var secondary.london_lsoa >}}` from *gis@communities.gov.uk*.
 2. Add the layer. It contains one polygon for every **LSOA** in England (small areas of about 1,500 residents), with the *rank* and *decile* of the Index of Multiple Deprivation (2025).
-3. To see only London, use [Filter]{.ui}: set `LSOA Name` (`LSOA21NM`) *starts with* the name of a borough (for example `Camden`). You can add more conditions with *or* for any other boroughs you want to include.
-4. For context, and to compare scales, also add `{{< var secondary.london_boroughs >}}` from the same publisher. This layer has one polygon per local authority, including the London boroughs (filter on `LAD24NM`). Place it above the LSOAs, with no fill and a visible outline.
+3. To see only London, click the layer in [Layers]{.ui}, then [Filter]{.ui} on the right-hand toolbar → [Add new]{.ui}. Set `LSOA Name` (`LSOA21NM`) *starts with* the name of a borough (for example `Camden`). You can add more conditions with *or* for any other boroughs you want to include.
+4. For context, and to compare scales, also add `{{< var secondary.london_boroughs >}}` from the same publisher. This layer has one polygon per local authority, including the London boroughs (filter on `LAD24NM`). In [Layers]{.ui}, drag it *above* the LSOAs, and give it no fill and a visible outline (see [Compare scales](#compare-scales) for how).
 
 ::: {.callout-note}
 ## Data source
@@ -68,29 +75,38 @@ Ministry of Housing, Communities & Local Government, *English Indices of Depriva
 ## Make the choropleth
 Now that the data are on the map, we can turn the main layer into a choropleth:
 
-1. Select the main layer and click [Styles]{.ui}.
-2. Under [Choose attributes]{.ui}, pick the numerical variable (`disp_income_pc_2023_eur` for Barcelona, `IMDRank` for London). Then choose [Counts and Amounts (Color)]{.ui} and click [Style options]{.ui}.
+1. In [Layers]{.ui}, click the main layer (the census sections, or the LSOAs for London), and then click [Styles]{.ui} on the right-hand toolbar.
+2. Under [Choose attributes]{.ui}, click [+ Field]{.ui} and pick the numerical variable: `disp_income_pc_2023_eur` for Barcelona, `IMDRank` for London.
+3. Under [Pick a style]{.ui}, select [Counts and Amounts (color)]{.ui} and click [Style options]{.ui}.
+
+![](images/w04/styles.png){fig-alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected"}
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
 With [Equal interval]{.ui}, every class has the same width; with [Quantile]{.ui}, every class contains the same number of areas. In Barcelona, a few sections have much higher incomes than the rest. Which of the two do you expect to show most of the city in the same colour? For London, the variable is a *rank*: do you expect the two classifications to look different at all? Write down your guess before the next step.
 :::
 
-3. Under [Classify data]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui}, with 5 classes each time, and look at how the map changes. Was your guess right?
+4. In [Style options]{.ui}, switch on [Classify data]{.ui}. Under [Method]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui} in turn, and set [Number of classes]{.ui} to 5 each time. Look at how the map and the class limits change. Was your guess right?
 
-<!-- SCREENSHOT 2: Style options with Classify data open (Quantile, 5 classes), Barcelona income map behind it. images/w04/classify.png -->
-4. Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.
-5. Check the legend: it should say what is being shown, and in which units.
+![](images/w04/classify.png){fig-alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath"}
 
-In the end, pick the classification you can best defend, and be ready to explain why you chose it.
+5. Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.
+6. Click [Done]{.ui}, and open [Legend]{.ui} on the left-hand toolbar. Does the legend make clear what is being shown, and in which units?
 
-## Compare scales (Barcelona)
-Next, let us see how much the picture depends on the size of the areas:
+Finally, settle on one classification for your map and note down why you chose it: the worksheet asks you to justify this choice.
 
-1. Put the neighbourhoods and districts layers *above* your income layer, and set their fill to *none* with a visible outline.
-2. Zoom into one district.
+## Compare scales {#compare-scales}
+Next, let us see how much the picture depends on the size of the areas. For this, the boundary layers need to show only their outlines:
 
-<!-- SCREENSHOT 3: one district zoomed in, census sections shaded, neighbourhood + district outlines on top, no fill. images/w04/scales.png -->
+1. In [Layers]{.ui}, click the neighbourhoods layer, and then click [Styles]{.ui} on the right-hand toolbar.
+2. Under [Location (Single symbol)]{.ui}, click the pencil next to [Symbol style]{.ui}.
+3. Next to [Fill color]{.ui}, click the *no colour* button (the circle with a line through it, on the far right). Keep a dark [Outline color]{.ui}.
+4. Close the [Symbol style]{.ui} panel and click [Done]{.ui}.
+5. Do the same for the districts, with a thicker outline (for example 2 or 3 px under [Outline width]{.ui}), so that you can tell the two apart.
+
+![](images/w04/no-fill.png){fig-alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline"}
+
+6. Zoom into one district.
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
@@ -105,13 +121,18 @@ If you are working with the London data, do the same with the boroughs. Compare 
 ## Write the pop-up
 A good pop-up does more than just show numbers. Let us set one up for the main layer:
 
-1. Select the main layer and click [Pop-ups]{.ui}.
-2. Set the title to the neighbourhood (Barcelona) or the LSOA name (London).
-3. Show the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*.
-4. Add a short interpretive note: one sentence on what the value means in context.
-5. Click on a few areas to check the result.
+1. First, switch off the pop-ups of the boundary layers. Otherwise, clicking on the map opens the neighbourhood or district instead of the census section. In [Layers]{.ui}, click the neighbourhoods layer, then [Pop-ups]{.ui} on the right-hand toolbar, and switch off [Enable pop-ups]{.ui}. Do the same for the districts (or the boroughs, for London).
+2. Now click the main layer in [Layers]{.ui}, and then [Pop-ups]{.ui} on the right-hand toolbar.
+3. Click [Title]{.ui} and set it to the neighbourhood (Barcelona) or the LSOA name (London).
+4. By default, the pop-up also contains a [Fields list]{.ui} with every attribute in the layer. Remove it via its [⋯]{.ui} menu.
+5. Click [Add content]{.ui} → [Text]{.ui}, and then [Edit text]{.ui}. Write the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*. To avoid typos in the field name, insert it with the [{}]{.ui} button in the text toolbar rather than typing it.
+6. Below that, add a short interpretive note: one sentence on what the value means in context. Click [OK]{.ui}.
 
-<!-- SCREENSHOT 4: configured pop-up open on a census section (neighbourhood title, income with unit, interpretive note). images/w04/popup.png -->
+![](images/w04/popup-text.png){fig-alt="Text editor for the pop-up, with the line Disposable income per person (2023) followed by the income field in curly brackets"}
+
+7. Click on a few areas to check the result.
+
+![](images/w04/popup.png){fig-alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block"}
 
 ## Evaluate your data
 To finish, choose one variable from your data pack and answer the five questions from [Secondary data and where it comes from](#secondary-data-and-where-it-comes-from). Then think of two or three limitations of the data. The following questions can help you with this:
@@ -152,4 +173,6 @@ Whichever source you use, check the licence, and always record the name, publish
 | The London layer is slow or looks wrong | Apply the borough filter first, and then zoom in. |
 | The map looks like it is all one colour | Check the classification and the number of classes, and try *quantile*. |
 | The legend shows odd numbers | Edit the legend labels, or round the values in the style options. |
+| Clicking the map opens a neighbourhood, district or borough | Switch off [Enable pop-ups]{.ui} for the boundary layers (see [Write the pop-up](#write-the-pop-up)). |
+| The boundary layers hide the colours underneath | Set their fill to *no colour* (see [Compare scales](#compare-scales)), and check that they are above the main layer in [Layers]{.ui}. |
 | A value is empty in the pop-up | The data may be missing for that area. If so, mention this in your evaluation. |

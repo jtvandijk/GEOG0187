@@ -44,7 +44,7 @@ All field survey entries, from every group, are stored in a single layer. We wil
 1. Click [Add]{.ui} → [Browse layers]{.ui}. Switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`. Make sure you pick the layer whose name ends in `_results`: there are other items with a very similar name, which will not work.
 <!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png -->
 2. Click [Add]{.ui} on the layer, and close the browse panel. The map will zoom to the points, and you will see the entries of the whole year.
-3. With the layer selected, click [Filter]{.ui} on the right-hand toolbar, then [Add new]{.ui}, and set up the following conditions:
+3. In [Layers]{.ui} (left-hand toolbar), click the survey layer so that it is highlighted. Then click [Filter]{.ui} on the right-hand toolbar (the funnel icon), then [Add new]{.ui}, and set up the following conditions:
    - **Data collection** *is* your fieldwork group (e.g. `Fieldwork - Catalonia Group 1`).
    - Click [Add new]{.ui} again, and set **Group number** *is* your working group number. (In the survey this was called *Working group number*, but in Map Viewer the field is shown as *Group number*.)
    - Click [Save]{.ui}. Only your group's sites should now be visible.
@@ -80,7 +80,7 @@ Switch between two or three basemaps now that your layers are styled. Which one 
 :::
 
 ## Set up the pop-ups
-By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered. Let us tidy it up by selecting the sites layer and clicking [Pop-ups]{.ui}:
+By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered. Let us tidy it up: click the sites layer in [Layers]{.ui}, and then [Pop-ups]{.ui} on the right-hand toolbar:
 
 1. Set the **title** to the site ID by clicking on the title, typing `{`, and choosing the Site ID field.
 2. Under [Fields list]{.ui}, keep the fields that matter (site ID and note) and remove the rest.
