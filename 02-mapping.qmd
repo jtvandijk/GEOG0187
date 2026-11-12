@@ -69,7 +69,12 @@ All field survey entries, from every group, are stored in a single layer. We wil
    - Click [Add new]{.ui} again, choose **Working Group Number**, change the operator from *is at least* to *is*, and enter your working group number (e.g. `5`). Do not leave it on *is at least*: that keeps every working group with a higher number too.
    - Click [Save]{.ui}. Only your working group's sites should now be visible.
 
-   ![The filter for the test entries: Data Collection *is* `Fieldwork - Test` and Working Group Number *is* `0`. Yours uses your own fieldwork group and working group number.](images/w02/filter.png){#fig-filter fig-alt="Filter pane with two conditions: Data Collection is Fieldwork - Test, and Working Group Number is 0"}
+   ::: {.callout-warning}
+   ## The screenshots show test data, not yours
+   The screenshots on this page were made with the test entries (`Fieldwork - Test`, working group `0`) and a test walk around the UCL campus. Do **not** copy these values: use your own fieldwork group and working group number in the filter, and your own group code in every title.
+   :::
+
+   ![Filter set up for the **test data**: Data Collection *is* `Fieldwork - Test`, Working Group Number *is* `0`. Your filter uses your own fieldwork group and working group number.](images/w02/filter.png){#fig-filter fig-alt="Filter pane with two conditions: Data Collection is Fieldwork - Test, and Working Group Number is 0"}
 
 6. Zoom to your sites: in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to layer]{.ui}.
 
@@ -113,13 +118,16 @@ Next, we will add your working group's route from Strava. ArcGIS Online cannot r
 
 3. Give the layer a title that starts with your group code, such as `CAT1_WG05 route`. The group code combines your fieldwork group and working group number: `CAT1_WG05` for Catalonia Group 1, working group 5 (`CAT2_` for Catalonia Group 2, `LDN_` for London). Then click [Create and add to map]{.ui}.
 
-   ![The title of the new layer (here for the test walk).](images/w02/add-file-details.png){#fig-add-file-details fig-alt="Add Layer dialog with a title for the route layer and a Create and add to map button"}
+   ![Title for the **test walk** route: `UCL_Field_Test_Route`. Your title starts with your own group code, such as `CAT1_WG05 route`.](images/w02/add-file-details.png){#fig-add-file-details fig-alt="Add Layer dialog with a title for the route layer and a Create and add to map button"}
 
-4. The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can convert and add each of them in the same way.
+4. The route now appears as a line on the map. Check that it matches where you walked.
 
    ![The route added to the map.](images/w02/route-added.png){#fig-route-added fig-alt="Map Viewer with the route layer above the survey layer, and the route drawn as a thin purple line"}
 
-If you do not have your working group's `.gpx` file yet, you can practise with the [route from the live demonstration]({{< var arcgis.demo_gpx >}}) (use the download button on the right), and add your own route later in the same way.
+::: {.callout-note}
+## Several recordings?
+If your working group recorded more than one route, for instance one per outing, convert and add each `.gpx` file in the same way. You then have one route layer per recording.
+:::
 
 ::: {.callout-tip}
 ## Save early
@@ -175,7 +183,7 @@ Finally, we need to save the map so that you can open it again next week:
 1. Click [Save and open]{.ui} → [Save as]{.ui}.
 2. Use `GEOG0187 – CAT1_WG05` as the title, with your own group code. Please do not add your name: the map ends up in your story map, which may become part of your portfolio, and the portfolio is marked anonymously. Add a short summary, for example *Sites and route from fieldwork in Barcelona*.
 
-   ![Saving the map (here for the test walk).](images/w02/save-map.png){#fig-save-map width=420 fig-alt="Save map dialog with a title, folder, tags and summary, and a Save button"}
+   ![Saving the **test walk** map as `GEOG0187 - UCL Field Test`. Your title uses your own group code, such as `GEOG0187 – CAT1_WG05`.](images/w02/save-map.png){#fig-save-map width=420 fig-alt="Save map dialog with a title, folder, tags and summary, and a Save button"}
 
 3. Click [Save]{.ui}. The map will now be in [Content]{.ui} → [My content]{.ui}.
 
@@ -190,7 +198,7 @@ By the end of this session, your saved map should have:
 - [ ] clear styling for both layers;
 - [ ] pop-ups that show the site ID, note and photo.
 
-![The finished map for the test walk.](images/w02/finished-map.png){#fig-finished-map fig-alt="Finished map with a light grey basemap, the route as a thick blue line and two orange survey sites around Gordon Street"}
+![The finished map for the **test walk**.](images/w02/finished-map.png){#fig-finished-map fig-alt="Finished map with a light grey basemap, the route as a thick blue line and two orange survey sites around Gordon Street"}
 
 ::: {.callout-note .exercise icon=false}
 ## Try it yourself
@@ -203,7 +211,7 @@ If you finish early, estimate how far your working group walked, and then check 
 | The survey layer does not appear in the search | Check that you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through [UCL SSO]{.ui}. |
 | No sites are left after filtering | Check that your filter uses exactly the same fieldwork group and working group number as your working group's [survey link]({{< var urls.links >}}). If your sites are still missing, ask the teaching staff. |
 | The filter shows other working groups too | Check that the **Working Group Number** condition uses *is*, not *is at least*. |
-| I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the [route from the live demonstration]({{< var arcgis.demo_gpx >}}). |
+| I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the [test walk route]({{< var arcgis.demo_gpx >}}) used for the screenshots on this page (use the download button on the right). |
 | ArcGIS Online does not accept my `.gpx` file | That is expected: convert it to GeoJSON first, using [geojson.io](https://geojson.io) (see [Convert the route to GeoJSON](#convert-the-route-to-geojson)). |
 | geojson.io does not show a route | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
 | The route is a straight line or has big jumps | The GPS signal was lost during recording. If two people in your working group recorded the route, use the other recording. |
