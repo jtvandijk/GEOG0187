@@ -467,33 +467,105 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="2.2" class="anchored" data-anchor-id="open-map-viewer"><span class="header-section-number">2.2</span> Open Map Viewer</h2>
 <p>Let us start by signing in to ArcGIS Online and opening an empty map:</p>
 <ol type="1">
-<li>Go to <a href="https://uclondon.maps.arcgis.com">https://uclondon.maps.arcgis.com</a>, click <span class="ui">UCL SSO</span>, and sign in as you would for Moodle. Please use a laptop or computer for this, not your phone.</li>
-<li>Open <span class="ui">Map</span> from the top menu. This opens <strong>Map Viewer</strong> with an empty map.</li>
-<li>Take a moment to look around. The left-hand toolbar holds what is <em>in</em> your map (<span class="ui">Layers</span>, <span class="ui">Add</span>, <span class="ui">Basemap</span>, <span class="ui">Save and open</span>), whilst the right-hand toolbar holds the settings for the selected layer (<span class="ui">Properties</span>, <span class="ui">Styles</span>, <span class="ui">Filter</span>, <span class="ui">Pop-ups</span>). <!-- SCREENSHOT 1: Map Viewer, empty map, both toolbars visible. images/w02/map-viewer.png --></li>
+<li><p>Go to <a href="https://uclondon.maps.arcgis.com">https://uclondon.maps.arcgis.com</a>, click <span class="ui">UCL SSO</span>, and sign in as you would for Moodle. Please use a laptop or computer for this, not your phone.</p>
+<div id="fig-sign-in" class="quarto-float quarto-figure quarto-figure-center anchored" alt="ArcGIS Online sign-in page for University College London with a UCL SSO button">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sign-in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/sign-in.png" class="img-fluid figure-img" alt="ArcGIS Online sign-in page for University College London with a UCL SSO button" width="360">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sign-in-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Signing in to ArcGIS Online with <span class="ui">UCL SSO</span>.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Open <span class="ui">Map</span> from the top menu. This opens <strong>Map Viewer</strong> with an empty map.</p>
+<div id="fig-home" class="quarto-float quarto-figure quarto-figure-center anchored" alt="ArcGIS Online top menu with Home, Gallery, Map, Scene, Groups, Content and Organization">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-home-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/home.png" class="img-fluid figure-img" alt="ArcGIS Online top menu with Home, Gallery, Map, Scene, Groups, Content and Organization">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-home-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The top menu of ArcGIS Online.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Take a moment to look around. The left-hand toolbar holds what is <em>in</em> your map (<span class="ui">Add</span>, <span class="ui">Layers</span>, <span class="ui">Basemap</span>, <span class="ui">Save and open</span>), whilst the right-hand toolbar holds the settings for the selected layer (<span class="ui">Properties</span>, <span class="ui">Styles</span>, <span class="ui">Filter</span>, <span class="ui">Pop-ups</span>). The right-hand toolbar only shows icons: hover over an icon to see its name.</p>
+<div id="fig-map-viewer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Map Viewer with an empty map of Europe, the left-hand toolbar with Add, Layers and Basemap, and an icon toolbar on the right">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-map-viewer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/map-viewer.png" class="img-fluid figure-img" alt="Map Viewer with an empty map of Europe, the left-hand toolbar with Add, Layers and Basemap, and an icon toolbar on the right">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-viewer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Map Viewer with an empty map.
+</figcaption>
+</figure>
+</div></li>
 </ol>
 </section>
 <section id="choose-a-basemap" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="choose-a-basemap"><span class="header-section-number">2.3</span> Choose a basemap</h2>
-<p>Click <span class="ui">Basemap</span> and try a few of the options. A quiet basemap such as <em>Light Gray Canvas</em> or <em>OpenStreetMap</em> makes your own data stand out, whereas <em>Imagery</em> shows what the places look like from above. You can change the basemap again at any time.</p>
+<p>Click <span class="ui">Basemap</span> and try a few of the options. A quiet basemap such as <em>Light Gray Canvas</em> or <em>OpenStreetMap Style</em> makes your own data stand out, whereas <em>Imagery</em> shows what the places look like from above. You can change the basemap again at any time.</p>
+<div id="fig-basemap" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Basemap pane with Light Gray Canvas selected, and the map in light grey">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-basemap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/basemap.png" class="img-fluid figure-img" alt="Basemap pane with Light Gray Canvas selected, and the map in light grey" width="560">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-basemap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Choosing a basemap.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="add-your-working-groups-sites" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="add-your-working-groups-sites"><span class="header-section-number">2.4</span> Add your working group’s sites</h2>
 <p>All field survey entries, from every group, are stored in a single layer. We will add that layer to our map and then filter it so that only your own working group’s sites are shown:</p>
 <ol type="1">
-<li>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span>. Switch from <span class="ui">My content</span> to <span class="ui">My organization</span>, and search for <code>UCL Geography Field Survey_results</code>. Make sure you pick the layer whose name ends in <code>_results</code>: there are other items with a very similar name, which will not work. <!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png --></li>
-<li>Click <span class="ui">Add</span> on the layer, and close the browse panel. The map will zoom to the points, and you will see the entries of the whole year.</li>
-<li>In <span class="ui">Layers</span> (left-hand toolbar), click the survey layer so that it is highlighted. Then click <span class="ui">Filter</span> on the right-hand toolbar (the funnel icon), then <span class="ui">Add new</span>, and set up the following conditions:
+<li><p>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span>.</p>
+<div id="fig-add-menu" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Add menu in Map Viewer with Browse layers, Add layer from URL and Add layer from file">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-add-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/add-menu.png" class="img-fluid figure-img" alt="The Add menu in Map Viewer with Browse layers, Add layer from URL and Add layer from file" width="480">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-add-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The <span class="ui">Add</span> menu.
+</figcaption>
+</figure>
+</div></li>
+<li><p>At the top of the panel, switch from <span class="ui">My content</span> to <span class="ui">My organization</span>, and search for <code>UCL Geography Field Survey_results</code>. Make sure you pick the layer whose name ends in <code>_results</code>: there are other items with a very similar name, which will not work.</p>
+<div id="fig-browse-layers" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Browse layers panel listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-browse-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/browse-layers.png" class="img-fluid figure-img" alt="Browse layers panel listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button" width="340">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-browse-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: The survey layers in <span class="ui">Browse layers</span>. Yours will show <span class="ui">My organization</span> at the top.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Click <span class="ui">Add</span> on the layer, and close the browse panel. The layer now appears under <span class="ui">Layers</span>, with the entries of the whole year. The map may not zoom to the points by itself; we will zoom in once we have filtered the layer.</p></li>
+<li><p>In <span class="ui">Layers</span> (left-hand toolbar), click the survey layer so that it is highlighted. Then click <span class="ui">Filter</span> on the right-hand toolbar (the funnel icon).</p>
+<div id="fig-layer-added" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Map Viewer with the survey results layer in the Layers list, two red points near Gordon Square, the Properties pane open and the Filter button highlighted on the right-hand toolbar">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-layer-added-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/layer-added.png" class="img-fluid figure-img" alt="Map Viewer with the survey results layer in the Layers list, two red points near Gordon Square, the Properties pane open and the Filter button highlighted on the right-hand toolbar">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-layer-added-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</span> on the right-hand toolbar.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Click <span class="ui">Add new</span>, and set up the following conditions:</p>
 <ul>
-<li><strong>Data collection</strong> <em>is</em> your fieldwork group:
+<li><strong>Data Collection</strong> <em>is</em> your fieldwork group:
 <ul>
 <li><code>Fieldwork - Catalonia Group 1</code> if you were in Catalonia from 23 to 27 January;</li>
 <li><code>Fieldwork - Catalonia Group 2</code> if you were in Catalonia from 27 to 31 January;</li>
 <li><code>Fieldwork - London</code> if you did your fieldwork in London.</li>
 </ul></li>
-<li>Click <span class="ui">Add new</span> again, and set <strong>Group number</strong> <em>is</em> your working group number (e.g.&nbsp;<code>5</code>).</li>
+<li>Click <span class="ui">Add new</span> again, choose <strong>Working Group Number</strong>, change the operator from <em>is at least</em> to <em>is</em>, and enter your working group number (e.g.&nbsp;<code>5</code>). Do not leave it on <em>is at least</em>: that keeps every working group with a higher number too.</li>
 <li>Click <span class="ui">Save</span>. Only your working group’s sites should now be visible. <!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png --></li>
 </ul></li>
-<li>Zoom to your sites (in <span class="ui">Layers</span>, open the <span class="ui">⋯</span> menu of the layer → <span class="ui">Zoom to</span>) and click on a point. Its pop-up shows the attributes and photo your working group entered.</li>
+<li><p>Zoom to your sites (in <span class="ui">Layers</span>, open the <span class="ui">⋯</span> menu of the layer → <span class="ui">Zoom to</span>) and click on a point. Its pop-up shows the attributes and photo your working group entered.</p></li>
 </ol>
 <div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -623,22 +695,26 @@ ul.task-list li input[type="checkbox"] {
 <td style="text-align: left;">Check that your filter uses exactly the same fieldwork group and working group number as your working group’s <a href="survey-links.html">survey link</a>. If your sites are still missing, ask the teaching staff.</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">The filter shows other working groups too</td>
+<td style="text-align: left;">Check that the <strong>Working Group Number</strong> condition uses <em>is</em>, not <em>is at least</em>.</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">I do not have a <code>.gpx</code> file</td>
 <td style="text-align: left;">Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the <a href="https://github.com/jtvandijk/GEOG0187/blob/master/data/UCL_Field_Test.gpx">route from the live demonstration</a>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">The <code>.gpx</code> file will not upload</td>
 <td style="text-align: left;">Check that the file ends in <code>.gpx</code> and was exported from the Strava <em>website</em>. You could also try a different browser.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">The route is a straight line or has big jumps</td>
 <td style="text-align: left;">The GPS signal was lost during recording. If two people in your working group recorded the route, use the other recording.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">The photo does not show in the pop-up</td>
 <td style="text-align: left;">Check that <span class="ui">Attachments</span> is switched on under <span class="ui">Pop-ups</span>. Note that not every entry has a photo.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">I cannot find my map next time</td>
 <td style="text-align: left;">Go to <span class="ui">Content</span> → <span class="ui">My content</span>, or search for <code>GEOG0187</code>.</td>
 </tr>

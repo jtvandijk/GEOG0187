@@ -31,28 +31,47 @@ ArcGIS Online changes its layout regularly. This chapter therefore describes *wh
 Let us start by signing in to ArcGIS Online and opening an empty map:
 
 1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), click [UCL SSO]{.ui}, and sign in as you would for Moodle. Please use a laptop or computer for this, not your phone.
+
+   ![Signing in to ArcGIS Online with [UCL SSO]{.ui}.](images/w02/sign-in.png){#fig-sign-in width=360 fig-alt="ArcGIS Online sign-in page for University College London with a UCL SSO button"}
+
 2. Open [Map]{.ui} from the top menu. This opens **Map Viewer** with an empty map.
-3. Take a moment to look around. The left-hand toolbar holds what is *in* your map ([Layers]{.ui}, [Add]{.ui}, [Basemap]{.ui}, [Save and open]{.ui}), whilst the right-hand toolbar holds the settings for the selected layer ([Properties]{.ui}, [Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}).
-<!-- SCREENSHOT 1: Map Viewer, empty map, both toolbars visible. images/w02/map-viewer.png -->
+
+   ![The top menu of ArcGIS Online.](images/w02/home.png){#fig-home fig-alt="ArcGIS Online top menu with Home, Gallery, Map, Scene, Groups, Content and Organization"}
+
+3. Take a moment to look around. The left-hand toolbar holds what is *in* your map ([Add]{.ui}, [Layers]{.ui}, [Basemap]{.ui}, [Save and open]{.ui}), whilst the right-hand toolbar holds the settings for the selected layer ([Properties]{.ui}, [Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}). The right-hand toolbar only shows icons: hover over an icon to see its name.
+
+   ![Map Viewer with an empty map.](images/w02/map-viewer.png){#fig-map-viewer fig-alt="Map Viewer with an empty map of Europe, the left-hand toolbar with Add, Layers and Basemap, and an icon toolbar on the right"}
 
 ## Choose a basemap
-Click [Basemap]{.ui} and try a few of the options. A quiet basemap such as *Light Gray Canvas* or *OpenStreetMap* makes your own data stand out, whereas *Imagery* shows what the places look like from above. You can change the basemap again at any time.
+Click [Basemap]{.ui} and try a few of the options. A quiet basemap such as *Light Gray Canvas* or *OpenStreetMap Style* makes your own data stand out, whereas *Imagery* shows what the places look like from above. You can change the basemap again at any time.
+
+![Choosing a basemap.](images/w02/basemap.png){#fig-basemap width=560 fig-alt="Basemap pane with Light Gray Canvas selected, and the map in light grey"}
 
 ## Add your working group's sites
 All field survey entries, from every group, are stored in a single layer. We will add that layer to our map and then filter it so that only your own working group's sites are shown:
 
-1. Click [Add]{.ui} → [Browse layers]{.ui}. Switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`. Make sure you pick the layer whose name ends in `_results`: there are other items with a very similar name, which will not work.
-<!-- SCREENSHOT 2: Browse layers panel, My organization selected, survey layer found. images/w02/browse-layers.png -->
-2. Click [Add]{.ui} on the layer, and close the browse panel. The map will zoom to the points, and you will see the entries of the whole year.
-3. In [Layers]{.ui} (left-hand toolbar), click the survey layer so that it is highlighted. Then click [Filter]{.ui} on the right-hand toolbar (the funnel icon), then [Add new]{.ui}, and set up the following conditions:
-   - **Data collection** *is* your fieldwork group:
+1. Click [Add]{.ui} → [Browse layers]{.ui}.
+
+   ![The [Add]{.ui} menu.](images/w02/add-menu.png){#fig-add-menu width=480 fig-alt="The Add menu in Map Viewer with Browse layers, Add layer from URL and Add layer from file"}
+
+2. At the top of the panel, switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`. Make sure you pick the layer whose name ends in `_results`: there are other items with a very similar name, which will not work.
+
+   ![The survey layers in [Browse layers]{.ui}. Yours will show [My organization]{.ui} at the top.](images/w02/browse-layers.png){#fig-browse-layers width=340 fig-alt="Browse layers panel listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button"}
+
+3. Click [Add]{.ui} on the layer, and close the browse panel. The layer now appears under [Layers]{.ui}, with the entries of the whole year. The map may not zoom to the points by itself; we will zoom in once we have filtered the layer.
+4. In [Layers]{.ui} (left-hand toolbar), click the survey layer so that it is highlighted. Then click [Filter]{.ui} on the right-hand toolbar (the funnel icon).
+
+   ![The survey layer added to the map, with [Filter]{.ui} on the right-hand toolbar.](images/w02/layer-added.png){#fig-layer-added fig-alt="Map Viewer with the survey results layer in the Layers list, two red points near Gordon Square, the Properties pane open and the Filter button highlighted on the right-hand toolbar"}
+
+5. Click [Add new]{.ui}, and set up the following conditions:
+   - **Data Collection** *is* your fieldwork group:
      - `Fieldwork - Catalonia Group 1` if you were in Catalonia from 23 to 27 January;
      - `Fieldwork - Catalonia Group 2` if you were in Catalonia from 27 to 31 January;
      - `Fieldwork - London` if you did your fieldwork in London.
-   - Click [Add new]{.ui} again, and set **Group number** *is* your working group number (e.g. `5`).
+   - Click [Add new]{.ui} again, choose **Working Group Number**, change the operator from *is at least* to *is*, and enter your working group number (e.g. `5`). Do not leave it on *is at least*: that keeps every working group with a higher number too.
    - Click [Save]{.ui}. Only your working group's sites should now be visible.
 <!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png -->
-4. Zoom to your sites (in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to]{.ui}) and click on a point. Its pop-up shows the attributes and photo your working group entered.
+6. Zoom to your sites (in [Layers]{.ui}, open the [⋯]{.ui} menu of the layer → [Zoom to]{.ui}) and click on a point. Its pop-up shows the attributes and photo your working group entered.
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
@@ -133,6 +152,7 @@ If you finish early, estimate how far your working group walked, and then check 
 | :------ | :---------- |
 | The survey layer does not appear in the search | Check that you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through [UCL SSO]{.ui}. |
 | No sites are left after filtering | Check that your filter uses exactly the same fieldwork group and working group number as your working group's [survey link]({{< var urls.links >}}). If your sites are still missing, ask the teaching staff. |
+| The filter shows other working groups too | Check that the **Working Group Number** condition uses *is*, not *is at least*. |
 | I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the [route from the live demonstration]({{< var arcgis.demo_gpx >}}). |
 | The `.gpx` file will not upload | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
 | The route is a straight line or has big jumps | The GPS signal was lost during recording. If two people in your working group recorded the route, use the other recording. |
