@@ -406,7 +406,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#open-map-viewer" id="toc-open-map-viewer" class="nav-link" data-scroll-target="#open-map-viewer"><span class="header-section-number">2.2</span> Open Map Viewer</a></li>
   <li><a href="#choose-a-basemap" id="toc-choose-a-basemap" class="nav-link" data-scroll-target="#choose-a-basemap"><span class="header-section-number">2.3</span> Choose a basemap</a></li>
   <li><a href="#add-your-working-groups-sites" id="toc-add-your-working-groups-sites" class="nav-link" data-scroll-target="#add-your-working-groups-sites"><span class="header-section-number">2.4</span> Add your working group’s sites</a></li>
-  <li><a href="#add-your-route" id="toc-add-your-route" class="nav-link" data-scroll-target="#add-your-route"><span class="header-section-number">2.5</span> Add your route</a></li>
+  <li><a href="#add-your-route" id="toc-add-your-route" class="nav-link" data-scroll-target="#add-your-route"><span class="header-section-number">2.5</span> Add your route</a>
+  <ul class="collapse">
+  <li><a href="#convert-the-route-to-geojson" id="toc-convert-the-route-to-geojson" class="nav-link" data-scroll-target="#convert-the-route-to-geojson"><span class="header-section-number">2.5.1</span> Convert the route to GeoJSON</a></li>
+  <li><a href="#add-the-route-to-your-map" id="toc-add-the-route-to-your-map" class="nav-link" data-scroll-target="#add-the-route-to-your-map"><span class="header-section-number">2.5.2</span> Add the route to your map</a></li>
+  </ul></li>
   <li><a href="#style-your-layers" id="toc-style-your-layers" class="nav-link" data-scroll-target="#style-your-layers"><span class="header-section-number">2.6</span> Style your layers</a></li>
   <li><a href="#set-up-the-pop-ups" id="toc-set-up-the-pop-ups" class="nav-link" data-scroll-target="#set-up-the-pop-ups"><span class="header-section-number">2.7</span> Set up the pop-ups</a></li>
   <li><a href="#save-your-map" id="toc-save-your-map" class="nav-link" data-scroll-target="#save-your-map"><span class="header-section-number">2.8</span> Save your map</a></li>
@@ -489,7 +493,7 @@ Figure&nbsp;2: The top menu of ArcGIS Online.
 </figcaption>
 </figure>
 </div></li>
-<li><p>Take a moment to look around. The left-hand toolbar holds what is <em>in</em> your map (<span class="ui">Add</span>, <span class="ui">Layers</span>, <span class="ui">Basemap</span>, <span class="ui">Save and open</span>), whilst the right-hand toolbar holds the settings for the selected layer (<span class="ui">Properties</span>, <span class="ui">Styles</span>, <span class="ui">Filter</span>, <span class="ui">Pop-ups</span>). The right-hand toolbar only shows icons: hover over an icon to see its name.</p>
+<li><p>Take a moment to look around. The left-hand toolbar holds what is <em>in</em> your map (<span class="ui">Add</span>, <span class="ui">Layers</span>, <span class="ui">Basemap</span>, <span class="ui">Save and open</span>), whilst the right-hand toolbar holds the settings for the selected layer (<span class="ui">Properties</span>, <span class="ui">Styles</span>, <span class="ui">Filter</span>, <span class="ui">Pop-ups</span>). The right-hand toolbar only shows icons: hover over an icon to see its name, or click the <span class="ui">«</span> button at the bottom of the toolbar to expand it so that the names are shown.</p>
 <div id="fig-map-viewer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Map Viewer with an empty map of Europe, the left-hand toolbar with Add, Layers and Basemap, and an icon toolbar on the right">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-map-viewer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -524,7 +528,7 @@ Figure&nbsp;4: Choosing a basemap.
 <div id="fig-add-menu" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The Add menu in Map Viewer with Browse layers, Add layer from URL and Add layer from file">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-add-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/w02/add-menu.png" class="img-fluid figure-img" alt="The Add menu in Map Viewer with Browse layers, Add layer from URL and Add layer from file" width="480">
+<img src="images/w02/add-menu.png" class="img-fluid figure-img" alt="The Add menu in Map Viewer with Browse layers, Add layer from URL and Add layer from file" width="420">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-add-menu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;5: The <span class="ui">Add</span> menu.
@@ -532,22 +536,22 @@ Figure&nbsp;5: The <span class="ui">Add</span> menu.
 </figure>
 </div></li>
 <li><p>At the top of the panel, switch from <span class="ui">My content</span> to <span class="ui">My organization</span>, and search for <code>UCL Geography Field Survey_results</code>. Make sure you pick the layer whose name ends in <code>_results</code>: there are other items with a very similar name, which will not work.</p>
-<div id="fig-browse-layers" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Browse layers panel listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button">
+<div id="fig-browse-layers" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Browse layers panel set to My organization, listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-browse-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/w02/browse-layers.png" class="img-fluid figure-img" alt="Browse layers panel listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button" width="340">
+<img src="images/w02/browse-layers.png" class="img-fluid figure-img" alt="Browse layers panel set to My organization, listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button" width="340">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-browse-layers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: The survey layers in <span class="ui">Browse layers</span>. Yours will show <span class="ui">My organization</span> at the top.
+Figure&nbsp;6: The survey layers in <span class="ui">Browse layers</span>, with <span class="ui">My organization</span> selected.
 </figcaption>
 </figure>
 </div></li>
-<li><p>Click <span class="ui">Add</span> on the layer, and close the browse panel. The layer now appears under <span class="ui">Layers</span>, with the entries of the whole year. The map may not zoom to the points by itself; we will zoom in once we have filtered the layer.</p></li>
+<li><p>Click <span class="ui">Add</span> on the <code>_results</code> layer, and close the browse panel. The layer now appears under <span class="ui">Layers</span>, with the entries of the whole year. The map may not zoom to the points by itself; we will zoom in once we have filtered the layer.</p></li>
 <li><p>In <span class="ui">Layers</span> (left-hand toolbar), click the survey layer so that it is highlighted. Then click <span class="ui">Filter</span> on the right-hand toolbar (the funnel icon).</p>
-<div id="fig-layer-added" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Map Viewer with the survey results layer in the Layers list, two red points near Gordon Square, the Properties pane open and the Filter button highlighted on the right-hand toolbar">
+<div id="fig-layer-added" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Map Viewer with the survey results layer in the Layers list, two points near Gordon Square, the Properties pane open and the Filter tooltip on the right-hand toolbar">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-layer-added-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/w02/layer-added.png" class="img-fluid figure-img" alt="Map Viewer with the survey results layer in the Layers list, two red points near Gordon Square, the Properties pane open and the Filter button highlighted on the right-hand toolbar">
+<img src="images/w02/layer-added.png" class="img-fluid figure-img" alt="Map Viewer with the survey results layer in the Layers list, two points near Gordon Square, the Properties pane open and the Filter tooltip on the right-hand toolbar">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-layer-added-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</span> on the right-hand toolbar.
@@ -563,9 +567,40 @@ Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</
 <li><code>Fieldwork - London</code> if you did your fieldwork in London.</li>
 </ul></li>
 <li>Click <span class="ui">Add new</span> again, choose <strong>Working Group Number</strong>, change the operator from <em>is at least</em> to <em>is</em>, and enter your working group number (e.g.&nbsp;<code>5</code>). Do not leave it on <em>is at least</em>: that keeps every working group with a higher number too.</li>
-<li>Click <span class="ui">Save</span>. Only your working group’s sites should now be visible. <!-- SCREENSHOT 3: Filter pane with the two conditions (use Fieldwork - Test / 0). images/w02/filter.png --></li>
-</ul></li>
-<li><p>Zoom to your sites (in <span class="ui">Layers</span>, open the <span class="ui">⋯</span> menu of the layer → <span class="ui">Zoom to</span>) and click on a point. Its pop-up shows the attributes and photo your working group entered.</p></li>
+<li>Click <span class="ui">Save</span>. Only your working group’s sites should now be visible.</li>
+</ul>
+<div id="fig-filter" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Filter pane with two conditions: Data Collection is Fieldwork - Test, and Working Group Number is 0">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-filter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/filter.png" class="img-fluid figure-img" alt="Filter pane with two conditions: Data Collection is Fieldwork - Test, and Working Group Number is 0">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-filter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: The filter for the test entries: Data Collection <em>is</em> <code>Fieldwork - Test</code> and Working Group Number <em>is</em> <code>0</code>. Yours uses your own fieldwork group and working group number.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Zoom to your sites: in <span class="ui">Layers</span>, open the <span class="ui">⋯</span> menu of the layer → <span class="ui">Zoom to layer</span>.</p>
+<div id="fig-zoom-to-layer" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The layer's more options menu with Zoom to layer, Show properties, Show table, Rename and Remove">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zoom-to-layer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/zoom-to-layer.png" class="img-fluid figure-img" alt="The layer's more options menu with Zoom to layer, Show properties, Show table, Rename and Remove" width="560">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zoom-to-layer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: The layer menu with <span class="ui">Zoom to layer</span>.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Click on a point. Its pop-up shows the attributes and photo your working group entered. We will tidy up this pop-up later on.</p>
+<div id="fig-popup-default" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Default pop-up listing Data Collection, Note, Site ID and Working Group Number (0.00), with a photo underneath">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popup-default-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/popup-default.png" class="img-fluid figure-img" alt="Default pop-up listing Data Collection, Note, Site ID and Working Group Number (0.00), with a photo underneath" width="560">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popup-default-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: The default pop-up of a survey entry.
+</figcaption>
+</figure>
+</div></li>
 </ol>
 <div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -584,11 +619,92 @@ Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</
 </section>
 <section id="add-your-route" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="add-your-route"><span class="header-section-number">2.5</span> Add your route</h2>
-<p>Next, we will add your working group’s route from Strava:</p>
+<p>Next, we will add your working group’s route from Strava. ArcGIS Online cannot read <code>.gpx</code> files, so we first convert the route to <strong>GeoJSON</strong>, a common format for spatial data that ArcGIS Online does accept.</p>
+<section id="convert-the-route-to-geojson" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="convert-the-route-to-geojson"><span class="header-section-number">2.5.1</span> Convert the route to GeoJSON</h3>
 <ol type="1">
-<li>Click <span class="ui">Add</span> → <span class="ui">Add layer from file</span>, and select your <code>.gpx</code> file.</li>
-<li>When asked, choose to create a <strong>hosted feature layer</strong>, so that the route is stored in your own ArcGIS Online content. Give it a name that starts with your group code, such as <code>CAT1_WG05 route</code>. The group code combines your fieldwork group and working group number: <code>CAT1_WG05</code> for Catalonia Group 1, working group 5 (<code>CAT2_</code> for Catalonia Group 2, <code>LDN_</code> for London). Then click <span class="ui">Create and add to map</span>. <!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png --></li>
-<li>The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can add each <code>.gpx</code> file in the same way.</li>
+<li><p>Go to <a href="https://geojson.io">geojson.io</a>. There is no need to sign up.</p>
+<div id="fig-geojsonio-start" class="quarto-float quarto-figure quarto-figure-center anchored" alt="The geojson.io website with an empty globe and an Import button on the left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-geojsonio-start-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/geojsonio-start.png" class="img-fluid figure-img" alt="The geojson.io website with an empty globe and an Import button on the left">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-geojsonio-start-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: geojson.io, before importing a file.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Click <span class="ui">Import</span> and select your <code>.gpx</code> file. Your route appears on the map as a line, and its data appear on the right.</p>
+<div id="fig-geojsonio-route" class="quarto-float quarto-figure quarto-figure-center anchored" alt="geojson.io showing the walked route as a line around the UCL campus, with the GeoJSON text on the right">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-geojsonio-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/geojsonio-route.png" class="img-fluid figure-img" alt="geojson.io showing the walked route as a line around the UCL campus, with the GeoJSON text on the right">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-geojsonio-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: The route imported into geojson.io.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Click <span class="ui">Export</span>, keep the file format on <span class="ui">GeoJSON</span>, and click <span class="ui">Export</span>. A <code>.geojson</code> file is downloaded.</p>
+<div id="fig-geojsonio-export" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Export dialog in geojson.io with GeoJSON as the file format and an Export button">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-geojsonio-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/geojsonio-export.png" class="img-fluid figure-img" alt="Export dialog in geojson.io with GeoJSON as the file format and an Export button" width="420">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-geojsonio-export-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Exporting the route as GeoJSON.
+</figcaption>
+</figure>
+</div></li>
+</ol>
+</section>
+<section id="add-the-route-to-your-map" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="add-the-route-to-your-map"><span class="header-section-number">2.5.2</span> Add the route to your map</h3>
+<ol type="1">
+<li><p>Back in Map Viewer, click <span class="ui">Add</span> → <span class="ui">Add layer from file</span>, click <span class="ui">Your device</span>, and select the <code>.geojson</code> file.</p>
+<div id="fig-add-file" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Add Layer dialog with a drop zone, the list of supported file types and buttons for Your device, Google Drive, Dropbox and OneDrive">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-add-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/add-file.png" class="img-fluid figure-img" alt="Add Layer dialog with a drop zone, the list of supported file types and buttons for Your device, Google Drive, Dropbox and OneDrive">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-add-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Adding a layer from a file.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Choose <span class="ui">Create a hosted feature layer and add it to the map</span>, so that the route is stored in your own ArcGIS Online content, and click <span class="ui">Next</span>.</p>
+<div id="fig-add-file-hosted" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Add Layer dialog with the option Create a hosted feature layer and add it to the map selected">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-add-file-hosted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/add-file-hosted.png" class="img-fluid figure-img" alt="Add Layer dialog with the option Create a hosted feature layer and add it to the map selected">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-add-file-hosted-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: Creating a hosted feature layer.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Give the layer a title that starts with your group code, such as <code>CAT1_WG05 route</code>. The group code combines your fieldwork group and working group number: <code>CAT1_WG05</code> for Catalonia Group 1, working group 5 (<code>CAT2_</code> for Catalonia Group 2, <code>LDN_</code> for London). Then click <span class="ui">Create and add to map</span>.</p>
+<div id="fig-add-file-details" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Add Layer dialog with a title for the route layer and a Create and add to map button">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-add-file-details-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/add-file-details.png" class="img-fluid figure-img" alt="Add Layer dialog with a title for the route layer and a Create and add to map button">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-add-file-details-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: The title of the new layer (here for the test walk).
+</figcaption>
+</figure>
+</div></li>
+<li><p>The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can convert and add each of them in the same way.</p>
+<div id="fig-route-added" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Map Viewer with the route layer above the survey layer, and the route drawn as a thin purple line">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-route-added-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/route-added.png" class="img-fluid figure-img" alt="Map Viewer with the route layer above the survey layer, and the route drawn as a thin purple line">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-route-added-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: The route added to the map.
+</figcaption>
+</figure>
+</div></li>
 </ol>
 <p>If you do not have your working group’s <code>.gpx</code> file yet, you can practise with the <a href="https://github.com/jtvandijk/GEOG0187/blob/master/data/UCL_Field_Test.gpx">route from the live demonstration</a> (use the download button on the right), and add your own route later in the same way.</p>
 <div class="callout callout-style-simple callout-tip callout-titled">
@@ -605,18 +721,58 @@ Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</
 </div>
 </div>
 </section>
+</section>
 <section id="style-your-layers" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="style-your-layers"><span class="header-section-number">2.6</span> Style your layers</h2>
 <p>First, let us make the <span class="ui">Layers</span> list, and with it the legend, readable for someone else:</p>
 <ol type="1">
-<li>Give both layers a clear name, such as <code>Survey sites</code> and <code>Route</code>: open the <span class="ui">⋯</span> menu of the layer in <span class="ui">Layers</span> → <span class="ui">Rename</span>. This only changes the name in your map, not the original layer.</li>
-<li>Check the order of the layers. The layer at the <em>top</em> of the list is drawn on top of the others. Because you added the route last, it is now on top, and may hide some of your sites. Drag the sites above the route by their handle (⠿).</li>
+<li><p>Give both layers a clear name, such as <code>Survey sites</code> and <code>Route</code>: open the <span class="ui">⋯</span> menu of the layer in <span class="ui">Layers</span> → <span class="ui">Rename</span>, type the new name and click <span class="ui">OK</span>. This only changes the name in your map, not the original layer.</p>
+<div id="fig-rename" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Rename box under the Layers list with the title Survey Sites and an OK button">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rename-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/rename.png" class="img-fluid figure-img" alt="Rename box under the Layers list with the title Survey Sites and an OK button" width="560">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rename-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18: Renaming a layer.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Check the order of the layers. The layer at the <em>top</em> of the list is drawn on top of the others. Because you added the route last, it is now on top, and may hide some of your sites. Drag the sites above the route by their handle (⠿).</p></li>
 </ol>
-<p>To change how a layer looks, select it in <span class="ui">Layers</span> and click <span class="ui">Styles</span> on the right-hand toolbar. We will style both layers in turn:</p>
+<p>To change how a layer looks, select it in <span class="ui">Layers</span> and click <span class="ui">Styles</span> on the right-hand toolbar. Keep the <span class="ui">Location (single symbol)</span> style, and click the pencil next to <span class="ui">Symbol style</span>. We will style both layers in turn:</p>
 <ul>
-<li>For the route, keep the <span class="ui">Location (single symbol)</span> style, click <span class="ui">Style options</span>, and change the line colour and width so that the route is clearly visible on your basemap.</li>
-<li>For the sites, change the symbol, size and colour so that the points stand out against the route. You could also style them by an attribute instead, but a single clear symbol is fine for now.</li>
+<li>For the route, change the line colour and width so that the route is clearly visible on your basemap.</li>
+<li>For the sites, change the size and fill colour so that the points stand out against the route. You could also style them by an attribute instead, but a single clear symbol is fine for now.</li>
 </ul>
+<p>Click <span class="ui">Done</span> when you are happy with a layer.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-style-route" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Symbol style pane for the route with colour, transparency and a width of 10 px">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-style-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/style-route.png" class="img-fluid figure-img" alt="Symbol style pane for the route with colour, transparency and a width of 10 px">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-style-route-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19: Styling the route.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-style-sites" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Symbol style pane for the survey sites with a size of 30 px and an orange fill colour">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-style-sites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/style-sites.png" class="img-fluid figure-img" alt="Symbol style pane for the survey sites with a size of 30 px and an orange fill colour">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-style-sites-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20: Styling the sites.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
 <p>What we are aiming for is a map that someone who was not there can read at a glance: two clearly different layers, and nothing that distracts from them.</p>
 <div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -634,21 +790,61 @@ Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</
 </section>
 <section id="set-up-the-pop-ups" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="set-up-the-pop-ups"><span class="header-section-number">2.7</span> Set up the pop-ups</h2>
-<p>By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered. Let us tidy it up: click the sites layer in <span class="ui">Layers</span>, and then <span class="ui">Pop-ups</span> on the right-hand toolbar:</p>
+<p>By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered (<a href="#fig-popup-default" class="quarto-xref">Figure&nbsp;10</a>). Let us tidy it up: click the sites layer in <span class="ui">Layers</span>, and then <span class="ui">Pop-ups</span> on the right-hand toolbar:</p>
 <ol type="1">
-<li>Set the <strong>title</strong> to the site ID by clicking on the title, typing <code>{</code>, and choosing the Site ID field.</li>
-<li>Under <span class="ui">Fields list</span>, keep the fields that matter (site ID and note) and remove the rest.</li>
-<li>Check that <span class="ui">Attachments</span> is included, so that the photo is shown.</li>
-<li>Click on a few points on the map to check the result. <!-- SCREENSHOT 5: Pop-ups pane configured, with an open pop-up showing title, note and photo. images/w02/popup.png --></li>
+<li><p>Set the <strong>title</strong> to the site ID: click the <span class="ui">{ }</span> button next to the title, and choose <strong>Site ID</strong> from the list of fields.</p>
+<div id="fig-popup-title" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pop-ups pane with the title set to {site_id} and the { } button next to it">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popup-title-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/popup-title.png" class="img-fluid figure-img" alt="Pop-ups pane with the title set to {site_id} and the { } button next to it">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popup-title-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;21: Setting the pop-up title.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Open <span class="ui">Fields list</span>, click <span class="ui">Select fields</span>, and keep only <strong>Site ID</strong> and <strong>Note</strong>.</p>
+<div id="fig-popup-fields" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pop-ups pane with Fields list open, showing 2 of 8 fields: Site ID and Note">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popup-fields-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/popup-fields.png" class="img-fluid figure-img" alt="Pop-ups pane with Fields list open, showing 2 of 8 fields: Site ID and Note">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popup-fields-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;22: The fields list with Site ID and Note.
+</figcaption>
+</figure>
+</div></li>
+<li><p>Check that <span class="ui">Attachments</span> is included, so that the photo is shown.</p></li>
+<li><p>Click on a few points on the map to check the result.</p>
+<div id="fig-popup-final" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pop-up titled S01 with Site ID S01, Note UCL Main Quad, and a photo of the UCL Portico">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popup-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/popup-final.png" class="img-fluid figure-img" alt="Pop-up titled S01 with Site ID S01, Note UCL Main Quad, and a photo of the UCL Portico">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popup-final-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23: The tidied pop-up: site ID as the title, the note and the photo.
+</figcaption>
+</figure>
+</div></li>
 </ol>
 </section>
 <section id="save-your-map" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="save-your-map"><span class="header-section-number">2.8</span> Save your map</h2>
 <p>Finally, we need to save the map so that you can open it again next week:</p>
 <ol type="1">
-<li>Click <span class="ui">Save and open</span> → <span class="ui">Save as</span>.</li>
-<li>Use <code>GEOG0187 – CAT1_WG05</code> as the title, with your own group code. Please do not add your name: the map ends up in your story map, which may become part of your portfolio, and the portfolio is marked anonymously. Add a short summary, for example <em>Sites and route from fieldwork in Barcelona</em>.</li>
-<li>Click <span class="ui">Save</span>. The map will now be in <span class="ui">Content</span> → <span class="ui">My content</span>.</li>
+<li><p>Click <span class="ui">Save and open</span> → <span class="ui">Save as</span>.</p></li>
+<li><p>Use <code>GEOG0187 – CAT1_WG05</code> as the title, with your own group code. Please do not add your name: the map ends up in your story map, which may become part of your portfolio, and the portfolio is marked anonymously. Add a short summary, for example <em>Sites and route from fieldwork in Barcelona</em>.</p>
+<div id="fig-save-map" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Save map dialog with a title, folder, tags and summary, and a Save button">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-save-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/save-map.png" class="img-fluid figure-img" alt="Save map dialog with a title, folder, tags and summary, and a Save button" width="420">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-save-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;24: Saving the map (here for the test walk).
+</figcaption>
+</figure>
+</div></li>
+<li><p>Click <span class="ui">Save</span>. The map will now be in <span class="ui">Content</span> → <span class="ui">My content</span>.</p></li>
 </ol>
 <p>You do not need to share the map with anyone at this point.</p>
 </section>
@@ -660,8 +856,18 @@ Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</
 <li><label><input type="checkbox">your working group’s sites, and only those;</label></li>
 <li><label><input type="checkbox">your route as a line;</label></li>
 <li><label><input type="checkbox">clear styling for both layers;</label></li>
-<li><label><input type="checkbox">pop-ups that show the site ID, note and photo. <!-- SCREENSHOT 6: the finished map (test data): basemap, styled route and sites. images/w02/finished-map.png --></label></li>
+<li><label><input type="checkbox">pop-ups that show the site ID, note and photo.</label></li>
 </ul>
+<div id="fig-finished-map" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Finished map with a light grey basemap, the route as a thick blue line and two orange survey sites around Gordon Street">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-finished-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w02/finished-map.png" class="img-fluid figure-img" alt="Finished map with a light grey basemap, the route as a thick blue line and two orange survey sites around Gordon Street">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-finished-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;25: The finished map for the test walk.
+</figcaption>
+</figure>
+</div>
 <div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -672,7 +878,7 @@ Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you finish early, estimate how far your working group walked, and then check with the <span class="ui">Measure</span> tool (right-hand toolbar). You could also add labels with the site IDs (<span class="ui">Labels</span> on the right-hand toolbar): does this make the map easier or harder to read?</p>
+<p>If you finish early, estimate how far your working group walked, and then check with the <span class="ui">Measure</span> tool (under <span class="ui">Map tools</span>, the wrench icon on the right-hand toolbar). You could also add labels with the site IDs (<span class="ui">Labels</span>, under <span class="ui">More</span> on the right-hand toolbar): does this make the map easier or harder to read?</p>
 </div>
 </div>
 </section>
@@ -703,12 +909,20 @@ Figure&nbsp;7: The survey layer added to the map, with <span class="ui">Filter</
 <td style="text-align: left;">Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the <a href="https://github.com/jtvandijk/GEOG0187/blob/master/data/UCL_Field_Test.gpx">route from the live demonstration</a>.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">The <code>.gpx</code> file will not upload</td>
-<td style="text-align: left;">Check that the file ends in <code>.gpx</code> and was exported from the Strava <em>website</em>. You could also try a different browser.</td>
+<td style="text-align: left;">ArcGIS Online does not accept my <code>.gpx</code> file</td>
+<td style="text-align: left;">That is expected: convert it to GeoJSON first, using <a href="https://geojson.io">geojson.io</a> (see <a href="#convert-the-route-to-geojson">Convert the route to GeoJSON</a>).</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">geojson.io does not show a route</td>
+<td style="text-align: left;">Check that the file ends in <code>.gpx</code> and was exported from the Strava <em>website</em>. You could also try a different browser.</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">The route is a straight line or has big jumps</td>
 <td style="text-align: left;">The GPS signal was lost during recording. If two people in your working group recorded the route, use the other recording.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">I cannot find the right-hand toolbar buttons</td>
+<td style="text-align: left;">Click the <span class="ui">«</span> button at the bottom of the toolbar to show the names, or hover over an icon.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The photo does not show in the pop-up</td>
