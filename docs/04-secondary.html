@@ -437,7 +437,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Sign in to ArcGIS Online with <span class="ui">UCL SSO</span> (see <a href="02-mapping.html#open-map-viewer">Open Map Viewer</a>) and have a browser open. In this session, everyone works with data for Barcelona, including those of you who did their fieldwork in London. For the worksheet, you can apply the same steps to data for London (see <a href="#find-your-own-data">Find your own data</a>).</p>
+<p>Sign in to ArcGIS Online with <span class="ui">UCL SSO</span> (see <a href="02-mapping.html#open-map-viewer">Open Map Viewer</a>) and have a browser open. In this session, everyone works with data for Barcelona, including those of you who did their fieldwork in London. For the worksheet, you can apply the same steps to data for another place, such as London (see <a href="#find-your-own-data">Find your own data</a>).</p>
 </div>
 </div>
 <section id="secondary-data-and-where-it-comes-from" class="level2" data-number="4.1">
@@ -745,12 +745,15 @@ Figure&nbsp;5: A pop-up for a census section.
 </tr>
 </tbody>
 </table>
-<p>Some good places to start:</p>
+<p>Your second story map does not have to be about Barcelona: you can choose another place, as long as you explore your working group’s Urban Project theme. Some good places to start:</p>
 <ul>
-<li><strong>ArcGIS Living Atlas</strong>, via <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">Living Atlas</span>. Everything here is already a layer, so this is the easiest option.</li>
-<li><strong>Open Data BCN</strong> (<a href="https://opendata-ajuntament.barcelona.cat/en/">opendata-ajuntament.barcelona.cat</a>) for Barcelona. Most datasets are CSV tables. To find data you can map directly, filter the catalogue by format (<em>GeoJSON</em>, <em>GPKG</em> or <em>SHP</em>), or look for datasets of places that come with coordinates.</li>
-<li><strong>London</strong>: the <em>English Indices of Deprivation 2025</em> are available as a layer under <span class="ui">Browse layers</span> → <span class="ui">ArcGIS Online</span>. The <a href="https://geoportal.statistics.gov.uk">ONS Open Geography Portal</a> has boundaries (wards, LSOAs, boroughs) as files and as layers. The London Datastore (<a href="https://data.london.gov.uk">data.london.gov.uk</a>) and the ONS (<a href="https://www.ons.gov.uk">ons.gov.uk</a>) mostly offer tables.</li>
+<li><strong>ArcGIS Living Atlas</strong>, via <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">Living Atlas</span>, or search <span class="ui">ArcGIS Online</span> in the same panel. Everything here is already a layer, so this is the easiest option. The <em>English Indices of Deprivation 2025</em>, for instance, are available this way.</li>
+<li><strong>ONS Open Geography Portal</strong> (<a href="https://geoportal.statistics.gov.uk">geoportal.statistics.gov.uk</a>): boundaries for the UK’s statistical and administrative areas, such as Output Areas, LSOAs, wards and local authorities, which you can download as GeoJSON or shapefile.</li>
+<li><strong>London Datastore</strong> (<a href="https://data.london.gov.uk">data.london.gov.uk</a>): data on all aspects of London, from housing to transport and the environment. Some datasets come with boundaries or coordinates; many are tables.</li>
+<li><strong>Geographic Data Service (GeoDS)</strong> (<a href="https://geods.ac.uk">geods.ac.uk</a>): research data on people and places in the UK, such as the <em>Access to Healthy Assets and Hazards</em> index shown on the <a href="index.html">welcome page</a>. Many datasets are by LSOA, so check whether a download includes the boundaries. Some datasets require a free account.</li>
+<li><strong>Defra Data Services Platform</strong> (<a href="https://environment.data.gov.uk">environment.data.gov.uk</a>): environmental data for England, such as flood zones, protected areas and air quality, often as shapefile, GeoPackage or GeoJSON.</li>
 </ul>
+<p>If you would like to stay with Barcelona, Open Data BCN (<a href="https://opendata-ajuntament.barcelona.cat/en/">opendata-ajuntament.barcelona.cat</a>) is the place to look. Most of its datasets are tables, though: filter the catalogue by format (<em>GeoJSON</em>, <em>GPKG</em> or <em>SHP</em>) to find data you can map directly.</p>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -761,7 +764,8 @@ Figure&nbsp;5: A pop-up for a census section.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area’s name or code, and no boundaries. To map such a table, you would first need to <em>join</em> it to a boundary layer by that name or code. This is in fact how the census sections layer in the data pack was made: the income figures are published as tables, and we joined them to the census section boundaries for you. Joining is not part of this module, so look for data that already include their location. If the data you really need only come as a table, ask the teaching staff in a session.</p>
+<p>Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area’s name or code, and no boundaries. To map such a table, you would first need to <strong>join</strong> it to a boundary layer. A join links two datasets through a column they share: if a table of income per LSOA and a boundary layer of LSOAs both contain the LSOA code, the GIS matches the rows by that code and copies the income values onto the matching polygons. This is in fact how the census sections layer in the data pack was made: Barcelona publishes the income figures as tables, and we joined them to the census section boundaries for you.</p>
+<p>Joining is not part of this module, so look for data that already include their location. For those who are interested, Esri explains how to do this in ArcGIS Online with the <a href="https://doc.arcgis.com/en/arcgis-online/analyze/join-features-mv.htm">Join Features</a> tool. Note that this tool uses ArcGIS credits, so please talk to the teaching staff in a session before you try it.</p>
 </div>
 </div>
 <p>Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.</p>

@@ -8,7 +8,7 @@ So far, we have mapped data that you collected yourself. Most of the maps you wi
 
 ::: {.callout-important}
 ## Before the session
-Sign in to ArcGIS Online with [UCL SSO]{.ui} (see [Open Map Viewer]({{< var urls.w02 >}}#open-map-viewer)) and have a browser open. In this session, everyone works with data for Barcelona, including those of you who did their fieldwork in London. For the worksheet, you can apply the same steps to data for London (see [Find your own data](#find-your-own-data)).
+Sign in to ArcGIS Online with [UCL SSO]{.ui} (see [Open Map Viewer]({{< var urls.w02 >}}#open-map-viewer)) and have a browser open. In this session, everyone works with data for Barcelona, including those of you who did their fieldwork in London. For the worksheet, you can apply the same steps to data for another place, such as London (see [Find your own data](#find-your-own-data)).
 :::
 
 ## Secondary data and where it comes from
@@ -157,15 +157,21 @@ For the worksheet, you do not have to use the data pack above. You now know two 
 | A CSV with latitude and longitude columns, one row per place | Locations of facilities, markets or trees | Yes: [Add layer from file]{.ui} turns each row into a point. Check that ArcGIS picks the right columns for the location. |
 | A table of values per area, with only the area's name or code | Most statistics, such as income per neighbourhood or per LSOA | Not in this module: see the warning below |
 
-Some good places to start:
+Your second story map does not have to be about Barcelona: you can choose another place, as long as you explore your working group's Urban Project theme. Some good places to start:
 
-- **ArcGIS Living Atlas**, via [Add]{.ui} → [Browse layers]{.ui} → [Living Atlas]{.ui}. Everything here is already a layer, so this is the easiest option.
-- **Open Data BCN** ([opendata-ajuntament.barcelona.cat](https://opendata-ajuntament.barcelona.cat/en/)) for Barcelona. Most datasets are CSV tables. To find data you can map directly, filter the catalogue by format (*GeoJSON*, *GPKG* or *SHP*), or look for datasets of places that come with coordinates.
-- **London**: the *English Indices of Deprivation 2025* are available as a layer under [Browse layers]{.ui} → [ArcGIS Online]{.ui}. The [ONS Open Geography Portal](https://geoportal.statistics.gov.uk) has boundaries (wards, LSOAs, boroughs) as files and as layers. The London Datastore ([data.london.gov.uk](https://data.london.gov.uk)) and the ONS ([ons.gov.uk](https://www.ons.gov.uk)) mostly offer tables.
+- **ArcGIS Living Atlas**, via [Add]{.ui} → [Browse layers]{.ui} → [Living Atlas]{.ui}, or search [ArcGIS Online]{.ui} in the same panel. Everything here is already a layer, so this is the easiest option. The *English Indices of Deprivation 2025*, for instance, are available this way.
+- **ONS Open Geography Portal** ([geoportal.statistics.gov.uk](https://geoportal.statistics.gov.uk)): boundaries for the UK's statistical and administrative areas, such as Output Areas, LSOAs, wards and local authorities, which you can download as GeoJSON or shapefile.
+- **London Datastore** ([data.london.gov.uk](https://data.london.gov.uk)): data on all aspects of London, from housing to transport and the environment. Some datasets come with boundaries or coordinates; many are tables.
+- **Geographic Data Service (GeoDS)** ([geods.ac.uk](https://geods.ac.uk)): research data on people and places in the UK, such as the *Access to Healthy Assets and Hazards* index shown on the [welcome page](index.html). Many datasets are by LSOA, so check whether a download includes the boundaries. Some datasets require a free account.
+- **Defra Data Services Platform** ([environment.data.gov.uk](https://environment.data.gov.uk)): environmental data for England, such as flood zones, protected areas and air quality, often as shapefile, GeoPackage or GeoJSON.
+
+If you would like to stay with Barcelona, Open Data BCN ([opendata-ajuntament.barcelona.cat](https://opendata-ajuntament.barcelona.cat/en/)) is the place to look. Most of its datasets are tables, though: filter the catalogue by format (*GeoJSON*, *GPKG* or *SHP*) to find data you can map directly.
 
 ::: {.callout-warning}
 ## Tables are not maps
-Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to *join* it to a boundary layer by that name or code. This is in fact how the census sections layer in the data pack was made: the income figures are published as tables, and we joined them to the census section boundaries for you. Joining is not part of this module, so look for data that already include their location. If the data you really need only come as a table, ask the teaching staff in a session.
+Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to **join** it to a boundary layer. A join links two datasets through a column they share: if a table of income per LSOA and a boundary layer of LSOAs both contain the LSOA code, the GIS matches the rows by that code and copies the income values onto the matching polygons. This is in fact how the census sections layer in the data pack was made: Barcelona publishes the income figures as tables, and we joined them to the census section boundaries for you.
+
+Joining is not part of this module, so look for data that already include their location. For those who are interested, Esri explains how to do this in ArcGIS Online with the [Join Features](https://doc.arcgis.com/en/arcgis-online/analyze/join-features-mv.htm) tool. Note that this tool uses ArcGIS credits, so please talk to the teaching staff in a session before you try it.
 :::
 
 Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.
