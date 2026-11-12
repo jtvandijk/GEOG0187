@@ -117,8 +117,19 @@ The session has two parts. First, we will check that the tools work: that you ca
 ### Test the tools
 We will start with a live demonstration of a test walk done with the same instructions, showing you how to get the route out of Strava, how to fill in the field survey, and what the data look like in ArcGIS Online. You will then do the same yourself:
 
-1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava website, not from the app, so you will need a laptop or computer for this step. Log in at [strava.com](https://www.strava.com), open your test walk, open the [⋯]{.ui} (more actions) menu next to the activity, and choose [Export GPX]{.ui}. Check that a `.gpx` file has been downloaded.
-<!-- SCREENSHOT 4: Strava website, activity page with the ⋯ menu open and "Export GPX" visible. images/w01/strava-export.png -->
+1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava website, not from the app, so you will need a laptop or computer for this step:
+   - Log in at [strava.com](https://www.strava.com). Your test walk appears on your dashboard: click its name (`UCL Field Test`) to open the activity.
+
+     ![](images/w01/strava-web-dashboard.png){width=480 fig-alt="Strava dashboard on the website, with the UCL Field Test activity in the feed"}
+
+   - On the activity page, click the [⋯]{.ui} (more actions) button on the left, below the pencil icon.
+
+     ![](images/w01/strava-web-activity.png){fig-alt="Strava activity page for UCL Field Test, with the pencil and more actions buttons on the left"}
+
+   - Choose [Export GPX]{.ui}, and check that a `.gpx` file has been downloaded.
+
+     ![](images/w01/strava-web-export.png){fig-alt="Strava activity page with the more actions menu open and Export GPX highlighted"}
+
 2. **Try the field survey.** Open the [test survey]({{< var urls.links >}}#test-link) and submit one test entry from the room:
    - **Data collection** and **Working group number** are already filled in as `Fieldwork - Test` and `0`, and cannot be changed.
    - For **Site ID**, enter `S00`.
