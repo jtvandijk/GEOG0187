@@ -11,7 +11,7 @@ Last week, you made a map of your working group's sites and route. This week, we
 Please make sure you have the following ready before the session starts:
 
 - your saved web map from last week, which you can find in [Content]{.ui} → [My content]{.ui};
-- your working group's photos and any videos, downloaded to the laptop you will be working on (your working group shares these in its own OneDrive folder);
+- your working group's photos and any videos, downloaded to the laptop you will be working on (your working group shares these in its own OneDrive or Google Drive folder);
 - the worksheet brief for this task. The brief sets out what your story map must contain; this chapter shows you *how* to build it.
 :::
 

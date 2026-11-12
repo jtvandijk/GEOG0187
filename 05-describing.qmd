@@ -46,7 +46,7 @@ Before we can load the data, we need to set up an RStudio project for the three 
 
 1. In RStudio, go to [File]{.ui} → [New Project]{.ui} → [New Directory]{.ui} → [New Project]{.ui}. Call it `GEOG0187-stats`, save it somewhere sensible (not your Downloads folder), and click [Create Project]{.ui}.
 2. In the [Files]{.ui} pane, click [New Folder]{.ui} and create a folder called `data`.
-3. Download the dataset and save it in that `data` folder:
+3. Download the dataset and save it in that `data` folder. The link opens the file on GitHub: click the download button (↓, *Download raw file*) at the top right of the file, and move the file into your `data` folder if your browser saved it elsewhere.
 
 | File | Type | Link |
 | :--- | :--- | :--- |
@@ -130,7 +130,7 @@ lsoa |>
 ```
 
 ::: {.callout-note}
-Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a *Living Environment* domain that partly measures air quality, so comparing NO~2~ with the IMD would partly mean comparing air pollution with itself. Using Income deprivation only avoids this problem.
+Why do we use income deprivation rather than the overall Index of Multiple Deprivation (IMD)? The IMD includes a *Living Environment* domain that partly measures air quality, so comparing NO~2~ with the IMD would partly mean comparing air pollution with itself. Using income deprivation only avoids this problem.
 :::
 
 ## Describing a single variable
