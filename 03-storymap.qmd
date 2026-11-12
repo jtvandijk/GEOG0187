@@ -36,12 +36,19 @@ ArcGIS StoryMaps changes its layout regularly. This chapter therefore describes 
 ## Create the story
 Let us start by creating a new story and setting up its cover:
 
-1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}), sign in with [UCL SSO]{.ui}, and open [StoryMaps]{.ui} from the app launcher or the top menu.
-2. Click [New story]{.ui}. This opens the **story builder**, in which you write directly in the page and add content with the [+]{.ui} button that appears between blocks.
-3. Click on the title placeholder and type your main title. Keep it short and specific, and make it about your theme rather than something like "My story map".
-4. In the cover, add your candidate number and your group code (for example `CAT1_WG05`, as in the title of your map) as the subtitle. Please do not put your name anywhere: if your name is shown as the author on the cover, remove it in the cover settings. A story map you submit as a formative worksheet does not need to be anonymous, but it may become part of your portfolio, which is marked anonymously, so it is easiest to leave your name out from the start.
+1. Go to [{{< var arcgis.org >}}]({{< var arcgis.org >}}) and sign in with [UCL SSO]{.ui}. Open the app launcher (the grid of nine dots, top right) and click [StoryMaps]{.ui}. StoryMaps opens in a new tab.
+
+   ![Opening StoryMaps from the app launcher.](images/w03/app-launcher.png){#fig-app-launcher fig-alt="ArcGIS Online home page with the app launcher open and StoryMaps highlighted"}
+
+2. Click [Create]{.ui} → [Story]{.ui}. This opens the **story builder**, in which you write directly in the page and add content with the [+]{.ui} button that appears between blocks.
+
+   ![Creating a new story.](images/w03/create-story.png){#fig-create-story fig-alt="ArcGIS StoryMaps content page with the Create menu open and Story at the top of the list of content types"}
+
+3. Click on the title placeholder and type your main title. Keep it short and specific, and make it about your theme rather than something like "My story map". You can add a subtitle underneath.
+4. Below the subtitle is the **byline**, which shows your name by default. Replace it with your candidate number and your group code (for example `ABCD1 - CAT1_WG05`, with the group code as in the title of your map). Please do not put your name anywhere in the story: a story map you submit as a formative worksheet does not need to be anonymous, but it may become part of your portfolio, which is marked anonymously, so it is easiest to leave your name out from the start.
 5. Choose a cover design that suits your theme, and pick a cover image from your working group's photos.
-<!-- SCREENSHOT 1: story builder, cover with title, candidate number and group number. images/w03/cover.png -->
+
+   ![Cover for the **test walk**, with a made-up candidate number and `TEST` in the byline. Your byline shows your own candidate number and group code.](images/w03/cover.png){#fig-cover fig-alt="Story builder with a cover titled UCL Campus, subtitle Getting a coffee, byline ABCD1 - TEST, and a photo of columns as cover image"}
 
 Your story is saved automatically as a draft in your own ArcGIS Online content.
 
@@ -108,7 +115,7 @@ The submission itself is explained in the worksheet brief and on Moodle.
 ## Before you leave
 By the end of this session, your story map should have:
 
-- [ ] a title, your candidate number, your group code, and no name;
+- [ ] a title, and your candidate number and group code in the byline, with no name;
 - [ ] your main headings in place, even if some sections are still empty;
 - [ ] your web map embedded, with a legend, zoom and expand buttons, and working pop-ups;
 - [ ] at least one photo with a caption;
@@ -122,6 +129,6 @@ You have until the worksheet deadline to finish your story map. You can use the 
 | I cannot find my web map | Go to [Content]{.ui} → [My content]{.ui}, or search for `GEOG0187`. If you did not save it last week, do that first. |
 | The map shows no photos in the pop-ups | Open the web map again and check that [Attachments]{.ui} is switched on under [Pop-ups]{.ui}. |
 | The map does not load when signed out | Share the web map and its layers with [Everyone (public)]{.ui}, then reload the story in a private window. |
-| My name is shown on the cover | Remove it from the author setting in the cover options. Your portfolio is marked anonymously. |
+| My name is shown on the cover | Click the byline under the subtitle and replace your name with your candidate number and group code. Your portfolio is marked anonymously. |
 | A photo or video upload fails | Reduce the file size, try a different browser, or use a link for the video. |
 | I lost my story | Go to [StoryMaps]{.ui} → [My stories]{.ui}. Drafts are saved automatically. |
