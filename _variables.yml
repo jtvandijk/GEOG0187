@@ -22,6 +22,7 @@ fieldwork:
 arcgis:
   org: "https://uclondon.maps.arcgis.com"
   layer: "UCL Geography Field Survey_results"
+  demo_gpx: "https://github.com/jtvandijk/GEOG0187/blob/master/data/UCL_Field_Test.gpx"
 
 # Secondary data pack (session 4, 26 Feb). Names must match the layers published in the UCL org.
 secondary:

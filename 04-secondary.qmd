@@ -49,7 +49,7 @@ The data pack consists of three layers for Barcelona that we have prepared for y
    - `gini_2024_pct`: the Gini index of tax income, 2024 (a higher value means a more unequal distribution).
 3. Add `{{< var secondary.bcn_barris >}}` and `{{< var secondary.bcn_districts >}}`, which contain the boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.
 
-![](images/w04/browse-bcn.png){fig-alt="Browse layers panel set to My organization, with the three GEOG0187 Barcelona layers in the search results"}
+![The Barcelona layers under [My organization]{.ui}.](images/w04/browse-bcn.png){#fig-browse-bcn fig-alt="Browse layers panel set to My organization, with the three GEOG0187 Barcelona layers in the search results"}
 
 4. Open [Layers]{.ui} and check the order. The layer at the *top* of the list is drawn on top of the others, so the census sections should be at the *bottom*, with the neighbourhoods above them and the districts at the top. If the order is different, drag the layers by their handle (⠿) on the left.
 
@@ -71,7 +71,7 @@ Now that the data are on the map, we can turn the main layer into a choropleth:
 2. Under [Choose attributes]{.ui}, click [+ Field]{.ui} and pick `disp_income_pc_2023_eur`.
 3. Under [Pick a style]{.ui}, select [Counts and Amounts (color)]{.ui} and click [Style options]{.ui}.
 
-![](images/w04/styles.png){fig-alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected"}
+![Styling the census sections by disposable income.](images/w04/styles.png){#fig-styles fig-alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected"}
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
@@ -80,7 +80,7 @@ With [Equal interval]{.ui}, every class has the same width; with [Quantile]{.ui}
 
 4. In [Style options]{.ui}, switch on [Classify data]{.ui}. Under [Method]{.ui}, try [Natural breaks]{.ui}, [Quantile]{.ui} and [Equal interval]{.ui} in turn, and set [Number of classes]{.ui} to 5 each time. Look at how the map and the class limits change. Was your guess right?
 
-![](images/w04/classify.png){fig-alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath"}
+![Classifying the data into quantiles.](images/w04/classify.png){#fig-classify fig-alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath"}
 
 5. Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.
 6. Click [Done]{.ui}, and open [Legend]{.ui} on the left-hand toolbar. Does the legend make clear what is being shown, and in which units? A name such as `disp_income_pc_2023_eur` does not. To change this, click [Fields]{.ui} on the right-hand toolbar, and click on the field. In the panel that opens, type a readable [Display name]{.ui}, such as *Disposable income per person, 2023 (€)*. You can rename the layer itself via its [⋯]{.ui} menu in [Layers]{.ui} → [Rename]{.ui}.
@@ -96,7 +96,7 @@ Next, let us see how much the picture depends on the size of the areas. For this
 4. Close the [Symbol style]{.ui} panel and click [Done]{.ui}.
 5. Do the same for the districts, with a thicker outline (for example 2 or 3 px under [Outline width]{.ui}), so that you can tell the two apart.
 
-![](images/w04/no-fill.png){fig-alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline"}
+![Neighbourhoods with no fill and a black outline.](images/w04/no-fill.png){#fig-no-fill fig-alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline"}
 
 6. Zoom into one district.
 
@@ -122,7 +122,7 @@ A good pop-up does more than just show numbers. Let us set one up for the main l
 
 7. Click on a few areas to check the result.
 
-![](images/w04/popup.png){fig-alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block"}
+![A pop-up for a census section.](images/w04/popup.png){#fig-popup fig-alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block"}
 
 ## Evaluate your data
 To finish, choose one variable from your data pack and answer the five questions from [Secondary data and where it comes from](#secondary-data-and-where-it-comes-from). Then think of two or three limitations of the data. The following questions can help you with this:

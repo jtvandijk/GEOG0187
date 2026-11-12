@@ -69,6 +69,8 @@ Next, we will add your working group's route from Strava:
 <!-- SCREENSHOT 4: Add layer from file dialog for a .gpx, hosted feature layer option visible. images/w02/add-gpx.png -->
 3. The route now appears as a line on the map. Check that it matches where you walked. If you have several recordings, you can add each `.gpx` file in the same way.
 
+If you do not have your working group's `.gpx` file yet, you can practise with the [route from the live demonstration]({{< var arcgis.demo_gpx >}}) (use the download button on the right), and add your own route later in the same way.
+
 
 ::: {.callout-tip}
 ## Save early
@@ -131,7 +133,7 @@ If you finish early, estimate how far your working group walked, and then check 
 | :------ | :---------- |
 | The survey layer does not appear in the search | Check that you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through [UCL SSO]{.ui}. |
 | No sites are left after filtering | Check that your filter uses exactly the same fieldwork group and working group number as your working group's [survey link]({{< var urls.links >}}). If your sites are still missing, ask the teaching staff. |
-| I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the route from the live demonstration. |
+| I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the [route from the live demonstration]({{< var arcgis.demo_gpx >}}). |
 | The `.gpx` file will not upload | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
 | The route is a straight line or has big jumps | The GPS signal was lost during recording. If two people in your working group recorded the route, use the other recording. |
 | The photo does not show in the pop-up | Check that [Attachments]{.ui} is switched on under [Pop-ups]{.ui}. Note that not every entry has a photo. |

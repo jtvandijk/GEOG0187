@@ -516,7 +516,16 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Add <code>GEOG0187 Barcelona - Neighbourhoods</code> and <code>GEOG0187 Barcelona - Districts</code>, which contain the boundaries of the 73 neighbourhoods and 10 districts. You will use these as context.</li>
 </ol>
-<p><img src="images/w04/browse-bcn.png" class="img-fluid" alt="Browse layers panel set to My organization, with the three GEOG0187 Barcelona layers in the search results"></p>
+<div id="fig-browse-bcn" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Browse layers panel set to My organization, with the three GEOG0187 Barcelona layers in the search results">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-browse-bcn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w04/browse-bcn.png" class="img-fluid figure-img" alt="Browse layers panel set to My organization, with the three GEOG0187 Barcelona layers in the search results">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-browse-bcn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The Barcelona layers under <span class="ui">My organization</span>.
+</figcaption>
+</figure>
+</div>
 <ol start="4" type="1">
 <li>Open <span class="ui">Layers</span> and check the order. The layer at the <em>top</em> of the list is drawn on top of the others, so the census sections should be at the <em>bottom</em>, with the neighbourhoods above them and the districts at the top. If the order is different, drag the layers by their handle (⠿) on the left.</li>
 </ol>
@@ -555,7 +564,16 @@ ul.task-list li input[type="checkbox"] {
 <li>Under <span class="ui">Choose attributes</span>, click <span class="ui">+ Field</span> and pick <code>disp_income_pc_2023_eur</code>.</li>
 <li>Under <span class="ui">Pick a style</span>, select <span class="ui">Counts and Amounts (color)</span> and click <span class="ui">Style options</span>.</li>
 </ol>
-<p><img src="images/w04/styles.png" class="img-fluid" alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected"></p>
+<div id="fig-styles" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-styles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w04/styles.png" class="img-fluid figure-img" alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-styles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Styling the census sections by disposable income.
+</figcaption>
+</figure>
+</div>
 <div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -572,7 +590,16 @@ ul.task-list li input[type="checkbox"] {
 <ol start="4" type="1">
 <li>In <span class="ui">Style options</span>, switch on <span class="ui">Classify data</span>. Under <span class="ui">Method</span>, try <span class="ui">Natural breaks</span>, <span class="ui">Quantile</span> and <span class="ui">Equal interval</span> in turn, and set <span class="ui">Number of classes</span> to 5 each time. Look at how the map and the class limits change. Was your guess right?</li>
 </ol>
-<p><img src="images/w04/classify.png" class="img-fluid" alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath"></p>
+<div id="fig-classify" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-classify-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w04/classify.png" class="img-fluid figure-img" alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-classify-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Classifying the data into quantiles.
+</figcaption>
+</figure>
+</div>
 <ol start="5" type="1">
 <li>Choose a single-hue colour ramp. If the polygon outlines clutter the map, switch them off or make them thinner.</li>
 <li>Click <span class="ui">Done</span>, and open <span class="ui">Legend</span> on the left-hand toolbar. Does the legend make clear what is being shown, and in which units? A name such as <code>disp_income_pc_2023_eur</code> does not. To change this, click <span class="ui">Fields</span> on the right-hand toolbar, and click on the field. In the panel that opens, type a readable <span class="ui">Display name</span>, such as <em>Disposable income per person, 2023 (€)</em>. You can rename the layer itself via its <span class="ui">⋯</span> menu in <span class="ui">Layers</span> → <span class="ui">Rename</span>.</li>
@@ -589,7 +616,16 @@ ul.task-list li input[type="checkbox"] {
 <li>Close the <span class="ui">Symbol style</span> panel and click <span class="ui">Done</span>.</li>
 <li>Do the same for the districts, with a thicker outline (for example 2 or 3 px under <span class="ui">Outline width</span>), so that you can tell the two apart.</li>
 </ol>
-<p><img src="images/w04/no-fill.png" class="img-fluid" alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline"></p>
+<div id="fig-no-fill" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-no-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w04/no-fill.png" class="img-fluid figure-img" alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-no-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Neighbourhoods with no fill and a black outline.
+</figcaption>
+</figure>
+</div>
 <ol start="6" type="1">
 <li>Zoom into one district.</li>
 </ol>
@@ -632,7 +668,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Below that, add a short interpretive note: one sentence on what the value means in context. Click <span class="ui">OK</span>.</p></li>
 <li><p>Click on a few areas to check the result.</p></li>
 </ol>
-<p><img src="images/w04/popup.png" class="img-fluid" alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block"></p>
+<div id="fig-popup" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w04/popup.png" class="img-fluid figure-img" alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: A pop-up for a census section.
+</figcaption>
+</figure>
+</div>
 </section>
 <section id="evaluate-your-data" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="evaluate-your-data"><span class="header-section-number">4.7</span> Evaluate your data</h2>
