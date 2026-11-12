@@ -171,7 +171,7 @@ If you would like to stay with Barcelona, Open Data BCN ([opendata-ajuntament.ba
 ## Tables are not maps
 Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to **join** it to a boundary layer. A join links two datasets through a column they share: if a table of income per LSOA and a boundary layer of LSOAs both contain the LSOA code, the GIS matches the rows by that code and copies the income values onto the matching polygons. This is in fact how the census sections layer in the data pack was made: Barcelona publishes the income figures as tables, and we joined them to the census section boundaries for you.
 
-Joining is not part of this module, so look for data that already include their location. For those who are interested, Esri explains how to do this in ArcGIS Online with the [Join Features](https://doc.arcgis.com/en/arcgis-online/analyze/join-features-mv.htm) tool. Note that this tool uses ArcGIS credits, so please talk to the teaching staff in a session before you try it.
+Joining is not part of this module, so look for data that already include their location. For those who are interested, Esri explains how to do this in ArcGIS Online with the [Join Features](https://doc.arcgis.com/en/arcgis-online/analyze/join-features-mv.htm) tool.
 :::
 
 Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.
