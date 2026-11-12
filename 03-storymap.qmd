@@ -101,7 +101,7 @@ Photos are where your story comes to life. To add one:
    ![[Image]{.ui} in the [+]{.ui} menu.](images/w03/image-menu.png){#fig-image-menu fig-alt="The block menu scrolled down to Media, with Image highlighted"}
 
 2. Add a **caption** under every photo that says what it shows and why it matters for your story. If the photo comes from your working group's shared folder, mention this.
-3. Add **alt text**, so that the image can be understood by someone using a screen reader: hover over the image, click the options button (the cog), open the [Accessibility]{.ui} tab, and type a short description in [Alternative text]{.ui}. Describe what the photo shows, for example *A building on Gordon Street covered in a green wall of plants*, without starting with "An image of".
+3. Add **alt text**, so that the image can be understood by someone using a screen reader: hover over the image, click the options button (the cog), open the [Accessibility]{.ui} tab, and type a short description in [Alternative text]{.ui}. Describe what the photo shows, for example *A building on Gordon Street covered in a green wall of plants*, without starting with "An image of". You can also click [Suggest]{.ui} to let StoryMaps draft the alt text for you with AI: read the suggestion, correct anything that is wrong or missing, and then [Save]{.ui} it.
 
    ![A photo from the **test walk**, with its caption. Your captions say what each photo shows and why it matters.](images/w03/image-block.png){#fig-image-block fig-alt="Image block in the story showing a building with a green wall and a red car, with the caption S02, Gordon Street"}
 
