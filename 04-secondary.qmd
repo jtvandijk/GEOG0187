@@ -157,7 +157,7 @@ For the worksheet, you do not have to use the data pack above. You now know two 
 | A CSV with latitude and longitude columns, one row per place | Locations of facilities, markets or trees | Yes: [Add layer from file]{.ui} turns each row into a point. Check that ArcGIS picks the right columns for the location. |
 | A table of values per area, with only the area's name or code | Most statistics, such as income per neighbourhood or per LSOA | Not in this module: see the warning below |
 
-Your second story map does not have to be about Barcelona: you can choose another place, as long as you explore your working group's Urban Project theme. Some good places to start:
+Your second story map does not have to be about Barcelona, or about your Urban Project theme: you can choose any place and topic that interests you. Some good places to start:
 
 - **ArcGIS Living Atlas**, via [Add]{.ui} → [Browse layers]{.ui} → [Living Atlas]{.ui}, or search [ArcGIS Online]{.ui} in the same panel. Everything here is already a layer, so this is the easiest option. The *English Indices of Deprivation 2025*, for instance, are available this way.
 - **ONS Open Geography Portal** ([geoportal.statistics.gov.uk](https://geoportal.statistics.gov.uk)): boundaries for the UK's statistical and administrative areas, such as Output Areas, LSOAs, wards and local authorities, which you can download as GeoJSON or shapefile.
