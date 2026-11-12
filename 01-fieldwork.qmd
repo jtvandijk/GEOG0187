@@ -42,7 +42,7 @@ Both datasets are collected once per working group. One or two people in your wo
 
 ::: {.callout-note}
 ## If your screen looks different
-Apps and websites change their layout regularly. This chapter therefore describes *what* to tap by its label (e.g. [Record]{.ui}) rather than relying on screenshots. If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.
+Apps and websites change their layout regularly, so the screenshots in this chapter may not match your phone exactly. The steps therefore also describe *what* to tap by its label (e.g. [Workout]{.ui}). If a label has moved or been renamed, look for the closest equivalent, and ask in class if you cannot find it.
 :::
 
 ## Before the session
@@ -81,10 +81,26 @@ Next, we will make sure that you can open the field survey and sign in to it:
 ### Do a test walk
 Finally, let us check that Strava actually records your route by going for a short test walk:
 
-1. Somewhere outside, open Strava, tap [Record]{.ui}, choose [Walk]{.ui} as the activity type, and start recording. You can lock your phone while you walk, as Strava keeps recording in the background.
+1. Somewhere outside, open Strava and tap the [Workout]{.ui} tab. Select [Walk]{.ui} as the sport (if it is not listed, tap [More sports]{.ui}), and tap [Start]{.ui}. You can lock your phone while you walk, as Strava keeps recording in the background.
+
+   ::: {layout-ncol=2}
+   ![](images/w01/strava-workout.png){width=230 fig-alt="Strava Workout tab with Run, Ride and More sports"}
+
+   ![](images/w01/strava-sport.png){width=230 fig-alt="Strava Choose a Sport list with Walk under Foot Sports"}
+   :::
+
 2. Walk for about 10 minutes.
-3. Stop the recording ([Stop]{.ui} → [Finish]{.ui}), name the activity `GEOG0187 test walk`, and [Save]{.ui} it.
+3. Stop the recording ([Stop]{.ui} → [Finish]{.ui}), name the activity `UCL Field Test`, check that the sport is [Walk]{.ui}, and tap [Save Activity]{.ui}.
+
+   ::: {layout-ncol=2}
+   ![](images/w01/strava-finish.png){width=230 fig-alt="Paused Strava recording after 10 minutes, with Resume and Finish buttons"}
+
+   ![](images/w01/strava-save.png){width=230 fig-alt="Strava Save Activity screen with the activity named UCL Field Test and the sport set to Walk"}
+   :::
+
 4. Check that your route looks right on the map, and take note of how much battery the walk used.
+
+   ![](images/w01/strava-route.png){width=260 fig-alt="Saved Strava activity showing the walked route on a map around Gordon Street"}
 
 ### Bring to the session
 Please bring the following with you to the session:
@@ -104,10 +120,21 @@ We will start with a live demonstration of a test walk done with the same instru
 2. **Try the field survey.** Open the [test survey]({{< var urls.links >}}#test-link) and submit one test entry from the room:
    - **Data collection** and **Working group number** are already filled in as `Fieldwork - Test` and `0`, and cannot be changed.
    - For **Site ID**, enter `S00`.
-   - For **Location**, tap [Allow]{.ui} when asked, and check that the dot on the map is roughly where you are. If it is not, wait a few seconds or drag it to the right spot.
+   - For **Location**, tap [Allow]{.ui} when your browser asks to use your location, and check that the pin on the map is roughly where you are. If it is not, wait a few seconds, or tap the map, move the map until the crosshair is on the right spot, and tap [OK]{.ui}.
    - For the **photo** and the **short note**, anything will do.
    - Tap [Submit]{.ui} and check that you see a confirmation.
-<!-- SCREENSHOT 5: the field survey on an iPhone, filled in, with the location map visible. images/w01/survey-form.png -->
+   - To submit another entry, refresh the page in your browser and the form opens again.
+
+   ::: {layout-ncol=2}
+   ![](images/w01/survey-allow-location.png){width=230 fig-alt="Browser prompt asking to allow survey123.arcgis.com to use your current location"}
+
+   ![](images/w01/survey-form.png){width=230 fig-alt="Field survey on a phone with Fieldwork - Test and working group 0 filled in, and the location shown on a map"}
+
+   ![](images/w01/survey-location.png){width=230 fig-alt="Field survey location screen with a crosshair to move the pin, and an OK button"}
+
+   ![](images/w01/survey-submitted.png){width=230 fig-alt="Field survey confirmation: Thank you. Your response was submitted successfully."}
+   :::
+
 3. **Fix any problems.** If something did not work, try to sort it out first with your working group and the students around you, using the [troubleshooting table](#troubleshooting), which covers the most common issues. If you are still stuck, or have any other questions, ask the teaching staff for help.
 
 By the end of this part, everyone should have exported a `.gpx` file and submitted one test entry from their own phone.
@@ -137,10 +164,10 @@ Finally, whoever logs the sites, and whoever takes over from them, saves your wo
 ## In Catalonia
 Once you are in Catalonia, there are a few things to keep in mind:
 
-- Whoever logs the sites opens the survey from the home screen icon you saved in the session, and submits one entry per site while standing at the site. Your fieldwork group and working group number are filled in for you, so you only add the site ID, location, photo and note.
+- Whoever logs the sites opens the survey from the home screen icon you saved in the session, and submits one entry per site while standing at the site. Your fieldwork group and working group number are filled in for you, so you only add the site ID, location, photo and note. After each submission, refresh the page to open a new, empty form.
 - Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
 - Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.
-- If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by dragging the dot to the right location on the map.
+- If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by moving the crosshair to the right location on the map.
 - Please be considerate. Survey entries will be **public**, because they appear in the story maps you publish later on. So do not take photos in which people's faces can be recognised, do not put anyone's name or other personal details in your notes, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
 
 ::: {.callout-tip}
@@ -163,6 +190,6 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | **Data collection** or **Working group number** is empty | The link lost its details, for instance because you had to sign in first. Close the form without submitting, open your working group's link again from the [Field Survey Links]({{< var urls.links >}}) page, and save that one to your home screen instead. |
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
-| The point is in the wrong place | Drag the dot on the map to the correct location before submitting. |
+| The point is in the wrong place | Tap the map, move it until the crosshair is on the correct location, and tap [OK]{.ui} before submitting. |
 | There is no confirmation after [Submit]{.ui} | Check that you have a connection, then tap [Submit]{.ui} again. Any required fields that are missing are highlighted in the form. |
 | The photo will not upload | Try again on wifi, or submit without the photo and write the site ID down alongside the photo instead. |

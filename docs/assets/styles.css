@@ -112,3 +112,8 @@ main li, main li p {
 .callout.exercise .callout-title-container {
     color: var(--main-color);
 }
+
+/* phone screenshots side by side: keep them phone-sized when columns stack */
+.quarto-layout-cell img[width="230"] {
+  max-width: 230px;
+}
