@@ -148,15 +148,24 @@ By the end of this session, you should have:
 - [ ] notes on the five questions and two or three limitations of your data.
 
 ## Find your own data
-For the worksheet, you do not have to use the data pack above. If you would like to find your own data, the following are good places to start:
+For the worksheet, you do not have to use the data pack above. You now know two ways of getting data into Map Viewer: browsing for a layer that is already in ArcGIS Online, as with the data pack, and adding a file, as with your route. That means you can bring in other data too. The question to ask of any dataset you find is: **does it come with its location?**
 
-- ArcGIS Living Atlas, via [Add]{.ui} → [Browse layers]{.ui} → [Living Atlas]{.ui}.
-- Open Data BCN ([opendata-ajuntament.barcelona.cat](https://opendata-ajuntament.barcelona.cat/en/)) for Barcelona.
-- The London Datastore ([data.london.gov.uk](https://data.london.gov.uk)), the ONS ([ons.gov.uk](https://www.ons.gov.uk)) and data.gov.uk for London and the UK. The *English Indices of Deprivation 2025* are also available as a layer in ArcGIS Online, under [Browse layers]{.ui} → [ArcGIS Online]{.ui}.
+| What you find | Example | Can you map it here? |
+| :------------ | :------ | :------------------- |
+| A layer in ArcGIS Online or the Living Atlas | Boundaries, census and deprivation layers | Yes: [Add]{.ui} → [Browse layers]{.ui} |
+| A file with its geometry: GeoJSON, a zipped shapefile, KML or GeoPackage | Some Open Data BCN datasets; ONS boundary files | Yes: [Add]{.ui} → [Add layer from file]{.ui}, as with your route |
+| A CSV with latitude and longitude columns, one row per place | Locations of facilities, markets or trees | Yes: [Add layer from file]{.ui} turns each row into a point. Check that ArcGIS picks the right columns for the location. |
+| A table of values per area, with only the area's name or code | Most statistics, such as income per neighbourhood or per LSOA | Not in this module: see the warning below |
+
+Some good places to start:
+
+- **ArcGIS Living Atlas**, via [Add]{.ui} → [Browse layers]{.ui} → [Living Atlas]{.ui}. Everything here is already a layer, so this is the easiest option.
+- **Open Data BCN** ([opendata-ajuntament.barcelona.cat](https://opendata-ajuntament.barcelona.cat/en/)) for Barcelona. Most datasets are CSV tables. To find data you can map directly, filter the catalogue by format (*GeoJSON*, *GPKG* or *SHP*), or look for datasets of places that come with coordinates.
+- **London**: the *English Indices of Deprivation 2025* are available as a layer under [Browse layers]{.ui} → [ArcGIS Online]{.ui}. The [ONS Open Geography Portal](https://geoportal.statistics.gov.uk) has boundaries (wards, LSOAs, boroughs) as files and as layers. The London Datastore ([data.london.gov.uk](https://data.london.gov.uk)) and the ONS ([ons.gov.uk](https://www.ons.gov.uk)) mostly offer tables.
 
 ::: {.callout-warning}
 ## Tables are not maps
-Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to *join* it to a boundary layer, which we do not cover in this module. So look for data that already include their geometry: a layer in ArcGIS Online or the Living Atlas, or a download offered as GeoJSON or a zipped shapefile, which you can add with [Add]{.ui} → [Add layer from file]{.ui}.
+Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area's name or code, and no boundaries. To map such a table, you would first need to *join* it to a boundary layer by that name or code. This is in fact how the census sections layer in the data pack was made: the income figures are published as tables, and we joined them to the census section boundaries for you. Joining is not part of this module, so look for data that already include their location. If the data you really need only come as a table, ask the teaching staff in a session.
 :::
 
 Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.

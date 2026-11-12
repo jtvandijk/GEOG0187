@@ -708,11 +708,48 @@ Figure&nbsp;5: A pop-up for a census section.
 </section>
 <section id="find-your-own-data" class="level2" data-number="4.10">
 <h2 data-number="4.10" class="anchored" data-anchor-id="find-your-own-data"><span class="header-section-number">4.10</span> Find your own data</h2>
-<p>For the worksheet, you do not have to use the data pack above. If you would like to find your own data, the following are good places to start:</p>
+<p>For the worksheet, you do not have to use the data pack above. You now know two ways of getting data into Map Viewer: browsing for a layer that is already in ArcGIS Online, as with the data pack, and adding a file, as with your route. That means you can bring in other data too. The question to ask of any dataset you find is: <strong>does it come with its location?</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 17%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">What you find</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Can you map it here?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">A layer in ArcGIS Online or the Living Atlas</td>
+<td style="text-align: left;">Boundaries, census and deprivation layers</td>
+<td style="text-align: left;">Yes: <span class="ui">Add</span> → <span class="ui">Browse layers</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A file with its geometry: GeoJSON, a zipped shapefile, KML or GeoPackage</td>
+<td style="text-align: left;">Some Open Data BCN datasets; ONS boundary files</td>
+<td style="text-align: left;">Yes: <span class="ui">Add</span> → <span class="ui">Add layer from file</span>, as with your route</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">A CSV with latitude and longitude columns, one row per place</td>
+<td style="text-align: left;">Locations of facilities, markets or trees</td>
+<td style="text-align: left;">Yes: <span class="ui">Add layer from file</span> turns each row into a point. Check that ArcGIS picks the right columns for the location.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">A table of values per area, with only the area’s name or code</td>
+<td style="text-align: left;">Most statistics, such as income per neighbourhood or per LSOA</td>
+<td style="text-align: left;">Not in this module: see the warning below</td>
+</tr>
+</tbody>
+</table>
+<p>Some good places to start:</p>
 <ul>
-<li>ArcGIS Living Atlas, via <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">Living Atlas</span>.</li>
-<li>Open Data BCN (<a href="https://opendata-ajuntament.barcelona.cat/en/">opendata-ajuntament.barcelona.cat</a>) for Barcelona.</li>
-<li>The London Datastore (<a href="https://data.london.gov.uk">data.london.gov.uk</a>), the ONS (<a href="https://www.ons.gov.uk">ons.gov.uk</a>) and data.gov.uk for London and the UK. The <em>English Indices of Deprivation 2025</em> are also available as a layer in ArcGIS Online, under <span class="ui">Browse layers</span> → <span class="ui">ArcGIS Online</span>.</li>
+<li><strong>ArcGIS Living Atlas</strong>, via <span class="ui">Add</span> → <span class="ui">Browse layers</span> → <span class="ui">Living Atlas</span>. Everything here is already a layer, so this is the easiest option.</li>
+<li><strong>Open Data BCN</strong> (<a href="https://opendata-ajuntament.barcelona.cat/en/">opendata-ajuntament.barcelona.cat</a>) for Barcelona. Most datasets are CSV tables. To find data you can map directly, filter the catalogue by format (<em>GeoJSON</em>, <em>GPKG</em> or <em>SHP</em>), or look for datasets of places that come with coordinates.</li>
+<li><strong>London</strong>: the <em>English Indices of Deprivation 2025</em> are available as a layer under <span class="ui">Browse layers</span> → <span class="ui">ArcGIS Online</span>. The <a href="https://geoportal.statistics.gov.uk">ONS Open Geography Portal</a> has boundaries (wards, LSOAs, boroughs) as files and as layers. The London Datastore (<a href="https://data.london.gov.uk">data.london.gov.uk</a>) and the ONS (<a href="https://www.ons.gov.uk">ons.gov.uk</a>) mostly offer tables.</li>
 </ul>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -724,7 +761,7 @@ Figure&nbsp;5: A pop-up for a census section.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area’s name or code, and no boundaries. To map such a table, you would first need to <em>join</em> it to a boundary layer, which we do not cover in this module. So look for data that already include their geometry: a layer in ArcGIS Online or the Living Atlas, or a download offered as GeoJSON or a zipped shapefile, which you can add with <span class="ui">Add</span> → <span class="ui">Add layer from file</span>.</p>
+<p>Many datasets come as a table of values per area (for example, income by neighbourhood or by LSOA), with only the area’s name or code, and no boundaries. To map such a table, you would first need to <em>join</em> it to a boundary layer by that name or code. This is in fact how the census sections layer in the data pack was made: the income figures are published as tables, and we joined them to the census section boundaries for you. Joining is not part of this module, so look for data that already include their location. If the data you really need only come as a table, ask the teaching staff in a session.</p>
 </div>
 </div>
 <p>Whichever source you use, check the licence, and always record the name, publisher and year of the dataset for your references.</p>
