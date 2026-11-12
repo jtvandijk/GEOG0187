@@ -117,3 +117,12 @@ main li, main li p {
 .quarto-layout-cell img[width="230"] {
   max-width: 230px;
 }
+
+/* survey link tables: same column widths in every table */
+.link-table table {
+  table-layout: fixed;
+  width: 100%;
+}
+.link-table th:first-child {
+  width: 9rem;
+}

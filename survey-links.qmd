@@ -36,9 +36,10 @@ group_table <- function(dc, label, n_groups) {
     sprintf("| %d | [Open the survey for %s, working group %d](%s) |",
             wg, label, wg, survey_link(dc, wg))
   }, character(1))
+  cat("::: {.link-table}\n\n")
   cat("| Working group | Survey link |\n| :------------ | :---------- |\n")
   cat(rows, sep = "\n")
-  cat("\n\n")
+  cat("\n\n:::\n\n")
 }
 
 cat("## Test link\n\n")
@@ -49,8 +50,10 @@ cat("::: {.callout-important}\n",
     ":::\n\n", sep = "")
 cat("Use this link only to sign in before [Session 1](01-fieldwork.html#sign-in-to-the-field-survey) and to submit your test entry [in the session](01-fieldwork.html#test-the-tools). ",
     "It fills in `", dc_test, "` and working group `0`. Do not save it to your home screen.\n\n", sep = "")
+cat("::: {.link-table}\n\n")
 cat("| Working group | Survey link |\n| :------------ | :---------- |\n")
 cat(sprintf("| 0 (test) | [Open the test survey](%s) |\n\n", survey_link(dc_test, 0)))
+cat(":::\n\n")
 
 cat("## Catalonia Group 1 (23 to 27 January)\n\n")
 group_table(dc_cat1, "Catalonia Group 1", 25)

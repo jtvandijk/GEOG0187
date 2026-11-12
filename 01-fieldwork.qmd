@@ -102,6 +102,8 @@ Finally, let us check that Strava actually records your route by going for a sho
 
    ![](images/w01/strava-route.png){width=260 fig-alt="Saved Strava activity showing the walked route on a map around Gordon Street"}
 
+   Do not worry if parts of your route look a bit erratic. When you stand still, your phone's GPS position keeps drifting by a few metres, so a stationary moment shows up as a small tangle of points rather than a single one. In the route above, for instance, the zigzag at the top looks as if we walked up and down several times, but in fact we were just standing still, getting a coffee.
+
 ### Bring to the session
 Please bring the following with you to the session:
 
