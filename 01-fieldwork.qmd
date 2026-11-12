@@ -65,7 +65,7 @@ Both Strava and your web browser (which you will use for the field survey) need 
 
    ![Location access for Strava on an iPhone.](images/w01/strava-location.png){#fig-strava-location width=260 fig-alt="iPhone location settings for Strava set to While Using the App, with Precise Location on"}
 
-2. For Safari, go to [Settings]{.ui} → [Apps]{.ui} → [Safari]{.ui}, and scroll a long way down to [Location]{.ui}. Select [Allow]{.ui} or [Ask]{.ui}, but not [Deny]{.ui}.
+2. For Safari, go to [Settings]{.ui} → [Apps]{.ui} → [Safari]{.ui}, and scroll a long way down to [Location]{.ui}. Select [Allow]{.ui} or [Ask]{.ui}, but not [Deny]{.ui}. If you use Chrome on your iPhone instead, go to [Settings]{.ui} → [Apps]{.ui} → [Chrome]{.ui} → [Location]{.ui} and select [While Using the App]{.ui}.
 
    ![Location access for Safari on an iPhone.](images/w01/safari-location.png){#fig-safari-location width=260 fig-alt="iPhone Safari location settings with the options Ask, Deny and Allow"}
 
@@ -115,7 +115,7 @@ Please bring the following with you to the session:
 The session has two parts. First, we will check that the tools work: that you can get your route out of Strava and submit an entry to the field survey. Then, you will plan with your working group how you will collect your data in Catalonia.
 
 ### Test the tools
-We will start with a live demonstration of a test walk done with the same instructions, showing you how to get the route out of Strava, how to fill in the field survey, and what the data look like in ArcGIS Online. You will then do the same yourself:
+Let us check that both tools work, using the test walk you did before the session:
 
 1. **Export your test walk.** The `.gpx` file can only be downloaded from the Strava website, not from the app, so you will need a laptop or computer for this step:
    - Log in at [strava.com](https://www.strava.com). Your test walk appears on your dashboard: click its name (`UCL Field Test`) to open the activity.
@@ -131,7 +131,7 @@ We will start with a live demonstration of a test walk done with the same instru
      ![[Export GPX]{.ui} in the more actions menu.](images/w01/strava-web-export.png){#fig-strava-web-export fig-alt="Strava activity page with the more actions menu open and Export GPX highlighted"}
 
 2. **Try the field survey.** Open the [test survey]({{< var urls.links >}}#test-link) and submit one test entry from the room:
-   - **Data collection** and **Working group number** are already filled in as `Fieldwork - Test` and `0`, and cannot be changed.
+   - **Data Collection** and **Working Group Number** are already filled in as `Fieldwork - Test` and `0`, and cannot be changed.
    - For **Site ID**, enter `S00`.
    - For **Location**, tap [Allow]{.ui} when your browser asks to use your location, and check that the pin on the map is roughly where you are. If it is not, wait a few seconds, or tap the map, move the map until the crosshair is on the right spot, and tap [OK]{.ui}.
    - For the **photo** and the **short note**, anything will do.
@@ -170,7 +170,7 @@ Finally, whoever logs the sites, and whoever takes over from them, saves your wo
 
 1. Open the [Field Survey Links]({{< var urls.links >}}) page, find your fieldwork group and working group number, and tap your working group's link.
 2. Check that the top of the form shows *your* fieldwork group and working group number.
-3. Add the survey to your home screen. In Safari, use [Share]{.ui} → [Add to Home Screen]{.ui}; in Chrome, use the [⋮]{.ui} menu → [Add to Home screen]{.ui}. Give it a name you will recognise, such as `Survey WG05`.
+3. Add the survey to your home screen. On an iPhone (Safari or Chrome), use the [Share]{.ui} button → [Add to Home Screen]{.ui}; on Android (Chrome), use the [⋮]{.ui} menu → [Add to Home screen]{.ui}. Give it a name you will recognise, such as `Survey WG05`.
 4. Open the survey from the new home screen icon, and show it to a member of the teaching staff before you leave the session, so that we can check together that it shows your fieldwork group and working group number.
 5. Close the survey without submitting anything. You will use it for the first time in Catalonia.
 
@@ -200,7 +200,7 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | Strava does not record, or the route is a straight line | Check that location access is set to [While Using the App]{.ui} with [Precise Location]{.ui} on. Do not force-close the app while recording, and turn off Low Power Mode if the route has gaps. |
 | There is no [Export GPX]{.ui} option | Use the Strava website on a laptop, not the app or a phone browser. You can only export your *own* activities, so the export has to be done by whoever recorded the route, who then shares the file with the group. |
 | The form shows the wrong fieldwork group or working group number | You have opened the wrong link. Remove the icon from your home screen, open your own working group's link from the [Field Survey Links]({{< var urls.links >}}) page, and save that one instead. |
-| **Data collection** or **Working group number** is empty | The link lost its details, for instance because you had to sign in first. Close the form without submitting, open your working group's link again from the [Field Survey Links]({{< var urls.links >}}) page, and save that one to your home screen instead. |
+| **Data Collection** or **Working Group Number** is empty | The link lost its details, for instance because you had to sign in first. Close the form without submitting, open your working group's link again from the [Field Survey Links]({{< var urls.links >}}) page, and save that one to your home screen instead. |
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Tap the map, move it until the crosshair is on the correct location, and tap [OK]{.ui} before submitting. |

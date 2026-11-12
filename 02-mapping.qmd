@@ -143,7 +143,7 @@ First, let us make the [Layers]{.ui} list, and with it the legend, readable for 
 
 2. Check the order of the layers. The layer at the *top* of the list is drawn on top of the others. Because you added the route last, it is now on top, and may hide some of your sites. Drag the sites above the route by their handle (⠿).
 
-To change how a layer looks, select it in [Layers]{.ui} and click [Styles]{.ui} on the right-hand toolbar. Keep the [Location (single symbol)]{.ui} style, and click the pencil next to [Symbol style]{.ui}. We will style both layers in turn:
+To change how a layer looks, select it in [Layers]{.ui} and click [Styles]{.ui} on the right-hand toolbar. Keep the [Location (single symbol)]{.ui} style, click [Style options]{.ui}, and then the pencil next to [Symbol style]{.ui}. We will style both layers in turn:
 
 - For the route, change the line colour and width so that the route is clearly visible on your basemap.
 - For the sites, change the size and fill colour so that the points stand out against the route. You could also style them by an attribute instead, but a single clear symbol is fine for now.

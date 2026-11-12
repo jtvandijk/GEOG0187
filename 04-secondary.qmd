@@ -37,7 +37,7 @@ Let us start by opening a new map ([Map]{.ui}) and picking a quiet basemap.
 
 ::: {.callout-tip}
 ## Left, then right
-Remember how Map Viewer is laid out. The left-hand toolbar holds what is *in* your map ([Add]{.ui}, [Layers]{.ui}, [Legend]{.ui}, [Save and open]{.ui}); the right-hand toolbar holds the settings ([Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}) for whichever layer is selected. So we always work in two steps: first click the layer in [Layers]{.ui} so that it is highlighted, and then click the tool on the right. The name at the top of the right-hand panel tells you which layer you are changing.
+Remember how Map Viewer is laid out. The left-hand toolbar holds what is *in* your map ([Add]{.ui}, [Layers]{.ui}, [Legend]{.ui}, [Save and open]{.ui}); the right-hand toolbar holds the settings ([Styles]{.ui}, [Filter]{.ui}, [Pop-ups]{.ui}) for whichever layer is selected. So we always work in two steps: first click the layer in [Layers]{.ui} so that it is highlighted, and then click the tool on the right. The name at the top of the right-hand panel tells you which layer you are changing. If you cannot tell the icons on the right apart, click [«]{.ui} at the bottom of the toolbar to show their names.
 :::
 
 The data pack consists of three layers for Barcelona that we have prepared for you:
@@ -115,7 +115,7 @@ A good pop-up does more than just show numbers. Let us set one up for the main l
 
 1. First, switch off the pop-ups of the boundary layers. Otherwise, clicking on the map opens the neighbourhood or district instead of the census section. In [Layers]{.ui}, click the neighbourhoods layer, then [Pop-ups]{.ui} on the right-hand toolbar, and switch off [Enable pop-ups]{.ui}. Do the same for the districts.
 2. Now click the main layer in [Layers]{.ui}, and then [Pop-ups]{.ui} on the right-hand toolbar.
-3. Click [Title]{.ui} and set it to the neighbourhood.
+3. Set the title to the neighbourhood: click the [{ }]{.ui} button next to the title, and choose `neighbourhood` from the list of fields.
 4. By default, the pop-up also contains a [Fields list]{.ui} with every attribute in the layer. Remove it by clicking the [⋯]{.ui} next to [Fields list]{.ui} → [Delete]{.ui}.
 5. Click [Add content]{.ui} → [Text]{.ui}, and then [Edit text]{.ui}. Write the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*. To avoid typos in the field name, insert it with the [{}]{.ui} button in the text toolbar rather than typing it.
 6. Below that, add a short interpretive note: one sentence on what the value means in context. Click [OK]{.ui}.
