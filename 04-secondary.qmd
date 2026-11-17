@@ -8,7 +8,7 @@ So far, we have mapped data that you collected yourself. Most of the maps you wi
 
 ::: {.callout-important}
 ## Before the session
-Sign in to ArcGIS Online with [UCL SSO]{.ui} (see [Open Map Viewer]({{< var urls.w02 >}}#open-map-viewer)) and have a browser open. In this session, everyone works with data for Barcelona, including those of you who did their fieldwork in London. For the worksheet, you can apply the same steps to data for another place, such as London (see [Find your own data](#find-your-own-data)).
+Sign in to ArcGIS Online with [UCL SSO]{.ui} (see [Open Map Viewer]({{< var urls.w02 >}}#open-map-viewer)) and have a browser open. In this session, everyone works with data for Barcelona, including those of you who did your fieldwork in London. For the worksheet, you can apply the same steps to data for another place, such as London (see [Find your own data](#find-your-own-data)).
 :::
 
 ## Secondary data and where it comes from
@@ -122,9 +122,8 @@ A good pop-up does more than just show numbers. Let us set one up for the main l
 
    ![The default pop-up settings, with the [Fields list]{.ui} below the title.](images/w04/popup-default.png){#fig-popup-default fig-alt="Pop-ups panel for the census sections, with the title set to a field and a Fields list showing 8 of 9 fields"}
 
-5. Click [Add content]{.ui} → [Text]{.ui}, and then [Edit text]{.ui}. Write the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*. To avoid typos in the field name, insert it with the [{}]{.ui} button in the text toolbar rather than typing it.
+5. Click [Add content]{.ui} → [Text]{.ui}, and then [Edit text]{.ui}. Write the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*. To avoid typos in the field name, insert it with the [{ }]{.ui} button in the text toolbar rather than typing it.
 6. Below that, add a short interpretive note: one sentence on what the value means in context. Click [OK]{.ui}.
-
 7. Click on a few areas to check the result.
 
 ![A pop-up for a census section.](images/w04/popup.png){#fig-popup fig-alt="Pop-up for a census section in la Sagrada Família showing its disposable income per person, next to the Pop-ups panel with a title and one text block"}
@@ -141,7 +140,7 @@ To finish, choose one variable from your data pack and answer the five questions
 Keep your answers as notes, because you will need them for the worksheet.
 
 ## Save your map
-Save your map via [Save and open]{.ui} → [Save as]{.ui}, with a title such as `GEOG0187 – Secondary data` (without your name, as for the first map). You will build on this map for the second story map.
+Save your map via [Save and open]{.ui} → [Save as]{.ui}, with a title such as `GEOG0187 - Secondary data` (without your name, as for the first map). You will build on this map for the second story map.
 
 ## Before you leave
 By the end of this session, you should have:
@@ -184,8 +183,8 @@ Whichever source you use, check the licence, and always record the name, publish
 ## Troubleshooting
 | Problem | What to try |
 | :------ | :---------- |
-| The Barcelona layers do not appear | Search [My organization]{.ui}, not [My content]{.ui}, and check that you signed in through [UCL SSO]{.ui}. Let staff know if the layers are missing. |
-| The map looks like it is all one colour | Check the classification and the number of classes, and try *quantile*. |
+| The Barcelona layers do not appear | Search [My organization]{.ui}, not [My content]{.ui}, and check that you signed in through [UCL SSO]{.ui}. Let the teaching staff know if the layers are missing. |
+| The map looks like it is all one colour | Check the classification and the number of classes, and try [Quantile]{.ui}. |
 | The legend shows odd numbers | Edit the legend labels, or round the values in the style options. |
 | Clicking the map opens a neighbourhood or district | Switch off [Enable pop-ups]{.ui} for the boundary layers (see [Write the pop-up](#write-the-pop-up)). |
 | The boundary layers hide the colours underneath | Set their fill to *no colour* (see [Add your data pack](#add-your-data-pack)), and check that they are above the main layer in [Layers]{.ui}. |

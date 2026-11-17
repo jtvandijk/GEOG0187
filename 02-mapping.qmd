@@ -183,9 +183,9 @@ By default, a pop-up shows every attribute in the layer, which quickly becomes c
 Finally, we need to save the map so that you can open it again next week:
 
 1. Click [Save and open]{.ui} → [Save as]{.ui}.
-2. Use `GEOG0187 – CAT1_WG05` as the title, with your own group code. Please do not add your name: the map ends up in your story map, which may become part of your portfolio, and the portfolio is marked anonymously. Add a short summary, for example *Sites and route from fieldwork in Barcelona*.
+2. Use `GEOG0187 - CAT1_WG05` as the title, with your own group code. Please do not add your name: the map ends up in your story map, which may become part of your portfolio, and the portfolio is marked anonymously. Add a short summary, for example *Sites and route from fieldwork in Barcelona*.
 
-   ![Saving the **test walk** map as `GEOG0187 - UCL Field Test`. Your title uses your own group code, such as `GEOG0187 – CAT1_WG05`.](images/w02/save-map.png){#fig-save-map width=420 fig-alt="Save map dialog with a title, folder, tags and summary, and a Save button"}
+   ![Saving the **test walk** map as `GEOG0187 - UCL Field Test`. Your title uses your own group code, such as `GEOG0187 - CAT1_WG05`.](images/w02/save-map.png){#fig-save-map width=420 fig-alt="Save map dialog with a title, folder, tags and summary, and a Save button"}
 
 3. Click [Save]{.ui}. The map will now be in [Content]{.ui} → [My content]{.ui}.
 

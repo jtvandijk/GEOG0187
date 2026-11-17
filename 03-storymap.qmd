@@ -125,8 +125,8 @@ Keep your clips short, and check the worksheet for how many are allowed and how 
 What you submit is the link to your story map, so anyone with the link must be able to open it.
 
 ::: {.callout-important}
-## Share with Everyone (public), or nobody can see it
-A new story is **Private**: only you can see it. If you do not share your story, *and* the map in it, with [Everyone (public)]{.ui}, the marker sees nothing at all, or a story with an empty map. Work that cannot be opened cannot be marked.
+## Share with Everyone (Public), or nobody can see it
+A new story is **Private**: only you can see it. If you do not share your story, *and* the map in it, with [Everyone (Public)]{.ui}, the marker sees nothing at all, or a story with an empty map. Work that cannot be opened cannot be marked.
 :::
 
 Let us publish the story and make sure that this is the case:
