@@ -418,7 +418,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#plan-your-fieldwork" id="toc-plan-your-fieldwork" class="nav-link" data-scroll-target="#plan-your-fieldwork"><span class="header-section-number">1.4.2</span> Plan your fieldwork</a></li>
   </ul></li>
   <li><a href="#in-catalonia" id="toc-in-catalonia" class="nav-link" data-scroll-target="#in-catalonia"><span class="header-section-number">1.5</span> In Catalonia</a></li>
-  <li><a href="#after-the-trip" id="toc-after-the-trip" class="nav-link" data-scroll-target="#after-the-trip"><span class="header-section-number">1.6</span> After the trip</a></li>
+  <li><a href="#after-the-trip" id="toc-after-the-trip" class="nav-link" data-scroll-target="#after-the-trip"><span class="header-section-number">1.6</span> After the trip</a>
+  <ul class="collapse">
+  <li><a href="#correct-an-entry" id="toc-correct-an-entry" class="nav-link" data-scroll-target="#correct-an-entry"><span class="header-section-number">1.6.1</span> Correct an entry</a></li>
+  </ul></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">1.7</span> Troubleshooting</a></li>
   </ul></li>
   </ul>
@@ -839,11 +842,23 @@ Figure&nbsp;15: The confirmation after submitting.
 </section>
 <section id="after-the-trip" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="after-the-trip"><span class="header-section-number">1.6</span> After the trip</h2>
-<p>Your sites will already be in ArcGIS Online, but there are two things to do before the next session:</p>
+<p>Your sites will already be in ArcGIS Online, but there are three things to do before the next session:</p>
 <ol type="1">
 <li><strong>Export and share the route.</strong> Whoever recorded the route downloads the <code>.gpx</code> file(s) from the Strava website, just as you did in the session, and shares them with the rest of the working group. If two people recorded, their routes should be the same, so one copy is enough; pick the one with the fewest gaps.</li>
 <li><strong>Share everything else.</strong> Put any extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. It is best to avoid WhatsApp for photos, because it compresses them and removes their location information.</li>
+<li><strong>Check your sites.</strong> Whoever logged the sites checks that every site is there, in the right place, with the right site ID and note, and corrects any mistakes as described below.</li>
 </ol>
+<section id="correct-an-entry" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="correct-an-entry"><span class="header-section-number">1.6.1</span> Correct an entry</h3>
+<p>If an entry has a mistake in it, for instance a point in the wrong place or a typo in the note, you can correct it afterwards. Only the person who submitted an entry can change it, so this is a job for whoever logged your working group’s sites. Please use a laptop or computer for this:</p>
+<ol type="1">
+<li>Go to <a href="https://survey123.arcgis.com">survey123.arcgis.com</a> and sign in with your UCL account: organisation URL <code>uclondon</code>, then <span class="ui">UCL SSO</span>.</li>
+<li>On the <span class="ui">My surveys</span> page, switch to the <span class="ui">Surveys I can view results for</span> tab, and open <span class="ui">UCL Geography Field Survey</span>.</li>
+<li>Open the <span class="ui">Data</span> tab. The table lists the entries of every working group, so find yours by its <strong>Data Collection</strong>, <strong>Working Group Number</strong> and <strong>Site ID</strong>, and click on it.</li>
+<li>In the panel that opens, click <span class="ui">Edit</span>. Correct the entry: move the point, change the site ID or note, or replace the photo. Then click <span class="ui">Submit</span>.</li>
+</ol>
+<p>Entries cannot be deleted. If you submitted the same site twice, change the site ID of the extra entry to <code>X</code>, so that you can leave it out of your map later on.</p>
+</section>
 </section>
 <section id="troubleshooting" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">1.7</span> Troubleshooting</h2>
@@ -885,7 +900,7 @@ Figure&nbsp;15: The confirmation after submitting.
 </tr>
 <tr class="even">
 <td style="text-align: left;">I submitted an entry with a mistake in it</td>
-<td style="text-align: left;">You cannot edit or delete an entry once it has been submitted, because everyone adds to the same layer. Submit a corrected entry instead, and write down the site ID of the wrong one: you can leave it out when you make your map.</td>
+<td style="text-align: left;">Correct it after the trip, on a laptop (see <a href="#correct-an-entry">Correct an entry</a>). If you have no connection in the field, this can wait: carry on with the next site.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">There is no confirmation after <span class="ui">Submit</span></td>

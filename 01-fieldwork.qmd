@@ -189,10 +189,21 @@ Before you travel, check whether your phone contract includes mobile data in Spa
 :::
 
 ## After the trip
-Your sites will already be in ArcGIS Online, but there are two things to do before the next session:
+Your sites will already be in ArcGIS Online, but there are three things to do before the next session:
 
 1. **Export and share the route.** Whoever recorded the route downloads the `.gpx` file(s) from the Strava website, just as you did in the session, and shares them with the rest of the working group. If two people recorded, their routes should be the same, so one copy is enough; pick the one with the fewest gaps.
 2. **Share everything else.** Put any extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. It is best to avoid WhatsApp for photos, because it compresses them and removes their location information.
+3. **Check your sites.** Whoever logged the sites checks that every site is there, in the right place, with the right site ID and note, and corrects any mistakes as described below.
+
+### Correct an entry {#correct-an-entry}
+If an entry has a mistake in it, for instance a point in the wrong place or a typo in the note, you can correct it afterwards. Only the person who submitted an entry can change it, so this is a job for whoever logged your working group's sites. Please use a laptop or computer for this:
+
+1. Go to [survey123.arcgis.com](https://survey123.arcgis.com) and sign in with your UCL account: organisation URL `uclondon`, then [UCL SSO]{.ui}.
+2. On the [My surveys]{.ui} page, switch to the [Surveys I can view results for]{.ui} tab, and open [UCL Geography Field Survey]{.ui}.
+3. Open the [Data]{.ui} tab. The table lists the entries of every working group, so find yours by its **Data Collection**, **Working Group Number** and **Site ID**, and click on it.
+4. In the panel that opens, click [Edit]{.ui}. Correct the entry: move the point, change the site ID or note, or replace the photo. Then click [Submit]{.ui}.
+
+Entries cannot be deleted. If you submitted the same site twice, change the site ID of the extra entry to `X`, so that you can leave it out of your map later on.
 
 ## Troubleshooting
 | Problem | What to try |
@@ -204,6 +215,6 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Tap the map, move it until the crosshair is on the correct location, and tap [OK]{.ui} before submitting. |
-| I submitted an entry with a mistake in it | You cannot edit or delete an entry once it has been submitted, because everyone adds to the same layer. Submit a corrected entry instead, and write down the site ID of the wrong one: you can leave it out when you make your map. |
+| I submitted an entry with a mistake in it | Correct it after the trip, on a laptop (see [Correct an entry](#correct-an-entry)). If you have no connection in the field, this can wait: carry on with the next site. |
 | There is no confirmation after [Submit]{.ui} | Check that you have a connection, then tap [Submit]{.ui} again. Any required fields that are missing are highlighted in the form. |
 | The photo will not upload | Try again on wifi, or submit without the photo and write the site ID down alongside the photo instead. |

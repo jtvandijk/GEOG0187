@@ -91,7 +91,7 @@ How many sites did your working group log? Write the number down, then count the
 
 Note that the filter only changes *your* map: nobody else's data are deleted or changed.
 
-If your working group submitted an entry with a mistake in it, and then a corrected one, you can leave the wrong entry out with a third condition: click [Add new]{.ui}, choose **Site ID**, set the operator to *is not*, and enter the site ID of the wrong entry. If the wrong and the corrected entry share the same site ID, use **Note** instead.
+If one of your points is in the wrong place, or its note has a mistake in it, whoever logged your sites can still correct it (see [Correct an entry]({{< var urls.w01 >}}#correct-an-entry)). The correction shows up in your map automatically. If your working group marked a duplicate entry with the site ID `X`, leave it out with a third condition: click [Add new]{.ui}, choose **Site ID**, set the operator to *is not*, and enter `X`.
 
 ## Add your route
 Next, we will add your working group's route from Strava. ArcGIS Online cannot read `.gpx` files, so we first convert the route to **GeoJSON**, a common format for spatial data that ArcGIS Online does accept.
@@ -212,7 +212,7 @@ If you finish early, estimate how far your working group walked, and then check 
 | :------ | :---------- |
 | The survey layer does not appear in the search | Check that you are searching [My organization]{.ui}, not [My content]{.ui}, and that you signed in through [UCL SSO]{.ui}. |
 | No sites are left after filtering | Check that your filter uses exactly the same fieldwork group and working group number as your working group's [survey link]({{< var urls.links >}}). If your sites are still missing, ask the teaching staff. |
-| One of our entries is wrong | Entries cannot be edited or deleted once submitted. Leave the wrong one out with an extra filter condition (see the end of [Add your working group's sites](#add-your-sites)). |
+| One of our entries is wrong | Whoever logged your sites can correct it in Survey123 (see [Correct an entry]({{< var urls.w01 >}}#correct-an-entry)). Duplicates cannot be deleted, but you can leave them out with an extra filter condition (see the end of [Add your working group's sites](#add-your-sites)). |
 | The filter shows other working groups too | Check that the **Working Group Number** condition uses *is*, not *is at least*. |
 | I do not have a `.gpx` file | Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the [test walk route]({{< var arcgis.demo_gpx >}}) used for the screenshots on this page (use the download button on the right). |
 | ArcGIS Online does not accept my `.gpx` file | That is expected: convert it to GeoJSON first, using [geojson.io](https://geojson.io) (see [Convert the route to GeoJSON](#convert-the-route-to-geojson)). |
