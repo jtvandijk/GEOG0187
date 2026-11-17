@@ -8,7 +8,7 @@ In Catalonia (or London), your working group recorded sites using the field surv
 
 ::: {.callout-important}
 ## Before the session
-Make sure you have a copy of your working group's route as a `.gpx` file, exported from the Strava website by whoever recorded it (see [After the trip]({{< var urls.w01 >}}#after-the-trip)), and that you know your fieldwork group and working group number. You can look these up in your working group's link on the [Field Survey Links]({{< var urls.links >}}) page.
+Make sure you have a copy of your working group's route as a `.gpx` file, exported from the Strava website by whoever recorded it (see [After the trip]({{< var urls.w01 >}}#after-the-trip)), and that you know your fieldwork group and working group number. Your working group number is listed in the Catalonia field trip information on Moodle.
 :::
 
 ## Layers and attributes
@@ -164,18 +164,20 @@ Switch between two or three basemaps now that your layers are styled. Which one 
 :::
 
 ## Set up the pop-ups
-By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered (@fig-popup-default). Let us tidy it up: click the sites layer in [Layers]{.ui}, and then [Pop-ups]{.ui} on the right-hand toolbar:
+By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered (@fig-popup-default). The route is the worst case: its pop-up lists the time of every single GPS point, which is of no use to a reader. So let us switch the route's pop-ups off and tidy up those of the sites:
 
-1. Set the **title** to the site ID: click the [{ }]{.ui} button next to the title, and choose **Site ID** from the list of fields.
+1. Click the route layer in [Layers]{.ui}, then [Pop-ups]{.ui} on the right-hand toolbar, and switch off [Enable pop-ups]{.ui}. Clicking the route now does nothing, which also makes it easier to click on a site next to it.
+2. Click the sites layer in [Layers]{.ui}, and then [Pop-ups]{.ui} on the right-hand toolbar.
+3. Set the **title** to the site ID: click the [{ }]{.ui} button next to the title, and choose **Site ID** from the list of fields.
 
    ![Setting the pop-up title.](images/w02/popup-title.png){#fig-popup-title fig-alt="Pop-ups pane with the title set to {site_id} and the { } button next to it"}
 
-2. Open [Fields list]{.ui}, click [Select fields]{.ui}, and keep only **Site ID** and **Note**.
+4. Open [Fields list]{.ui}, click [Select fields]{.ui}, and keep only **Site ID** and **Note**.
 
    ![The fields list with Site ID and Note.](images/w02/popup-fields.png){#fig-popup-fields fig-alt="Pop-ups pane with Fields list open, showing 2 of 8 fields: Site ID and Note"}
 
-3. Check that [Attachments]{.ui} is included, so that the photo is shown.
-4. Click on a few points on the map to check the result.
+5. Check that [Attachments]{.ui} is included, so that the photo is shown.
+6. Click on a few points on the map to check the result.
 
    ![The tidied pop-up: site ID as the title, the note and the photo.](images/w02/popup-final.png){#fig-popup-final fig-alt="Pop-up titled S01 with Site ID S01, Note UCL Main Quad, and a photo of the UCL Portico"}
 
@@ -198,7 +200,7 @@ By the end of this session, your saved map should have:
 - [ ] your working group's sites, and only those;
 - [ ] your route as a line;
 - [ ] clear styling for both layers;
-- [ ] pop-ups that show the site ID, note and photo.
+- [ ] pop-ups that show the site ID, note and photo, and no pop-ups for the route.
 
 ![The finished map for the **test walk**.](images/w02/finished-map.png){#fig-finished-map fig-alt="Finished map with a light grey basemap, the route as a thick blue line and two orange survey sites around Gordon Street"}
 

@@ -440,7 +440,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Make sure you have a copy of your working group’s route as a <code>.gpx</code> file, exported from the Strava website by whoever recorded it (see <a href="01-fieldwork.html#after-the-trip">After the trip</a>), and that you know your fieldwork group and working group number. You can look these up in your working group’s link on the <a href="survey-links.html">Field Survey Links</a> page.</p>
+<p>Make sure you have a copy of your working group’s route as a <code>.gpx</code> file, exported from the Strava website by whoever recorded it (see <a href="01-fieldwork.html#after-the-trip">After the trip</a>), and that you know your fieldwork group and working group number. Your working group number is listed in the Catalonia field trip information on Moodle.</p>
 </div>
 </div>
 <section id="layers-and-attributes" class="level2" data-number="2.1">
@@ -798,8 +798,10 @@ Figure&nbsp;19: Styling the sites.
 </section>
 <section id="set-up-the-pop-ups" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="set-up-the-pop-ups"><span class="header-section-number">2.7</span> Set up the pop-ups</h2>
-<p>By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered (<a href="#fig-popup-default" class="quarto-xref">Figure&nbsp;9</a>). Let us tidy it up: click the sites layer in <span class="ui">Layers</span>, and then <span class="ui">Pop-ups</span> on the right-hand toolbar:</p>
+<p>By default, a pop-up shows every attribute in the layer, which quickly becomes cluttered (<a href="#fig-popup-default" class="quarto-xref">Figure&nbsp;9</a>). The route is the worst case: its pop-up lists the time of every single GPS point, which is of no use to a reader. So let us switch the route’s pop-ups off and tidy up those of the sites:</p>
 <ol type="1">
+<li><p>Click the route layer in <span class="ui">Layers</span>, then <span class="ui">Pop-ups</span> on the right-hand toolbar, and switch off <span class="ui">Enable pop-ups</span>. Clicking the route now does nothing, which also makes it easier to click on a site next to it.</p></li>
+<li><p>Click the sites layer in <span class="ui">Layers</span>, and then <span class="ui">Pop-ups</span> on the right-hand toolbar.</p></li>
 <li><p>Set the <strong>title</strong> to the site ID: click the <span class="ui">{ }</span> button next to the title, and choose <strong>Site ID</strong> from the list of fields.</p>
 <div id="fig-popup-title" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Pop-ups pane with the title set to {site_id} and the { } button next to it">
 <figure class="quarto-float quarto-float-fig figure">
@@ -864,7 +866,7 @@ Figure&nbsp;23: Saving the <strong>test walk</strong> map as <code>GEOG0187 - UC
 <li><label><input type="checkbox">your working group’s sites, and only those;</label></li>
 <li><label><input type="checkbox">your route as a line;</label></li>
 <li><label><input type="checkbox">clear styling for both layers;</label></li>
-<li><label><input type="checkbox">pop-ups that show the site ID, note and photo.</label></li>
+<li><label><input type="checkbox">pop-ups that show the site ID, note and photo, and no pop-ups for the route.</label></li>
 </ul>
 <div id="fig-finished-map" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Finished map with a light grey basemap, the route as a thick blue line and two orange survey sites around Gordon Street">
 <figure class="quarto-float quarto-float-fig figure">
