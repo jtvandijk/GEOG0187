@@ -119,12 +119,15 @@ A good pop-up does more than just show numbers. Let us set one up for the main l
 2. Now click the main layer in [Layers]{.ui}, and then [Pop-ups]{.ui} on the right-hand toolbar.
 3. Set the title to the neighbourhood: click the [{ }]{.ui} button next to the title, and choose `neighbourhood` from the list of fields.
 4. By default, the pop-up also contains a [Fields list]{.ui} with every attribute in the layer. Remove it by clicking the [⋯]{.ui} next to [Fields list]{.ui} → [Delete]{.ui}.
+
+   ![The default pop-up settings, with the [Fields list]{.ui} below the title.](images/w04/popup-default.png){#fig-popup-default fig-alt="Pop-ups panel for the census sections, with the title set to a field and a Fields list showing 8 of 9 fields"}
+
 5. Click [Add content]{.ui} → [Text]{.ui}, and then [Edit text]{.ui}. Write the value with a clear name and unit, for example *Disposable income per person (2023): €{disp_income_pc_2023_eur}*. To avoid typos in the field name, insert it with the [{}]{.ui} button in the text toolbar rather than typing it.
 6. Below that, add a short interpretive note: one sentence on what the value means in context. Click [OK]{.ui}.
 
 7. Click on a few areas to check the result.
 
-![A pop-up for a census section.](images/w04/popup.png){#fig-popup fig-alt="Pop-up for a census section in el Camp de l'Arpa del Clot showing its disposable income per person, next to the Pop-ups panel with a title and one text block"}
+![A pop-up for a census section.](images/w04/popup.png){#fig-popup fig-alt="Pop-up for a census section in la Sagrada Família showing its disposable income per person, next to the Pop-ups panel with a title and one text block"}
 
 ## Evaluate your data
 To finish, choose one variable from your data pack and answer the five questions from [Secondary data and where it comes from](#secondary-data-and-where-it-comes-from). Then think of two or three limitations of the data. The following questions can help you with this:
