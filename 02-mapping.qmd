@@ -82,7 +82,7 @@ All field survey entries, from every group, are stored in a single layer. We wil
 
 7. Click on a point. Its pop-up shows the attributes and photo your working group entered. We will tidy up this pop-up later on.
 
-   ![The default pop-up of a survey entry.](images/w02/popup-default.png){#fig-popup-default width=420 fig-alt="Default pop-up titled GEOG0187 Field Survey Sites, listing Data Collection, Note, Site ID and Working Group Number (0.00), with a photo underneath"}
+   ![The default pop-up of a survey entry.](images/w02/popup-default.png){#fig-popup-default fig-alt="Default pop-up titled GEOG0187 Field Survey Sites for site S01, listing Data Collection, Note, Site ID and Working Group Number (0.00), with a photo underneath"}
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
