@@ -418,7 +418,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#plan-your-fieldwork" id="toc-plan-your-fieldwork" class="nav-link" data-scroll-target="#plan-your-fieldwork"><span class="header-section-number">1.4.2</span> Plan your fieldwork</a></li>
   </ul></li>
   <li><a href="#in-catalonia" id="toc-in-catalonia" class="nav-link" data-scroll-target="#in-catalonia"><span class="header-section-number">1.5</span> In Catalonia</a></li>
-  <li><a href="#after-the-trip" id="toc-after-the-trip" class="nav-link" data-scroll-target="#after-the-trip"><span class="header-section-number">1.6</span> After the trip</a></li>
+  <li><a href="#after-the-trip" id="toc-after-the-trip" class="nav-link" data-scroll-target="#after-the-trip"><span class="header-section-number">1.6</span> After the trip</a>
+  <ul class="collapse">
+  <li><a href="#correct-an-entry" id="toc-correct-an-entry" class="nav-link" data-scroll-target="#correct-an-entry"><span class="header-section-number">1.6.1</span> Correct an entry</a></li>
+  </ul></li>
   <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">1.7</span> Troubleshooting</a></li>
   </ul></li>
   </ul>
@@ -719,7 +722,7 @@ Figure&nbsp;11: <span class="ui">Export GPX</span> in the more actions menu.
 <li>For <strong>Site ID</strong>, enter <code>S00</code>.</li>
 <li>For <strong>Location</strong>, tap <span class="ui">Allow</span> when your browser asks to use your location, and check that the pin on the map is roughly where you are. If it is not, wait a few seconds, or tap the map, move the map until the crosshair is on the right spot, and tap <span class="ui">OK</span>. If the background map makes it hard to find the exact spot, tap the basemap button in the top-right corner of the map and switch to, for instance, <span class="ui">Streets</span> or <span class="ui">Imagery</span>.</li>
 <li>For the <strong>photo</strong> and the <strong>short note</strong>, anything will do.</li>
-<li>Before you tap <span class="ui">Submit</span>, check the pin on the map and read your note once more: an entry cannot be changed or deleted once it has been submitted. Then tap <span class="ui">Submit</span> and check that you see a confirmation.</li>
+<li>Before you tap <span class="ui">Submit</span>, check the pin on the map and read your note once more. Then tap <span class="ui">Submit</span> and check that you see a confirmation.</li>
 <li>To submit another entry, refresh the page in your browser and the form opens again.</li>
 </ul>
 <div class="quarto-layout-panel" data-layout-ncol="2">
@@ -818,25 +821,12 @@ Figure&nbsp;15: The confirmation after submitting.
 <p>Once you are in Catalonia, there are a few things to keep in mind:</p>
 <ul>
 <li>Whoever logs the sites opens the survey from the home screen icon you saved in the session, and submits one entry per site while standing at the site. Your fieldwork group and working group number are filled in for you, so you only add the site ID, location, photo and note. After each submission, refresh the page to open a new, empty form.</li>
-<li>Before submitting, check that the pin is on the right spot (switch the basemap if that helps), and write a note that will still make sense to you weeks later. Once submitted, an entry cannot be changed or deleted.</li>
+<li>Before submitting, check that the pin is on the right spot (switch the basemap if that helps), and write a note that will still make sense to you weeks later. You can correct mistakes after the trip (see <a href="#correct-an-entry">Correct an entry</a>), but it is much easier to get it right on the spot.</li>
 <li>Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.</li>
 <li>Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.</li>
 <li>If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by moving the crosshair to the right location on the map.</li>
 <li>Please be considerate. Survey entries will be <strong>public</strong>, because they appear in the story maps you publish later on. So do not take photos in which people’s faces can be recognised, do not put anyone’s name or other personal details in your notes, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.</li>
 </ul>
-<div class="callout callout-style-simple callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Entries cannot be changed
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Once an entry has been submitted, it cannot be edited or deleted, because every working group adds to the same layer. If you made a mistake, for instance the pin is in the wrong place or the note is wrong, submit a new entry with the next unused site ID, and start its note with which entry it replaces, such as <em>Replaces S03</em>. Write down the site ID of the wrong entry: you will leave it out when you make your map.</p>
-</div>
-</div>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -853,11 +843,24 @@ Figure&nbsp;15: The confirmation after submitting.
 </section>
 <section id="after-the-trip" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="after-the-trip"><span class="header-section-number">1.6</span> After the trip</h2>
-<p>Your sites will already be in ArcGIS Online, but there are two things to do before the next session:</p>
+<p>Your sites will already be in ArcGIS Online, but there are three things to do before the next session:</p>
 <ol type="1">
 <li><strong>Export and share the route.</strong> Whoever recorded the route downloads the <code>.gpx</code> file(s) from the Strava website, just as you did in the session, and shares them with the rest of the working group. If two people recorded, their routes should be the same, so one copy is enough; pick the one with the fewest gaps.</li>
 <li><strong>Share everything else.</strong> Put any extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. It is best to avoid WhatsApp for photos, because it compresses them and removes their location information.</li>
+<li><strong>Check your sites.</strong> Whoever logged the sites checks that every site is there, in the right place, with the right site ID and note, and corrects any mistakes as described below.</li>
 </ol>
+<section id="correct-an-entry" class="level3" data-number="1.6.1">
+<h3 data-number="1.6.1" class="anchored" data-anchor-id="correct-an-entry"><span class="header-section-number">1.6.1</span> Correct an entry</h3>
+<p>If an entry has a mistake in it, for instance a point in the wrong place or a typo in the note, you can correct it afterwards. Only the person who submitted an entry can change it, so this is a job for whoever logged your working group’s sites. Please use a laptop or computer for this:</p>
+<ol type="1">
+<li>Go to <a href="https://survey123.arcgis.com">survey123.arcgis.com</a> and sign in with your UCL account: organisation URL <code>uclondon</code>, then <span class="ui">UCL SSO</span>.</li>
+<li>On the <span class="ui">My surveys</span> page, switch to the <span class="ui">Surveys I can view results for</span> tab, and open <span class="ui">UCL Geography Field Survey</span>.</li>
+<li>Open the <span class="ui">Data</span> tab, and switch on <span class="ui">Form view</span> in the toolbar above the map.</li>
+<li>The table at the bottom lists the entries of every working group, so there may be hundreds of them. Sort the table by <strong>Data Collection</strong> with the arrows next to the column name, scroll down to your fieldwork group, and find your working group number and site ID. Click on the entry: it opens in a panel on the right.</li>
+<li>Click the pencil at the top of the panel (<span class="ui">Edit this record</span>). Correct the entry: change the site ID or note, replace the photo, or move the point. The small location map starts zoomed out to the whole world, so zoom in to your site and click on the right spot. Then click <span class="ui">Submit</span>.</li>
+</ol>
+<p>Entries cannot be deleted. If you submitted the same site twice, change the site ID of the extra entry to <code>X</code>, so that you can leave it out of your map later on.</p>
+</section>
 </section>
 <section id="troubleshooting" class="level2" data-number="1.7">
 <h2 data-number="1.7" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">1.7</span> Troubleshooting</h2>
@@ -899,7 +902,7 @@ Figure&nbsp;15: The confirmation after submitting.
 </tr>
 <tr class="even">
 <td style="text-align: left;">I submitted an entry with a mistake in it</td>
-<td style="text-align: left;">Entries cannot be changed. Submit a new entry with the next unused site ID and a note such as <em>Replaces S03</em>, and write down the site ID of the wrong one (see <a href="#in-catalonia">In Catalonia</a>).</td>
+<td style="text-align: left;">Correct it after the trip, on a laptop (see <a href="#correct-an-entry">Correct an entry</a>). If you have no connection in the field, this can wait: carry on with the next site.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">There is no confirmation after <span class="ui">Submit</span></td>

@@ -135,7 +135,7 @@ Let us check that both tools work, using the test walk you did before the sessio
    - For **Site ID**, enter `S00`.
    - For **Location**, tap [Allow]{.ui} when your browser asks to use your location, and check that the pin on the map is roughly where you are. If it is not, wait a few seconds, or tap the map, move the map until the crosshair is on the right spot, and tap [OK]{.ui}. If the background map makes it hard to find the exact spot, tap the basemap button in the top-right corner of the map and switch to, for instance, [Streets]{.ui} or [Imagery]{.ui}.
    - For the **photo** and the **short note**, anything will do.
-   - Before you tap [Submit]{.ui}, check the pin on the map and read your note once more: an entry cannot be changed or deleted once it has been submitted. Then tap [Submit]{.ui} and check that you see a confirmation.
+   - Before you tap [Submit]{.ui}, check the pin on the map and read your note once more. Then tap [Submit]{.ui} and check that you see a confirmation.
    - To submit another entry, refresh the page in your browser and the form opens again.
 
    ::: {layout-ncol=2}
@@ -178,16 +178,11 @@ Finally, whoever logs the sites, and whoever takes over from them, saves your wo
 Once you are in Catalonia, there are a few things to keep in mind:
 
 - Whoever logs the sites opens the survey from the home screen icon you saved in the session, and submits one entry per site while standing at the site. Your fieldwork group and working group number are filled in for you, so you only add the site ID, location, photo and note. After each submission, refresh the page to open a new, empty form.
-- Before submitting, check that the pin is on the right spot (switch the basemap if that helps), and write a note that will still make sense to you weeks later. Once submitted, an entry cannot be changed or deleted.
+- Before submitting, check that the pin is on the right spot (switch the basemap if that helps), and write a note that will still make sense to you weeks later. You can correct mistakes after the trip (see [Correct an entry](#correct-an-entry)), but it is much easier to get it right on the spot.
 - Whoever records the route starts Strava when the group starts walking, and stops it when you finish. One recording per outing is fine, and you can have several recordings in total.
 - Charge your phone every night and bring a power bank if you have one, because GPS and the camera use more battery than usual.
 - If you have no signal or no mobile data, Strava will keep recording and upload your route once you are back online. The survey, however, needs a connection to submit. If you have none, take a photo with your camera, note the site ID and time in your notebook, and submit the entry later, placing the point by moving the crosshair to the right location on the map.
 - Please be considerate. Survey entries will be **public**, because they appear in the story maps you publish later on. So do not take photos in which people's faces can be recognised, do not put anyone's name or other personal details in your notes, and follow the ethics guidance in your Urban Project worksheet. Do not record your accommodation as a site.
-
-::: {.callout-important}
-## Entries cannot be changed
-Once an entry has been submitted, it cannot be edited or deleted, because every working group adds to the same layer. If you made a mistake, for instance the pin is in the wrong place or the note is wrong, submit a new entry with the next unused site ID, and start its note with which entry it replaces, such as *Replaces S03*. Write down the site ID of the wrong entry: you will leave it out when you make your map.
-:::
 
 ::: {.callout-tip}
 ## Check your roaming charges
@@ -195,10 +190,22 @@ Before you travel, check whether your phone contract includes mobile data in Spa
 :::
 
 ## After the trip
-Your sites will already be in ArcGIS Online, but there are two things to do before the next session:
+Your sites will already be in ArcGIS Online, but there are three things to do before the next session:
 
 1. **Export and share the route.** Whoever recorded the route downloads the `.gpx` file(s) from the Strava website, just as you did in the session, and shares them with the rest of the working group. If two people recorded, their routes should be the same, so one copy is enough; pick the one with the fewest gaps.
 2. **Share everything else.** Put any extra photos, videos and notes in a shared OneDrive or Google Drive folder for your working group. It is best to avoid WhatsApp for photos, because it compresses them and removes their location information.
+3. **Check your sites.** Whoever logged the sites checks that every site is there, in the right place, with the right site ID and note, and corrects any mistakes as described below.
+
+### Correct an entry {#correct-an-entry}
+If an entry has a mistake in it, for instance a point in the wrong place or a typo in the note, you can correct it afterwards. Only the person who submitted an entry can change it, so this is a job for whoever logged your working group's sites. Please use a laptop or computer for this:
+
+1. Go to [survey123.arcgis.com](https://survey123.arcgis.com) and sign in with your UCL account: organisation URL `uclondon`, then [UCL SSO]{.ui}.
+2. On the [My surveys]{.ui} page, switch to the [Surveys I can view results for]{.ui} tab, and open [UCL Geography Field Survey]{.ui}.
+3. Open the [Data]{.ui} tab, and switch on [Form view]{.ui} in the toolbar above the map.
+4. The table at the bottom lists the entries of every working group, so there may be hundreds of them. Sort the table by **Data Collection** with the arrows next to the column name, scroll down to your fieldwork group, and find your working group number and site ID. Click on the entry: it opens in a panel on the right.
+5. Click the pencil at the top of the panel ([Edit this record]{.ui}). Correct the entry: change the site ID or note, replace the photo, or move the point. The small location map starts zoomed out to the whole world, so zoom in to your site and click on the right spot. Then click [Submit]{.ui}.
+
+Entries cannot be deleted. If you submitted the same site twice, change the site ID of the extra entry to `X`, so that you can leave it out of your map later on.
 
 ## Troubleshooting
 | Problem | What to try |
@@ -210,6 +217,6 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Tap the map, move it until the crosshair is on the correct location, and tap [OK]{.ui} before submitting. |
-| I submitted an entry with a mistake in it | Entries cannot be changed. Submit a new entry with the next unused site ID and a note such as *Replaces S03*, and write down the site ID of the wrong one (see [In Catalonia](#in-catalonia)). |
+| I submitted an entry with a mistake in it | Correct it after the trip, on a laptop (see [Correct an entry](#correct-an-entry)). If you have no connection in the field, this can wait: carry on with the next site. |
 | There is no confirmation after [Submit]{.ui} | Check that you have a connection, then tap [Submit]{.ui} again. Any required fields that are missing are highlighted in the form. |
 | The photo will not upload | Try again on wifi, or submit without the photo and write the site ID down alongside the photo instead. |
