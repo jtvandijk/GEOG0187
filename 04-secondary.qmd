@@ -53,7 +53,9 @@ The data pack consists of three layers for Barcelona that we have prepared for y
 
 4. Open [Layers]{.ui} and check the order. The layer at the *top* of the list is drawn on top of the others, so the census sections should be at the *bottom*, with the neighbourhoods above them and the districts at the top. If the order is different, drag the layers by their handle (⠿) on the left.
 
-Because the boundary layers are on top, their fill colour hides the census sections underneath. They should show only their outlines:
+Because the boundary layers are on top, their fill colour hides the census sections underneath (@fig-boundary-fill). They should show only their outlines:
+
+![The neighbourhoods layer, with its default fill, hides the census sections underneath.](images/w04/boundary-fill.png){#fig-boundary-fill fig-alt="Map Viewer zoomed into Barcelona, with the neighbourhoods layer drawn in a solid blue fill that covers the census sections underneath"}
 
 5. In [Layers]{.ui}, click the neighbourhoods layer, and then click [Styles]{.ui} on the right-hand toolbar.
 6. A boundary layer has only one style, [Location (Single symbol)]{.ui}. Click [Style options]{.ui} under it, and then the pencil next to [Symbol style]{.ui}.
