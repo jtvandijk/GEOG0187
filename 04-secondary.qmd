@@ -32,7 +32,7 @@ A **choropleth map** shades areas (polygons) by the value of a numerical variabl
 - **The colours.** Use a single-hue ramp from light to dark for values that go from low to high, and avoid rainbow palettes.
 - **The scale.** The same variable can look different for small areas than for large ones, because averaging over a large area hides the differences inside it. This is known as the [modifiable areal unit problem](https://en.wikipedia.org/wiki/Modifiable_areal_unit_problem) (MAUP).
 
-## Add your data pack
+## Add your data pack {#add-your-data-pack}
 Let us start by opening a new map ([Map]{.ui}) and picking a quiet basemap.
 
 ::: {.callout-tip}
@@ -52,6 +52,16 @@ The data pack consists of three layers for Barcelona that we have prepared for y
 ![The Barcelona layers under [My organization]{.ui}.](images/w04/browse-bcn.png){#fig-browse-bcn fig-alt="Browse layers panel set to My organization, with the three GEOG0187 Barcelona layers in the search results"}
 
 4. Open [Layers]{.ui} and check the order. The layer at the *top* of the list is drawn on top of the others, so the census sections should be at the *bottom*, with the neighbourhoods above them and the districts at the top. If the order is different, drag the layers by their handle (⠿) on the left.
+
+Because the boundary layers are on top, their fill colour hides the census sections underneath. They should show only their outlines:
+
+5. In [Layers]{.ui}, click the neighbourhoods layer, and then click [Styles]{.ui} on the right-hand toolbar.
+6. A boundary layer has only one style, [Location (Single symbol)]{.ui}. Click [Style options]{.ui} under it, and then the pencil next to [Symbol style]{.ui}.
+7. Next to [Fill color]{.ui}, click the *no colour* button (the circle with a line through it, on the far right). Keep a dark [Outline color]{.ui}.
+8. Close the [Symbol style]{.ui} panel and click [Done]{.ui}.
+9. Do the same for the districts, with a thicker outline (for example 2 or 3 px under [Outline width]{.ui}), so that you can tell the two apart.
+
+![Neighbourhoods with no fill and a black outline.](images/w04/no-fill.png){#fig-no-fill fig-alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline"}
 
 
 ::: {.callout-tip}
@@ -88,17 +98,7 @@ With [Equal interval]{.ui}, every class has the same width; with [Quantile]{.ui}
 Finally, settle on one classification for your map and note down why you chose it: the worksheet asks you to justify this choice.
 
 ## Compare scales {#compare-scales}
-Next, let us see how much the picture depends on the size of the areas. For this, the boundary layers need to show only their outlines:
-
-1. In [Layers]{.ui}, click the neighbourhoods layer, and then click [Styles]{.ui} on the right-hand toolbar.
-2. A boundary layer has only one style, [Location (Single symbol)]{.ui}. Click [Style options]{.ui} under it, and then the pencil next to [Symbol style]{.ui}.
-3. Next to [Fill color]{.ui}, click the *no colour* button (the circle with a line through it, on the far right). Keep a dark [Outline color]{.ui}.
-4. Close the [Symbol style]{.ui} panel and click [Done]{.ui}.
-5. Do the same for the districts, with a thicker outline (for example 2 or 3 px under [Outline width]{.ui}), so that you can tell the two apart.
-
-![Neighbourhoods with no fill and a black outline.](images/w04/no-fill.png){#fig-no-fill fig-alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline"}
-
-6. Zoom into one district.
+Next, let us see how much the picture depends on the size of the areas. This is where the neighbourhood and district outlines come in: zoom into one district.
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
@@ -183,5 +183,5 @@ Whichever source you use, check the licence, and always record the name, publish
 | The map looks like it is all one colour | Check the classification and the number of classes, and try *quantile*. |
 | The legend shows odd numbers | Edit the legend labels, or round the values in the style options. |
 | Clicking the map opens a neighbourhood or district | Switch off [Enable pop-ups]{.ui} for the boundary layers (see [Write the pop-up](#write-the-pop-up)). |
-| The boundary layers hide the colours underneath | Set their fill to *no colour* (see [Compare scales](#compare-scales)), and check that they are above the main layer in [Layers]{.ui}. |
+| The boundary layers hide the colours underneath | Set their fill to *no colour* (see [Add your data pack](#add-your-data-pack)), and check that they are above the main layer in [Layers]{.ui}. |
 | A value is empty in the pop-up | The data may be missing for that area. If so, mention this in your evaluation. |

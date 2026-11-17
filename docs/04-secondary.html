@@ -529,6 +529,24 @@ Figure&nbsp;1: The Barcelona layers under <span class="ui">My organization</span
 <ol start="4" type="1">
 <li>Open <span class="ui">Layers</span> and check the order. The layer at the <em>top</em> of the list is drawn on top of the others, so the census sections should be at the <em>bottom</em>, with the neighbourhoods above them and the districts at the top. If the order is different, drag the layers by their handle (⠿) on the left.</li>
 </ol>
+<p>Because the boundary layers are on top, their fill colour hides the census sections underneath. They should show only their outlines:</p>
+<ol start="5" type="1">
+<li>In <span class="ui">Layers</span>, click the neighbourhoods layer, and then click <span class="ui">Styles</span> on the right-hand toolbar.</li>
+<li>A boundary layer has only one style, <span class="ui">Location (Single symbol)</span>. Click <span class="ui">Style options</span> under it, and then the pencil next to <span class="ui">Symbol style</span>.</li>
+<li>Next to <span class="ui">Fill color</span>, click the <em>no colour</em> button (the circle with a line through it, on the far right). Keep a dark <span class="ui">Outline color</span>.</li>
+<li>Close the <span class="ui">Symbol style</span> panel and click <span class="ui">Done</span>.</li>
+<li>Do the same for the districts, with a thicker outline (for example 2 or 3 px under <span class="ui">Outline width</span>), so that you can tell the two apart.</li>
+</ol>
+<div id="fig-no-fill" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-no-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/w04/no-fill.png" class="img-fluid figure-img" alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-no-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Neighbourhoods with no fill and a black outline.
+</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-simple callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -570,7 +588,7 @@ Figure&nbsp;1: The Barcelona layers under <span class="ui">My organization</span
 <img src="images/w04/styles.png" class="img-fluid figure-img" alt="Styles panel with disp_income_pc_2023_eur chosen as the attribute and Counts and Amounts (color) selected">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-styles-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Styling the census sections by disposable income.
+Figure&nbsp;3: Styling the census sections by disposable income.
 </figcaption>
 </figure>
 </div>
@@ -596,7 +614,7 @@ Figure&nbsp;2: Styling the census sections by disposable income.
 <img src="images/w04/classify.png" class="img-fluid figure-img" alt="Style options with Classify data switched on, Quantile as the method and the class limits listed underneath">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-classify-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Classifying the data into quantiles.
+Figure&nbsp;4: Classifying the data into quantiles.
 </figcaption>
 </figure>
 </div>
@@ -608,27 +626,7 @@ Figure&nbsp;3: Classifying the data into quantiles.
 </section>
 <section id="compare-scales" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="compare-scales"><span class="header-section-number">4.5</span> Compare scales</h2>
-<p>Next, let us see how much the picture depends on the size of the areas. For this, the boundary layers need to show only their outlines:</p>
-<ol type="1">
-<li>In <span class="ui">Layers</span>, click the neighbourhoods layer, and then click <span class="ui">Styles</span> on the right-hand toolbar.</li>
-<li>A boundary layer has only one style, <span class="ui">Location (Single symbol)</span>. Click <span class="ui">Style options</span> under it, and then the pencil next to <span class="ui">Symbol style</span>.</li>
-<li>Next to <span class="ui">Fill color</span>, click the <em>no colour</em> button (the circle with a line through it, on the far right). Keep a dark <span class="ui">Outline color</span>.</li>
-<li>Close the <span class="ui">Symbol style</span> panel and click <span class="ui">Done</span>.</li>
-<li>Do the same for the districts, with a thicker outline (for example 2 or 3 px under <span class="ui">Outline width</span>), so that you can tell the two apart.</li>
-</ol>
-<div id="fig-no-fill" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-no-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/w04/no-fill.png" class="img-fluid figure-img" alt="Symbol style panel for the neighbourhoods layer, with the no colour button selected for the fill and a black outline">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-no-fill-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Neighbourhoods with no fill and a black outline.
-</figcaption>
-</figure>
-</div>
-<ol start="6" type="1">
-<li>Zoom into one district.</li>
-</ol>
+<p>Next, let us see how much the picture depends on the size of the areas. This is where the neighbourhood and district outlines come in: zoom into one district.</p>
 <div class="exercise callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -798,7 +796,7 @@ Figure&nbsp;5: A pop-up for a census section.
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The boundary layers hide the colours underneath</td>
-<td style="text-align: left;">Set their fill to <em>no colour</em> (see <a href="#compare-scales">Compare scales</a>), and check that they are above the main layer in <span class="ui">Layers</span>.</td>
+<td style="text-align: left;">Set their fill to <em>no colour</em> (see <a href="#add-your-data-pack">Add your data pack</a>), and check that they are above the main layer in <span class="ui">Layers</span>.</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">A value is empty in the pop-up</td>
