@@ -80,9 +80,9 @@ All field survey entries, from every group, are stored in a single layer. We wil
 
    ![The layer menu with [Zoom to layer]{.ui}.](images/w02/zoom-to-layer.png){#fig-zoom-to-layer fig-alt="The layer's more options menu with Zoom to layer, Show properties, Show table, Rename and Remove"}
 
-7. Click on a point. Its pop-up shows the attributes your working group entered. We will tidy up this pop-up, and add the photo to it, later on.
+7. Click on a point. Its pop-up shows the attributes and photo your working group entered. We will tidy up this pop-up later on.
 
-   ![The default pop-up of a survey entry.](images/w02/popup-default.png){#fig-popup-default fig-alt="Default pop-up titled GEOG0187 Field Survey Sites, listing Data Collection, Note, Site ID and Working Group Number (0.00), with the last edited date underneath"}
+   ![The default pop-up of a survey entry.](images/w02/popup-default.png){#fig-popup-default width=420 fig-alt="Default pop-up titled GEOG0187 Field Survey Sites, listing Data Collection, Note, Site ID and Working Group Number (0.00), with a photo underneath"}
 
 ::: {.callout-note .exercise icon=false}
 ## Predict first
@@ -174,7 +174,7 @@ By default, a pop-up shows every attribute in the layer, which quickly becomes c
 
    ![The fields list with Site ID and Note.](images/w02/popup-fields.png){#fig-popup-fields fig-alt="Pop-ups pane with Fields list open, showing 2 of 8 fields: Site ID and Note"}
 
-3. Check that [Attachments]{.ui} is included, so that the photo is shown. If it is not, click [Add content]{.ui} → [Attachments]{.ui}.
+3. Check that [Attachments]{.ui} is included, so that the photo is shown.
 4. Click on a few points on the map to check the result.
 
    ![The tidied pop-up: site ID as the title, the note and the photo.](images/w02/popup-final.png){#fig-popup-final fig-alt="Pop-up titled S01 with Site ID S01, Note UCL Main Quad, and a photo of the UCL Portico"}
@@ -219,5 +219,5 @@ If you finish early, estimate how far your working group walked, and then check 
 | geojson.io does not show a route | Check that the file ends in `.gpx` and was exported from the Strava *website*. You could also try a different browser. |
 | The route is a straight line or has big jumps | The GPS signal was lost during recording. If two people in your working group recorded the route, use the other recording. |
 | I cannot find the right-hand toolbar buttons | Click the [«]{.ui} button at the bottom of the toolbar to show the names, or hover over an icon. |
-| The photo does not show in the pop-up | Check that [Attachments]{.ui} is included under [Pop-ups]{.ui}, or add it via [Add content]{.ui} → [Attachments]{.ui}. Note that not every entry has a photo. |
+| The photo does not show in the pop-up | Check that [Attachments]{.ui} is switched on under [Pop-ups]{.ui}. Note that not every entry has a photo. |
 | I cannot find my map next time | Go to [Content]{.ui} → [My content]{.ui}, or search for `GEOG0187`. |
