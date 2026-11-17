@@ -202,7 +202,7 @@ If an entry has a mistake in it, for instance a point in the wrong place or a ty
 2. On the [My surveys]{.ui} page, switch to the [Surveys I can view results for]{.ui} tab, and open [UCL Geography Field Survey]{.ui}.
 3. Open the [Data]{.ui} tab, and switch on [Form view]{.ui} in the toolbar above the map.
 4. The table at the bottom lists the entries of every working group, so there may be hundreds of them. Sort the table by **Data Collection** with the arrows next to the column name, scroll down to your fieldwork group, and find your working group number and site ID. Click on the entry: it opens in a panel on the right.
-5. Click the pencil at the top of the panel ([Edit this record]{.ui}). Correct the entry: move the point, change the site ID or note, or replace the photo. Then click [Submit]{.ui}.
+5. Click the pencil at the top of the panel ([Edit this record]{.ui}). Correct the entry: change the site ID or note, replace the photo, or move the point. The small location map starts zoomed out to the whole world, so zoom in to your site and click on the right spot. Then click [Submit]{.ui}.
 
 Entries cannot be deleted. If you submitted the same site twice, change the site ID of the extra entry to `X`, so that you can leave it out of your map later on.
 
