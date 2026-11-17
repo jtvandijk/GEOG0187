@@ -405,7 +405,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#layers-and-attributes" id="toc-layers-and-attributes" class="nav-link" data-scroll-target="#layers-and-attributes"><span class="header-section-number">2.1</span> Layers and attributes</a></li>
   <li><a href="#open-map-viewer" id="toc-open-map-viewer" class="nav-link" data-scroll-target="#open-map-viewer"><span class="header-section-number">2.2</span> Open Map Viewer</a></li>
   <li><a href="#choose-a-basemap" id="toc-choose-a-basemap" class="nav-link" data-scroll-target="#choose-a-basemap"><span class="header-section-number">2.3</span> Choose a basemap</a></li>
-  <li><a href="#add-your-working-groups-sites" id="toc-add-your-working-groups-sites" class="nav-link" data-scroll-target="#add-your-working-groups-sites"><span class="header-section-number">2.4</span> Add your working group’s sites</a></li>
+  <li><a href="#add-your-sites" id="toc-add-your-sites" class="nav-link" data-scroll-target="#add-your-sites"><span class="header-section-number">2.4</span> Add your working group’s sites</a></li>
   <li><a href="#add-your-route" id="toc-add-your-route" class="nav-link" data-scroll-target="#add-your-route"><span class="header-section-number">2.5</span> Add your route</a>
   <ul class="collapse">
   <li><a href="#convert-the-route-to-geojson" id="toc-convert-the-route-to-geojson" class="nav-link" data-scroll-target="#convert-the-route-to-geojson"><span class="header-section-number">2.5.1</span> Convert the route to GeoJSON</a></li>
@@ -510,8 +510,8 @@ Figure&nbsp;3: Choosing a basemap.
 </figure>
 </div>
 </section>
-<section id="add-your-working-groups-sites" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="add-your-working-groups-sites"><span class="header-section-number">2.4</span> Add your working group’s sites</h2>
+<section id="add-your-sites" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="add-your-sites"><span class="header-section-number">2.4</span> Add your working group’s sites</h2>
 <p>All field survey entries, from every group, are stored in a single layer. We will add that layer to our map and then filter it so that only your own working group’s sites are shown:</p>
 <ol type="1">
 <li><p>Click <span class="ui">Add</span> → <span class="ui">Browse layers</span>.</p>
@@ -619,6 +619,7 @@ Figure&nbsp;9: The default pop-up of a survey entry.
 </div>
 </div>
 <p>Note that the filter only changes <em>your</em> map: nobody else’s data are deleted or changed.</p>
+<p>If your working group submitted an entry with a mistake in it, and then a corrected one, you can leave the wrong entry out with a third condition: click <span class="ui">Add new</span>, choose <strong>Site ID</strong>, set the operator to <em>is not</em>, and enter the site ID of the wrong entry. If the wrong and the corrected entry share the same site ID, use <strong>Note</strong> instead.</p>
 </section>
 <section id="add-your-route" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="add-your-route"><span class="header-section-number">2.5</span> Add your route</h2>
@@ -908,34 +909,38 @@ Figure&nbsp;24: The finished map for the <strong>test walk</strong>.
 <td style="text-align: left;">Check that your filter uses exactly the same fieldwork group and working group number as your working group’s <a href="survey-links.html">survey link</a>. If your sites are still missing, ask the teaching staff.</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">One of our entries is wrong</td>
+<td style="text-align: left;">Entries cannot be edited or deleted once submitted. Leave the wrong one out with an extra filter condition (see the end of <a href="#add-your-sites">Add your working group’s sites</a>).</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">The filter shows other working groups too</td>
 <td style="text-align: left;">Check that the <strong>Working Group Number</strong> condition uses <em>is</em>, not <em>is at least</em>.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">I do not have a <code>.gpx</code> file</td>
 <td style="text-align: left;">Ask whoever recorded the route in your working group to share it. In the meantime, you can practise with the <a href="https://github.com/jtvandijk/GEOG0187/blob/master/data/UCL_Field_Test.gpx">test walk route</a> used for the screenshots on this page (use the download button on the right).</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">ArcGIS Online does not accept my <code>.gpx</code> file</td>
 <td style="text-align: left;">That is expected: convert it to GeoJSON first, using <a href="https://geojson.io">geojson.io</a> (see <a href="#convert-the-route-to-geojson">Convert the route to GeoJSON</a>).</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">geojson.io does not show a route</td>
 <td style="text-align: left;">Check that the file ends in <code>.gpx</code> and was exported from the Strava <em>website</em>. You could also try a different browser.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">The route is a straight line or has big jumps</td>
 <td style="text-align: left;">The GPS signal was lost during recording. If two people in your working group recorded the route, use the other recording.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">I cannot find the right-hand toolbar buttons</td>
 <td style="text-align: left;">Click the <span class="ui">«</span> button at the bottom of the toolbar to show the names, or hover over an icon.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">The photo does not show in the pop-up</td>
 <td style="text-align: left;">Check that <span class="ui">Attachments</span> is switched on under <span class="ui">Pop-ups</span>. Note that not every entry has a photo.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">I cannot find my map next time</td>
 <td style="text-align: left;">Go to <span class="ui">Content</span> → <span class="ui">My content</span>, or search for <code>GEOG0187</code>.</td>
 </tr>

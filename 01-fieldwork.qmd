@@ -61,7 +61,7 @@ Let us start by installing Strava and making sure that your activities are not v
 ### Check your location settings
 Both Strava and your web browser (which you will use for the field survey) need access to your location. On an iPhone, you can find both settings under [Settings]{.ui} → [Apps]{.ui}:
 
-1. For Strava, go to [Settings]{.ui} → [Apps]{.ui} → [Strava]{.ui} → [Location]{.ui}. Select [While Using the App]{.ui} and keep [Precise Location]{.ui} switched on.
+1. For Strava, go to [Settings]{.ui} → [Apps]{.ui} → [Strava]{.ui} → [Location]{.ui}. Select [While Using the App]{.ui} and keep [Precise Location]{.ui} switched on. If you have just installed Strava, [Location]{.ui} may not be listed yet: it only appears once Strava has asked for your location, which happens when you start your first recording. In that case, start a recording, allow location access when asked, discard the recording, and come back to this step.
 
    ![Location access for Strava on an iPhone.](images/w01/strava-location.png){#fig-strava-location width=260 fig-alt="iPhone location settings for Strava set to While Using the App, with Precise Location on"}
 
@@ -133,7 +133,7 @@ Let us check that both tools work, using the test walk you did before the sessio
 2. **Try the field survey.** Open the [test survey]({{< var urls.links >}}#test-link) and submit one test entry from the room:
    - **Data Collection** and **Working Group Number** are already filled in as `Fieldwork - Test` and `0`, and cannot be changed.
    - For **Site ID**, enter `S00`.
-   - For **Location**, tap [Allow]{.ui} when your browser asks to use your location, and check that the pin on the map is roughly where you are. If it is not, wait a few seconds, or tap the map, move the map until the crosshair is on the right spot, and tap [OK]{.ui}.
+   - For **Location**, tap [Allow]{.ui} when your browser asks to use your location, and check that the pin on the map is roughly where you are. If it is not, wait a few seconds, or tap the map, move the map until the crosshair is on the right spot, and tap [OK]{.ui}. If the background map makes it hard to find the exact spot, tap the basemap button in the top-right corner of the map and switch to, for instance, [Streets]{.ui} or [Imagery]{.ui}.
    - For the **photo** and the **short note**, anything will do.
    - Tap [Submit]{.ui} and check that you see a confirmation.
    - To submit another entry, refresh the page in your browser and the form opens again.
@@ -204,5 +204,6 @@ Your sites will already be in ArcGIS Online, but there are two things to do befo
 | The survey asks me to sign in again | Sign in as you did during the setup: organisation URL `uclondon`, then [UCL SSO]{.ui}. You may need to do this again after a while, also in Catalonia. |
 | The survey cannot find my location | Allow location access for your browser (see above), then reload the form. Your phone finds its location fastest outdoors with a clear view of the sky, so if you are inside or in a narrow street, move outside or to a wider street and wait up to a minute. |
 | The point is in the wrong place | Tap the map, move it until the crosshair is on the correct location, and tap [OK]{.ui} before submitting. |
+| I submitted an entry with a mistake in it | You cannot edit or delete an entry once it has been submitted, because everyone adds to the same layer. Submit a corrected entry instead, and write down the site ID of the wrong one: you can leave it out when you make your map. |
 | There is no confirmation after [Submit]{.ui} | Check that you have a connection, then tap [Submit]{.ui} again. Any required fields that are missing are highlighted in the form. |
 | The photo will not upload | Try again on wifi, or submit without the photo and write the site ID down alongside the photo instead. |
