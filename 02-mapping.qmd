@@ -52,11 +52,11 @@ All field survey entries, from every group, are stored in a single layer. We wil
 
    ![The [Add]{.ui} menu.](images/w02/add-menu.png){#fig-add-menu fig-alt="The Add menu in Map Viewer with Browse layers, Add layer from URL and Add layer from file"}
 
-2. At the top of the panel, switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`. Make sure you pick the layer whose name ends in `_results`: there are other items with a very similar name, which will not work.
+2. At the top of the panel, switch from [My content]{.ui} to [My organization]{.ui}, and search for `{{< var arcgis.layer >}}`.
 
-   ![The survey layers in [Browse layers]{.ui}, with [My organization]{.ui} selected.](images/w02/browse-layers.png){#fig-browse-layers fig-alt="Browse layers panel set to My organization, listing UCL Geography Field Survey_results, UCL Geography Field Survey_form and UCL Geography Field Survey, each with an Add button"}
+   ![The survey layer in [Browse layers]{.ui}, with [My organization]{.ui} selected.](images/w02/browse-layers.png){#fig-browse-layers fig-alt="Browse layers panel set to My organization, with the GEOG0187 Field Survey Sites layer and an Add button"}
 
-3. Click [Add]{.ui} on the `_results` layer, and close the browse panel. The layer now appears under [Layers]{.ui}, with the entries of the whole year. The map may not zoom to the points by itself; we will zoom in once we have filtered the layer.
+3. Click [Add]{.ui} on the layer, and close the browse panel. The layer now appears under [Layers]{.ui}, with the entries of the whole year. The map may not zoom to the points by itself; we will zoom in once we have filtered the layer.
 4. In [Layers]{.ui} (left-hand toolbar), click the survey layer so that it is highlighted. Then click [Filter]{.ui} on the right-hand toolbar (the funnel icon).
 
    ![The survey layer added to the map, with [Filter]{.ui} on the right-hand toolbar.](images/w02/layer-added.png){#fig-layer-added fig-alt="Map Viewer with the survey results layer in the Layers list, two points near Gordon Square, the Properties pane open and the Filter tooltip on the right-hand toolbar"}
