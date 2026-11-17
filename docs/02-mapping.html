@@ -619,7 +619,7 @@ Figure&nbsp;9: The default pop-up of a survey entry.
 </div>
 </div>
 <p>Note that the filter only changes <em>your</em> map: nobody else’s data are deleted or changed.</p>
-<p>If one of your points is in the wrong place, or its note has a mistake in it, whoever logged your sites can still correct it (see <a href="01-fieldwork.html#correct-an-entry">Correct an entry</a>). The correction shows up in your map automatically. If your working group marked a duplicate entry with the site ID <code>X</code>, leave it out with a third condition: click <span class="ui">Add new</span>, choose <strong>Site ID</strong>, set the operator to <em>is not</em>, and enter <code>X</code>.</p>
+<p>Survey entries cannot be changed once submitted, so if your working group made a mistake in the field, it submitted a new entry that replaces the wrong one (its note starts with, for instance, <em>Replaces S03</em>). Leave the wrong entry out with a third condition: click <span class="ui">Add new</span>, choose <strong>Site ID</strong>, set the operator to <em>is not</em>, and enter the site ID of the wrong entry (here <code>S03</code>). Add one such condition for each wrong entry.</p>
 </section>
 <section id="add-your-route" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="add-your-route"><span class="header-section-number">2.5</span> Add your route</h2>
@@ -910,7 +910,7 @@ Figure&nbsp;24: The finished map for the <strong>test walk</strong>.
 </tr>
 <tr class="odd">
 <td style="text-align: left;">One of our entries is wrong</td>
-<td style="text-align: left;">Whoever logged your sites can correct it in Survey123 (see <a href="01-fieldwork.html#correct-an-entry">Correct an entry</a>). Duplicates cannot be deleted, but you can leave them out with an extra filter condition (see the end of <a href="#add-your-sites">Add your working group’s sites</a>).</td>
+<td style="text-align: left;">Entries cannot be changed or deleted. Leave the wrong one out with an extra filter condition, <strong>Site ID</strong> <em>is not</em> the wrong site ID (see the end of <a href="#add-your-sites">Add your working group’s sites</a>).</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The filter shows other working groups too</td>
